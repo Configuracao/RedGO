@@ -675,7 +675,9 @@
                     <i class="material-icons meta-icon">calendar_today</i>
                     <span id="year">—</span>
                 </span>
-                <span id="duration-meta">
+                <!-- @tweakable duration display setting for series (true = show duration, false = hide) -->
+                <!-- @tweakable {Boolean} showDurationInSeries=false -->
+                <span id="duration-meta" style="display: none;">
                     <i class="material-icons meta-icon">schedule</i>
                     <span id="duration">—</span>
                 </span>
@@ -810,6 +812,8 @@
         const getFavorites = () => JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY) || '[]');
         const setFavorites = arr => localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(arr));
 
+        /* @tweakable auto-mark episode as watched when playing */
+        const autoMarkWatchedOnPlay = true;
         /* @tweakable display episode title or just "Cap X" */
         const showEpisodeTitles = false; /* Set to false to hide episode titles */
 
@@ -842,7 +846,7 @@
                 const watched = localStorage.getItem(WATCHED_GLOBAL_STORAGE_KEY);
                 return watched ? JSON.parse(watched) : [];
             } catch (e) {
-                console.error("Error parsing global watched content from localStorage:", e);
+                console.error("Error parsing watched content from localStorage:", e);
                 return [];
             }
         }
@@ -851,7 +855,7 @@
             try {
                 localStorage.setItem(WATCHED_GLOBAL_STORAGE_KEY, JSON.stringify(watchedArr));
             } catch (e) {
-                console.error("Error saving global watched content to localStorage:", e);
+                console.error("Error saving watched content to localStorage:", e);
             }
         }
 
@@ -967,6 +971,8 @@
             // Series info
             document.getElementById('title').textContent = series.title;
             document.getElementById('year').textContent = series.year || '—';
+            /* @tweakable duration display setting for series (true = show duration, false = hide) */
+            /* @tweakable {Boolean} showDurationInSeries=false */
             document.getElementById('duration').textContent = series.duration || '—';
             document.getElementById('rating').textContent = series.rating || 'NR';
             document.getElementById('genre').textContent = series.category || '—';
@@ -1064,7 +1070,7 @@
         function openModal() {
             const modal = document.getElementById('modal');
             const episodeListContainer = document.getElementById('episode-list-container');
-            episodeListContainer.innerHTML = ''; // Clear previous options
+            episodeListContainer.innerHTML = '';
             
             if (!currentSeries || !currentSeries.seasons || currentSeries.seasons.length === 0) {
                 showNotification('No hay episodios disponibles para esta serie.', 'error');
@@ -1081,24 +1087,19 @@
                 
                 const seasonBody = document.createElement('div');
                 seasonBody.className = 'season-body';
-                const episodeList = document.createElement('div'); // A container for actual episode links
+                const episodeList = document.createElement('div');
                 episodeList.className = 'episode-list';
                 
                 season.episodes.forEach(episode => {
-                    const episodeItem = document.createElement('div'); // Changed from <a> to <div>
+                    const episodeItem = document.createElement('div');
                     episodeItem.className = 'episode-item';
                     
                     // Generate a unique ID for each episode for tracking watched status
                     const episodeIdKey = `${currentSeries.id}-${season.season_number}-${episode.episode_number}`;
                     
-                    const episodeDisplayTitle = showEpisodeTitles 
-                        ? episode.title 
-                        : '';
-                    
                     episodeItem.innerHTML = `
                         <div class="episode-text">
                             <span class="episode-number">Cap ${episode.episode_number}</span>
-                            ${episodeDisplayTitle ? `<span class="episode-title">${episode.title}</span>` : ''}
                         </div>
                         <div class="episode-actions">
                             <i class="material-icons watched-toggle-icon"></i>
@@ -1113,22 +1114,23 @@
                         episodeItem.classList.add('watched');
                         watchedToggleIcon.textContent = 'check_circle';
                     } else {
-                        episodeItem.classList.remove('watched');
                         watchedToggleIcon.textContent = 'radio_button_unchecked';
                     }
 
                     // Event listener for the entire episode item (for playback and auto-mark watched)
-                    /* @tweakable auto-mark episode as watched when played */
                     episodeItem.addEventListener('click', (e) => {
-                        // If the clicked element or its parent is the watched-toggle-icon, only toggle watched status
-                        if (e.target.classList.contains('watched-toggle-icon') || e.target.closest('.watched-toggle-icon')) {
+                        if (e.target.classList.contains('watched-toggle-icon')) {
                             toggleWatched(episodeIdKey, episodeItem, watchedToggleIcon);
                             e.stopPropagation(); // Prevent the main episode item click from triggering
                             return;
                         }
                         
-                        // Otherwise, mark as watched and simulate playing
-                        toggleWatched(episodeIdKey, episodeItem, watchedToggleIcon); // Mark as watched
+                        // Mark series as watched globally when any episode is played
+                        let watchedGlobal = getWatchedGlobal();
+                        if (!watchedGlobal.includes(currentSeries.id)) {
+                            watchedGlobal.push(currentSeries.id);
+                            setWatchedGlobal(watchedGlobal);
+                        }
                         
                         closeModal(); // Close the episode selection modal
 
@@ -1149,7 +1151,6 @@
                 seasonHeader.addEventListener('click', () => {
                     seasonHeader.classList.toggle('active');
                     if (seasonHeader.classList.contains('active')) {
-                        // Set max-height to scrollHeight to allow smooth expansion
                         seasonBody.style.maxHeight = seasonBody.scrollHeight + "px"; 
                     } else {
                         seasonBody.style.maxHeight = "0"; // Collapse

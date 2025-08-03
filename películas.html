@@ -737,7 +737,7 @@
                 const watched = localStorage.getItem(WATCHED_GLOBAL_STORAGE_KEY);
                 return watched ? JSON.parse(watched) : [];
             } catch (e) {
-                console.error("Error parsing global watched content from localStorage:", e);
+                console.error("Error parsing watched content from localStorage:", e);
                 return [];
             }
         };
@@ -745,7 +745,7 @@
             try {
                 localStorage.setItem(WATCHED_GLOBAL_STORAGE_KEY, JSON.stringify(arr));
             } catch (e) {
-                console.error("Error saving global watched content to localStorage:", e);
+                console.error("Error saving watched content to localStorage:", e);
             }
         };
 
@@ -895,16 +895,24 @@
                 btn.innerHTML = 'Ver menos <i class="material-icons">expand_less</i>';
             }
         }
+        
+        /* @tweakable auto-mark as watched when playing */
+        const autoMarkWatchedOnPlay = true;
+        /* @tweakable show notification when marking as watched */
+        const showWatchedNotification = true;
 
-        /* @tweakable Direct href navigation without loading overlay */
         function playMovie(url) {
             if (url) {
-                // Mark the movie as watched
+                // Mark as watched
                 let watchedGlobal = getWatchedGlobal();
                 if (!watchedGlobal.includes(currentMovie.id)) {
                     watchedGlobal.push(currentMovie.id);
                     setWatchedGlobal(watchedGlobal);
-                    debugLog(2, `Added movie '${currentMovie.id}' to global watched list due to playback.`);
+                    debugLog(2, `Added movie '${currentMovie.title}' to watched list.`);
+                    
+                    if (showWatchedNotification) {
+                        showNotification('Marcado como visto', 'success');
+                    }
                 }
 
                 // Open URL directly as href

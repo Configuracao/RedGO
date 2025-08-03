@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFlixter - Mi Historial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            /* @tweakable main accent color */
+            --main-red: #e50914;
+            /* @tweakable background primary color (darkest) */
+            --bg-primary: #000000;
+            /* @tweakable background secondary color */
+            --bg-secondary: #0a0a0a;
+            /* @tweakable card background color */
+            --bg-card: #121212;
+            /* @tweakable border color for subtle divisions */
+            --border-subtle: rgba(255,255,255,0.08);
+            /* @tweakable text color for primary content */
+            --text-primary: #ffffff;
+            /* @tweakable text color for secondary content */
+            --text-secondary: #cccccc;
+            /* @tweakable grid columns for desktop */
+            --grid-columns: 6;
+            /* @tweakable gap between grid items */
+            --grid-gap: 16px;
+            /* @tweakable main container padding */
+            --main-padding: 20px;
+            /* @tweakable card border radius */
+            --card-radius: 12px;
+            /* @tweakable card hover scale */
+            --card-hover-scale: 1.05;
+            /* @tweakable page transition duration */
+            --transition-duration: 0.3s;
+            /* @tweakable watched indicator color */
+            --watched-color: #4CAF50;
+            /* @tweakable watched indicator size */
+            --watched-size: 24px;
+            /* @tweakable empty state text color */
+            --empty-text-color: #888888;
+            /* @tweakable loading spinner size */
+            --spinner-size: 40px;
+            /* @tweakable sorting option active color */
+            --sort-active-color: var(--main-red);
+            /* @tweakable sorting option hover color */
+            --sort-hover-color: rgba(229,9,20,0.1);
+            /* @tweakable watched date text size */
+            --watched-date-size: 0.85rem;
+            /* @tweakable watched date text color */
+            --watched-date-color: #aaa;
+            /* @tweakable clear history button hover color */
+            --clear-hover-color: #ff4757;
+            /* @tweakable clear history button padding */
+            --clear-padding: 12px 24px;
+            /* @tweakable clear history button font size */
+            --clear-font-size: 0.9rem;
+            /* @tweakable sort dropdown background */
+            --sort-bg: #1a1a1a;
+            /* @tweakable sort dropdown border */
+            --sort-border: 1px solid rgba(255,255,255,0.1);
+            /* @tweakable sort dropdown radius */
+            --sort-radius: 8px;
+            /* @tweakable sort dropdown padding */
+            --sort-padding: 8px 12px;
+            /* @tweakable responsive breakpoint for mobile */
+            --mobile-breakpoint: 480px;
+            /* @tweakable responsive breakpoint for tablet */
+            --tablet-breakpoint: 768px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px var(--main-padding);
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-subtle);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .back-btn {
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: white;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all var(--transition-duration);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-btn:hover {
+            background: var(--main-red);
+            transform: scale(1.1);
+        }
+
+        .page-title {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff4757, var(--main-red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Sort Controls */
+        .sort-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .sort-label {
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .sort-select {
+            background: var(--sort-bg);
+            border: var(--sort-border);
+            color: var(--text-primary);
+            padding: var(--sort-padding);
+            border-radius: var(--sort-radius);
+            font-size: 14px;
+            cursor: pointer;
+            transition: all var(--transition-duration);
+        }
+
+        .sort-select:hover {
+            border-color: var(--main-red);
+        }
+
+        .sort-select:focus {
+            outline: none;
+            border-color: var(--main-red);
+        }
+
+        .clear-btn {
+            background: transparent;
+            border: 1px solid var(--watched-color);
+            color: var(--watched-color);
+            padding: var(--clear-padding);
+            border-radius: var(--card-radius);
+            font-size: var(--clear-font-size);
+            cursor: pointer;
+            transition: all var(--transition-duration);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .clear-btn:hover {
+            background: var(--watched-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .main-container {
+            padding: var(--main-padding);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Grid Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(var(--grid-columns), 1fr);
+            gap: var(--grid-gap);
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Movie Card */
+        .movie-card {
+            position: relative;
+            aspect-ratio: 2/3;
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all var(--transition-duration);
+            background: var(--bg-card);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .movie-card:hover {
+            transform: scale(var(--card-hover-scale));
+            box-shadow: 0 8px 30px rgba(229,9,20,0.4);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-duration);
+        }
+
+        .movie-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .movie-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform var(--transition-duration);
+        }
+
+        .movie-card:hover .movie-info {
+            transform: translateY(0);
+        }
+
+        .movie-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .movie-year {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .watched-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 50%;
+            padding: 4px;
+            color: var(--watched-color);
+            font-size: var(--watched-size);
+            z-index: 10;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .watched-date {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: var(--watched-date-size);
+            color: var(--watched-date-color);
+            z-index: 10;
+        }
+
+        /* Loading */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .spinner {
+            width: var(--spinner-size);
+            height: var(--spinner-size);
+            border: 3px solid var(--bg-card);
+            border-top: 3px solid var(--main-red);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--empty-text-color);
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            color: var(--watched-color);
+            margin-bottom: 16px;
+        }
+
+        .empty-state-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .empty-state-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: var(--tablet-breakpoint)) {
+            :root {
+                --grid-columns: 4;
+                --main-padding: 16px;
+            }
+        }
+
+        @media (max-width: var(--mobile-breakpoint)) {
+            :root {
+                --grid-columns: 3;
+                --main-padding: 12px;
+                --grid-gap: 12px;
+            }
+            .header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .sort-controls {
+                justify-content: center;
+                margin-top: 12px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            :root {
+                --grid-columns: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <button class="back-btn" onclick="history.back()">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            <h1 class="page-title">Mi Historial</h1>
+        </div>
+        <div class="sort-controls">
+            <span class="sort-label">Ordenar por:</span>
+            <select class="sort-select" id="sortSelect">
+                <option value="recent">Más recientes primero</option>
+                <option value="oldest">Más antiguas primero</option>
+                <option value="title">Título A-Z</option>
+                <option value="year">Año</option>
+            </select>
+            <button class="clear-btn" id="clearBtn">
+                <i class="material-icons">delete_sweep</i>
+                Limpiar historial
+            </button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Cargando historial...</p>
+        </div>
+        
+        <div id="contentGrid" class="content-grid"></div>
+    </main>
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+        import { getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAEbMY3zYyxIjTREF-0kO-eK7soHAyy084",
+            authDomain: "web-de-peli.firebaseapp.com",
+            databaseURL: "https://web-de-peli-default-rtdb.firebaseio.com",
+            projectId: "web-de-peli",
+            storageBucket: "web-de-peli.firebasestorage.app",
+            messagingSenderId: "94710081234",
+            appId: "1:94710081234:web:4a106a5e25bd50e6c56f0b"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Constants
+        /* @tweakable Local storage key for watched content identification */
+        const WATCHED_GLOBAL_STORAGE_KEY = 'cineflixter-watched-global';
+        /* @tweakable Local storage key for watched timestamps */
+        const WATCHED_TIMESTAMPS_KEY = 'cineflixter-watched-timestamps';
+
+        let allContent = [];
+        let watchedItems = [];
+        let watchedTimestamps = {};
+
+        // Load watched data
+        function loadWatchedData() {
+            try {
+                watchedItems = JSON.parse(localStorage.getItem(WATCHED_GLOBAL_STORAGE_KEY) || '[]');
+                watchedTimestamps = JSON.parse(localStorage.getItem(WATCHED_TIMESTAMPS_KEY) || '{}');
+            } catch (e) {
+                console.error("Error loading watched data:", e);
+                watchedItems = [];
+                watchedTimestamps = {};
+            }
+        }
+
+        // Save watched timestamp
+        function saveWatchedTimestamp(id) {
+            watchedTimestamps[id] = new Date().toISOString();
+            localStorage.setItem(WATCHED_TIMESTAMPS_KEY, JSON.stringify(watchedTimestamps));
+        }
+
+        // Sort content based on selection
+        function sortContent(content, sortBy) {
+            switch (sortBy) {
+                case 'recent':
+                    return content.sort((a, b) => {
+                        const timeA = watchedTimestamps[a.id] ? new Date(watchedTimestamps[a.id]).getTime() : 0;
+                        const timeB = watchedTimestamps[b.id] ? new Date(watchedTimestamps[b.id]).getTime() : 0;
+                        return timeB - timeA; // Most recent first
+                    });
+                case 'oldest':
+                    return content.sort((a, b) => {
+                        const timeA = watchedTimestamps[a.id] ? new Date(watchedTimestamps[a.id]).getTime() : 0;
+                        const timeB = watchedTimestamps[b.id] ? new Date(watchedTimestamps[b.id]).getTime() : 0;
+                        return timeA - timeB; // Oldest first
+                    });
+                case 'title':
+                    return content.sort((a, b) => a.title.localeCompare(b.title));
+                case 'year':
+                    return content.sort((a, b) => parseInt(b.year || 0) - parseInt(a.year || 0));
+                default:
+                    return content;
+            }
+        }
+
+        // Load content from Firebase
+        const contentsRef = ref(database, 'contenidos');
+        onValue(contentsRef, (snapshot) => {
+            const data = snapshot.value;
+            const contentGrid = document.getElementById('contentGrid');
+            const loading = document.getElementById('loading');
+
+            loadWatchedData();
+
+            if (!data) {
+                contentGrid.innerHTML = '<div class="empty-state"><i class="material-icons empty-state-icon">visibility_off</i><div class="empty-state-title">No hay contenido disponible</div><div class="empty-state-subtitle">Intenta más tarde</div></div>';
+                loading.style.display = 'none';
+                return;
+            }
+
+            // Map Firebase data
+            allContent = Object.keys(data).map(key => ({
+                id: key,
+                ...data[key]
+            }));
+
+            // Filter watched items
+            let watchedContent = allContent.filter(item => watchedItems.includes(item.id));
+
+            if (watchedContent.length === 0) {
+                contentGrid.innerHTML = '<div class="empty-state"><i class="material-icons empty-state-icon">history</i><div class="empty-state-title">Aún no has visto contenido</div><div class="empty-state-subtitle">Empieza a ver películas o series para que aparezcan aquí</div></div>';
+                loading.style.display = 'none';
+                return;
+            }
+
+            // Sort content
+            const sortSelect = document.getElementById('sortSelect');
+            watchedContent = sortContent(watchedContent, sortSelect.value);
+
+            loading.style.display = 'none');
+
+            // Render content
+            contentGrid.innerHTML = '';
+            watchedContent.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'movie-card';
+                card.onclick = () => {
+                    const targetPage = item.type === 'series' ? 'series.html' : 'películas.html';
+                    window.location.href = `${targetPage}?id=${item.id}`;
+                };
+                
+                // Show watched indicator and date
+                const watchedDate = watchedTimestamps[item.id] 
+                    ? new Date(watchedTimestamps[item.id]).toLocaleDateString('es-ES', {
+                        day: '2-digit',
+                        month: 'short'
+                    })
+                    : '';
+                
+                card.innerHTML = `
+                    <img src="${item.poster}" alt="${item.title}" loading="lazy">
+                    <div class="watched-indicator">
+                        <i class="material-icons">check_circle</i>
+                    </div>
+                    ${watchedDate ? `<div class="watched-date">${watchedDate}</div>` : ''}
+                    <div class="movie-info">
+                        <div class="movie-title">${item.title}</div>
+                        <div class="movie-year">${item.year || '—'}</div>
+                    </div>
+                `;
+                
+                contentGrid.appendChild(card);
+            });
+        });
+
+        // Event listeners
+        document.getElementById('sortSelect').addEventListener('change', (e) => {
+            onValue(contentsRef, (snapshot) => {
+                const data = snapshot.val();
+                if (!data) return;
+                
+                const content = Object.keys(data).map(key => ({
+                    id: key,
+                    ...data[key]
+                }));
+                
+                let watchedContent = content.filter(item => watchedItems.includes(item.id));
+                watchedContent = sortContent(watchedContent, e.target.value);
+                
+                const contentGrid = document.getElementById('contentGrid');
+                contentGrid.innerHTML = '';
+                watchedContent.forEach(item => {
+                    // Re-render with new sort
+                });
+            });
+        });
+
+        document.getElementById('clearBtn').addEventListener('click', async () => {
+            if (confirm('¿Estás seguro de que quieres limpiar todo tu historial?')) {
+                localStorage.removeItem(WATCHED_GLOBAL_STORAGE_KEY);
+                localStorage.removeItem(WATCHED_TIMESTAMPS_KEY);
+                location.reload();
+            }
+        });
+    </script>
+</body>
+</html>

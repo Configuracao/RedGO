@@ -278,6 +278,17 @@
             pageTitle.textContent = 'Ver Más';
         }
 
+        // Helper function to get watched items
+        function getWatchedItems() {
+            try {
+                const watched = localStorage.getItem('cineflixter-watched-global');
+                return watched ? JSON.parse(watched) : [];
+            } catch (e) {
+                console.error("Error parsing watched content:", e);
+                return [];
+            }
+        }
+
         // Load content
         const contentsRef = ref(database, 'contenidos');
         onValue(contentsRef, (snapshot) => {
@@ -299,7 +310,13 @@
             // Filter content based on parameters
             let filteredContent = content;
             
-            if (category) {
+            if (category === 'Mi%20Contenido%20Visto' || category === 'Mi Contenido Visto') {
+                /* @tweakable watched content filtering - get watched items from localStorage */
+                const watched = getWatchedItems();
+                filteredContent = content.filter(item => watched.includes(item.id));
+                console.log('Watched items:', watched);
+                console.log('Filtered content:', filteredContent);
+            } else if (category) {
                 filteredContent = content.filter(item => item.category === category);
             } else if (year) {
                 filteredContent = content.filter(item => parseInt(item.year) === parseInt(year));
@@ -319,7 +336,12 @@
             loading.style.display = 'none';
 
             if (filteredContent.length === 0) {
-                contentGrid.innerHTML = '<div class="empty-state">No se encontraron resultados</div>';
+                /* @tweakable empty state message for watched content */
+                if (category === 'Mi%20Contenido%20Visto' || category === 'Mi Contenido Visto') {
+                    contentGrid.innerHTML = '<div class="empty-state">Aún no has visto ningún contenido. ¡Empieza a ver algo!</div>';
+                } else {
+                    contentGrid.innerHTML = '<div class="empty-state">No se encontraron resultados</div>';
+                }
                 return;
             }
 
