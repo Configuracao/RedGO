@@ -1130,6 +1130,11 @@
                         if (!watchedGlobal.includes(currentSeries.id)) {
                             watchedGlobal.push(currentSeries.id);
                             setWatchedGlobal(watchedGlobal);
+                            
+                            /* @tweakable save timestamp when marking series as watched */
+                            const watchedTimestamps = JSON.parse(localStorage.getItem('cineflixter-watched-timestamps') || '{}');
+                            watchedTimestamps[currentSeries.id] = new Date().toISOString();
+                            localStorage.setItem('cineflixter-watched-timestamps', JSON.stringify(watchedTimestamps));
                         }
                         
                         closeModal(); // Close the episode selection modal

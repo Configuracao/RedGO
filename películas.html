@@ -910,6 +910,11 @@
                     setWatchedGlobal(watchedGlobal);
                     debugLog(2, `Added movie '${currentMovie.title}' to watched list.`);
                     
+                    /* @tweakable save timestamp when marking as watched */
+                    const watchedTimestamps = JSON.parse(localStorage.getItem('cineflixter-watched-timestamps') || '{}');
+                    watchedTimestamps[currentMovie.id] = new Date().toISOString();
+                    localStorage.setItem('cineflixter-watched-timestamps', JSON.stringify(watchedTimestamps));
+                    
                     if (showWatchedNotification) {
                         showNotification('Marcado como visto', 'success');
                     }
