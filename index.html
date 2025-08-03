@@ -188,6 +188,8 @@
         .content-section {
             margin-bottom: var(--section-margin);
             padding: 0 var(--section-padding);
+            /* @tweakable ensures last section has enough bottom clearance */
+            scroll-margin-bottom: 120px;
         }
         
         .section-header {
@@ -255,6 +257,8 @@
             padding-bottom: 20px; 
             scrollbar-width: thin;
             scrollbar-color: var(--main-red) transparent;
+            /* @tweakable adds extra bottom padding to prevent clipping */
+            margin-bottom: 20px; 
         }
         
         .horizontal-scroll::-webkit-scrollbar {
@@ -574,6 +578,8 @@
             gap: 16px; 
             padding: 30px var(--section-padding);
             padding-bottom: 80px;
+            /* @tweakable extra bottom padding on category grid to prevent overlap */
+            padding-bottom: 120px;
         }
         
         /* Animación de entrada */
@@ -1031,6 +1037,8 @@
             .category-grid {
                 grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
                 padding: 20px var(--section-padding);
+                /* @tweakable extra bottom padding on category grid to prevent overlap */
+                padding-bottom: 120px;
             }
 
             .request-modal-content {
@@ -1363,7 +1371,8 @@
             function openCategoryPage(categoryName, itemsToShow = null) {
                 const effectiveItems = itemsToShow || allContent.filter(item => item.category === categoryName);
                 debugLog(2, `[OPEN CATEGORY] Opening category page for "${categoryName}" with ${effectiveItems.length} items.`);
-                renderFullPageGrid(effectiveItems, categoryName);
+                /* @tweakable redirect to vermas.html instead of using overlay */
+                window.location.href = `vermas.html?category=${encodeURIComponent(categoryName)}`;
             }
             
             function closeCategoryPage() {
@@ -1680,8 +1689,8 @@
                 }
 
                 debugLog(2, `[VIEW MORE] "Estrenos del Año" filter resulted in ${yearReleasesForViewMore.length} items.`);
-                const yearReleasesCatalogTitle = `Estrenos del Año ${currentYear}`;
-                openCategoryPage(yearReleasesCatalogTitle, yearReleasesForViewMore);
+                /* @tweakable redirect to vermas.html instead of using overlay */
+                window.location.href = `vermas.html?year=${currentYear}`;
             };
             
             function openRequestModal() {
@@ -1717,8 +1726,8 @@
             filterMoviesBtn.addEventListener("click", e => { 
                 e.preventDefault(); 
                 currentFilter = 'movies'; 
-                const moviesCatalogTitle = 'Películas';
-                openCategoryPage(moviesCatalogTitle, allContent.filter(item => item.type === 'movie')); 
+                /* @tweakable redirect to vermas.html for movies */
+                window.location.href = 'vermas.html?type=movies';
                 sideMenu.classList.remove("active"); 
                 overlay.classList.remove("active"); 
             });
@@ -1726,8 +1735,8 @@
             filterSeriesBtn.addEventListener("click", e => { 
                 e.preventDefault(); 
                 currentFilter = 'series'; 
-                const seriesCatalogTitle = 'Series';
-                openCategoryPage(seriesCatalogTitle, allContent.filter(item => item.type === 'series')); 
+                /* @tweakable redirect to vermas.html for series */
+                window.location.href = 'vermas.html?type=series';
                 sideMenu.classList.remove("active"); 
                 overlay.classList.remove("active"); 
             });
@@ -1736,7 +1745,8 @@
                 e.preventDefault(); 
                 currentFilter = 'favorites'; 
                 const favorites = getFavorites();
-                openCategoryPage('Mis Favoritos', allContent.filter(item => favorites.includes(item.id))); 
+                /* @tweakable redirect to vermas.html for favorites */
+                window.location.href = 'vermas.html?category=Mis%20Favoritos';
                 sideMenu.classList.remove("active"); 
                 overlay.classList.remove("active"); 
             });
@@ -1745,7 +1755,8 @@
                 e.preventDefault();
                 currentFilter = 'watched';
                 const watched = getWatchedGlobal();
-                openCategoryPage('Mi Contenido Visto', allContent.filter(item => watched.includes(item.id)));
+                /* @tweakable redirect to vermas.html for watched */
+                window.location.href = 'vermas.html?category=Mi%20Contenido%20Visto';
                 sideMenu.classList.remove("active");
                 overlay.classList.remove("active");
             });
