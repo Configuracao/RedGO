@@ -489,7 +489,7 @@
             padding: 16px 22px; 
             border: 2px solid var(--input-border-color);
             border-radius: 30px; 
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.08);
             color: var(--text-primary);
             font-size: 17px;
             font-weight: 500;
@@ -1413,12 +1413,12 @@
             function renderYearReleases(content) { 
                 recentMoviesContainer.innerHTML = '';
                 
-                let yearReleases = content.filter(item => parseInt(item.year) === currentYear);
+                let yearReleases = content.filter(item => parseInt(item.year) === 2025); // Filter to current year only
                 if (yearReleases.length === 0) {
-                    yearReleases = content.filter(item => parseInt(item.year) === currentYear - 1);
-                    debugLog(2, `[ESTRENOS DEL AÑO] No releases found for ${currentYear}. Falling back to ${currentYear - 1} releases: ${yearReleases.length} items.`);
+                    yearReleases = content.filter(item => parseInt(item.year) === 2025); // Fallback to 2025
+                    debugLog(2, `[ESTRENOS DEL AÑO] No releases found for ${2025}. Using ${2025} releases: ${yearReleases.length} items.`);
                 } else {
-                    debugLog(2, `[ESTRENOS DEL AÑO] Found ${yearReleases.length} releases for ${currentYear}.`);
+                    debugLog(2, `[ESTRENOS DEL AÑO] Found ${yearReleases.length} releases for ${2025}.`);
                 }
 
                 yearReleases.sort((a, b) => {
@@ -1496,16 +1496,21 @@
 
             function renderHeroSlider(content) {
                 heroSliderContainer.innerHTML = ''; 
-                const latestContent = [...content].sort((a, b) => {
-                    const dateA = a.dateAdded ? new Date(a.dateAdded).getTime() : parseInt(a.id, 10);
-                    const dateB = b.dateAdded ? new Date(b.dateAdded).getTime() : parseInt(b.id, 10);
-                    return dateB - dateA; 
-                }).slice(0, numberOfHeroSliderItems);
+                const currentYear = new Date().getFullYear();
+                /* @tweakable Filter to show only content from this year */
+                const latestContent = [...content]
+                    .filter(item => parseInt(item.year) === currentYear)
+                    .sort((a, b) => {
+                        const dateA = a.dateAdded ? new Date(a.dateAdded).getTime() : parseInt(a.id, 10);
+                        const dateB = b.dateAdded ? new Date(b.dateAdded).getTime() : parseInt(b.id, 10);
+                        return dateB - dateA; 
+                    })
+                    .slice(0, numberOfHeroSliderItems);
 
-                debugLog(2, `[HERO SLIDER] Rendering ${latestContent.length} latest items for hero slider.`);
+                debugLog(2, `[HERO SLIDER] Rendering ${latestContent.length} items from year ${currentYear} for hero slider.`);
 
                 if (latestContent.length === 0) {
-                    heroSliderContainer.innerHTML = '<p style="text-align: center; color: #bbb; padding: 40px; width: 100%;">No hay estrenos recientes disponibles para el slider.</p>';
+                    heroSliderContainer.innerHTML = '<p style="text-align: center; color: #bbb; padding: 40px; width: 100%;">No hay estrenos de este año disponibles para el slider.</p>';
                 } else {
                     latestContent.forEach(item => {
                         heroSliderContainer.appendChild(createSliderItem(item));
@@ -1671,7 +1676,7 @@
 
                 let yearReleasesForViewMore = contentForViewMore.filter(item => parseInt(item.year) === currentYear);
                 if (yearReleasesForViewMore.length === 0) {
-                    yearReleasesForViewMore = contentForViewMore.filter(item => parseInt(item.year) === currentYear - 1);
+                    yearReleasesForViewMore = contentForViewMore.filter(item => parseInt(item.year) === 2025);
                 }
 
                 debugLog(2, `[VIEW MORE] "Estrenos del Año" filter resulted in ${yearReleasesForViewMore.length} items.`);
