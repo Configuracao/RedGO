@@ -810,6 +810,9 @@
         const getFavorites = () => JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY) || '[]');
         const setFavorites = arr => localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(arr));
 
+        /* @tweakable display episode title or just "Cap X" */
+        const showEpisodeTitles = false; /* Set to false to hide episode titles */
+
         // NEW: Watched Episodes
         /* @tweakable Local storage key for watched episodes */
         const WATCHED_EPISODES_STORAGE_KEY = 'cineflixter-watched-episodes';
@@ -883,7 +886,77 @@
             setWatchedEpisodes(watchedEpisodes);
         }
 
+        // Load series data from Firebase
+        /* @tweakable Firebase data loading timeout in milliseconds */
+        const FIREBASE_TIMEOUT = 10000;
+        
+        function loadSeriesData() {
+            debugLog(2, 'Starting to load series data from Firebase...');
+            
+            const timeoutId = setTimeout(() => {
+                debugLog(1, 'Firebase loading timeout reached');
+                document.getElementById('loading').style.display = 'none';
+                showNotification('Error: Tiempo de espera agotado al cargar la serie.', 'error');
+            }, FIREBASE_TIMEOUT);
+
+            onValue(ref(db, 'contenidos'), snap => {
+                clearTimeout(timeoutId);
+                const data = snap.val();
+                debugLog(2, 'Firebase data received:', data);
+                
+                if (!data) {
+                    document.getElementById('loading').style.display = 'none';
+                    showNotification('No se encontró contenido.', 'error');
+                    debugLog(1, 'No data received from Firebase');
+                    return;
+                }
+                
+                // Map Firebase keys to 'id' property for consistent access
+                allContent = Object.keys(data).map(key => ({
+                    id: key,
+                    ...data[key]
+                }));
+                debugLog(2, 'All content processed:', allContent.length, 'items');
+                
+                currentSeries = allContent.find(s => s.id === id);
+                debugLog(2, `Looking for series with ID '${id}'. Found:`, currentSeries);
+                
+                if (!currentSeries) {
+                    document.getElementById('loading').style.display = 'none';
+                    showNotification('La serie no fue encontrada.', 'error');
+                    debugLog(1, `Series with ID '${id}' not found in fetched data.`);
+                    return;
+                }
+                
+                // Validate that the retrieved item is indeed a series
+                if (currentSeries.type && currentSeries.type !== 'series') {
+                    debugLog(1, `Warning: Item with ID '${id}' is of type '${currentSeries.type}' but expected 'series'. Redirecting to appropriate page.`);
+                    if (currentSeries.type === 'movie') {
+                        window.location.href = `películas.html?id=${id}`;
+                        return;
+                    }
+                }
+
+                debugLog(2, 'Rendering series data...');
+                renderSeries(currentSeries);
+                renderSimilar(currentSeries);
+                document.getElementById('loading').style.display = 'none';
+                debugLog(2, 'Series loading completed successfully');
+                
+            }, (error) => {
+                clearTimeout(timeoutId);
+                console.error("Error loading content from Firebase:", error);
+                showNotification('Error al cargar el contenido desde la base de datos.', 'error');
+                document.getElementById('loading').style.display = 'none';
+                debugLog(1, 'Firebase error:', error);
+            });
+        }
+
+        // Initialize data loading
+        loadSeriesData();
+
         function renderSeries(series) {
+            debugLog(2, 'Rendering series:', series.title);
             document.title = series.title;
             
             // Hero background
@@ -901,6 +974,7 @@
             
             // Update favorite button
             updateFavoriteButton();
+            debugLog(2, 'Series rendering completed');
         }
 
         function renderSimilar(series) {
@@ -1017,10 +1091,14 @@
                     // Generate a unique ID for each episode for tracking watched status
                     const episodeIdKey = `${currentSeries.id}-${season.season_number}-${episode.episode_number}`;
                     
+                    const episodeDisplayTitle = showEpisodeTitles 
+                        ? episode.title 
+                        : '';
+                    
                     episodeItem.innerHTML = `
                         <div class="episode-text">
-                            <span class="episode-number">E${episode.episode_number}</span>
-                            <span class="episode-title">${episode.title}</span>
+                            <span class="episode-number">Cap ${episode.episode_number}</span>
+                            ${episodeDisplayTitle ? `<span class="episode-title">${episode.title}</span>` : ''}
                         </div>
                         <div class="episode-actions">
                             <i class="material-icons watched-toggle-icon"></i>
