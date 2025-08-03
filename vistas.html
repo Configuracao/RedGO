@@ -373,7 +373,8 @@
             }
         }
 
-        // Delete item from watched
+        // Make deleteItem available globally
+        /* @tweakable function to delete item from watched list */
         function deleteItem(id) {
             // Remove from watched items
             watchedItems = watchedItems.filter(itemId => itemId !== id);
@@ -383,17 +384,22 @@
             delete watchedTimestamps[id];
             localStorage.setItem(WATCHED_TIMESTAMPS_KEY, JSON.stringify(watchedTimestamps));
             
-            // Remove from display
+            // Remove from display with animation
             const card = document.querySelector(`[data-id="${id}"]`);
             if (card) {
+                /* @tweakable animation duration for card removal in milliseconds */
+                const animationDuration = 300;
                 card.style.transform = 'scale(0.8)';
                 card.style.opacity = '0';
                 setTimeout(() => {
                     card.remove();
                     checkEmptyState();
-                }, 300);
+                }, animationDuration);
             }
         }
+
+        // Expose deleteItem to global scope
+        window.deleteItem = deleteItem;
 
         // Check if empty
         function checkEmptyState() {
