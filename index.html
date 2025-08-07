@@ -1119,7 +1119,8 @@
             <a href="#" id="filter-series" class="side-menu-item"><i class="material-icons">tv</i><span>Series</span></a>
             <a href="#" id="filter-watched" class="side-menu-item"><i class="material-icons">visibility</i><span>Visto</span></a>
             <a href="https://t.me/+ho9D0p6Elu5hOGNh" class="side-menu-item"><i class="material-icons">telegram</i><span>Telegram</span></a>
-            <a href="#" id="request-content-btn" class="side-menu-item"><i class="material-icons">add_comment</i><span>Solicitar Película/Serie</span></a>
+            
+            <a href="solicitud.html" id="request-content-btn" class="side-menu-item"><i class="material-icons">add_comment</i><span>Solicitar Película/Serie</span></a>
         </div>
     </div>
     <div class="overlay"></div>
@@ -1707,9 +1708,10 @@
 
             requestContentBtn.addEventListener('click', (e) => {
                 e.preventDefault();
+                /* @tweakable redirect to solicitud.html instead of opening modal */
+                window.location.href = 'solicitud.html';
                 sideMenu.classList.remove("active");
                 overlay.classList.remove("active");
-                openRequestModal();
             });
 
             requestModalClose.addEventListener('click', closeRequestModal);
