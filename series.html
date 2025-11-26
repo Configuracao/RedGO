@@ -2,1189 +2,399 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Cargando...</title>
+    
+    <script>
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('reloaded') !== 'true') {
+                urlParams.set('reloaded', 'true');
+                window.location.search = urlParams.toString();
+            }
+        })();
+    </script>
+
     <style>
         :root {
-            /* @tweakable brand color */
-            --brand-red: #e50914;
-            /* @tweakable background dark color (overall darkest background) */
-            --bg-dark: #000000;
-            /* @tweakable background gray color (slightly lighter than dark for depth) */
-            --bg-gray: #0a0a0a; /* Darker */
-            /* @tweakable background light color (for elements like season headers) */
-            --bg-light: #1c1c1c; /* Darker */
-            /* @tweakable extra small spacing */
-            --spacing-xs: 4px;
-            /* @tweakable small spacing */
-            --spacing-sm: 8px;
-            /* @tweakable medium spacing for general padding */
-            --spacing-md: 12px;
-            /* @tweakable large spacing for section padding */
-            --spacing-lg: 20px;
-            /* @tweakable extra large spacing for main content padding */
-            --spacing-xl: 24px;
-            /* @tweakable extra extra large spacing for hero padding */
-            --spacing-xxl: 32px;
-            /* @tweakable border radius */
-            --radius-sm: 4px;
-            --radius-md: 8px;
-            --radius-lg: 12px;
-            /* @tweakable shadows */
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.6);
-            /* @tweakable transitions */
-            --transition-fast: 0.2s ease;
-            --transition-medium: 0.4s ease;
-            /* @tweakable hero section height */
-            --hero-height: 60vh;
-            /* @tweakable similar movies grid desktop column count */
-            --similar-grid-columns: 5;
-            /* @tweakable gap between similar content cards */
-            --similar-gap: 8px;
-            /* @tweakable synopsis collapsed height */
-            --synopsis-collapsed-height: 3.6em;
-            --synopsis-expanded: none;
-            /* @tweakable card hover scale */
-            --hover-scale: 1.05;
-            /* @tweakable modal overlay opacity */
-            --modal-overlay: 0.9;
-            /* @tweakable button sizes */
-            --btn-padding-y: 12px;
-            --btn-padding-x: 24px;
-            --btn-font-size: 1rem;
-            /* @tweakable synopsis positioning */
-            --synopsis-margin-top: 20px;
-            --synopsis-line-height: 1.6;
-            /* @tweakable synopsis animation duration */
-            --synopsis-transition-duration: 0.4s;
-            /* @tweakable playback modal animation duration */
-            --modal-animation-duration: 0.3s;
-            /* @tweakable notification duration in ms */
-            --notification-duration: 3000ms;
-            /* @tweakable color for watched episodes */
-            --watched-color: #4CAF50; /* A shade of green */
-            /* @tweakable size of the watched/unwatched icon */
-            --watched-icon-size: 24px;
+            /* CAMBIO: Se confirma el rojo como color principal */
+            --main-red: #E50914;
+            --background-color: #121212;
+            --surface-color: #1f1f1f;
+            --on-surface-color: #FFFFFF;
+            --on-surface-variant-color: #BDBDBD;
+            --border-color: #2d2d2d;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        body, html {
+            margin: 0; padding: 0; font-family: 'Manrope', sans-serif;
+            background-color: var(--background-color); color: var(--on-surface-color);
+        }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        a { text-decoration: none; color: inherit; }
+
+        .movie-banner {
+            position: relative; min-height: 350px; display: flex; align-items: flex-end;
+            gap: 20px; padding: 20px; background-size: cover; background-position: center 20%;
+        }
+        .movie-banner::after {
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(to top, var(--background-color) 10%, rgba(18, 18, 18, 0.5) 50%, transparent 100%);
+            z-index: 1;
+        }
+        .movie-poster, .movie-info, .top-action-button { position: relative; z-index: 2; }
+        .movie-poster { flex-shrink: 0; width: 180px; }
+        .movie-poster img { width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); display: block; }
+        .movie-info h1 { font-size: 2.2rem; font-weight: 700; margin: 0 0 10px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .movie-meta { display: flex; flex-wrap: wrap; gap: 15px; color: var(--on-surface-variant-color); font-size: 0.95rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+        .movie-meta span { display: inline-flex; align-items: center; gap: 6px; }
+        .movie-meta .material-icons { font-size: 1em; }
+        
+        .main-content { background-color: var(--background-color); padding: 20px; }
+        .main-content h2 { font-size: 1.2rem; font-weight: 700; margin-top: 0; margin-bottom: 8px; }
+        #movie-synopsis { color: var(--on-surface-variant-color); margin: 0; font-size: 1rem; }
+        
+        .top-action-button { position: absolute; top: 16px; color: #fff; background: transparent; border-radius: 50%; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; border: none; text-decoration: none; transition: transform 0.2s, color 0.2s; }
+        .back-button { left: 16px; }
+        #favorite-btn { right: 16px; }
+        #favorite-btn.is-favorite { color: var(--main-red); }
+
+        /* CAMBIO: Se añade la animación de pulso al botón de episodios */
+        @keyframes pulse-animation {
+            0% { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+            50% { transform: scale(1.08); box-shadow: 0 8px 20px rgba(0,0,0,0.6); }
+            100% { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+        }
+        .fab { 
+            position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; 
+            background-color: var(--main-red); border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4); 
+            cursor: pointer; z-index: 998;
+            animation: pulse-animation 2s infinite ease-in-out;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-dark);
-            color: white;
-            overflow-x: hidden;
+        #episode-selector-view {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--background-color); z-index: 1002;
+            display: flex; flex-direction: column; transform: translateX(100%);
+            transition: transform 0.35s ease-out;
         }
-
-        /* Loading */
-        .loader {
-            position: fixed;
-            inset: 0;
-            background: var(--bg-dark);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
+        #episode-selector-view.active { transform: translateX(0); }
+        .selector-header {
+            display: flex; align-items: center; padding: 12px;
+            gap: 12px; background-color: #181818; flex-shrink: 0;
         }
+        .selector-back-button { background: none; border: none; color: white; padding: 8px; cursor: pointer; display: flex; }
+        .selector-title { font-size: 1.25rem; font-weight: 600; margin: 0; }
+        .season-tabs {
+            display: flex; overflow-x: auto; background-color: #181818;
+            border-bottom: 1px solid var(--border-color); flex-shrink: 0;
+            padding: 0 8px; -ms-overflow-style: none; scrollbar-width: none;
+        }
+        .season-tabs::-webkit-scrollbar { display: none; }
+        .season-tab {
+            padding: 14px 16px; cursor: pointer; color: var(--on-surface-variant-color);
+            font-weight: 600; font-size: 0.9rem; white-space: nowrap;
+            border-bottom: 3px solid transparent; transition: color 0.2s ease, border-color 0.2s ease;
+        }
+        .season-tab.active { color: var(--on-surface-color); border-bottom-color: var(--main-red); }
+        .episode-list { list-style: none; margin: 0; padding: 0; overflow-y: auto; flex-grow: 1; }
+        .episode-item {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .episode-play-link { flex-grow: 1; padding: 16px; cursor: pointer; font-weight: 600; }
+        .episode-cast-button {
+            background: none; border: none; color: var(--on-surface-variant-color);
+            cursor: pointer; padding: 16px;
+            transition: color 0.2s; display: inline-flex; align-items: center;
+        }
+        
+        #playback-modal {
+            position: fixed; top: 50%; left: 50%;
+            transform: translate(-50%, -50%) scale(0.95); background-color: #2c2c2e;
+            border-radius: 12px; z-index: 1005;
+            box-shadow: 0 12px 17px 2px rgba(0,0,0,0.14), 0 5px 22px 4px rgba(0,0,0,0.12), 0 7px 8px -4px rgba(0,0,0,0.2);
+            opacity: 0; visibility: hidden; transition: transform 0.3s ease, opacity 0.3s ease;
+            display: flex; flex-direction: column; align-items: center; padding: 24px;
+        }
+        #playback-modal.is-active { transform: translate(-50%, -50%) scale(1); opacity: 1; visibility: visible; }
+        body.player-active { overflow: hidden; }
 
         .spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid var(--bg-light);
-            border-top: 3px solid var(--brand-red);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
+            height: 48px; width: 48px; animation: rotate 2s linear infinite;
+            transform-origin: center center;
+        }
+        .spinner-path {
+            stroke-dasharray: 1, 200; stroke-dashoffset: 0; stroke: var(--main-red);
+            stroke-linecap: round; animation: dash 1.5s ease-in-out infinite;
+        }
+        @keyframes rotate { 100% { transform: rotate(360deg); } }
+        @keyframes dash {
+            0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; }
+            50% { stroke-dasharray: 89, 200; stroke-dashoffset: -35px; }
+            100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; }
         }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Navigation */
-        .nav-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            padding: var(--spacing-md);
-            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
-        }
-
-        .back-btn {
-            width: 36px;
-            height: 36px;
-            background: rgba(0,0,0,0.6);
-            border: none;
-            border-radius: 50%;
-            color: white;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all var(--transition-fast);
-        }
-
-        .back-btn:hover {
-            background: rgba(255,255,255,0.2);
-            transform: scale(var(--hover-scale));
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: var(--hero-height);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            align-items: end;
-            padding-bottom: var(--spacing-xxl);
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                180deg,
-                transparent 40%,
-                rgba(0,0,0,0.8) 100%
-            );
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 800px;
-            padding: 0 var(--spacing-md);
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: var(--spacing-md);
-            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
-        }
-
-        .hero-meta {
-            display: flex;
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-lg);
-            font-size: 0.9rem;
-            color: #bbb;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .hero-meta span {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-            /* @tweakable spacing between icon and text */
-            --meta-icon-gap: 4px;
-        }
-
-        .hero-meta span:not(:last-child)::after {
-            content: '•';
-            margin-left: var(--spacing-sm);
-            color: #666;
-            margin-right: 0;
-        }
-
-        /* @tweakable meta icon styles */
-        .meta-icon {
-            font-size: 1rem;
-            color: var(--brand-red);
-            /* @tweakable meta icon vertical alignment */
-            --meta-icon-align: middle;
-        }
-
-        /* Buttons */
-        .actions {
-            display: flex;
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-            padding: var(--btn-padding-y) var(--btn-padding-x);
-            border: none;
-            border-radius: var(--radius-sm);
-            font-size: var(--btn-font-size);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all var(--transition-fast);
-        }
-
-        .btn-primary {
-            background: var(--brand-red);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #f61218;
-            transform: scale(var(--hover-scale));
-        }
-
-        .btn-secondary {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            backdrop-filter: blur(8px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255,255,255,0.3);
-            transform: scale(var(--hover-scale));
-        }
-
-        /* Synopsis */
-        .synopsis-container {
-            margin-top: var(--synopsis-margin-top);
-            padding: 0 var(--spacing-md);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .synopsis {
-            font-size: 1rem;
-            line-height: var(--synopsis-line-height);
-            color: #ddd;
-            /* @tweakable line clamp for collapsed state */
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            transition: max-height var(--synopsis-transition-duration);
-            max-height: var(--synopsis-collapsed-height);
-        }
-
-        .synopsis.expanded {
-            -webkit-line-clamp: unset;
-            max-height: 1000px; /* Large enough value to show all content */
-        }
-
-        .expand-btn {
-            background: none;
-            border: none;
-            color: var(--brand-red);
-            cursor: pointer;
-            font-size: 0.9rem;
-            margin-top: var(--spacing-sm);
-            transition: all var(--transition-fast);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-        }
-
-        .expand-btn:hover {
-            color: #ff4757;
-        }
+        #toast-container { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 2000; }
+        .toast { background-color: #323232; color: #fff; padding: 12px 20px; border-radius: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); opacity: 0; transform: translateY(20px); transition: opacity 0.3s ease, transform 0.3s ease; font-size: 0.9rem; }
+        .toast.show { opacity: 1; transform: translateY(0); }
         
-        /* @tweakable expand button active state */
-        .expand-btn:active {
-            transform: translateY(1px);
-            color: #fff;
-        }
-
-        /* Main Content (for Similar Series, if added) */
-        .main-content {
-            padding: var(--spacing-xl) var(--spacing-md);
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: var(--spacing-lg);
-        }
-
-        /* Similar Movies/Series Grid */
-        .similar-grid {
-            display: grid;
-            grid-template-columns: repeat(var(--similar-grid-columns), 1fr);
-            gap: var(--similar-gap);
-            /* @tweakable responsive grid */
-        }
-
-        @media (max-width: 1200px) {
-            .similar-grid { 
-                /* @tweakable similar series grid for large desktops/laptops */
-                grid-template-columns: repeat(4, 1fr); 
-            }
-        }
-
-        @media (max-width: 768px) {
-            .similar-grid { 
-                /* @tweakable similar series grid for tablets */
-                grid-template-columns: repeat(3, 1fr); 
-            }
-        }
-
-        @media (max-width: 480px) {
-            .similar-grid { 
-                /* @tweakable similar series grid for mobile phones */
-                grid-template-columns: repeat(2, 1fr); 
-            }
-        }
-
-        .movie-card { /* Renamed from movie-card to content-card logically */
-            flex: 0 0 180px;
-            position: relative;
-            aspect-ratio: 2/3;
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            cursor: pointer;
-            transition: all var(--transition-medium);
-            background: var(--bg-gray);
-            /* @tweakable similar card size */
-            min-height: 150px;
-        }
-
-        .movie-card:hover {
-            transform: scale(var(--hover-scale));
-            box-shadow: var(--shadow-md);
-        }
-
-        .movie-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform var(--transition-medium);
-        }
-
-        .movie-card:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Modal */
-        .modal {
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,var(--modal-overlay));
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            animation: fadeIn var(--modal-animation-duration) ease;
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background: var(--bg-gray);
-            border-radius: var(--radius-md);
-            padding: var(--spacing-lg);
-            /* @tweakable max-width for series modal to accommodate episode lists */
-            max-width: 600px; 
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-            animation: slideUp var(--modal-animation-duration) ease;
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: var(--spacing-md);
-            border-bottom: 1px solid var(--bg-light);
-            padding-bottom: var(--spacing-md);
-        }
-
-        .modal-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .close-btn {
-            background: none;
-            border: none;
-            color: #bbb;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: color var(--transition-fast);
-        }
-
-        .close-btn:hover {
-            color: white;
-        }
-
-        /* Episode List Specific Styles (adapted from Materialize Collapsible) */
-        .episode-list-container {
-            margin-top: var(--spacing-md);
-        }
-        .season-collapsible {
-            border: none;
-            box-shadow: none;
-        }
-        .season-header {
-            background-color: var(--bg-light);
-            color: white;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-            padding: var(--spacing-md) var(--spacing-lg);
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            border-radius: var(--radius-sm);
-            margin-bottom: 2px; /* Small gap between headers */
-        }
-        .season-header:hover {
-            background-color: rgba(229,9,14,0.1);
-            border-color: var(--brand-red);
-        }
-        .season-header .material-icons {
-            margin-right: var(--spacing-sm);
-            color: var(--brand-red);
-            transition: transform 0.3s ease;
-        }
-        .season-header.active .material-icons {
-            transform: rotate(90deg); /* Rotate arrow when active */
-        }
-        .season-body {
-            background-color: var(--bg-dark);
-            border-bottom: none;
-            padding: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out;
-            border-radius: var(--radius-sm);
-            margin-bottom: 5px;
-        }
-        .season-body.active {
-            max-height: 500px; /* Adjust based on expected content height */
-        }
-
-        .episode-item {
-            display: flex;
-            justify-content: space-between; /* Space out content and actions */
-            align-items: center;
-            gap: var(--spacing-md);
-            color: #eeeeee;
-            padding: var(--spacing-md) var(--spacing-lg);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-            text-decoration: none;
-        }
-        .episode-item:last-child {
-            border-bottom: none;
-        }
-        .episode-item:hover {
-            background-color: rgba(229,9,14,0.1);
-            color: white;
-        }
-        .episode-item:hover .play-icon {
-            color: var(--brand-red);
-        }
-
-        .watched-toggle-icon {
-            font-size: var(--watched-icon-size);
-            color: #757575; /* Default color for unwatched */
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .watched-toggle-icon:hover {
-            color: #a0a0a0;
-        }
-
-        .episode-item.watched .watched-toggle-icon {
-            color: var(--watched-color);
-        }
-
-        .episode-item.watched .episode-number,
-        .episode-item.watched .episode-title {
-            color: #a0a0a0; /* Slightly dim watched episode text */
-        }
-
-        .episode-item.watched:hover {
-            background-color: rgba(76, 175, 80, 0.1); /* Lighter green background on hover for watched */
-        }
-
-        /* Notifications */
-        #notifications-container {
-            position: fixed;
-            top: 20px; 
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 450px;
-            padding: 10px;
-            box-sizing: border-box;
-            z-index: 1004; 
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            pointer-events: none;
-        }
-        
-        .notification {
-            background: linear-gradient(135deg, rgba(51,51,51,0.95), rgba(31,31,31,0.98));
-            backdrop-filter: blur(20px);
-            color: white;
-            padding: 16px 20px;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-            display: flex;
-            align-items: center;
-            opacity: 0;
-            transform: translateY(-30px) scale(0.9);
-            transition: all var(--transition-medium) cubic-bezier(0.4, 0, 0.2, 1);
-            pointer-events: auto;
-            font-size: 14px;
-            font-weight: 500;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .notification.show {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-        
-        .notification--success {
-            background: linear-gradient(135deg, rgba(229,9,20,0.9), rgba(255,107,107,0.8));
-            border-color: rgba(229,9,20,0.3);
-            box-shadow: 0 8px 32px rgba(229,9,20,0.3);
-        }
-        
-        .notification--error {
-            background: linear-gradient(135deg, rgba(211,47,47,0.9), rgba(244,67,54,0.8));
-            border-color: rgba(211,47,47,0.3);
-            box-shadow: 0 8px 32px rgba(211,47,47,0.3);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.2rem;
-            }
-            .hero-meta {
-                font-size: 0.8rem;
-                gap: var(--spacing-sm);
-            }
-            .btn {
-                padding: 10px 18px;
-                font-size: 0.9rem;
-            }
-            .hero {
-                --hero-height: 50vh;
-                padding-bottom: var(--spacing-md);
-            }
-            .hero-content {
-                padding: 0 var(--spacing-sm);
-            }
-            .synopsis-container, .main-content {
-                padding: 0 var(--spacing-sm);
-            }
-            .modal-content {
-                padding: var(--spacing-md);
-            }
-            .season-header, .episode-item {
-                padding: var(--spacing-md) var(--spacing-md);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                --hero-height: 45vh;
-                padding-bottom: var(--spacing-sm);
-            }
-            .hero-title {
-                font-size: 1.8rem;
-                margin-bottom: var(--spacing-sm);
-            }
-            .actions {
-                flex-direction: column;
-                gap: var(--spacing-sm);
-            }
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-            .synopsis-container, .main-content {
-                padding: 0 var(--spacing-sm);
-            }
-            .modal-content {
-                width: 95%;
-                padding: var(--spacing-md);
-            }
-            .season-header, .episode-item {
-                padding: var(--spacing-sm) var(--spacing-md);
-            }
+        @media screen and (max-width: 600px) {
+            .movie-banner { flex-direction: column; align-items: center; gap: 15px; padding: 15px; text-align: center; padding-top: 80px; min-height: 0; }
+            .movie-poster { width: 150px; }
+            .movie-info h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Loading -->
-    <div class="loader" id="loading">
-        <div class="spinner"></div>
-    </div>
 
-    <!-- Notifications container -->
-    <div id="notifications-container"></div>
+<div id="toast-container"></div>
 
-    <!-- Navigation -->
-    <nav class="nav-bar">
-        <button class="back-btn" onclick="history.back()">
-            <i class="material-icons">arrow_back</i>
-        </button>
-    </nav>
-
-    <!-- Hero -->
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <h1 class="hero-title" id="title">Cargando...</h1>
-            <div class="hero-meta">
-                <span id="year-meta">
-                    <i class="material-icons meta-icon">calendar_today</i>
-                    <span id="year">—</span>
-                </span>
-                <!-- @tweakable duration display setting for series (true = show duration, false = hide) -->
-                <!-- @tweakable {Boolean} showDurationInSeries=false -->
-                <span id="duration-meta" style="display: none;">
-                    <i class="material-icons meta-icon">schedule</i>
-                    <span id="duration">—</span>
-                </span>
-                <span id="rating-meta">
-                    <i class="material-icons meta-icon">star</i>
-                    <span id="rating">—</span>
-                </span>
-                <span id="genre-meta">
-                    <i class="material-icons meta-icon">movie</i>
-                    <span id="genre">—</span>
-                </span>
-            </div>
-            <div class="actions">
-                <button class="btn btn-primary" onclick="openModal()">
-                    <i class="material-icons">play_arrow</i>
-                    Reproducir
-                </button>
-                <button class="btn btn-secondary" onclick="toggleFavorite()">
-                    <i class="material-icons" id="favoriteIcon">add</i>
-                    <span id="favoriteText">Mi Lista</span>
-                </button>
-            </div>
+<div id="series-detail-view">
+    <div id="movie-banner" class="movie-banner">
+        <a href="index.html" class="top-action-button back-button" title="Volver"><i class="material-icons">arrow_back</i></a>
+        <button id="favorite-btn" class="top-action-button" title="Añadir a favoritos"><i class="material-icons">favorite_border</i></button>
+        <div class="movie-poster"><img id="poster-img" src="" alt="Poster de la serie"></div>
+        <div class="movie-info">
+            <h1 id="movie-title"></h1>
+            <div class="movie-meta"></div>
         </div>
-    </section>
-
-    <!-- Synopsis -->
-    <div class="synopsis-container">
-        <p class="synopsis" id="synopsis">Cargando sinopsis...</p>
-        <button class="expand-btn" id="expandBtn" onclick="toggleSynopsis()">
-            Ver más
-            <i class="material-icons">expand_more</i>
-        </button>
     </div>
-
-    <!-- Similar Series (Optional - can be populated if data available) -->
     <div class="main-content">
-        <section>
-            <h2 class="section-title">Series similares</h2>
-            <div class="similar-grid" id="similar-grid">
-                <!-- Similar series will be populated here -->
-            </div>
-        </section>
+        <h2>SINOPSIS</h2>
+        <p id="movie-synopsis"></p>
     </div>
-
-    <!-- Playback Modal (modified for episodes) -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">Seleccionar Episodio</h3>
-                <button class="close-btn" onclick="closeModal()">×</button>
-            </div>
-            <div class="episode-list-container" id="episode-list-container">
-                <!-- Seasons and episodes will be populated here -->
-            </div>
-        </div>
+    <div id="fab-play" class="fab">
+        <i class="material-icons">playlist_play</i>
     </div>
+</div>
 
-    <script type="module">
-        // Firebase config
-        const CONFIG = {
-            apiKey: "AIzaSyAEbMY3zYyxIjTREF-0kO-eK7soHAyy084",
-            authDomain: "web-de-peli.firebaseapp.com",
-            databaseURL: "https://web-de-peli-default-rtdb.firebaseio.com",
-            projectId: "web-de-peli",
-            storageBucket: "web-de-peli.firebasestorage.app",
-            messagingSenderId: "94710081234",
-            appId: "1:94710081234:web:4a106a5e25bd50e6c56f0b"
-        };
+<div id="episode-selector-view">
+    <header class="selector-header">
+        <button id="selector-back-button" class="selector-back-button" aria-label="Volver"><i class="material-icons">arrow_back</i></button>
+        <h1 id="selector-title" class="selector-title"></h1>
+    </header>
+    <nav id="season-tabs" class="season-tabs"></nav>
+    <ul id="episode-list" class="episode-list"></ul>
+</div>
 
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
-        import { getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+<div id="playback-modal">
+    <svg class="spinner" viewBox="25 25 50 50">
+        <circle class="spinner-path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
+    </svg>
+</div>
 
-        const app = initializeApp(CONFIG);
-        const db = getDatabase(app);
+<script>
+    const playbackModal = document.getElementById('playback-modal');
+    let playbackTimeout;
+    let currentIframe = null;
 
-        /* @tweakable Set debug level for console logs (0 = off, 1 = important messages, 2 = verbose messages) */
-        const debugLevel = 2; 
-
-        function debugLog(level, message, ...args) {
-            if (debugLevel >= level) {
-                console.log(`DEBUG (Level ${level}) - Series: ${message}`, ...args);
-            }
+    function showPlaybackModal() {
+        playbackModal.classList.add('is-active');
+        document.body.classList.add('player-active');
+        if(history.state?.playbackModal !== true) {
+            history.pushState({ playbackModal: true }, '');
         }
+    }
 
-        // Get series ID from URL
-        const params = new URLSearchParams(location.search);
-        const id = params.get('id');
-        debugLog(2, 'Received ID from URL:', id);
+    function hidePlaybackModal() {
+        playbackModal.classList.remove('is-active');
+        document.body.classList.remove('player-active');
+        if (playbackTimeout) clearTimeout(playbackTimeout);
+        if (currentIframe) {
+            currentIframe.src = 'about:blank';
+            currentIframe.remove();
+            currentIframe = null;
+        }
+    }
+
+    function startPlayback(videoUrl) {
+        if (!videoUrl) { console.error("URL de video no válida."); return; }
+        showPlaybackModal();
+        currentIframe = document.createElement('iframe');
+        currentIframe.src = videoUrl;
+        currentIframe.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:99999;display:none;";
+        currentIframe.setAttribute('allow', 'autoplay; fullscreen');
+        currentIframe.setAttribute('allowfullscreen', '');
+        document.body.appendChild(currentIframe);
         
-        if (!id) history.back();
+        playbackTimeout = setTimeout(() => {
+            hidePlaybackModal();
+            if(currentIframe) currentIframe.style.display = 'block';
+        }, 5000);
+    }
 
-        let currentSeries = null;
-        let allContent = []; // Renamed from allMovies for clarity as it includes series
+    window.addEventListener('popstate', (event) => {
+        if (playbackModal.classList.contains('is-active') || currentIframe) {
+             hidePlaybackModal();
+        }
+    });
 
-        // --- Notifications function ---
-        /* @tweakable notification display duration */
-        function showNotification(message, type = 'default', duration = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--notification-duration'))) {
-            const container = document.getElementById('notifications-container');
-            if (!container) {
-                console.error('Notifications container not found!');
+    document.addEventListener('DOMContentLoaded', async () => {
+        const contentId = new URLSearchParams(window.location.search).get('id');
+        if (!contentId) {
+            document.body.innerHTML = '<h1>Error: ID de serie no especificado.</h1>';
+            return;
+        }
+        
+        try {
+            const res = await fetch('db.json?v=' + Date.now());
+            const data = await res.json();
+            const seriesItem = data.contenidos.find(c => c.id === contentId && c.type === 'series');
+            if (!seriesItem) {
+                document.body.innerHTML = '<h1>Error: Serie no encontrada.</h1>';
                 return;
             }
-
-            const notification = document.createElement('div');
-            notification.className = 'notification';
-            if (type === 'success') {
-                notification.classList.add('notification--success');
-            } else if (type === 'error') {
-                notification.classList.add('notification--error');
-            }
-            notification.textContent = message;
-
-            container.appendChild(notification);
-
-            // Trigger reflow to ensure transition works for 'show' class
-            void notification.offsetWidth;
-
-            notification.classList.add('show');
-
-            setTimeout(() => {
-                notification.classList.remove('show');
-                // Remove the notification from DOM after transition ends
-                notification.addEventListener('transitionend', () => {
-                    notification.remove();
-                }, { once: true });
-            }, duration);
-        }
-
-        // Favorites
-        /* @tweakable local storage key for favorites */
-        const FAVORITES_STORAGE_KEY = 'cineflixter-favorites';
-        const getFavorites = () => JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY) || '[]');
-        const setFavorites = arr => localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(arr));
-
-        /* @tweakable auto-mark episode as watched when playing */
-        const autoMarkWatchedOnPlay = true;
-        /* @tweakable display episode title or just "Cap X" */
-        const showEpisodeTitles = false; /* Set to false to hide episode titles */
-
-        // NEW: Watched Episodes
-        /* @tweakable Local storage key for watched episodes */
-        const WATCHED_EPISODES_STORAGE_KEY = 'cineflixter-watched-episodes';
-        /* @tweakable Local storage key for watched movies and series (top level) */
-        const WATCHED_GLOBAL_STORAGE_KEY = 'cineflixter-watched-global';
-
-        function getWatchedEpisodes() {
-            try {
-                const watched = localStorage.getItem(WATCHED_EPISODES_STORAGE_KEY);
-                return watched ? JSON.parse(watched) : [];
-            } catch (e) {
-                console.error("Error parsing watched episodes from localStorage:", e);
-                return [];
-            }
-        }
-
-        function setWatchedEpisodes(watchedArr) {
-            try {
-                localStorage.setItem(WATCHED_EPISODES_STORAGE_KEY, JSON.stringify(watchedArr));
-            } catch (e) {
-                console.error("Error saving watched episodes to localStorage:", e);
-            }
-        }
-
-        function getWatchedGlobal() {
-            try {
-                const watched = localStorage.getItem(WATCHED_GLOBAL_STORAGE_KEY);
-                return watched ? JSON.parse(watched) : [];
-            } catch (e) {
-                console.error("Error parsing watched content from localStorage:", e);
-                return [];
-            }
-        }
-
-        function setWatchedGlobal(watchedArr) {
-            try {
-                localStorage.setItem(WATCHED_GLOBAL_STORAGE_KEY, JSON.stringify(watchedArr));
-            } catch (e) {
-                console.error("Error saving watched content to localStorage:", e);
-            }
-        }
-
-        function isEpisodeWatched(episodeIdKey) {
-            const watched = getWatchedEpisodes();
-            return watched.includes(episodeIdKey);
-        }
-
-        function toggleWatched(episodeIdKey, episodeLinkElement, iconElement) {
-            let watchedEpisodes = getWatchedEpisodes();
-            let watchedGlobal = getWatchedGlobal();
-            const isCurrentlyWatched = watchedEpisodes.includes(episodeIdKey);
-
-            if (isCurrentlyWatched) {
-                watchedEpisodes = watchedEpisodes.filter(id => id !== episodeIdKey);
-                episodeLinkElement.classList.remove('watched');
-                iconElement.textContent = 'radio_button_unchecked';
-                debugLog(2, `Marked episode '${episodeIdKey}' as unwatched.`);
-            } else {
-                watchedEpisodes.push(episodeIdKey);
-                episodeLinkElement.classList.add('watched');
-                iconElement.textContent = 'check_circle';
-                debugLog(2, `Marked episode '${episodeIdKey}' as watched.`);
-
-                // Mark the parent series as watched globally if it's not already
-                if (currentSeries && !watchedGlobal.includes(currentSeries.id)) {
-                    watchedGlobal.push(currentSeries.id);
-                    setWatchedGlobal(watchedGlobal);
-                    debugLog(2, `Added series '${currentSeries.id}' to global watched list.`);
-                }
-            }
-            setWatchedEpisodes(watchedEpisodes);
-        }
-
-        // Load series data from Firebase
-        /* @tweakable Firebase data loading timeout in milliseconds */
-        const FIREBASE_TIMEOUT = 10000;
-        
-        function loadSeriesData() {
-            debugLog(2, 'Starting to load series data from Firebase...');
             
-            const timeoutId = setTimeout(() => {
-                debugLog(1, 'Firebase loading timeout reached');
-                document.getElementById('loading').style.display = 'none';
-                showNotification('Error: Tiempo de espera agotado al cargar la serie.', 'error');
-            }, FIREBASE_TIMEOUT);
+            window.currentSeriesData = seriesItem;
+            populateDetailPage(seriesItem);
+            setupEventListeners(contentId);
+            updateFavoriteButton(contentId);
 
-            onValue(ref(db, 'contenidos'), snap => {
-                clearTimeout(timeoutId);
-                const data = snap.val();
-                debugLog(2, 'Firebase data received:', data);
-                
-                if (!data) {
-                    document.getElementById('loading').style.display = 'none';
-                    showNotification('No se encontró contenido.', 'error');
-                    debugLog(1, 'No data received from Firebase');
-                    return;
-                }
-                
-                // Map Firebase keys to 'id' property for consistent access
-                allContent = Object.keys(data).map(key => ({
-                    id: key,
-                    ...data[key]
-                }));
-                debugLog(2, 'All content processed:', allContent.length, 'items');
-                
-                currentSeries = allContent.find(s => s.id === id);
-                debugLog(2, `Looking for series with ID '${id}'. Found:`, currentSeries);
-                
-                if (!currentSeries) {
-                    document.getElementById('loading').style.display = 'none';
-                    showNotification('La serie no fue encontrada.', 'error');
-                    debugLog(1, `Series with ID '${id}' not found in fetched data.`);
-                    return;
-                }
-                
-                // Validate that the retrieved item is indeed a series
-                if (currentSeries.type && currentSeries.type !== 'series') {
-                    debugLog(1, `Warning: Item with ID '${id}' is of type '${currentSeries.type}' but expected 'series'. Redirecting to appropriate page.`);
-                    if (currentSeries.type === 'movie') {
-                        window.location.href = `películas.html?id=${id}`;
-                        return;
-                    }
-                }
+        } catch (error) {
+            console.error("Error al cargar datos:", error);
+            document.body.innerHTML = '<h1>Error al cargar la aplicación.</h1>';
+        }
+    });
 
-                debugLog(2, 'Rendering series data...');
-                renderSeries(currentSeries);
-                renderSimilar(currentSeries);
-                document.getElementById('loading').style.display = 'none';
-                debugLog(2, 'Series loading completed successfully');
+    function populateDetailPage(series) {
+        document.title = series.title;
+        document.getElementById('movie-title').textContent = series.title;
+        document.getElementById('movie-banner').style.backgroundImage = `url('${series.banner || series.poster}')`;
+        document.getElementById('poster-img').src = series.poster;
+        document.getElementById('movie-synopsis').textContent = series.synopsis;
+
+        const metaContainer = document.querySelector('.movie-info .movie-meta');
+        metaContainer.innerHTML = '';
+        if (series.year) metaContainer.innerHTML += `<span><i class="material-icons">calendar_today</i>${series.year}</span>`;
+        if (series.rating) metaContainer.innerHTML += `<span><i class="material-icons">star_border</i>${series.rating}</span>`;
+        if (series.category) metaContainer.innerHTML += `<span><i class="material-icons">theater_comedy</i>${series.category}</span>`;
+    }
+
+    function populateEpisodeSelector(series) {
+        document.getElementById('selector-title').textContent = `${series.title} (${series.year})`;
+        
+        const seasonTabsContainer = document.getElementById('season-tabs');
+        seasonTabsContainer.innerHTML = '';
+
+        if (series.seasons && series.seasons.length > 0) {
+            series.seasons.forEach((season, index) => {
+                const tab = document.createElement('div');
+                tab.className = 'season-tab';
+                tab.textContent = `TEMPORADA ${season.season_number}`;
+                tab.dataset.season = season.season_number;
+                if (index === 0) tab.classList.add('active');
+                seasonTabsContainer.appendChild(tab);
+            });
+            renderEpisodesForSeason(series.seasons[0].season_number);
+        } else {
+             document.getElementById('episode-list').innerHTML = `<li style="padding: 20px; text-align: center; color: var(--on-surface-variant-color);">No hay episodios disponibles.</li>`;
+        }
+    }
+
+    function renderEpisodesForSeason(seasonNumber) {
+        const episodeList = document.getElementById('episode-list');
+        episodeList.innerHTML = '';
+        const seasonData = window.currentSeriesData.seasons.find(s => s.season_number == seasonNumber);
+
+        if (seasonData && seasonData.episodes) {
+            seasonData.episodes.forEach(episode => {
+                const li = document.createElement('li');
+                li.className = 'episode-item';
                 
-            }, (error) => {
-                clearTimeout(timeoutId);
-                console.error("Error loading content from Firebase:", error);
-                showNotification('Error al cargar el contenido desde la base de datos.', 'error');
-                document.getElementById('loading').style.display = 'none';
-                debugLog(1, 'Firebase error:', error);
+                const episodeName = episode.title ? `: ${episode.title}` : '';
+                li.innerHTML = `
+                    <div class="episode-play-link" data-src="${episode.src}">
+                        Episodio ${episode.episode_number}${episodeName}
+                    </div>
+                    <button class="episode-cast-button" data-cast-src="${episode.src}" title="Transmitir">
+                        <i class="material-icons">cast</i>
+                    </button>
+                `;
+                episodeList.appendChild(li);
             });
         }
+    }
 
-        // Initialize data loading
-        loadSeriesData();
+    function setupEventListeners(contentId) {
+        const selectorView = document.getElementById('episode-selector-view');
 
-        function renderSeries(series) {
-            debugLog(2, 'Rendering series:', series.title);
-            document.title = series.title;
-            
-            // Hero background
-            const hero = document.getElementById('hero');
-            const bg = series.banner || series.poster;
-            hero.style.backgroundImage = `url(${bg})`;
-            
-            // Series info
-            document.getElementById('title').textContent = series.title;
-            document.getElementById('year').textContent = series.year || '—';
-            /* @tweakable duration display setting for series (true = show duration, false = hide) */
-            /* @tweakable {Boolean} showDurationInSeries=false */
-            document.getElementById('duration').textContent = series.duration || '—';
-            document.getElementById('rating').textContent = series.rating || 'NR';
-            document.getElementById('genre').textContent = series.category || '—';
-            document.getElementById('synopsis').textContent = series.synopsis || 'Sin sinopsis disponible';
-            
-            // Update favorite button
-            updateFavoriteButton();
-            debugLog(2, 'Series rendering completed');
-        }
+        document.getElementById('fab-play').addEventListener('click', () => {
+            populateEpisodeSelector(window.currentSeriesData);
+            selectorView.classList.add('active');
+        });
 
-        function renderSimilar(series) {
-            // Filter similar series by category, excluding the current series
-            const similar = allContent
-                .filter(c => c.id !== series.id && c.category === series.category && c.type === 'series')
-                .slice(0, 6); // Limit to 6 similar series for display
-            
-            debugLog(2, `Rendering similar series for category '${series.category}' and type '${series.type}':`, similar);
+        document.getElementById('selector-back-button').addEventListener('click', () => {
+            selectorView.classList.remove('active');
+        });
 
-            const grid = document.getElementById('similar-grid');
-            grid.innerHTML = '';
-
-            if (similar.length === 0) {
-                grid.innerHTML = '<p style="text-align: center; color: #bbb;">No hay contenido similar disponible.</p>';
-            } else {
-                similar.forEach(s => {
-                    const card = document.createElement('div');
-                    card.className = 'movie-card'; /* Reusing movie-card style */
-                    card.innerHTML = `
-                        <img src="${s.poster}" alt="${s.title}" loading="lazy">
-                    `;
-                    card.onclick = () => {
-                        const targetPage = s.type === 'series' ? 'series.html' : 'películas.html';
-                        debugLog(2, `Navigating from similar card: ${s.title} (Type: ${s.type}, ID: ${s.id}) to URL: ${targetPage}?id=${s.id}`); // Deep link to similar series
-                        window.location.href = `${targetPage}?id=${s.id}`;
-                    };
-                    grid.appendChild(card);
-                });
+        document.getElementById('season-tabs').addEventListener('click', (e) => {
+            if (e.target.matches('.season-tab')) {
+                document.querySelector('.season-tab.active')?.classList.remove('active');
+                e.target.classList.add('active');
+                renderEpisodesForSeason(e.target.dataset.season);
             }
-        }
+        });
+        
+        document.getElementById('episode-list').addEventListener('click', (e) => {
+            const castButton = e.target.closest('.episode-cast-button');
+            const playLink = e.target.closest('.episode-play-link');
 
-        function toggleFavorite() {
-            if (!id) {
-                showNotification('Error: No se pudo identificar el contenido.', 'error');
-                debugLog(1, 'Error: No ID found for favorite toggle.');
-                return;
-            }
-
-            const favorites = getFavorites();
-            const index = favorites.indexOf(id);
-            
-            if (index > -1) {
-                favorites.splice(index, 1);
-                setFavorites(favorites);
-                showNotification('Eliminado de Mi Lista', 'default');
-                debugLog(2, `Removed ID '${id}' from favorites.`);
-            } else {
-                favorites.push(id);
-                setFavorites(favorites);
-                showNotification('Agregado a Mi Lista', 'success');
-                debugLog(2, `Added ID '${id}' to favorites.`);
-            }
-            
-            updateFavoriteButton();
-        }
-
-        function updateFavoriteButton() {
-            const favorites = getFavorites();
-            const isFavorite = favorites.includes(id);
-            
-            const icon = document.getElementById('favoriteIcon');
-            const text = document.getElementById('favoriteText');
-            
-            if (isFavorite) {
-                icon.textContent = 'check';
-                text.textContent = 'Quitar de mi lista';
-            } else {
-                icon.textContent = 'add';
-                text.textContent = 'Mi Lista';
-            }
-        }
-
-        function toggleSynopsis() {
-            const synopsis = document.getElementById('synopsis');
-            const btn = document.getElementById('expandBtn');
-            
-            if (synopsis.classList.contains('expanded')) {
-                synopsis.classList.remove('expanded');
-                btn.innerHTML = 'Ver más <i class="material-icons">expand_more</i>';
-            } else {
-                synopsis.classList.add('expanded');
-                btn.innerHTML = 'Ver menos <i class="material-icons">expand_less</i>';
-            }
-        }
-
-        function openModal() {
-            const modal = document.getElementById('modal');
-            const episodeListContainer = document.getElementById('episode-list-container');
-            episodeListContainer.innerHTML = '';
-            
-            if (!currentSeries || !currentSeries.seasons || currentSeries.seasons.length === 0) {
-                showNotification('No hay episodios disponibles para esta serie.', 'error');
-                debugLog(1, 'Error: No seasons found for current series or currentSeries is null.');
-                return;
-            }
-
-            currentSeries.seasons.forEach(season => {
-                const seasonContainer = document.createElement('div');
-                
-                const seasonHeader = document.createElement('div');
-                seasonHeader.className = 'season-header';
-                seasonHeader.innerHTML = `<i class="material-icons">chevron_right</i>Temporada ${season.season_number}`;
-                
-                const seasonBody = document.createElement('div');
-                seasonBody.className = 'season-body';
-                const episodeList = document.createElement('div');
-                episodeList.className = 'episode-list';
-                
-                season.episodes.forEach(episode => {
-                    const episodeItem = document.createElement('div');
-                    episodeItem.className = 'episode-item';
-                    
-                    // Generate a unique ID for each episode for tracking watched status
-                    const episodeIdKey = `${currentSeries.id}-${season.season_number}-${episode.episode_number}`;
-                    
-                    episodeItem.innerHTML = `
-                        <div class="episode-text">
-                            <span class="episode-number">Cap ${episode.episode_number}</span>
-                        </div>
-                        <div class="episode-actions">
-                            <i class="material-icons watched-toggle-icon"></i>
-                            <i class="material-icons play-icon">play_circle_outline</i>
-                        </div>
-                    `;
-                    
-                    const watchedToggleIcon = episodeItem.querySelector('.watched-toggle-icon');
-
-                    // Set initial watched state
-                    if (isEpisodeWatched(episodeIdKey)) {
-                        episodeItem.classList.add('watched');
-                        watchedToggleIcon.textContent = 'check_circle';
-                    } else {
-                        watchedToggleIcon.textContent = 'radio_button_unchecked';
-                    }
-
-                    // Event listener for the entire episode item (for playback and auto-mark watched)
-                    episodeItem.addEventListener('click', (e) => {
-                        if (e.target.classList.contains('watched-toggle-icon')) {
-                            toggleWatched(episodeIdKey, episodeItem, watchedToggleIcon);
-                            e.stopPropagation(); // Prevent the main episode item click from triggering
-                            return;
-                        }
-                        
-                        // Mark series as watched globally when any episode is played
-                        let watchedGlobal = getWatchedGlobal();
-                        if (!watchedGlobal.includes(currentSeries.id)) {
-                            watchedGlobal.push(currentSeries.id);
-                            setWatchedGlobal(watchedGlobal);
-                            
-                            /* @tweakable save timestamp when marking series as watched */
-                            const watchedTimestamps = JSON.parse(localStorage.getItem('cineflixter-watched-timestamps') || '{}');
-                            watchedTimestamps[currentSeries.id] = new Date().toISOString();
-                            localStorage.setItem('cineflixter-watched-timestamps', JSON.stringify(watchedTimestamps));
-                        }
-                        
-                        closeModal(); // Close the episode selection modal
-
-                        // Open URL directly as href
-                        window.location.href = episode.src;
-                        debugLog(2, `Opening episode '${episode.title}' (ID: ${episodeIdKey}) directly.`);
-                    });
-
-                    episodeList.appendChild(episodeItem);
-                });
-
-                seasonBody.appendChild(episodeList);
-                seasonContainer.appendChild(seasonHeader);
-                seasonContainer.appendChild(seasonBody);
-                episodeListContainer.appendChild(seasonContainer);
-
-                // Add click listener for collapsible behavior
-                seasonHeader.addEventListener('click', () => {
-                    seasonHeader.classList.toggle('active');
-                    if (seasonHeader.classList.contains('active')) {
-                        seasonBody.style.maxHeight = seasonBody.scrollHeight + "px"; 
-                    } else {
-                        seasonBody.style.maxHeight = "0"; // Collapse
-                    }
-                });
-            });
-
-            modal.classList.add('active');
-            debugLog(2, 'Opened episode selection modal for series:', currentSeries.title);
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('modal');
-            modal.classList.remove('active');
-            debugLog(2, 'Closed episode selection modal.');
-        }
-
-        // Close modal on outside click
-        document.getElementById('modal').addEventListener('click', (e) => {
-            if (e.target.classList.contains('modal')) {
-                closeModal();
+            if (castButton) {
+                const src = castButton.dataset.castSrc;
+                if (src) window.location.href = `wvc-x-callback://open?url=${encodeURIComponent(src)}`;
+            } else if (playLink) {
+                const src = playLink.dataset.src;
+                if (src) startPlayback(src);
             }
         });
 
-        // Expose functions to the global scope for onclick attributes in HTML
-        window.openModal = openModal;
-        window.toggleFavorite = toggleFavorite;
-        window.toggleSynopsis = toggleSynopsis;
-        window.closeModal = closeModal;
-    </script>
+        document.getElementById('favorite-btn').addEventListener('click', () => toggleFavorite(contentId));
+    }
+    
+    function showToast(message) {
+        const container = document.getElementById('toast-container');
+        if (!container) return;
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = message;
+        container.appendChild(toast);
+        requestAnimationFrame(() => toast.classList.add('show'));
+        setTimeout(() => {
+            toast.classList.remove('show');
+            toast.addEventListener('transitionend', () => toast.remove());
+        }, 3000);
+    }
+    
+    // CAMBIO: Se usa 'cinemax-favorites' para guardar los favoritos
+    function getFavorites() { return JSON.parse(localStorage.getItem('cinemax-favorites') || '[]'); }
+    function saveFavorites(arr) { localStorage.setItem('cinemax-favorites', JSON.stringify(arr)); }
+
+    function toggleFavorite(id) {
+        let favs = getFavorites();
+        const isFav = favs.includes(id);
+        favs = isFav ? favs.filter(i => i !== id) : [...favs, id];
+        saveFavorites(favs);
+        updateFavoriteButton(id);
+        showToast(isFav ? 'Eliminado de favoritos' : 'Añadido a favoritos');
+    }
+
+    function updateFavoriteButton(id) {
+        const isFav = getFavorites().includes(id);
+        const btn = document.getElementById('favorite-btn');
+        if (!btn) return;
+        const icon = btn.querySelector('.material-icons');
+        btn.classList.toggle('is-favorite', isFav);
+        icon.textContent = isFav ? 'favorite' : 'favorite_border';
+    }
+</script>
 </body>
 </html>
