@@ -116,32 +116,20 @@
             cursor: pointer; padding: 16px;
             transition: color 0.2s; display: inline-flex; align-items: center;
         }
-        
-        #playback-modal {
-            position: fixed; top: 50%; left: 50%;
-            transform: translate(-50%, -50%) scale(0.95); background-color: #2c2c2e;
-            border-radius: 12px; z-index: 1005;
-            box-shadow: 0 12px 17px 2px rgba(0,0,0,0.14), 0 5px 22px 4px rgba(0,0,0,0.12), 0 7px 8px -4px rgba(0,0,0,0.2);
-            opacity: 0; visibility: hidden; transition: transform 0.3s ease, opacity 0.3s ease;
-            display: flex; flex-direction: column; align-items: center; padding: 24px;
-        }
-        #playback-modal.is-active { transform: translate(-50%, -50%) scale(1); opacity: 1; visibility: visible; }
-        body.player-active { overflow: hidden; }
 
-        .spinner {
-            height: 48px; width: 48px; animation: rotate 2s linear infinite;
-            transform-origin: center center;
+        /* INICIO: Nuevos estilos para marcar como visto */
+        .episode-item.is-watched .episode-play-link {
+            color: var(--on-surface-variant-color); /* Color más tenue */
+            font-weight: 400;
+            font-style: italic;
         }
-        .spinner-path {
-            stroke-dasharray: 1, 200; stroke-dashoffset: 0; stroke: var(--main-red);
-            stroke-linecap: round; animation: dash 1.5s ease-in-out infinite;
+        .episode-item.is-watched .episode-play-link::after {
+            content: ' ✓'; /* Marca de visto sutil */
+            color: #4CAF50; /* Un color verde para el checkmark */
         }
-        @keyframes rotate { 100% { transform: rotate(360deg); } }
-        @keyframes dash {
-            0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; }
-            50% { stroke-dasharray: 89, 200; stroke-dashoffset: -35px; }
-            100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; }
-        }
+        /* FIN: Nuevos estilos para marcar como visto */
+        
+        /* ELIMINADO: Estilos para el modal de reproducción/spinner */
 
         #toast-container { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 2000; }
         .toast { background-color: #323232; color: #fff; padding: 12px 20px; border-radius: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); opacity: 0; transform: translateY(20px); transition: opacity 0.3s ease, transform 0.3s ease; font-size: 0.9rem; }
@@ -186,57 +174,31 @@
     <ul id="episode-list" class="episode-list"></ul>
 </div>
 
-<div id="playback-modal">
-    <svg class="spinner" viewBox="25 25 50 50">
-        <circle class="spinner-path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
-    </svg>
-</div>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
 
 <script>
-    const playbackModal = document.getElementById('playback-modal');
-    let playbackTimeout;
-    let currentIframe = null;
+    // --- 1. CONFIGURACIÓN E INICIALIZACIÓN DE FIREBASE (REEMPLAZA) ---
+    const firebaseConfig = {
+        apiKey: "AIzaSyAvX9ZWG402NpI1UFyBxL_HxeMHSLF8fBI",
+        authDomain: "hidraflix-ba716.firebaseapp.com",
+        projectId: "hidraflix-ba716", 
+        // Añade el resto de tu configuración si es necesario
+    };
 
-    function showPlaybackModal() {
-        playbackModal.classList.add('is-active');
-        document.body.classList.add('player-active');
-        if(history.state?.playbackModal !== true) {
-            history.pushState({ playbackModal: true }, '');
-        }
+    let dbFirestore;
+    try {
+        firebase.initializeApp(firebaseConfig);
+        dbFirestore = firebase.firestore();
+        console.log("Firebase y Firestore inicializados.");
+    } catch (error) {
+        console.error("Error al inicializar Firebase:", error);
     }
+    // ----------------------------------------------------
 
-    function hidePlaybackModal() {
-        playbackModal.classList.remove('is-active');
-        document.body.classList.remove('player-active');
-        if (playbackTimeout) clearTimeout(playbackTimeout);
-        if (currentIframe) {
-            currentIframe.src = 'about:blank';
-            currentIframe.remove();
-            currentIframe = null;
-        }
-    }
+    // ELIMINADO: Variables y funciones del loader (playbackModal, playbackTimeout, currentIframe, showPlaybackModal, hidePlaybackModal, startPlayback)
 
-    function startPlayback(videoUrl) {
-        if (!videoUrl) { console.error("URL de video no válida."); return; }
-        showPlaybackModal();
-        currentIframe = document.createElement('iframe');
-        currentIframe.src = videoUrl;
-        currentIframe.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:99999;display:none;";
-        currentIframe.setAttribute('allow', 'autoplay; fullscreen');
-        currentIframe.setAttribute('allowfullscreen', '');
-        document.body.appendChild(currentIframe);
-        
-        playbackTimeout = setTimeout(() => {
-            hidePlaybackModal();
-            if(currentIframe) currentIframe.style.display = 'block';
-        }, 5000);
-    }
-
-    window.addEventListener('popstate', (event) => {
-        if (playbackModal.classList.contains('is-active') || currentIframe) {
-             hidePlaybackModal();
-        }
-    });
+    // ELIMINADO: window.addEventListener('popstate')
 
     document.addEventListener('DOMContentLoaded', async () => {
         const contentId = new URLSearchParams(window.location.search).get('id');
@@ -244,13 +206,20 @@
             document.body.innerHTML = '<h1>Error: ID de serie no especificado.</h1>';
             return;
         }
+
+        if (!dbFirestore) {
+            document.body.innerHTML = '<h1>Error: Firebase no está disponible.</h1>'; 
+            return;
+        }
         
         try {
-            const res = await fetch('db.json?v=' + Date.now());
-            const data = await res.json();
-            const seriesItem = data.contenidos.find(c => c.id === contentId && c.type === 'series');
-            if (!seriesItem) {
-                document.body.innerHTML = '<h1>Error: Serie no encontrada.</h1>';
+            // Busca el documento de la serie en la colección 'contenidos'
+            const seriesDoc = await dbFirestore.collection('contenidos').doc(contentId).get();
+            
+            const seriesItem = seriesDoc.exists ? { id: seriesDoc.id, ...seriesDoc.data() } : null;
+
+            if (!seriesItem || seriesItem.type !== 'series') {
+                document.body.innerHTML = '<h1>Error: Serie no encontrada o tipo incorrecto.</h1>';
                 return;
             }
             
@@ -260,7 +229,7 @@
             updateFavoriteButton(contentId);
 
         } catch (error) {
-            console.error("Error al cargar datos:", error);
+            console.error("Error al cargar datos desde Firebase:", error);
             document.body.innerHTML = '<h1>Error al cargar la aplicación.</h1>';
         }
     });
@@ -300,15 +269,56 @@
         }
     }
 
+    // --- NUEVAS FUNCIONES DE ESTADO 'VISTO' ---
+    function getWatchedEpisodes(seriesId) { 
+        // Estructura: { "seriesId": ["S1E1", "S1E2", ...], "seriesId2": ["S1E1"], ... }
+        const watched = JSON.parse(localStorage.getItem('cineflixter-watched') || '{}');
+        return watched[seriesId] || [];
+    }
+
+    function saveWatchedEpisodes(seriesId, watchedList) { 
+        const watched = JSON.parse(localStorage.getItem('cineflixter-watched') || '{}');
+        watched[seriesId] = watchedList;
+        localStorage.setItem('cineflixter-watched', JSON.stringify(watched));
+    }
+
+    function markEpisodeAsWatched(seriesId, seasonNumber, episodeNumber) {
+        const episodeId = `S${seasonNumber}E${episodeNumber}`;
+        let watchedList = getWatchedEpisodes(seriesId);
+        
+        if (!watchedList.includes(episodeId)) {
+            watchedList.push(episodeId);
+            saveWatchedEpisodes(seriesId, watchedList);
+        }
+    }
+
+    function isEpisodeWatched(seriesId, seasonNumber, episodeNumber) {
+        const episodeId = `S${seasonNumber}E${episodeNumber}`;
+        return getWatchedEpisodes(seriesId).includes(episodeId);
+    }
+    // ---------------------------------------------
+
+
     function renderEpisodesForSeason(seasonNumber) {
         const episodeList = document.getElementById('episode-list');
         episodeList.innerHTML = '';
         const seasonData = window.currentSeriesData.seasons.find(s => s.season_number == seasonNumber);
+        // Obtener el ID de la serie para el estado 'visto'
+        const seriesId = new URLSearchParams(window.location.search).get('id');
 
         if (seasonData && seasonData.episodes) {
             seasonData.episodes.forEach(episode => {
                 const li = document.createElement('li');
                 li.className = 'episode-item';
+                
+                // Añadir atributos de datos para el seguimiento en el evento de clic
+                li.dataset.season = seasonNumber;
+                li.dataset.episode = episode.episode_number;
+
+                // Marcar como visto si corresponde
+                if (seriesId && isEpisodeWatched(seriesId, seasonNumber, episode.episode_number)) {
+                    li.classList.add('is-watched');
+                }
                 
                 const episodeName = episode.title ? `: ${episode.title}` : '';
                 li.innerHTML = `
@@ -353,7 +363,21 @@
                 if (src) window.location.href = `wvc-x-callback://open?url=${encodeURIComponent(src)}`;
             } else if (playLink) {
                 const src = playLink.dataset.src;
-                if (src) startPlayback(src);
+                
+                if (src) {
+                    const seriesId = contentId; // Usar el contentId de la función de configuración
+                    const li = playLink.closest('.episode-item');
+                    const seasonNumber = li?.dataset.season;
+                    const episodeNumber = li?.dataset.episode;
+                    
+                    // Lógica para marcar como visto antes de navegar
+                    if (seriesId && seasonNumber && episodeNumber) {
+                        markEpisodeAsWatched(seriesId, seasonNumber, episodeNumber);
+                    }
+                    
+                    // CAMBIO: Navegación directa
+                    window.location.href = src;
+                }
             }
         });
 
@@ -374,9 +398,8 @@
         }, 3000);
     }
     
-    // CAMBIO: Se usa 'cinemax-favorites' para guardar los favoritos
-    function getFavorites() { return JSON.parse(localStorage.getItem('cinemax-favorites') || '[]'); }
-    function saveFavorites(arr) { localStorage.setItem('cinemax-favorites', JSON.stringify(arr)); }
+    function getFavorites() { return JSON.parse(localStorage.getItem('cineflixter-favorites') || '[]'); }
+    function saveFavorites(arr) { localStorage.setItem('cineflixter-favorites', JSON.stringify(arr)); }
 
     function toggleFavorite(id) {
         let favs = getFavorites();

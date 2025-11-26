@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineFlixter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            /* ESTE VALOR SERÁ DINÁMICAMENTE ACTUALIZADO POR FIREBASE SETTINGS */
+            --main-red: #E50914; 
+            --background-color: #000000; 
+            --header-background: #080808;
+            --surface-color: #1f1f1f;
+            --text-color: #ffffff;
+            --border-color: #444;
+            --menu-bg: #101010;
+            --menu-text-secondary: #aaa;
+            --menu-divider: #383838;
+        }
+        body, html {
+            margin: 0; padding: 0; font-family: 'Manrope', sans-serif;
+            background-color: var(--background-color); color: var(--text-color);
+        }
+        * { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+        a { text-decoration: none; color: inherit; }
+        button, a { -webkit-tap-highlight-color: transparent; }
+
+        .top-section-wrapper { background-color: var(--header-background); position: sticky; top: 0; z-index: 1000; }
+        .header { display: flex; align-items: center; justify-content: space-between; padding: 12px; height: 52px; }
+        .app-logo { height: 28px; position: absolute; left: 50%; transform: translateX(-50%); }
+        .menu-btn, .search-btn { background: none; border: none; color: white; cursor: pointer; padding: 8px; }
+        .material-icons { font-size: 24px; }
+        
+        .side-menu { position: fixed; top: 0; left: -300px; width: 300px; height: 100%; background-color: var(--menu-bg); transition: left 0.3s ease; z-index: 1002; display: flex; flex-direction: column; }
+        .side-menu.active { left: 0; }
+        .side-menu-header { display: flex; align-items: center; gap: 16px; padding: 20px; border-bottom: 1px solid var(--menu-divider); }
+        .user-avatar { width: 50px; height: 50px; border-radius: 50%; background-color: var(--surface-color); overflow: hidden; flex-shrink: 0; }
+        .user-avatar img { width: 100%; height: 100%; object-fit: cover; }
+        .user-info div:first-child { font-weight: 600; font-size: 1.1rem; }
+        .side-menu-content { flex-grow: 1; overflow-y: auto; }
+        .side-menu-section { padding: 16px 20px; }
+        .side-menu-section-title { font-size: 0.9rem; font-weight: 600; color: var(--menu-text-secondary); margin-bottom: 8px; text-transform: uppercase; }
+        .side-menu-item { display: flex; align-items: center; padding: 12px; border-radius: 8px; margin-bottom: 4px; color: var(--text-color); cursor: pointer; transition: background-color 0.2s, color 0.2s; position: relative; }
+        .side-menu-item .material-icons { margin-right: 16px; color: var(--text-color); transition: color 0.2s; }
+        .side-menu-item.active { background-color: rgba(229, 9, 20, 0.2); color: var(--main-red); font-weight: 600; }
+        .side-menu-item.active .material-icons { color: var(--main-red); }
+        .notification-badge { position: absolute; top: 10px; left: 30px; width: 8px; height: 8px; background-color: var(--main-red); border-radius: 50%; display: none; }
+        .side-menu-footer { padding: 20px; text-align: center; color: var(--menu-text-secondary); font-size: 0.9rem; }
+        .overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); opacity: 0; visibility: hidden; transition: opacity 0.3s ease; z-index: 1001; }
+        .overlay.active { opacity: 1; visibility: visible; }
+        .category-nav { display: flex; overflow-x: auto; white-space: nowrap; padding: 8px 12px; -ms-overflow-style: none; scrollbar-width: none; }
+        .category-nav::-webkit-scrollbar { display: none; }
+        .category-item { padding: 8px 16px; margin-right: 10px; color: #b3b3b3; text-decoration: none; font-size: 16px; transition: color 0.3s ease; cursor: pointer; border-bottom: 2px solid transparent; }
+        .category-item.active { color: white; font-weight: bold; border-bottom-color: var(--main-red); }
+        
+        .movie-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); 
+            gap: 8px; 
+            padding: 8px; 
+            margin-bottom: 16px; 
+        }
+        
+        .movie-poster, .channel-card { 
+            position: relative; 
+            overflow: hidden; 
+            border-radius: 5px; 
+            transition: transform 0.3s ease; 
+            display: block; 
+            background-color: #222; 
+        }
+
+        .movie-poster { aspect-ratio: 2 / 3; }
+        .channel-card { aspect-ratio: 1 / 1; cursor: pointer; }
+        .movie-poster:hover, .channel-card:hover { transform: scale(1.05); }
+        .movie-poster img, .channel-card img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; transition: opacity 0.4s ease; }
+        .movie-poster img.loaded, .channel-card img.loaded { opacity: 1; }
+        .poster-loader { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; z-index: 2; }
+        
+        /* ---------------------------------------------------------------------------------- */
+        /* --- CSS AÑADIDO/MODIFICADO PARA EL RATING (IZQUIERDA) Y AÑO (DERECHA) y TAG (ABAJO) --- */
+        
+        /* Estilo para la Puntuación (esquina superior izquierda) - REDUCIDO */
+        .poster-rating {
+            position: absolute; 
+            top: 6px; /* Ajuste ligero */
+            left: 6px; /* Ajuste ligero */
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: #FFD700; 
+            padding: 3px 5px; /* Reducción de padding */
+            border-radius: 4px; 
+            font-size: 0.7rem; /* ⬅️ REDUCIDO */
+            font-weight: 700; 
+            z-index: 3; 
+            display: flex; 
+            align-items: center;
+            gap: 2px; /* Reducción de gap */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+
+        .poster-rating .material-icons {
+            font-size: 12px; /* ⬅️ REDUCIDO */
+            color: #FFD700;
+        }
+
+        /* 🆕 Estilo para el Año (esquina superior derecha) - REDUCIDO */
+        .poster-year {
+            position: absolute; 
+            top: 6px; /* Ajuste ligero */
+            right: 6px; /* Ajuste ligero */
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white; 
+            padding: 3px 5px; /* Reducción de padding */
+            border-radius: 4px; 
+            font-size: 0.7rem; /* ⬅️ REDUCIDO */
+            font-weight: 700; 
+            z-index: 3; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+
+        /* 🔄 Estilo para la etiqueta de promoción (Tag) */
+        .poster-tag { 
+            position: absolute; 
+            bottom: 40px; 
+            left: 8px; 
+            right: auto; 
+            background-color: var(--main-red); 
+            color: white; 
+            padding: 4px 8px; 
+            border-radius: 4px; 
+            font-size: 0.7rem; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            z-index: 3; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.4); 
+        }
+
+        /* 🆕 Estilo para el Título (superpuesto en la parte inferior) */
+        .poster-title-overlay {
+            position: absolute; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white; 
+            padding: 8px 6px; 
+            font-size: 0.75rem; 
+            font-weight: 600; 
+            text-align: center;
+            z-index: 3; 
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            border-radius: 0 0 5px 5px;
+        }
+        /* ---------------------------------------------------------------------------------- */
+
+        .fullscreen-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--background-color); z-index: 1003; transform: translateX(100%); transition: transform 0.3s ease-in-out; display: flex; flex-direction: column; }
+        .fullscreen-overlay.active { transform: translateX(0); }
+        .overlay-header { display: flex; align-items: center; gap: 8px; padding: 8px; background-color: var(--header-background); flex-shrink: 0; }
+        .overlay-header h2 { font-size: 1.25rem; font-weight: 600; margin-left: 8px; }
+        #search-input { flex-grow: 1; border: none; background: none; color: white; font-family: 'Manrope', sans-serif; font-size: 1.1rem; padding: 8px; }
+        #search-input:focus { outline: none; }
+        .search-tabs { display: flex; background-color: var(--header-background); flex-shrink: 0; }
+        .search-tab-btn { flex: 1; background: none; border: none; color: #aaa; font-family: 'Manrope', sans-serif; font-size: 0.9rem; font-weight: 700; padding: 12px; cursor: pointer; border-bottom: 3px solid transparent; transition: color 0.2s, border-color 0.2s; }
+        .search-tab-btn.active { color: white; border-bottom-color: var(--main-red); }
+        #search-results-grid { overflow-y: auto; flex-grow: 1; padding: 8px; }
+        .bottom-sheet { position: fixed; bottom: 0; left: 0; right: 0; background-color: #2c2c2e; border-radius: 28px 28px 0 0; z-index: 1002; transform: translateY(100%); transition: transform 0.35s ease-out; box-shadow: 0 -4px 20px rgba(0,0,0,0.3); max-height: 90vh; display: flex; flex-direction: column; }
+        .bottom-sheet.active { transform: translateY(0); }
+        .panel-handle { width: 32px; height: 4px; background-color: rgba(255, 255, 255, 0.4); border-radius: 2px; margin: 8px auto; flex-shrink: 0; }
+        .panel-content { padding: 8px 24px 24px; overflow-y: auto; }
+        .panel-content h3 { font-size: 1.5rem; font-weight: 700; margin: 8px 0 24px 0; text-align: center; }
+        #request-form label { display: block; margin-bottom: 6px; font-size: 0.9rem; color: #ccc; }
+        #request-form input, #request-form select { width: 100%; padding: 12px; margin-bottom: 16px; border: 1px solid var(--border-color); border-radius: 8px; background-color: #333; color: white; font-family: 'Manrope', sans-serif; font-size: 1rem; box-sizing: border-box; }
+        #request-form input:focus, #request-form select:focus { outline: none; border-color: var(--main-red); box-shadow: 0 0 0 2px color-mix(in srgb, var(--main-red) 30%, transparent); }
+        #request-form button { width: 100%; padding: 14px; border: none; border-radius: 8px; background-color: var(--main-red); color: white; font-family: 'Manrope', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background-color 0.2s; }
+        #notifications-list-container { padding: 16px 8px; overflow-y: auto; flex-grow: 1; }
+        .notification-item { background-color: var(--surface-color); padding: 16px; margin: 0 8px 12px 8px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        .notification-title { font-weight: 700; margin-bottom: 8px; font-size: 1.1rem; }
+        .notification-message { color: #ccc; font-size: 0.95rem; line-height: 1.5; margin-bottom: 16px; }
+        .notification-time { font-size: 0.8rem; color: #888; text-align: right; }
+        #no-notifications { text-align: center; color: #888; padding: 40px 20px; }
+        #channels-grid { overflow-y: auto; flex-grow: 1; padding: 8px; }
+        #toast-container { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 2000; }
+        .toast { background-color: #323232; color: #fff; padding: 12px 20px; border-radius: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); opacity: 0; transform: translateY(20px); transition: opacity 0.3s ease, transform 0.3s ease; font-size: 0.9rem; }
+        .toast.show { opacity: 1; transform: translateY(0); }
+
+        body.player-active { overflow: hidden; }
+        #playback-modal { position: fixed; top: 50%; left: 50%; width: 90px; height: 90px; transform: translate(-50%, -50%) scale(0.95); background-color: #2c2c2e; border-radius: 12px; z-index: 1005; box-shadow: 0 12px 17px 2px rgba(0,0,0,0.14), 0 5px 22px 4px rgba(0,0,0,0.12), 0 7px 8px -4px rgba(0,0,0,0.2); opacity: 0; visibility: hidden; transition: transform 0.3s ease, opacity 0.3s ease; display: flex; justify-content: center; align-items: center; }
+        #playback-modal.is-active { transform: translate(-50%, -50%) scale(1); opacity: 1; visibility: visible; }
+        .spinner { height: 48px; width: 48px; animation: rotate 2s linear infinite; transform-origin: center center; }
+        .spinner-path { stroke-dasharray: 1, 200; stroke-dashoffset: 0; stroke: var(--main-red); stroke-linecap: round; animation: dash 1.5s ease-in-out infinite; }
+        @keyframes rotate { 100% { transform: rotate(360deg); } }
+        @keyframes dash { 0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; } 50% { stroke-dasharray: 89, 200; stroke-dashoffset: -35px; } 100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; } }
+    </style>
+</head>
+<body>
+    <div id="toast-container"></div>
+    <div class="top-section-wrapper">
+        <header class="header">
+            <button class="menu-btn"><i class="material-icons">menu</i></button>
+            <img src="https://i.ibb.co/PZL32Sr1/1000434392-removebg-preview.png" alt="CineFlixter Logo" class="app-logo">
+            <button class="search-btn"><i class="material-icons">search</i></button>
+        </header>
+        <nav id="category-nav" class="category-nav"></nav>
+    </div>
+
+    <div id="search-overlay" class="fullscreen-overlay">
+        <div class="overlay-header">
+            <button class="menu-btn" id="search-close-btn"><i class="material-icons">arrow_back</i></button>
+            <input type="text" id="search-input" placeholder="Buscar películas o series...">
+        </div>
+        <div class="search-tabs">
+            <button class="search-tab-btn active" data-filter="movie">PELÍCULAS</button>
+            <button class="search-tab-btn" data-filter="series">SERIES</button>
+        </div>
+        <div id="search-results-grid" class="movie-grid"></div>
+    </div>
+    <div id="notifications-overlay" class="fullscreen-overlay">
+        <div class="overlay-header">
+            <button class="menu-btn" id="notifications-close-btn"><i class="material-icons">arrow_back</i></button>
+            <h2>Notificaciones</h2>
+        </div>
+        <div id="notifications-list-container"></div>
+    </div>
+    <div id="channels-overlay" class="fullscreen-overlay">
+        <div class="overlay-header">
+            <button class="menu-btn" id="channels-close-btn"><i class="material-icons">arrow_back</i></button>
+            <h2>Canales</h2>
+        </div>
+        <div id="channels-grid" class="movie-grid"></div>
+    </div>
+
+    <div class="side-menu">
+        <div class="side-menu-header">
+            <div class="user-avatar">
+                <img src="https://i.ibb.co/kg2mS5qt/1000434394-removebg-preview.png" alt="Avatar">
+            </div>
+            <div class="user-info"><div>CineFlixter</div></div>
+        </div>
+        <div class="side-menu-content">
+            <div class="side-menu-section">
+                <a href="#" id="filter-all" class="side-menu-item active"><i class="material-icons">home</i><span>Inicio</span></a>
+                <a href="#" id="notifications-btn" class="side-menu-item"><i class="material-icons">notifications</i><span class="notification-badge"></span><span>Notificaciones</span></a>
+                <a href="#" id="filter-movies" class="side-menu-item"><i class="material-icons">movie</i><span>Películas</span></a>
+                <a href="#" id="filter-series" class="side-menu-item"><i class="material-icons">tv</i><span>Series</span></a>
+                <a href="#" id="filter-channels" class="side-menu-item"><i class="material-icons">live_tv</i><span>Canales</span></a>
+                <a href="#" id="filter-favorites" class="side-menu-item"><i class="material-icons">favorite</i><span>Mis Favoritos</span></a>
+            </div>
+            <hr style="border: none; height: 1px; background-color: var(--menu-divider); margin: 0 20px;">
+            <div class="side-menu-section">
+                <p class="side-menu-section-title">Soporte</p>
+                <a href="https://t.me/HydraflixOK" target="_blank" class="side-menu-item"><i class="material-icons">telegram</i><span>Síguenos en Telegram</span></a>
+                <a href="#" id="request-content-btn" class="side-menu-item"><i class="material-icons">add_comment</i><span>Solicitar Contenido</span></a>
+            </div>
+        </div>
+        <div class="side-menu-footer">Versión 1.5.4</div>
+    </div>
+    <div class="overlay"></div>
+
+    <div id="request-panel" class="bottom-sheet">
+        <div class="panel-handle"></div>
+        <div class="panel-content">
+            <h3>Solicitar Contenido</h3>
+            <form id="request-form">
+                <label for="request-title">Nombre:</label><input type="text" id="request-title" name="title" required>
+                <label for="request-type">Tipo:</label><select id="request-type" name="type" required><option value="Película">Película</option><option value="Serie">Serie</option></select>
+                <button type="submit" id="request-submit-btn">Enviar Solicitud</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="main-grid" class="movie-grid"></div>
+
+    <div id="playback-modal">
+        <svg class="spinner" viewBox="25 25 50 50">
+            <circle class="spinner-path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
+        </svg>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        // --- 1. CONFIGURACIÓN E INICIALIZACIÓN DE FIREBASE ---
+        // *** ⚠️ IMPORTANTE: REEMPLAZA ESTOS VALORES CON TU PROPIA CONFIGURACIÓN DE FIREBASE ***
+        const firebaseConfig = {
+            apiKey: "AIzaSyAvX9ZWG402NpI1UFyBxL_HxeMHSLF8fBI",
+            authDomain: "hidraflix-ba716.firebaseapp.com",
+            projectId: "hidraflix-ba716", 
+            // ... otros campos si son necesarios
+        };
+
+        let dbFirestore;
+        try {
+            firebase.initializeApp(firebaseConfig);
+            dbFirestore = firebase.firestore();
+            console.log("Firebase y Firestore inicializados correctamente.");
+        } catch (error) {
+            console.error("Error al inicializar Firebase:", error);
+        }
+        // --------------------------------------------------------------------
+
+        const mainGrid = document.getElementById('main-grid');
+        const sideMenu = document.querySelector(".side-menu");
+        const overlay = document.querySelector(".overlay");
+        const categoryNav = document.getElementById("category-nav");
+        const searchOverlay = document.getElementById('search-overlay');
+        const notificationsOverlay = document.getElementById('notifications-overlay');
+        const channelsOverlay = document.getElementById('channels-overlay');
+        const requestPanel = document.getElementById('request-panel');
+        const menuBtns = document.querySelectorAll(".menu-btn");
+        const searchBtn = document.querySelector('.search-btn');
+        const searchCloseBtn = document.getElementById('search-close-btn');
+        const notificationsBtn = document.getElementById('notifications-btn');
+        const notificationsCloseBtn = document.getElementById('notifications-close-btn');
+        const channelsCloseBtn = document.getElementById('channels-close-btn');
+        const requestContentBtn = document.getElementById('request-content-btn');
+        const searchInput = document.getElementById('search-input');
+        const searchTabs = document.querySelector('.search-tabs');
+        const searchResultsGrid = document.getElementById('search-results-grid');
+        const notificationsListContainer = document.getElementById('notifications-list-container');
+        const notificationBadge = document.querySelector('.notification-badge');
+        const channelsGrid = document.getElementById('channels-grid');
+        const menuItems = document.querySelectorAll(".side-menu-item");
+        
+        // Inicialización de datos vacía. Se llena en fetchAllData.
+        let allData = { contenidos: [], canales: [], notificaciones: [] }; 
+        let currentViewContent = [];
+
+        const loaderHTML = `
+            <div class="poster-loader">
+                <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="spinner-path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
+                </svg>
+            </div>`;
+
+        const playbackModal = document.getElementById('playback-modal');
+        let playbackTimeout;
+        let currentIframe = null;
+
+        function showPlaybackModal() {
+            playbackModal.classList.add('is-active');
+            document.body.classList.add('player-active');
+            if(history.state?.playbackModal !== true) {
+                history.pushState({ playbackModal: true }, '');
+            }
+        }
+
+        function hidePlaybackModal() {
+            playbackModal.classList.remove('is-active');
+            document.body.classList.remove('player-active');
+            if (playbackTimeout) clearTimeout(playbackTimeout);
+            if (currentIframe) {
+                currentIframe.src = 'about:blank';
+                currentIframe.remove();
+                currentIframe = null;
+            }
+        }
+
+        function startPlayback(videoUrl) {
+            if (!videoUrl) { console.error("URL de video no válida."); return; }
+            showPlaybackModal();
+            currentIframe = document.createElement('iframe');
+            currentIframe.src = videoUrl;
+            currentIframe.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:99999;display:none;";
+            currentIframe.setAttribute('allow', 'autoplay; fullscreen');
+            currentIframe.setAttribute('allowfullscreen', '');
+            document.body.appendChild(currentIframe);
+            
+            playbackTimeout = setTimeout(() => {
+                hidePlaybackModal();
+                if(currentIframe) currentIframe.style.display = 'block';
+            }, 5000);
+        }
+
+        window.addEventListener('popstate', (event) => {
+            if (playbackModal.classList.contains('is-active') || currentIframe) {
+                 hidePlaybackModal();
+            }
+        });
+
+        function showToast(message) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            container.appendChild(toast);
+            requestAnimationFrame(() => toast.classList.add('show'));
+            setTimeout(() => {
+                toast.classList.remove('show');
+                toast.addEventListener('transitionend', () => toast.remove());
+            }, 3000);
+        }
+
+        function renderNotifications(notifications = []) {
+            if (notifications.length === 0) { notificationsListContainer.innerHTML = `<p id="no-notifications">No hay notificaciones nuevas.</p>`; return; }
+            // Nota: Se asume que los documentos de notificación tienen un campo 'timestamp' (número o Timestamp de Firebase) para ordenar.
+            notifications.sort((a, b) => (b.timestamp?.seconds || b.timestamp || 0) - (a.timestamp?.seconds || b.timestamp || 0));
+            notificationsListContainer.innerHTML = notifications.map(n => {
+                // Manejo de timestamp si viene de Firebase (objeto con seconds y nanoseconds) o como número
+                const dateMs = (n.timestamp?.seconds || n.timestamp) * 1000;
+                const date = dateMs ? new Date(dateMs) : new Date(); // Usa fecha actual si falla
+                const timeString = date.toLocaleString('es-ES', { day: 'numeric', month: 'short', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true });
+
+                return `<div class="notification-item" data-id="${n.id}"><div class="notification-title">${n.title}</div><p class="notification-message">${n.message}</p><div class="notification-time">${timeString}</div></div>`;
+            }).join('');
+            
+            const lastReadId = localStorage.getItem('lastReadNotificationId') || '0';
+            if (notifications.length > 0 && notifications[0].id !== lastReadId) { notificationBadge.style.display = 'block'; }
+        }
+
+        function renderChannelsPage(channels = []) {
+            channelsGrid.innerHTML = "";
+            if (channels.length === 0) { channelsGrid.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; padding: 20px;">No hay canales disponibles.</p>`; return; }
+            channels.forEach(channel => {
+                const card = document.createElement('div');
+                card.className = 'channel-card js-channel-link';
+                card.dataset.streamUrl = channel.url || '';
+                card.innerHTML = `${loaderHTML}<img data-src="${channel.logo}" alt="${channel.name} logo" loading="lazy">`;
+                channelsGrid.appendChild(card);
+                lazyLoadObserver.observe(card);
+            });
+        }
+        
+        notificationsBtn.addEventListener('click', (e) => { e.preventDefault(); closeAllOverlays(); notificationsOverlay.classList.add('active'); notificationBadge.style.display = 'none'; if (allData.notificaciones.length > 0) { localStorage.setItem('lastReadNotificationId', allData.notificaciones[0].id); } });
+        
+        menuBtns.forEach(btn => { if (!btn.closest('.overlay-header')) { btn.addEventListener("click", () => { sideMenu.classList.toggle("active"); overlay.classList.toggle("active"); }); } });
+        
+        function closeAllOverlays() { sideMenu.classList.remove("active"); searchOverlay.classList.remove("active"); notificationsOverlay.classList.remove("active"); channelsOverlay.classList.remove("active"); requestPanel.classList.remove("active"); overlay.classList.remove("active"); }
+        
+        overlay.addEventListener("click", closeAllOverlays);
+        searchBtn.addEventListener("click", () => { closeAllOverlays(); searchOverlay.classList.add("active"); searchInput.focus(); });
+        searchCloseBtn.addEventListener("click", () => searchOverlay.classList.remove("active"));
+        notificationsCloseBtn.addEventListener('click', () => notificationsOverlay.classList.remove('active'));
+        channelsCloseBtn.addEventListener('click', () => channelsOverlay.classList.remove('active'));
+        
+        // --- 2. FUNCIÓN DE CARGA DE DATOS DESDE FIRESTORE ---
+        async function fetchAllData() {
+            if (!dbFirestore) {
+                mainGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center;">Error: Firebase no está disponible.</p>';
+                return;
+            }
+
+            mainGrid.innerHTML = Array.from({length: 18}, () => `<a class="movie-poster">${loaderHTML}</a>`).join('');
+            
+            try {
+                // 1. Cargar Ajustes (para el color)
+                const settingsDoc = await dbFirestore.collection('settings').doc('app-settings').get();
+                if (settingsDoc.exists) {
+                    const settings = settingsDoc.data();
+                    if (settings.main_color) {
+                        document.documentElement.style.setProperty('--main-red', settings.main_color);
+                    }
+                }
+                
+                // 2. Cargar Contenidos (Películas y Series)
+                const contentSnapshot = await dbFirestore.collection('contenidos').get();
+                const loadedContenidos = contentSnapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                
+                // --- FIX: FILTRADO DE CONTENIDO DUPLICADO EN EL FRONTEND ---
+                const uniqueTitles = new Set();
+                allData.contenidos = loadedContenidos.filter(item => {
+                    // Usamos el título del contenido como la clave de unicidad, ignorando mayúsculas/minúsculas.
+                    const titleKey = item.title ? item.title.toLowerCase().trim() : '';
+                    
+                    // Si la clave ya fue vista, es un duplicado -> lo descartamos (return false).
+                    if (titleKey && uniqueTitles.has(titleKey)) {
+                        return false;
+                    }
+                    
+                    // Si es nuevo, lo registramos y lo conservamos (return true).
+                    uniqueTitles.add(titleKey);
+                    return true;
+                });
+                // -----------------------------------------------------------
+                
+                // 3. Cargar Canales
+                const channelsSnapshot = await dbFirestore.collection('canales').get();
+                allData.canales = channelsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+                // 4. Cargar Notificaciones
+                const notificationsSnapshot = await dbFirestore.collection('notificaciones').get();
+                allData.notificaciones = notificationsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+
+                // Ordenar contenidos por ID de Firestore (para que los más recientes salgan primero)
+                // El ID de Firestore es un string que incluye el timestamp de creación, por lo que
+                // al ordenar de forma descendente (b.id vs a.id) el contenido más nuevo aparecerá arriba.
+                allData.contenidos.sort((a, b) => (b.id || '').localeCompare(a.id || ''));
+
+                renderNotifications(allData.notificaciones);
+                showAllContent();
+
+            } catch (error) {
+                console.error("Error al cargar datos de Firebase:", error);
+                mainGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center;">Error al cargar contenido desde Firebase. Revisa tu consola y configuración.</p>';
+            }
+        }
+        // --------------------------------------------------------------------
+        
+        const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const itemContainer = entry.target;
+                    const img = itemContainer.querySelector('img');
+                    if (img && img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.onload = () => {
+                            img.classList.add('loaded');
+                            const loader = itemContainer.querySelector('.poster-loader');
+                            if (loader) loader.remove();
+                        };
+                    }
+                    observer.unobserve(itemContainer);
+                }
+            });
+        }, { rootMargin: "0px 0px 200px 0px" });
+
+        function renderContentGrid(content, container) {
+            container.innerHTML = "";
+            if (content.length === 0) { container.innerHTML = `<p class="placeholder" style="grid-column: 1 / -1; text-align: center;">No se encontraron resultados.</p>`; return; }
+            content.forEach(item => {
+                const posterLink = document.createElement("a");
+                posterLink.href = item.type === 'series' ? `series.html?id=${item.id}` : `entrada.html?id=${item.id}`;
+                posterLink.className = "movie-poster";
+                
+                // --- PUNTUACIÓN (ESQUINA SUPERIOR IZQUIERDA) ---
+                const ratingHTML = item.rating ? `<div class="poster-rating"><i class="material-icons">star</i> ${item.rating}</div>` : '';
+                
+                // --- AÑO (ESQUINA SUPERIOR DERECHA) ---
+                const yearHTML = item.year ? `<div class="poster-year">${item.year}</div>` : '';
+
+                // --- TAG (ESQUINA INFERIOR IZQUIERDA - MOVIDO ARRIBA) ---
+                const tagHTML = item.tag ? `<div class="poster-tag">${item.tag}</div>` : '';
+
+                // --- TÍTULO (EN LA PARTE INFERIOR) ---
+                const titleOverlayHTML = item.title ? `<div class="poster-title-overlay">${item.title}</div>` : '';
+
+                posterLink.innerHTML = `${ratingHTML}${yearHTML}${tagHTML}${titleOverlayHTML}${loaderHTML}<img data-src="${item.poster}" alt="${item.title}" loading="lazy">`;
+                container.appendChild(posterLink);
+                lazyLoadObserver.observe(posterLink);
+            });
+        }
+
+        function setActiveMenuItem(activeItem) { menuItems.forEach(item => item.classList.remove('active')); if (activeItem) activeItem.classList.add('active'); }
+        function showMainContent() { mainGrid.style.display = 'grid'; categoryNav.style.display = 'flex'; }
+        function showAllContent(){ setActiveMenuItem(document.getElementById('filter-all')); showMainContent(); currentViewContent = allData.contenidos; renderCategories(currentViewContent); filterContent("all"); }
+        function showMoviesOnly(){ setActiveMenuItem(document.getElementById('filter-movies')); showMainContent(); currentViewContent = allData.contenidos.filter(e => "movie" === e.type); renderCategories(currentViewContent); filterContent("all"); }
+        function showSeriesOnly(){ setActiveMenuItem(document.getElementById('filter-series')); showMainContent(); currentViewContent = allData.contenidos.filter(e => "series" === e.type); renderCategories(currentViewContent); filterContent("all"); }
+        
+        function getFavorites() { return JSON.parse(localStorage.getItem('cineflixter-favorites') || '[]'); }
+        
+        function showFavorites() {
+            setActiveMenuItem(document.getElementById('filter-favorites'));
+            showMainContent();
+            const favoriteIDs = getFavorites();
+            if (favoriteIDs.length === 0) {
+                mainGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center;">Aún no tienes favoritos.</p>';
+                categoryNav.style.display = 'none';
+                return;
+            }
+            currentViewContent = allData.contenidos.filter(item => favoriteIDs.includes(item.id));
+            renderCategories(currentViewContent);
+            filterContent('all');
+        }
+
+        function renderCategories(content) {
+            const categories = ['TODO', 'ESTRENOS', ...new Set(content.map(item => item.category).filter(Boolean))];
+            categoryNav.innerHTML = '';
+            categories.forEach(cat => {
+                const item = document.createElement("a");
+                item.href = "#";
+                item.className = "category-item";
+                item.dataset.category = cat.toLowerCase();
+                item.textContent = cat.toUpperCase();
+                if (cat === 'TODO') item.classList.add('active');
+                categoryNav.appendChild(item);
+            });
+            document.querySelectorAll(".category-item").forEach(item => {
+                item.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    document.querySelector(".category-item.active")?.classList.remove("active");
+                    this.classList.add("active");
+                    filterContent(this.dataset.category);
+                });
+            });
+        }
+        function filterContent(category) {
+            const activeCat = document.querySelector(".category-item.active")?.dataset.category || 'todo';
+            const catToFilter = category || activeCat;
+            let filtered;
+            if (catToFilter === 'todo' || catToFilter === 'all') {
+                filtered = currentViewContent;
+            } else if (catToFilter === 'estrenos') {
+                const currentYear = new Date().getFullYear();
+                filtered = currentViewContent.filter(item => item && String(item.year) === String(currentYear));
+            } else {
+                filtered = currentViewContent.filter(item => item.category && item.category.toLowerCase() === catToFilter);
+            }
+            renderContentGrid(filtered, mainGrid);
+        }
+        function performSearch() {
+            const query = searchInput.value.toLowerCase().trim();
+            const activeFilter = searchTabs.querySelector('.active').dataset.filter;
+            if (query === "") { searchResultsGrid.innerHTML = ''; return; }
+            const results = allData.contenidos.filter(item => item.title.toLowerCase().includes(query) && (item.type === 'movie' || item.type === 'series') && item.type === activeFilter);
+            renderContentGrid(results, searchResultsGrid);
+        }
+        searchInput.addEventListener('input', performSearch);
+        searchTabs.addEventListener('click', (e) => { if (e.target.matches('.search-tab-btn')) { searchTabs.querySelector('.active').classList.remove('active'); e.target.classList.add('active'); performSearch(); } });
+        
+        document.getElementById("filter-all").addEventListener("click", e => { e.preventDefault(); showAllContent(); closeAllOverlays(); });
+        document.getElementById("filter-movies").addEventListener("click", e => { e.preventDefault(); showMoviesOnly(); closeAllOverlays(); });
+        document.getElementById("filter-series").addEventListener("click", e => { e.preventDefault(); showSeriesOnly(); closeAllOverlays(); });
+        document.getElementById("filter-favorites").addEventListener("click", e => { e.preventDefault(); showFavorites(); closeAllOverlays(); });
+        document.getElementById("filter-channels").addEventListener("click", e => { e.preventDefault(); closeAllOverlays(); setActiveMenuItem(e.currentTarget); renderChannelsPage(allData.canales); channelsOverlay.classList.add('active'); });
+        requestContentBtn.addEventListener('click', (e) => { e.preventDefault(); closeAllOverlays(); requestPanel.classList.add('active'); overlay.classList.add('active'); });
+
+        channelsGrid.addEventListener('click', (e) => {
+            const channelLink = e.target.closest('.js-channel-link');
+            if (channelLink && channelLink.dataset.streamUrl) {
+                e.preventDefault();
+                startPlayback(channelLink.dataset.streamUrl);
+            }
+        });
+        
+        document.getElementById('request-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const BOT_TOKEN = "8545619232:AAETbHnvGM6_JD9bBJGqLrs5K-L758gQeiE"; // REEMPLAZA
+            const CHAT_ID = "5275754444"; // REEMPLAZA
+            const title = document.getElementById('request-title').value;
+            const type = document.getElementById('request-type').value;
+            const message = `🔔 *Nueva Solicitud en CineFlixter* 🔔\n\n*Nombre:* ${title}\n*Tipo:* ${type}`;
+            const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+            const requestSubmitBtn = document.getElementById('request-submit-btn');
+            requestSubmitBtn.disabled = true; requestSubmitBtn.textContent = 'Enviando...';
+            try {
+                const response = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: CHAT_ID, text: message, parse_mode: 'Markdown' }) });
+                const data = await response.json();
+                if (data.ok) { showToast('Solicitud enviada con éxito'); document.getElementById('request-form').reset(); closeAllOverlays(); }
+                else { throw new Error(data.description); }
+            } catch (error) {
+                console.error('Error al enviar a Telegram:', error);
+                showToast('Error al enviar la solicitud. Intenta de nuevo.');
+            } finally {
+                requestSubmitBtn.disabled = false; requestSubmitBtn.textContent = 'Enviar Solicitud';
+            }
+        });
+
+        // Cargar los datos de Firebase al iniciar
+        fetchAllData();
+    });
+    </script>
+</body>
+</html>

@@ -38,38 +38,8 @@
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         button:focus, a:focus, input:focus, select:focus { outline: none; }
 
-        #playback-modal {
-            position: fixed; top: 50%; left: 50%;
-            transform: translate(-50%, -50%) scale(0.95);
-            background-color: #2c2c2e;
-            border-radius: 12px;
-            z-index: 1005;
-            box-shadow: 0 12px 17px 2px rgba(0,0,0,0.14), 0 5px 22px 4px rgba(0,0,0,0.12), 0 7px 8px -4px rgba(0,0,0,0.2);
-            opacity: 0; visibility: hidden;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            display: flex; flex-direction: column; align-items: center;
-            padding: 24px;
-        }
-        #playback-modal.is-active {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 1; visibility: visible;
-        }
-        .spinner {
-            height: 48px; width: 48px; animation: rotate 2s linear infinite;
-            transform-origin: center center;
-        }
-        .spinner-path {
-            stroke-dasharray: 1, 200; stroke-dashoffset: 0; stroke: var(--main-red);
-            stroke-linecap: round; animation: dash 1.5s ease-in-out infinite;
-        }
-        @keyframes rotate { 100% { transform: rotate(360deg); } }
-        @keyframes dash {
-            0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; }
-            50% { stroke-dasharray: 89, 200; stroke-dashoffset: -35px; }
-            100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; }
-        }
-        body.player-active { overflow: hidden; }
-
+        /* ELIMINADO: Estilos para el modal de reproducción/spinner */
+        
         .movie-banner {
             position: relative; min-height: 350px; display: flex; align-items: flex-end;
             gap: 20px; padding: 20px; background-size: cover; background-position: center 20%;
@@ -204,57 +174,27 @@
     </div>
 </div>
 
-<div id="playback-modal">
-    <svg class="spinner" viewBox="25 25 50 50">
-        <circle class="spinner-path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
-    </svg>
-</div>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
 
 <script>
-    const playbackModal = document.getElementById('playback-modal');
-    let playbackTimeout;
-    let currentIframe = null;
+    // --- 1. CONFIGURACIÓN E INICIALIZACIÓN DE FIREBASE (REEMPLAZA) ---
+    const firebaseConfig = {
+        apiKey: "AIzaSyAvX9ZWG402NpI1UFyBxL_HxeMHSLF8fBI",
+        authDomain: "hidraflix-ba716.firebaseapp.com",
+        projectId: "hidraflix-ba716", 
+        // Añade el resto de tu configuración si es necesario
+    };
 
-    function showPlaybackModal() {
-        playbackModal.classList.add('is-active');
-        document.body.classList.add('player-active');
-        if(history.state?.playbackModal !== true) {
-            history.pushState({ playbackModal: true }, '');
-        }
+    let dbFirestore;
+    try {
+        firebase.initializeApp(firebaseConfig);
+        dbFirestore = firebase.firestore();
+        console.log("Firebase y Firestore inicializados.");
+    } catch (error) {
+        console.error("Error al inicializar Firebase:", error);
     }
-
-    function hidePlaybackModal() {
-        playbackModal.classList.remove('is-active');
-        document.body.classList.remove('player-active');
-        if (playbackTimeout) clearTimeout(playbackTimeout);
-        if (currentIframe) {
-            currentIframe.src = 'about:blank';
-            currentIframe.remove();
-            currentIframe = null;
-        }
-    }
-
-    function startPlayback(videoUrl) {
-        if (!videoUrl) { console.error("URL de video no válida"); return; }
-        showPlaybackModal();
-        currentIframe = document.createElement('iframe');
-        currentIframe.src = videoUrl;
-        currentIframe.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:99999;display:none;";
-        currentIframe.setAttribute('allow', 'autoplay; fullscreen');
-        currentIframe.setAttribute('allowfullscreen', '');
-        document.body.appendChild(currentIframe);
-        
-        playbackTimeout = setTimeout(() => {
-            hidePlaybackModal();
-            if (currentIframe) currentIframe.style.display = 'block';
-        }, 5000);
-    }
-
-    window.addEventListener('popstate', (event) => {
-        if (playbackModal.classList.contains('is-active') || currentIframe) {
-             hidePlaybackModal();
-        }
-    });
+    // ----------------------------------------------------
 
     const fabPlay = document.getElementById('fab-play');
     const actionPanel = document.getElementById('action-panel');
@@ -316,6 +256,7 @@
             if (option.quality) detailsHtml += `<span><i class="material-icons">hd</i>${option.quality}</span>`;
             
             const li = document.createElement('li');
+            // Nota: El enlace ya no usa '#' sino directamente el src para la navegación.
             li.innerHTML = `<a href="${option.src}" class="option-item server-option"><div class="option-details">${detailsHtml}</div></a>`;
             selectionList.appendChild(li);
         });
@@ -331,8 +272,10 @@
         } else if (serverTarget) {
             const url = serverTarget.getAttribute('href');
             closeAllModals();
+            
+            // CAMBIO: Navegación directa
             if (currentAction === 'play') {
-                startPlayback(url);
+                window.location.href = url; // Abre el enlace de reproducción directamente
             } else {
                 window.location.href = `wvc-x-callback://open?url=${encodeURIComponent(url)}`;
             }
@@ -355,9 +298,8 @@
         setTimeout(() => { toast.classList.remove('show'); toast.addEventListener('transitionend', () => toast.remove()); }, 3000);
     }
     
-    // CAMBIO: Se usa 'cinemax-favorites' para guardar los favoritos
-    function getFavorites() { return JSON.parse(localStorage.getItem('cinemax-favorites') || '[]'); }
-    function saveFavorites(arr) { localStorage.setItem('cinemax-favorites', JSON.stringify(arr)); }
+    function getFavorites() { return JSON.parse(localStorage.getItem('cineflixter-favorites') || '[]'); }
+    function saveFavorites(arr) { localStorage.setItem('cineflixter-favorites', JSON.stringify(arr)); }
     function toggleFavorite(id) {
         let favs = getFavorites();
         const isFav = favs.includes(id);
@@ -378,22 +320,35 @@
         const contentId = new URLSearchParams(window.location.search).get('id');
         if (!contentId) { document.body.innerHTML = '<h1>Error: ID no especificado.</h1>'; return; }
         
+        if (!dbFirestore) {
+            document.body.innerHTML = '<h1>Error: Firebase no está disponible.</h1>'; 
+            return;
+        }
+
         try {
-            const res = await fetch('db.json?v=' + Date.now());
-            if (!res.ok) throw new Error("Network response was not ok");
-            const data = await res.json();
-            
-            // Busca tanto en contenidos como en canales
-            const item = data.contenidos.find(c => c.id === contentId) || data.canales.find(c => c.id === contentId);
-            
+            // Intenta buscar el documento en 'contenidos'
+            let itemDoc = await dbFirestore.collection('contenidos').doc(contentId).get();
+            let item = itemDoc.exists ? { id: itemDoc.id, ...itemDoc.data() } : null;
+
+            // Si no se encuentra, busca en 'canales'
+            if (!item) {
+                itemDoc = await dbFirestore.collection('canales').doc(contentId).get();
+                item = itemDoc.exists ? { id: itemDoc.id, ...itemDoc.data() } : null;
+            }
+
             if (!item) { document.body.innerHTML = '<h1>Error: Contenido no encontrado.</h1>'; return; }
             
             populatePage(item);
 
-        } catch (error) { console.error("Error:", error); document.body.innerHTML = '<h1>Error al cargar la aplicación.</h1>'; } 
+        } catch (error) { 
+            console.error("Error al cargar datos desde Firebase:", error); 
+            document.body.innerHTML = '<h1>Error al cargar la aplicación.</h1>'; 
+        } 
     });
 
     function populatePage(item) {
+        const contentId = new URLSearchParams(window.location.search).get('id');
+
         // Si el item es un canal (no tiene 'title', pero sí 'name')
         if (item.name && !item.title) {
             document.title = item.name;
@@ -405,13 +360,12 @@
             document.querySelector('.movie-meta').style.display = 'none';
             document.getElementById('synopsis-section').style.display = 'none';
             document.getElementById('favorite-btn').style.display = 'none';
-            fabPlay.style.display = 'none'; // Ocultar FAB, la reproducción es automática
+            fabPlay.style.display = 'none'; // Ocultar FAB
 
-            // Iniciar reproducción del canal automáticamente
-            startPlayback(item.url);
+            // CAMBIO: Navegación directa para reproducción de canal
+            window.location.href = item.url;
 
         } else { // Si es una película o serie
-            const contentId = new URLSearchParams(window.location.search).get('id');
             document.title = item.title;
             document.getElementById('movie-banner').style.backgroundImage = `url('${item.banner || item.poster}')`;
             document.getElementById('movie-title').textContent = item.title;
@@ -426,13 +380,34 @@
             document.getElementById('movie-synopsis').textContent = item.synopsis;
             setupSynopsisToggle();
             
-            groupedOptions = (item.options || []).reduce((acc, option) => {
+            // --- INICIO DE LA MODIFICACIÓN CLAVE (FILTRADO) ---
+            const allowedDomains = ['dumbalag.com', 'vidhide.me']; // Dominios permitidos
+
+            // 1. Filtrar las opciones: Solo se incluyen enlaces que contengan uno de los dominios permitidos
+            const filteredOptions = (item.options || []).filter(option => {
+                // Asegura que option.src existe y contiene un dominio permitido
+                if (option.src) {
+                    return allowedDomains.some(domain => option.src.includes(domain));
+                }
+                return false; // Descarta opciones sin URL o sin dominio permitido
+            });
+
+            // 2. Agrupar las opciones filtradas por idioma:
+            groupedOptions = filteredOptions.reduce((acc, option) => {
                 const lang = option.audio || 'Indefinido';
                 if (!acc[lang]) acc[lang] = [];
                 acc[lang].push(option);
                 return acc;
             }, {});
             
+            // Si después del filtro no hay opciones, oculta el botón de play
+            if (filteredOptions.length === 0) {
+                 fabPlay.style.display = 'none';
+            } else {
+                 fabPlay.style.display = 'flex'; // Asegura que esté visible si hay enlaces
+            }
+            // --- FIN DE LA MODIFICACIÓN CLAVE (FILTRADO) ---
+
             document.getElementById('favorite-btn').addEventListener('click', () => toggleFavorite(contentId));
             updateFavoriteButton(contentId);
         }
