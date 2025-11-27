@@ -31,65 +31,66 @@
             background-color: var(--background-color); 
             color: var(--text-color);
             line-height: 1.4;
+            overflow-x: hidden; 
         }
+        
+        .container { max-width: 800px; margin: 0 auto; padding: 15px; }
+        h1#title-agenda { text-align: center; font-size: 1.6rem; font-weight: 700; color: var(--text-color); margin: 10px 0 20px; }
+        .controls-bar { display: flex; gap: 10px; margin-bottom: 20px; }
+        .controls-bar input, .controls-bar select { flex-grow: 1; padding: 10px 15px; border-radius: 8px; border: 1px solid var(--border-color); background-color: var(--surface-color); color: var(--text-color); font-size: 1rem; -webkit-appearance: none; cursor: pointer; }
+        .controls-bar option { background-color: var(--surface-color); color: var(--text-color); }
+        ul#menu { list-style: none; padding: 0; margin: 0; }
+        .submenu-item li img[alt="play"] { filter: hue-rotate(300deg) brightness(1.5); }
+        .loading-message { text-align: center; color: var(--menu-text-secondary); padding: 40px; }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 15px;
-        }
 
-        h1#title-agenda {
-            text-align: center;
-            font-size: 1.6rem;
-            font-weight: 700;
+        /* --- ESTILOS PARA EL MODAL DE CARGA (#loading-overlay) --- */
+        #loading-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--background-color); 
+            z-index: 10000; 
+            display: none; 
+            align-items: center; justify-content: center;
+            flex-direction: column;
             color: var(--text-color);
-            margin: 10px 0 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
         }
 
-        /* Controles (Búsqueda y Filtro) */
-        .controls-bar {
-            display: flex;
-            gap: 10px;
+        /* Estilo para el botón de cancelar dentro del modal de carga */
+        #abort-loading-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--main-red);
+            color: var(--text-color);
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 10001; 
+            padding: 0; 
+        }
+
+        /* Estilo para el spinner de carga */
+        .spinner {
+            border: 4px solid var(--surface-color);
+            border-top: 4px solid var(--main-red);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
             margin-bottom: 20px;
         }
 
-        .controls-bar input, .controls-bar select {
-            flex-grow: 1;
-            padding: 10px 15px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            background-color: var(--surface-color);
-            color: var(--text-color);
-            font-size: 1rem;
-            -webkit-appearance: none;
-            cursor: pointer;
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
-        
-        .controls-bar option {
-            background-color: var(--surface-color);
-            color: var(--text-color);
-        }
-
-        /* Contenedor de la Lista */
-        ul#menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        /* Icono de Play en el submenú (para que el color sea Rojo) */
-        .submenu-item li img[alt="play"] {
-            filter: hue-rotate(300deg) brightness(1.5); 
-        }
-        
-        /* Indicador de carga */
-        .loading-message {
-            text-align: center;
-            color: var(--menu-text-secondary);
-            padding: 40px;
-        }
-
     </style>
 </head>
 <body>
@@ -108,6 +109,19 @@
             <p class="loading-message">Cargando agenda...</p>
         </ul>
     </div>
+    
+    <div id="loading-overlay">
+        <button id="abort-loading-btn" aria-label="Cancelar Carga">×</button>
+        <div class="spinner"></div>
+        <p>Extrayendo stream... espere 5 segundos</p>
+    </div>
+
+    <iframe 
+        id="stream-iframe" 
+        style="width: 1px; height: 1px; position: fixed; left: -9999px; top: -9999px; visibility: hidden;" 
+        frameborder="0" 
+        allowfullscreen>
+    </iframe>
 
     <script>
         $ = jQuery;
@@ -116,8 +130,7 @@
         const AGENDA_URL = "https://golazoplay.com/agenda.json";
         const IMG_BASE_URL = "https://img.golazoplay.com";
         const CATEGORIES_PERMITTED = ['futbol', 'tennis', 'basketball', 'wwe', 'mma(ufc)', 'formula1', 'boxing'];
-        // Zona Horaria de origen del JSON (ajusta si es necesario)
-        const SOURCE_TIMEZONE = "America/Lima"; 
+        const SOURCE_TIMEZONE = "America/Lima";
         
         // --- VARIABLES DE TEMA USADAS EN EL TEMPLATE ---
         const THEME_MAIN_RED = "#E50914";     
@@ -126,13 +139,59 @@
         const THEME_TEXT_SECONDARY = "#aaa";  
         const THEME_BORDER_COLOR = "#383838"; 
 
+        // Variable global para manejar el temporizador de 5 segundos
+        let loadingTimeout; 
+
         document.addEventListener('DOMContentLoaded', function() {
             obtenerAgenda();
 
+            // --- MANEJADOR DE CLIC DEL SUBMENÚ (ACTIVA CARGA DE 5S Y CARGA OCULTA) ---
             $(document).on("click", ".submenu-item", function (event) {
+                event.preventDefault(); 
                 event.stopPropagation();
+
+                const urlPath = $(this).attr('href'); 
+                const baseUrl = window.location.origin;
+                const fullUrl = baseUrl + urlPath; 
+
+                // 1. Ocultar agenda, bloquear scroll y mostrar overlay de carga
+                $('.controls-bar').hide();
+                $('#title-agenda').hide();
+                $('body').css('overflow', 'hidden'); 
+                $('#loading-overlay').css('display', 'flex'); 
+
+                // 2. Esperar 5000 milisegundos (5 segundos)
+                loadingTimeout = setTimeout(() => {
+                    // 3. Ocultar overlay de carga
+                    $('#loading-overlay').hide();
+                    
+                    // 4. Cargar URL en el iframe OCULTO
+                    // Esto permite que el WebView nativo intercepte la URL de stream
+                    $('#stream-iframe').attr('src', fullUrl);
+                    
+                    // 5. Restaurar la vista de la agenda (si la app nativa no cierra el webview)
+                    $('.controls-bar').show();
+                    $('#title-agenda').show();
+                    $('body').css('overflow', 'auto'); 
+
+                }, 5000); 
             });
 
+            // --- MANEJADOR DEL BOTÓN DE ABORTAR CARGA ---
+            $(document).on("click", "#abort-loading-btn", function () {
+                clearTimeout(loadingTimeout); // Detiene el temporizador
+                $('#loading-overlay').hide();
+                
+                // 3. Restaurar la vista de la agenda
+                $('.controls-bar').show();
+                $('#title-agenda').show();
+                $('body').css('overflow', 'auto'); 
+                
+                // 4. Limpiar el iframe oculto
+                $('#stream-iframe').attr('src', '');
+            });
+            
+            // --- MANEJADOR DE TOGGLE DEL SUBMENU ---
             $(document).on("click", ".toggle-submenu", function () {
                 var $submenuElement = $(this).closest('li').find('ul');
 
@@ -149,23 +208,18 @@
 
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            /********** SCRIPT SEARCH FILTER **********/
+            /********** FILTROS **********/
+            
             let search = document.getElementById('search');
-
             search.addEventListener('keyup', () => {
                 let filter = search.value.toLowerCase();
                 let streamLinks = document.querySelectorAll("#menu > li");
 
-                if(filter === '') {
-                    streamLinks.forEach(link => link.style.display = 'block');
-                    return;
-                }
-
                 streamLinks.forEach(link => {
                     let title = link.querySelector('div > div > span').textContent.toLowerCase();
 
-                    if (title.includes(filter)) {
-                        link.style.display = '';
+                    if(filter === '' || title.includes(filter)) {
+                        link.style.display = 'block';
                     } else {
                         link.style.display = 'none';
                     }
@@ -177,10 +231,7 @@
                 obtenerAgenda(); 
             });
 
-            /********** SCRIPT SELECTED CATEGORY FILTER **********/
-
             let searchByCategory = document.getElementById('filter_category');
-
             searchByCategory.addEventListener('change', function() {
                 let filter = this.value.toLowerCase();
                 let streamLinks = document.querySelectorAll("#menu > li");
@@ -197,40 +248,19 @@
             });
         });
 
-        function upgrade() {
-            refrescarAgenda();
-        }
+        // --- FUNCIONES DE MANEJO DE HORA Y FECHA ---
 
-        // --- FUNCIONES DE MANEJO DE HORA Y FECHA (CORREGIDAS) ---
-
-        /**
-         * @function convertToUserTimeZone
-         * Convierte la hora de la agenda (en SOURCE_TIMEZONE) a la hora local del usuario.
-         */
         function convertToUserTimeZone(dateString, timeString) {
             const DateTime = luxon.DateTime;
-            
-            // Combina la fecha y hora de la agenda en el formato ISO 8601 esperado
             const combinedDateTime = `${dateString}T${timeString}`;
-            
-            // Crea un objeto DateTime con la hora y la zona de origen
             const sourceDateTime = DateTime.fromISO(combinedDateTime, { zone: SOURCE_TIMEZONE });
-            
-            // Convierte a la zona horaria local del usuario y formatea
             const localDateTime = sourceDateTime.toLocal();
-            
             return localDateTime.toFormat("HH:mm");
         }
         
-        /**
-         * @function formatDate
-         * CORREGIDO: Usa Luxon para formatear la fecha actual de forma segura y en español.
-         */
         function formatDate(dateString) {
             const DateTime = luxon.DateTime;
-            // Asume que dateString es el ISO de la fecha actual (new Date().toISOString())
             const dt = DateTime.fromISO(dateString, { locale: 'es' });
-            // Formato robusto: "27 de noviembre de 2025"
             return dt.toFormat("d 'de' MMMM 'de' yyyy");
         }
 
@@ -244,7 +274,6 @@
                         ? IMG_BASE_URL + value.attributes.country.data.attributes.image.data.attributes.url
                         : "https://img.golazoplay.com/uploads/sin_imagen_d36205f0e8.png";
                     
-                    // Conversión a la hora local del usuario
                     const localTime = convertToUserTimeZone(value.attributes.date_diary, value.attributes.diary_hour);
 
                     const submenuHtml = value.attributes.embeds.data.map(embed => {
@@ -298,7 +327,6 @@
             menuElement.innerHTML = '<p class="loading-message">Cargando agenda...</p>';
 
             try {
-                // Fetch con anti-caché
                 const response = await fetch(`${AGENDA_URL}?t=${new Date().getTime()}`);
                 
                 if (!response.ok) {
@@ -309,7 +337,6 @@
 
                 loadCategories(result.data);
                 
-                // La fecha ahora se formatea correctamente usando Luxon
                 const dateCompleted = formatDate(new Date().toISOString());
                 titleAgendaElement.innerHTML = "Agenda - " + dateCompleted;
 
