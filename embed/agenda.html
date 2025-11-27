@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Deportiva - CineFlixter</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- VARIABLES DE TEMA OSCURO (CineFlixter) --- */
+        :root {
+            --main-red: #E50914; 
+            --background-color: #000000; 
+            --surface-color: #1f1f1f;
+            --text-color: #ffffff;
+            --border-color: #444;
+            --menu-text-secondary: #aaa;
+            --menu-divider: #383838;
+        }
+
+        /* --- ESTILOS GENERALES Y ESTRUCTURA --- */
+        body, html {
+            margin: 0; padding: 0; 
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--background-color); 
+            color: var(--text-color);
+            line-height: 1.4;
+            overflow-x: hidden; 
+        }
+        
+        .container { max-width: 800px; margin: 0 auto; padding: 15px; }
+        h1#title-agenda { text-align: center; font-size: 1.6rem; font-weight: 700; color: var(--text-color); margin: 10px 0 20px; }
+        .controls-bar { display: flex; gap: 10px; margin-bottom: 20px; }
+        .controls-bar input, .controls-bar select { flex-grow: 1; padding: 10px 15px; border-radius: 8px; border: 1px solid var(--border-color); background-color: var(--surface-color); color: var(--text-color); font-size: 1rem; -webkit-appearance: none; cursor: pointer; }
+        .controls-bar option { background-color: var(--surface-color); color: var(--text-color); }
+        ul#menu { list-style: none; padding: 0; margin: 0; }
+        .submenu-item li img[alt="play"] { filter: hue-rotate(300deg) brightness(1.5); }
+        .loading-message { text-align: center; color: var(--menu-text-secondary); padding: 40px; }
+
+
+        /* --- ESTILOS PARA EL MODAL DE CARGA (#loading-overlay) --- */
+        #loading-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--background-color); 
+            z-index: 10000; 
+            display: none; 
+            align-items: center; justify-content: center;
+            flex-direction: column;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* Estilo para el botón de cancelar dentro del modal de carga */
+        #abort-loading-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--main-red);
+            color: var(--text-color);
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 10001; 
+            padding: 0; 
+        }
+
+        /* Estilo para el spinner de carga */
+        .spinner {
+            border: 4px solid var(--surface-color);
+            border-top: 4px solid var(--main-red);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="title-agenda">Agenda</h1>
+        
+        <div class="controls-bar">
+            <input type="search" id="search" placeholder="Buscar partido..." autocomplete="off">
+            <select id="filter_category">
+                <option value="">-- Filtra por Categoria --</option>
+            </select>
+        </div>
+
+        <ul id="menu">
+            <p class="loading-message">Cargando agenda...</p>
+        </ul>
+    </div>
+    
+    <div id="loading-overlay">
+        <button id="abort-loading-btn" aria-label="Cancelar Carga">×</button>
+        <div class="spinner"></div>
+        <p>Extrayendo stream... espere 5 segundos</p>
+    </div>
+
+    <iframe 
+        id="stream-iframe" 
+        style="width: 1px; height: 1px; position: fixed; left: -9999px; top: -9999px; visibility: hidden;" 
+        frameborder="0" 
+        allowfullscreen>
+    </iframe>
+
+    <script>
+        $ = jQuery;
+
+        // --- CONFIGURACIÓN Y CONSTANTES ---
+        const AGENDA_URL = "https://golazoplay.com/agenda.json";
+        const IMG_BASE_URL = "https://img.golazoplay.com";
+        const CATEGORIES_PERMITTED = ['futbol', 'tennis', 'basketball', 'wwe', 'mma(ufc)', 'formula1', 'boxing'];
+        const SOURCE_TIMEZONE = "America/Lima";
+        
+        // --- VARIABLES DE TEMA USADAS EN EL TEMPLATE ---
+        const THEME_MAIN_RED = "#E50914";     
+        const THEME_SURFACE_COLOR = "#1f1f1f"; 
+        const THEME_TEXT_COLOR = "#ffffff";   
+        const THEME_TEXT_SECONDARY = "#aaa";  
+        const THEME_BORDER_COLOR = "#383838"; 
+
+        // Variable global para manejar el temporizador de 5 segundos
+        let loadingTimeout; 
+
+        document.addEventListener('DOMContentLoaded', function() {
+            obtenerAgenda();
+
+            // --- MANEJADOR DE CLIC DEL SUBMENÚ (ACTIVA CARGA DE 5S Y CARGA OCULTA) ---
+            $(document).on("click", ".submenu-item", function (event) {
+                event.preventDefault(); 
+                event.stopPropagation();
+
+                const urlPath = $(this).attr('href'); 
+                const baseUrl = window.location.origin;
+                const fullUrl = baseUrl + urlPath; 
+
+                // 1. Ocultar agenda, bloquear scroll y mostrar overlay de carga
+                $('.controls-bar').hide();
+                $('#title-agenda').hide();
+                $('body').css('overflow', 'hidden'); 
+                $('#loading-overlay').css('display', 'flex'); 
+
+                // 2. Esperar 5000 milisegundos (5 segundos)
+                loadingTimeout = setTimeout(() => {
+                    // 3. Ocultar overlay de carga
+                    $('#loading-overlay').hide();
+                    
+                    // 4. Cargar URL en el iframe OCULTO
+                    // Esto permite que el WebView nativo intercepte la URL de stream
+                    $('#stream-iframe').attr('src', fullUrl);
+                    
+                    // 5. Restaurar la vista de la agenda (si la app nativa no cierra el webview)
+                    $('.controls-bar').show();
+                    $('#title-agenda').show();
+                    $('body').css('overflow', 'auto'); 
+
+                }, 5000); 
+            });
+
+            // --- MANEJADOR DEL BOTÓN DE ABORTAR CARGA ---
+            $(document).on("click", "#abort-loading-btn", function () {
+                clearTimeout(loadingTimeout); // Detiene el temporizador
+                $('#loading-overlay').hide();
+                
+                // 3. Restaurar la vista de la agenda
+                $('.controls-bar').show();
+                $('#title-agenda').show();
+                $('body').css('overflow', 'auto'); 
+                
+                // 4. Limpiar el iframe oculto
+                $('#stream-iframe').attr('src', '');
+            });
+            
+            // --- MANEJADOR DE TOGGLE DEL SUBMENU ---
+            $(document).on("click", ".toggle-submenu", function () {
+                var $submenuElement = $(this).closest('li').find('ul');
+
+                if (!$submenuElement.is(":visible"))
+                {
+                    $(".toggle-submenu").not(this).closest('li').find('ul').slideUp();
+                    $submenuElement.slideDown();
+                } else {
+                    $submenuElement.slideUp();
+                }
+            });
+
+            setInterval(upgrade, 60000); 
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            /********** FILTROS **********/
+            
+            let search = document.getElementById('search');
+            search.addEventListener('keyup', () => {
+                let filter = search.value.toLowerCase();
+                let streamLinks = document.querySelectorAll("#menu > li");
+
+                streamLinks.forEach(link => {
+                    let title = link.querySelector('div > div > span').textContent.toLowerCase();
+
+                    if(filter === '' || title.includes(filter)) {
+                        link.style.display = 'block';
+                    } else {
+                        link.style.display = 'none';
+                    }
+                });
+            });
+
+            search.addEventListener("search", function(event) {
+                event.preventDefault();
+                obtenerAgenda(); 
+            });
+
+            let searchByCategory = document.getElementById('filter_category');
+            searchByCategory.addEventListener('change', function() {
+                let filter = this.value.toLowerCase();
+                let streamLinks = document.querySelectorAll("#menu > li");
+
+                streamLinks.forEach(link => {
+                    const category = link.getAttribute('data-category').toLowerCase();
+
+                    if (filter === '' || category.includes(filter)) {
+                        link.style.display = '';
+                    } else {
+                        link.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // --- FUNCIONES DE MANEJO DE HORA Y FECHA ---
+
+        function convertToUserTimeZone(dateString, timeString) {
+            const DateTime = luxon.DateTime;
+            const combinedDateTime = `${dateString}T${timeString}`;
+            const sourceDateTime = DateTime.fromISO(combinedDateTime, { zone: SOURCE_TIMEZONE });
+            const localDateTime = sourceDateTime.toLocal();
+            return localDateTime.toFormat("HH:mm");
+        }
+        
+        function formatDate(dateString) {
+            const DateTime = luxon.DateTime;
+            const dt = DateTime.fromISO(dateString, { locale: 'es' });
+            return dt.toFormat("d 'de' MMMM 'de' yyyy");
+        }
+
+        // --- FUNCIONES DE CARGA Y RENDERIZADO ---
+
+        function buildAgendaHtml(data) {
+             return data
+                .filter(value => CATEGORIES_PERMITTED.includes(value.attributes.deportes.toLowerCase()))
+                .map(value => {
+                    const imageUrl = value.attributes.country.data
+                        ? IMG_BASE_URL + value.attributes.country.data.attributes.image.data.attributes.url
+                        : "https://img.golazoplay.com/uploads/sin_imagen_d36205f0e8.png";
+                    
+                    const localTime = convertToUserTimeZone(value.attributes.date_diary, value.attributes.diary_hour);
+
+                    const submenuHtml = value.attributes.embeds.data.map(embed => {
+                        if (embed) {
+                            let urlComplete = embed.attributes.embed_iframe || "/star-plus";
+                            return `
+                                <div class="submenu" style="padding-top:8px">
+                                    <a href="${urlComplete}" style="font-size: 0.875rem; color: ${THEME_TEXT_SECONDARY}; text-decoration: none; transition: color 0.3s;" class="submenu-item">
+                                        <li style="padding-bottom: 0.5rem; padding-top: 0.5rem; width: 100%; display: flex; align-items: center; list-style: none; border-bottom: 1px dashed ${THEME_BORDER_COLOR};">
+                                            <img src="https://img.icons8.com/?size=10&id=59862&format=png&color=E50914" style="margin-right: 0.5rem; height: 10px; width: 10px;" alt="play">
+                                            <span style="font-family: arial, Arial, Helvetica, sans-serif; font-size: 15px;">${embed.attributes.embed_name}</span>
+                                        </li>
+                                    </a>
+                                </div>
+                            `;
+                        }
+                        return '';
+                    }).join('');
+
+                    return `
+                        <li class="toggle-submenu" 
+                            style="padding: 0.75rem; border-radius: 8px; cursor: pointer; list-style: none; margin-bottom: 10px; background-color: ${THEME_SURFACE_COLOR}; border-left: 3px solid ${THEME_MAIN_RED};" 
+                            data-category="${value.attributes.deportes.toLowerCase()}">
+                            
+                            <div style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center;">
+                                    <time datetime="${localTime}" 
+                                          style="width: 3rem; text-align: center; font-weight: 700; font-size: 15px; color: ${THEME_MAIN_RED};">
+                                        ${localTime}
+                                    </time>
+                                    <img src="${imageUrl}" alt="" style="margin-left: 0.5rem; object-fit: cover; height: 1.5rem; width: 1.5rem;">
+                                    <span style="flex: 1; margin-left: 1rem; text-align: left; font-weight: 700; color: ${THEME_TEXT_COLOR}; font-family: arial, Arial, Helvetica, sans-serif;font-size: 15px;">
+                                        ${value.attributes.diary_description}
+                                    </span>
+                                </div>
+                                <span style="margin-left: 0.5rem; color: ${THEME_TEXT_SECONDARY};"></span>
+                            </div>
+                            
+                            <ul style="margin-left: 1rem; border-radius: 0.5rem; display: none; padding-top: 5px;">
+                                ${submenuHtml}
+                            </ul>
+                        </li>
+                    `;
+                }).join('');
+        }
+
+        async function obtenerAgenda() {
+            const menuElement = document.getElementById("menu");
+            const titleAgendaElement = document.getElementById("title-agenda");
+            
+            menuElement.innerHTML = '<p class="loading-message">Cargando agenda...</p>';
+
+            try {
+                const response = await fetch(`${AGENDA_URL}?t=${new Date().getTime()}`);
+                
+                if (!response.ok) {
+                    throw new Error(`Error ${response.status}: No se pudo acceder a la URL de la agenda.`);
+                }
+                
+                const result = await response.json();
+
+                loadCategories(result.data);
+                
+                const dateCompleted = formatDate(new Date().toISOString());
+                titleAgendaElement.innerHTML = "Agenda - " + dateCompleted;
+
+                const data = result.data.sort((a, b) =>
+                    a.attributes.diary_hour.localeCompare(b.attributes.diary_hour)
+                );
+
+                const html = buildAgendaHtml(data);
+                
+                if (html.length === 0) {
+                     menuElement.innerHTML = `<p class="loading-message">No hay eventos disponibles en las categorías permitidas.</p>`;
+                } else {
+                     menuElement.innerHTML = html;
+                }
+               
+            } catch (error) {
+                console.error("Error fetching agenda:", error);
+                menuElement.innerHTML = `<p class="loading-message" style="color:${THEME_MAIN_RED};">
+                    <strong>¡Error de carga!</strong>
+                    No se pudieron obtener los datos de la agenda. 
+                    <br>(${error.message}).</p>`;
+            }
+        }
+
+        async function refrescarAgenda() {
+            await obtenerAgenda();
+        }
+
+        function loadCategories(data) {
+            let filter_category = document.getElementById('filter_category');
+            if (!filter_category) return;
+            
+            let categoryArray = [];
+            data.forEach(item => {
+                const category = item.attributes.deportes.toLowerCase();
+                if (CATEGORIES_PERMITTED.includes(category) && !categoryArray.includes(category)) {
+                    categoryArray.push(category);
+                }
+            });
+
+            if(categoryArray.length > 0) {
+                let html = '  <option value="">-- Filtra por Categoria --</option>';
+                categoryArray.forEach(category => {
+                    html += `<option value="${category}">${category.toUpperCase()}</option>`;
+                });
+                filter_category.innerHTML = html;
+            }
+        }
+    </script>
+</body>
+</html>
