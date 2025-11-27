@@ -47,38 +47,33 @@
         /* --- ESTILOS PARA EL MODAL DE CARGA (#loading-overlay) --- */
         #loading-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background-color: var(--background-color); 
+            /* Oscurece el fondo y centra el contenido pequeño */
+            background-color: rgba(0, 0, 0, 0.9); 
             z-index: 10000; 
             display: none; 
-            align-items: center; justify-content: center;
-            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+        }
+
+        /* Contenedor pequeño y centrado */
+        #loading-content {
+            background-color: var(--surface-color); 
+            padding: 30px 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             color: var(--text-color);
             font-size: 1.2rem;
             font-weight: 600;
-        }
-
-        /* Estilo para el botón de cancelar dentro del modal de carga */
-        #abort-loading-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: var(--main-red);
-            color: var(--text-color);
-            border: none;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            line-height: 1;
-            cursor: pointer;
-            z-index: 10001; 
-            padding: 0; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         /* Estilo para el spinner de carga */
         .spinner {
-            border: 4px solid var(--surface-color);
+            border: 4px solid var(--menu-divider);
             border-top: 4px solid var(--main-red);
             border-radius: 50%;
             width: 50px;
@@ -111,9 +106,10 @@
     </div>
     
     <div id="loading-overlay">
-        <button id="abort-loading-btn" aria-label="Cancelar Carga">×</button>
-        <div class="spinner"></div>
-        <p>Extrayendo stream... espere 5 segundos</p>
+        <div id="loading-content">
+            <div class="spinner"></div>
+            <p>Extrayendo stream... espere 5 segundos</p>
+        </div>
     </div>
 
     <iframe 
@@ -139,9 +135,6 @@
         const THEME_TEXT_SECONDARY = "#aaa";  
         const THEME_BORDER_COLOR = "#383838"; 
 
-        // Variable global para manejar el temporizador de 5 segundos
-        let loadingTimeout; 
-
         document.addEventListener('DOMContentLoaded', function() {
             obtenerAgenda();
 
@@ -161,34 +154,19 @@
                 $('#loading-overlay').css('display', 'flex'); 
 
                 // 2. Esperar 5000 milisegundos (5 segundos)
-                loadingTimeout = setTimeout(() => {
+                setTimeout(() => {
                     // 3. Ocultar overlay de carga
                     $('#loading-overlay').hide();
                     
-                    // 4. Cargar URL en el iframe OCULTO
-                    // Esto permite que el WebView nativo intercepte la URL de stream
+                    // 4. Cargar URL en el iframe OCULTO para intercepción del stream
                     $('#stream-iframe').attr('src', fullUrl);
                     
-                    // 5. Restaurar la vista de la agenda (si la app nativa no cierra el webview)
+                    // 5. Restaurar la vista de la agenda
                     $('.controls-bar').show();
                     $('#title-agenda').show();
                     $('body').css('overflow', 'auto'); 
 
                 }, 5000); 
-            });
-
-            // --- MANEJADOR DEL BOTÓN DE ABORTAR CARGA ---
-            $(document).on("click", "#abort-loading-btn", function () {
-                clearTimeout(loadingTimeout); // Detiene el temporizador
-                $('#loading-overlay').hide();
-                
-                // 3. Restaurar la vista de la agenda
-                $('.controls-bar').show();
-                $('#title-agenda').show();
-                $('body').css('overflow', 'auto'); 
-                
-                // 4. Limpiar el iframe oculto
-                $('#stream-iframe').attr('src', '');
             });
             
             // --- MANEJADOR DE TOGGLE DEL SUBMENU ---
@@ -205,7 +183,6 @@
             });
 
             setInterval(upgrade, 60000); 
-
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
             /********** FILTROS **********/
