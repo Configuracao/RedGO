@@ -36,11 +36,9 @@
         
         .container { max-width: 800px; margin: 0 auto; padding: 15px; }
         h1#title-agenda { text-align: center; font-size: 1.6rem; font-weight: 700; color: var(--text-color); margin: 10px 0 20px; }
-        
-        /* Ajuste de la barra de controles para un solo elemento */
         .controls-bar { display: flex; gap: 10px; margin-bottom: 20px; }
-        .controls-bar input { flex-grow: 1; padding: 10px 15px; border-radius: 8px; border: 1px solid var(--border-color); background-color: var(--surface-color); color: var(--text-color); font-size: 1rem; -webkit-appearance: none; cursor: pointer; }
-
+        .controls-bar input, .controls-bar select { flex-grow: 1; padding: 10px 15px; border-radius: 8px; border: 1px solid var(--border-color); background-color: var(--surface-color); color: var(--text-color); font-size: 1rem; -webkit-appearance: none; cursor: pointer; }
+        .controls-bar option { background-color: var(--surface-color); color: var(--text-color); }
         ul#menu { list-style: none; padding: 0; margin: 0; }
         .submenu-item li img[alt="play"] { filter: hue-rotate(300deg) brightness(1.5); }
         .loading-message { text-align: center; color: var(--menu-text-secondary); padding: 40px; }
@@ -49,6 +47,7 @@
         /* --- ESTILOS PARA EL MODAL DE CARGA (#loading-overlay) --- */
         #loading-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            /* Oscurece el fondo y centra el contenido pequeño */
             background-color: rgba(0, 0, 0, 0.9); 
             z-index: 10000; 
             display: none; 
@@ -64,6 +63,7 @@
             text-align: center;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             color: var(--text-color);
+            /* Reducimos el tamaño de fuente para el texto */
             font-size: 1rem; 
             font-weight: 600;
             display: flex;
@@ -80,7 +80,7 @@
             width: 50px;
             height: 50px;
             animation: spin 1s linear infinite;
-            margin-bottom: 10px; 
+            margin-bottom: 10px; /* Reducimos el margen */
         }
 
         @keyframes spin {
@@ -96,6 +96,9 @@
         
         <div class="controls-bar">
             <input type="search" id="search" placeholder="Buscar partido..." autocomplete="off">
+            <select id="filter_category">
+                <option value="">-- Filtra por Categoria --</option>
+            </select>
         </div>
 
         <ul id="menu">
@@ -136,7 +139,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             obtenerAgenda();
 
-            // --- MANEJADOR DE CLIC DEL SUBMENÚ (ACTIVA CARGA INMEDIATA Y MUESTRA MODAL DE 5S) ---
+            // --- MANEJADOR DE CLIC DEL SUBMENÚ (ACTIVA CARGA DE 5S Y CARGA OCULTA) ---
             $(document).on("click", ".submenu-item", function (event) {
                 event.preventDefault(); 
                 event.stopPropagation();
@@ -145,30 +148,26 @@
                 const baseUrl = window.location.origin;
                 const fullUrl = baseUrl + urlPath; 
 
-                // 1. Ocultar agenda, bloquear scroll
+                // 1. Ocultar agenda, bloquear scroll y mostrar overlay de carga
                 $('.controls-bar').hide();
                 $('#title-agenda').hide();
                 $('body').css('overflow', 'hidden'); 
-                
-                // 2. CARGAR URL EN EL IFRAME OCULTO (ACCIÓN INMEDIATA para la extracción del stream)
-                $('#stream-iframe').attr('src', fullUrl);
-
-                // 3. Mostrar overlay de carga (solo visual)
                 $('#loading-overlay').css('display', 'flex'); 
 
-                // 4. Esperar 5000 milisegundos (5 segundos) para dar tiempo a la extracción
+                // 2. Esperar 2000 milisegundos (5 segundos)
                 setTimeout(() => {
-                    // 5. Ocultar overlay de carga y restaurar la vista
+                    // 3. Ocultar overlay de carga
                     $('#loading-overlay').hide();
                     
+                    // 4. Cargar URL en el iframe OCULTO para intercepción del stream
+                    $('#stream-iframe').attr('src', fullUrl);
+                    
+                    // 5. Restaurar la vista de la agenda
                     $('.controls-bar').show();
                     $('#title-agenda').show();
                     $('body').css('overflow', 'auto'); 
-                    
-                    // Opcional: Limpiar el src del iframe para detener cualquier proceso residual
-                    $('#stream-iframe').attr('src', '');
 
-                }, 5000); 
+                }, 2000); 
             });
             
             // --- MANEJADOR DE TOGGLE DEL SUBMENU ---
@@ -187,43 +186,44 @@
             setInterval(upgrade, 60000); 
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            /********** FUNCIONALIDAD DE BUSCADOR (CORREGIDA Y ROBUSTA CON EVENTO 'INPUT') **********/
+            /********** FILTROS **********/
             
-            function applySearch() {
-                // Usamos jQuery para obtener el valor del input de forma segura.
-                const searchTerm = $('#search').val().trim().toLowerCase(); 
-                
-                // Recorremos todos los elementos de la agenda
-                $("#menu > li").each(function() {
-                    const $link = $(this);
-                    // Obtenemos todo el texto visible dentro del elemento <li>
-                    const linkText = $link.text().trim().toLowerCase(); 
-                    
-                    let passesSearch = false;
-                    
-                    // Si el término está vacío O si el texto del elemento incluye el término
-                    if (searchTerm === '' || linkText.includes(searchTerm)) {
-                        passesSearch = true;
+            let search = document.getElementById('search');
+            search.addEventListener('keyup', () => {
+                let filter = search.value.toLowerCase();
+                let streamLinks = document.querySelectorAll("#menu > li");
+
+                streamLinks.forEach(link => {
+                    let title = link.querySelector('div > div > span').textContent.toLowerCase();
+
+                    if(filter === '' || title.includes(filter)) {
+                        link.style.display = 'block';
+                    } else {
+                        link.style.display = 'none';
                     }
-                    
-                    // Establecer visibilidad
-                    $link.css('display', passesSearch ? 'block' : 'none');
                 });
-            }
-
-            // CORRECCIÓN CLAVE: Adjuntamos el evento 'input' para una respuesta inmediata y robusta.
-            $(document).on('input', '#search', applySearch);
-
-            $(document).on("search", '#search', function(event) {
-                event.preventDefault();
-                // Si el buscador está vacío y se presiona Enter, recarga la agenda.
-                if ($(this).val().trim() === '') {
-                    obtenerAgenda(); 
-                }
             });
 
-            // Se define globalmente para que `obtenerAgenda` pueda llamarla después de cargar
-            window.applySearch = applySearch;
+            search.addEventListener("search", function(event) {
+                event.preventDefault();
+                obtenerAgenda(); 
+            });
+
+            let searchByCategory = document.getElementById('filter_category');
+            searchByCategory.addEventListener('change', function() {
+                let filter = this.value.toLowerCase();
+                let streamLinks = document.querySelectorAll("#menu > li");
+
+                streamLinks.forEach(link => {
+                    const category = link.getAttribute('data-category').toLowerCase();
+
+                    if (filter === '' || category.includes(filter)) {
+                        link.style.display = '';
+                    } else {
+                        link.style.display = 'none';
+                    }
+                });
+            });
         });
 
         // --- FUNCIONES DE MANEJO DE HORA Y FECHA ---
@@ -308,11 +308,13 @@
                 const response = await fetch(`${AGENDA_URL}?t=${new Date().getTime()}`);
                 
                 if (!response.ok) {
-                    throw new Error(`Error HTTP ${response.status}: El recurso de la agenda no está disponible.`);
+                    throw new Error(`Error ${response.status}: No se pudo acceder a la URL de la agenda.`);
                 }
                 
                 const result = await response.json();
 
+                loadCategories(result.data);
+                
                 const dateCompleted = formatDate(new Date().toISOString());
                 titleAgendaElement.innerHTML = "Agenda - " + dateCompleted;
 
@@ -326,30 +328,40 @@
                      menuElement.innerHTML = `<p class="loading-message">No hay eventos disponibles en las categorías permitidas.</p>`;
                 } else {
                      menuElement.innerHTML = html;
-                     // Aplica búsqueda después de cargar la agenda (si hay un término pre-escrito)
-                     if(typeof applySearch === 'function') {
-                        applySearch(); 
-                     }
                 }
                
             } catch (error) {
                 console.error("Error fetching agenda:", error);
-                
-                let userMessage = error.message;
-
-                if (error instanceof SyntaxError) {
-                    userMessage = "El servidor devolvió un formato no JSON. La URL podría estar caída o devolver un error HTML.";
-                }
-
                 menuElement.innerHTML = `<p class="loading-message" style="color:${THEME_MAIN_RED};">
                     <strong>¡Error de carga!</strong>
                     No se pudieron obtener los datos de la agenda. 
-                    <br>Diagnóstico: ${userMessage}</p>`;
+                    <br>(${error.message}).</p>`;
             }
         }
 
         async function refrescarAgenda() {
             await obtenerAgenda();
+        }
+
+        function loadCategories(data) {
+            let filter_category = document.getElementById('filter_category');
+            if (!filter_category) return;
+            
+            let categoryArray = [];
+            data.forEach(item => {
+                const category = item.attributes.deportes.toLowerCase();
+                if (CATEGORIES_PERMITTED.includes(category) && !categoryArray.includes(category)) {
+                    categoryArray.push(category);
+                }
+            });
+
+            if(categoryArray.length > 0) {
+                let html = '  <option value="">-- Filtra por Categoria --</option>';
+                categoryArray.forEach(category => {
+                    html += `<option value="${category}">${category.toUpperCase()}</option>`;
+                });
+                filter_category.innerHTML = html;
+            }
         }
     </script>
 </body>
