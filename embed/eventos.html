@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Embed Loader</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      font-family: sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .spinner {
+      border: 8px solid #333;
+      border-top: 8px solid #00ff00;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin: auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    iframe {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader">
+    <div class="spinner"></div>
+    <p>Cargando evento...</p>
+  </div>
 
+  <iframe id="embedFrame"></iframe>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const embedParam = params.get("embed");
+
+    if (embedParam) {
+      try {
+        const decodedURL = atob(embedParam); // decodifica base64
+        document.getElementById("embedFrame").src = decodedURL;
+        // NO se muestra el iframe, no se oculta el loader
+      } catch (e) {
+        document.querySelector(".loader p").textContent = "Error al cargar.";
+      }
+    } else {
+      document.querySelector(".loader p").textContent = "Enlace embed no proporcionado.";
+    }
+  </script>
+</body>
+</html>
