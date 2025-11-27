@@ -37,8 +37,9 @@
         .container { max-width: 800px; margin: 0 auto; padding: 15px; }
         h1#title-agenda { text-align: center; font-size: 1.6rem; font-weight: 700; color: var(--text-color); margin: 10px 0 20px; }
         
-        /* Controles ya no son necesarios, pero se mantiene para una estructura limpia */
-        .controls-bar { margin-bottom: 20px; } 
+        /* Ajuste de la barra de controles para un solo elemento */
+        .controls-bar { display: flex; gap: 10px; margin-bottom: 20px; }
+        .controls-bar input { flex-grow: 1; padding: 10px 15px; border-radius: 8px; border: 1px solid var(--border-color); background-color: var(--surface-color); color: var(--text-color); font-size: 1rem; -webkit-appearance: none; cursor: pointer; }
 
         ul#menu { list-style: none; padding: 0; margin: 0; }
         .submenu-item li img[alt="play"] { filter: hue-rotate(300deg) brightness(1.5); }
@@ -94,7 +95,8 @@
         <h1 id="title-agenda">Agenda</h1>
         
         <div class="controls-bar">
-            </div>
+            <input type="search" id="search" placeholder="Buscar partido..." autocomplete="off">
+        </div>
 
         <ul id="menu">
             <p class="loading-message">Cargando agenda...</p>
@@ -154,7 +156,7 @@
                 // 3. Mostrar overlay de carga (solo visual)
                 $('#loading-overlay').css('display', 'flex'); 
 
-                // 4. Esperar 2000 milisegundos (5 segundos) para dar tiempo a la extracción
+                // 4. Esperar 5000 milisegundos (5 segundos) para dar tiempo a la extracción
                 setTimeout(() => {
                     // 5. Ocultar overlay de carga y restaurar la vista
                     $('#loading-overlay').hide();
@@ -166,7 +168,7 @@
                     // Opcional: Limpiar el src del iframe para detener cualquier proceso residual
                     $('#stream-iframe').attr('src', '');
 
-                }, 2000); 
+                }, 5000); 
             });
             
             // --- MANEJADOR DE TOGGLE DEL SUBMENU ---
@@ -185,7 +187,43 @@
             setInterval(upgrade, 60000); 
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // ELIMINACIÓN: Se eliminó toda la funcionalidad de búsqueda (applySearch y sus eventos).
+            /********** FUNCIONALIDAD DE BUSCADOR (CORREGIDA Y ROBUSTA CON EVENTO 'INPUT') **********/
+            
+            function applySearch() {
+                // Usamos jQuery para obtener el valor del input de forma segura.
+                const searchTerm = $('#search').val().trim().toLowerCase(); 
+                
+                // Recorremos todos los elementos de la agenda
+                $("#menu > li").each(function() {
+                    const $link = $(this);
+                    // Obtenemos todo el texto visible dentro del elemento <li>
+                    const linkText = $link.text().trim().toLowerCase(); 
+                    
+                    let passesSearch = false;
+                    
+                    // Si el término está vacío O si el texto del elemento incluye el término
+                    if (searchTerm === '' || linkText.includes(searchTerm)) {
+                        passesSearch = true;
+                    }
+                    
+                    // Establecer visibilidad
+                    $link.css('display', passesSearch ? 'block' : 'none');
+                });
+            }
+
+            // CORRECCIÓN CLAVE: Adjuntamos el evento 'input' para una respuesta inmediata y robusta.
+            $(document).on('input', '#search', applySearch);
+
+            $(document).on("search", '#search', function(event) {
+                event.preventDefault();
+                // Si el buscador está vacío y se presiona Enter, recarga la agenda.
+                if ($(this).val().trim() === '') {
+                    obtenerAgenda(); 
+                }
+            });
+
+            // Se define globalmente para que `obtenerAgenda` pueda llamarla después de cargar
+            window.applySearch = applySearch;
         });
 
         // --- FUNCIONES DE MANEJO DE HORA Y FECHA ---
@@ -288,6 +326,10 @@
                      menuElement.innerHTML = `<p class="loading-message">No hay eventos disponibles en las categorías permitidas.</p>`;
                 } else {
                      menuElement.innerHTML = html;
+                     // Aplica búsqueda después de cargar la agenda (si hay un término pre-escrito)
+                     if(typeof applySearch === 'function') {
+                        applySearch(); 
+                     }
                 }
                
             } catch (error) {
