@@ -493,10 +493,21 @@
                 allData.notificaciones = notificationsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
 
-                // Ordenar contenidos por ID de Firestore (para que los más recientes salgan primero)
-                // El ID de Firestore es un string que incluye el timestamp de creación, por lo que
-                // al ordenar de forma descendente (b.id vs a.id) el contenido más nuevo aparecerá arriba.
-                allData.contenidos.sort((a, b) => (b.id || '').localeCompare(a.id || ''));
+                // ✅ MODIFICACIÓN CRÍTICA: Ordenar por el campo 'created_at' (más reciente primero)
+                allData.contenidos.sort((a, b) => {
+                    // Usamos el campo numérico 'created_at' (timestamp en milisegundos) que fue añadido desde el panel de administración.
+                    // Esto garantiza que el contenido más nuevo aparezca en primer plano.
+                    const dateA = a.created_at || 0;
+                    const dateB = b.created_at || 0;
+                    
+                    if (dateA !== dateB) {
+                        return dateB - dateA; // Ordenar de forma descendente (más reciente primero)
+                    }
+                    
+                    // Fallback: Si no tiene campo de fecha (contenido viejo), ordenamos por ID
+                    return (b.id || '').localeCompare(a.id || ''); 
+                });
+
 
                 renderNotifications(allData.notificaciones);
                 showAllContent();
@@ -636,7 +647,7 @@
         
         document.getElementById('request-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const BOT_TOKEN = "8545619232:AAETbHnvGM6_JD9bBJGqLrs5K-L758gQeiE"; // REEMPLAZA
+            const BOT_TOKEN = "8545619232:AAETbHnvGM6_JD9bBJGqLrs5K-L758gQeiI"; // REEMPLAZA
             const CHAT_ID = "5275754444"; // REEMPLAZA
             const title = document.getElementById('request-title').value;
             const type = document.getElementById('request-type').value;

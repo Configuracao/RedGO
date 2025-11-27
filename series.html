@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Cargando...</title>
     
@@ -22,36 +22,62 @@
 
     <style>
         :root {
-            /* CAMBIO: Se confirma el rojo como color principal */
-            --main-red: #E50914;
-            --background-color: #121212;
-            --surface-color: #1f1f1f;
+            /* PALETA VIBRANTE (Rojo más saturado para glow) */
+            --main-red: #FF0033; 
+            --background-color: #0A0A0A; /* Fondo más oscuro para contraste */
+            --surface-color: #1A1A1A; /* Superficie/Modales/Bottom Sheets */
             --on-surface-color: #FFFFFF;
             --on-surface-variant-color: #BDBDBD;
-            --border-color: #2d2d2d;
+            --border-color: #333333;
+            --shine-color: rgba(255, 0, 51, 0.7); /* Color de resplandor neón */
+            --main-accent-hover: #260008; /* Fondo sutil al pasar el mouse */
+            --watched-color: #4CAF50; /* Color del checkmark de "Visto" */
         }
 
         body, html {
             margin: 0; padding: 0; font-family: 'Manrope', sans-serif;
             background-color: var(--background-color); color: var(--on-surface-color);
+            line-height: 1.6;
         }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         a { text-decoration: none; color: inherit; }
 
         .movie-banner {
-            position: relative; min-height: 350px; display: flex; align-items: flex-end;
+            position: relative; min-height: 380px; display: flex; align-items: flex-end;
             gap: 20px; padding: 20px; background-size: cover; background-position: center 20%;
         }
         .movie-banner::after {
             content: ''; position: absolute; bottom: 0; left: 0;
             width: 100%; height: 100%;
-            background: linear-gradient(to top, var(--background-color) 10%, rgba(18, 18, 18, 0.5) 50%, transparent 100%);
+            /* Gradiente más agresivo */
+            background: linear-gradient(to top, var(--background-color) 0%, rgba(10, 10, 10, 0.8) 40%, transparent 100%);
             z-index: 1;
         }
+        /* Nuevo: Glassmorphism sutil en la parte superior */
+        .movie-banner::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 50%;
+            backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+            opacity: 0.05; z-index: 1;
+        }
+        
         .movie-poster, .movie-info, .top-action-button { position: relative; z-index: 2; }
         .movie-poster { flex-shrink: 0; width: 180px; }
-        .movie-poster img { width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); display: block; }
-        .movie-info h1 { font-size: 2.2rem; font-weight: 700; margin: 0 0 10px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .movie-poster img { 
+            width: 100%; border-radius: 12px; /* Bordes más modernos */
+            box-shadow: 0 15px 50px rgba(0,0,0,0.8); /* Sombra más profunda */
+            display: block; 
+        }
+        
+        /* TÍTULO CON TEXT-SHADOW NEÓN */
+        .movie-info h1 { 
+            font-size: 2.5rem; 
+            font-weight: 800; 
+            margin: 0 0 12px 0; 
+            color: var(--on-surface-color);
+            text-shadow: 
+                0 0 8px var(--shine-color), /* Resplandor principal */
+                0 0 20px rgba(0,0,0,0.8);
+        }
         .movie-meta { display: flex; flex-wrap: wrap; gap: 15px; color: var(--on-surface-variant-color); font-size: 0.95rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
         .movie-meta span { display: inline-flex; align-items: center; gap: 6px; }
         .movie-meta .material-icons { font-size: 1em; }
@@ -60,55 +86,93 @@
         .main-content h2 { font-size: 1.2rem; font-weight: 700; margin-top: 0; margin-bottom: 8px; }
         #movie-synopsis { color: var(--on-surface-variant-color); margin: 0; font-size: 1rem; }
         
-        .top-action-button { position: absolute; top: 16px; color: #fff; background: transparent; border-radius: 50%; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; border: none; text-decoration: none; transition: transform 0.2s, color 0.2s; }
+        /* Estilos para el efecto 'Ver Más' */
+        #movie-synopsis.collapsed { 
+            display: -webkit-box; 
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical; 
+            overflow: hidden; 
+        }
+        .toggle-synopsis-btn { 
+            background: none; border: none; 
+            color: var(--main-red); font-family: 'Manrope', sans-serif; 
+            font-weight: 700; cursor: pointer; padding: 4px 0; 
+            margin-top: 4px; transition: color 0.2s; font-size: 0.9rem;
+        }
+        .toggle-synopsis-btn:hover { color: var(--shine-color); }
+        
+        .top-action-button { 
+            position: absolute; top: 16px; color: #fff; background: rgba(26, 26, 26, 0.6); 
+            border-radius: 50%; width: 44px; height: 44px; display: inline-flex; 
+            align-items: center; justify-content: center; cursor: pointer; 
+            border: 1px solid var(--border-color); text-decoration: none; 
+            transition: all 0.2s; backdrop-filter: blur(5px);
+        }
+        .top-action-button:hover { transform: scale(1.1); background: rgba(26, 26, 26, 0.8); }
         .back-button { left: 16px; }
         #favorite-btn { right: 16px; }
-        #favorite-btn.is-favorite { color: var(--main-red); }
+        #favorite-btn.is-favorite { color: var(--main-red); text-shadow: 0 0 8px var(--shine-color); } /* Glow en favorito */
 
-        /* CAMBIO: Se añade la animación de pulso al botón de episodios */
+        /* FAB CON RESPLANDOR NEÓN Y ANIMACIÓN MEJORADA */
         @keyframes pulse-animation {
-            0% { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
-            50% { transform: scale(1.08); box-shadow: 0 8px 20px rgba(0,0,0,0.6); }
-            100% { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+            0% { transform: scale(1); box-shadow: 0 0 10px var(--main-red), 0 0 20px var(--shine-color); }
+            50% { transform: scale(1.08); box-shadow: 0 0 15px var(--main-red), 0 0 30px var(--shine-color); }
+            100% { transform: scale(1); box-shadow: 0 0 10px var(--main-red), 0 0 20px var(--shine-color); }
         }
         .fab { 
-            position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; 
+            position: fixed; bottom: 24px; right: 24px; width: 64px; height: 64px; 
             background-color: var(--main-red); border-radius: 50%; 
             display: flex; align-items: center; justify-content: center; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.4); 
+            color: var(--on-surface-color); /* Icono blanco sobre rojo */
             cursor: pointer; z-index: 998;
-            animation: pulse-animation 2s infinite ease-in-out;
+            animation: pulse-animation 2.5s infinite ease-in-out;
+            border: 3px solid var(--on-surface-color);
         }
+        .fab .material-icons { font-size: 2.5rem; }
 
         #episode-selector-view {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-color: var(--background-color); z-index: 1002;
             display: flex; flex-direction: column; transform: translateX(100%);
-            transition: transform 0.35s ease-out;
+            transition: transform 0.35s cubic-bezier(0.3, 0.7, 0.4, 0.9);
         }
         #episode-selector-view.active { transform: translateX(0); }
         .selector-header {
             display: flex; align-items: center; padding: 12px;
-            gap: 12px; background-color: #181818; flex-shrink: 0;
+            gap: 12px; background-color: var(--surface-color); flex-shrink: 0;
+            border-bottom: 1px solid var(--border-color);
         }
-        .selector-back-button { background: none; border: none; color: white; padding: 8px; cursor: pointer; display: flex; }
-        .selector-title { font-size: 1.25rem; font-weight: 600; margin: 0; }
+        .selector-back-button { background: none; border: none; color: white; padding: 8px; cursor: pointer; display: flex; transition: color 0.2s; }
+        .selector-back-button:hover { color: var(--main-red); }
+        .selector-title { font-size: 1.25rem; font-weight: 700; margin: 0; }
         .season-tabs {
-            display: flex; overflow-x: auto; background-color: #181818;
+            display: flex; overflow-x: auto; background-color: var(--surface-color);
             border-bottom: 1px solid var(--border-color); flex-shrink: 0;
             padding: 0 8px; -ms-overflow-style: none; scrollbar-width: none;
         }
         .season-tabs::-webkit-scrollbar { display: none; }
         .season-tab {
             padding: 14px 16px; cursor: pointer; color: var(--on-surface-variant-color);
-            font-weight: 600; font-size: 0.9rem; white-space: nowrap;
-            border-bottom: 3px solid transparent; transition: color 0.2s ease, border-color 0.2s ease;
+            font-weight: 600; font-size: 0.95rem; white-space: nowrap;
+            border-bottom: 3px solid transparent; transition: all 0.2s ease;
         }
-        .season-tab.active { color: var(--on-surface-color); border-bottom-color: var(--main-red); }
+        /* Pestaña activa con GLOW */
+        .season-tab.active { 
+            color: var(--main-red); 
+            border-bottom-color: var(--main-red); 
+            text-shadow: 0 0 5px var(--shine-color);
+        }
+        .season-tab:hover { color: var(--on-surface-color); }
+        
         .episode-list { list-style: none; margin: 0; padding: 0; overflow-y: auto; flex-grow: 1; }
         .episode-item {
             display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s;
+        }
+        .episode-item:hover {
+            background-color: var(--main-accent-hover); 
+            border-left: 4px solid var(--main-red); /* Borde de acento al hacer hover */
         }
         .episode-play-link { flex-grow: 1; padding: 16px; cursor: pointer; font-weight: 600; }
         .episode-cast-button {
@@ -116,21 +180,22 @@
             cursor: pointer; padding: 16px;
             transition: color 0.2s; display: inline-flex; align-items: center;
         }
+        .episode-cast-button:hover { color: var(--main-red); }
 
-        /* INICIO: Nuevos estilos para marcar como visto */
+        /* ESTILOS PARA EPISODIOS VISTOS */
+        .episode-item.is-watched {
+            background-color: var(--main-accent-hover);
+        }
         .episode-item.is-watched .episode-play-link {
-            color: var(--on-surface-variant-color); /* Color más tenue */
-            font-weight: 400;
-            font-style: italic;
+            color: var(--on-surface-variant-color); 
+            font-weight: 500;
         }
         .episode-item.is-watched .episode-play-link::after {
-            content: ' ✓'; /* Marca de visto sutil */
-            color: #4CAF50; /* Un color verde para el checkmark */
+            content: ' ✓'; 
+            color: var(--watched-color); 
+            font-weight: 700;
         }
-        /* FIN: Nuevos estilos para marcar como visto */
         
-        /* ELIMINADO: Estilos para el modal de reproducción/spinner */
-
         #toast-container { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 2000; }
         .toast { background-color: #323232; color: #fff; padding: 12px 20px; border-radius: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); opacity: 0; transform: translateY(20px); transition: opacity 0.3s ease, transform 0.3s ease; font-size: 0.9rem; }
         .toast.show { opacity: 1; transform: translateY(0); }
@@ -139,6 +204,8 @@
             .movie-banner { flex-direction: column; align-items: center; gap: 15px; padding: 15px; text-align: center; padding-top: 80px; min-height: 0; }
             .movie-poster { width: 150px; }
             .movie-info h1 { font-size: 1.8rem; }
+            .fab { bottom: 16px; right: 16px; width: 56px; height: 56px; }
+            .fab .material-icons { font-size: 2rem; }
         }
     </style>
 </head>
@@ -158,7 +225,7 @@
     </div>
     <div class="main-content">
         <h2>SINOPSIS</h2>
-        <p id="movie-synopsis"></p>
+        <div class="synopsis-container"><p id="movie-synopsis"></p></div> 
     </div>
     <div id="fab-play" class="fab">
         <i class="material-icons">playlist_play</i>
@@ -178,44 +245,29 @@
 <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
 
 <script>
-    // --- 1. CONFIGURACIÓN E INICIALIZACIÓN DE FIREBASE (REEMPLAZA) ---
+    // --- 1. CONFIGURACIÓN E INICIALIZACIÓN DE FIREBASE ---
     const firebaseConfig = {
         apiKey: "AIzaSyAvX9ZWG402NpI1UFyBxL_HxeMHSLF8fBI",
         authDomain: "hidraflix-ba716.firebaseapp.com",
         projectId: "hidraflix-ba716", 
-        // Añade el resto de tu configuración si es necesario
     };
 
     let dbFirestore;
     try {
         firebase.initializeApp(firebaseConfig);
         dbFirestore = firebase.firestore();
-        console.log("Firebase y Firestore inicializados.");
     } catch (error) {
         console.error("Error al inicializar Firebase:", error);
     }
     // ----------------------------------------------------
 
-    // ELIMINADO: Variables y funciones del loader (playbackModal, playbackTimeout, currentIframe, showPlaybackModal, hidePlaybackModal, startPlayback)
-
-    // ELIMINADO: window.addEventListener('popstate')
-
     document.addEventListener('DOMContentLoaded', async () => {
         const contentId = new URLSearchParams(window.location.search).get('id');
-        if (!contentId) {
-            document.body.innerHTML = '<h1>Error: ID de serie no especificado.</h1>';
-            return;
-        }
-
-        if (!dbFirestore) {
-            document.body.innerHTML = '<h1>Error: Firebase no está disponible.</h1>'; 
-            return;
-        }
+        if (!contentId) { document.body.innerHTML = '<h1>Error: ID de serie no especificado.</h1>'; return; }
+        if (!dbFirestore) { document.body.innerHTML = '<h1>Error: Firebase no está disponible.</h1>'; return; }
         
         try {
-            // Busca el documento de la serie en la colección 'contenidos'
             const seriesDoc = await dbFirestore.collection('contenidos').doc(contentId).get();
-            
             const seriesItem = seriesDoc.exists ? { id: seriesDoc.id, ...seriesDoc.data() } : null;
 
             if (!seriesItem || seriesItem.type !== 'series') {
@@ -239,7 +291,10 @@
         document.getElementById('movie-title').textContent = series.title;
         document.getElementById('movie-banner').style.backgroundImage = `url('${series.banner || series.poster}')`;
         document.getElementById('poster-img').src = series.poster;
-        document.getElementById('movie-synopsis').textContent = series.synopsis;
+        
+        // **ACTUALIZADO: Agregando la sinopsis y llamando al toggle**
+        document.getElementById('movie-synopsis').textContent = series.synopsis || 'Sin sinopsis disponible.';
+        setupSynopsisToggle();
 
         const metaContainer = document.querySelector('.movie-info .movie-meta');
         metaContainer.innerHTML = '';
@@ -247,6 +302,28 @@
         if (series.rating) metaContainer.innerHTML += `<span><i class="material-icons">star_border</i>${series.rating}</span>`;
         if (series.category) metaContainer.innerHTML += `<span><i class="material-icons">theater_comedy</i>${series.category}</span>`;
     }
+
+    // --- NUEVA FUNCIÓN PARA EL EFECTO 'VER MÁS' ---
+    function setupSynopsisToggle() {
+        const synopsisP = document.getElementById('movie-synopsis');
+        const container = synopsisP.parentElement;
+        if (!synopsisP || !container) return;
+
+        // Utilizamos la longitud del texto como proxy para saber si necesitamos el botón 'Ver más'
+        if (synopsisP.textContent.length > 250) { 
+            synopsisP.classList.add('collapsed');
+            const toggleBtn = document.createElement('button');
+            toggleBtn.className = 'toggle-synopsis-btn';
+            toggleBtn.textContent = 'Ver más';
+            container.appendChild(toggleBtn);
+            toggleBtn.addEventListener('click', () => {
+                const isCollapsed = synopsisP.classList.toggle('collapsed');
+                toggleBtn.textContent = isCollapsed ? 'Ver más' : 'Ver menos';
+            });
+        }
+    }
+    // ---------------------------------------------
+
 
     function populateEpisodeSelector(series) {
         document.getElementById('selector-title').textContent = `${series.title} (${series.year})`;
@@ -269,9 +346,8 @@
         }
     }
 
-    // --- NUEVAS FUNCIONES DE ESTADO 'VISTO' ---
+    // --- LÓGICA DE ESTADO 'VISTO' ---
     function getWatchedEpisodes(seriesId) { 
-        // Estructura: { "seriesId": ["S1E1", "S1E2", ...], "seriesId2": ["S1E1"], ... }
         const watched = JSON.parse(localStorage.getItem('cineflixter-watched') || '{}');
         return watched[seriesId] || [];
     }
@@ -298,12 +374,10 @@
     }
     // ---------------------------------------------
 
-
     function renderEpisodesForSeason(seasonNumber) {
         const episodeList = document.getElementById('episode-list');
         episodeList.innerHTML = '';
         const seasonData = window.currentSeriesData.seasons.find(s => s.season_number == seasonNumber);
-        // Obtener el ID de la serie para el estado 'visto'
         const seriesId = new URLSearchParams(window.location.search).get('id');
 
         if (seasonData && seasonData.episodes) {
@@ -311,11 +385,9 @@
                 const li = document.createElement('li');
                 li.className = 'episode-item';
                 
-                // Añadir atributos de datos para el seguimiento en el evento de clic
                 li.dataset.season = seasonNumber;
                 li.dataset.episode = episode.episode_number;
 
-                // Marcar como visto si corresponde
                 if (seriesId && isEpisodeWatched(seriesId, seasonNumber, episode.episode_number)) {
                     li.classList.add('is-watched');
                 }
@@ -365,17 +437,15 @@
                 const src = playLink.dataset.src;
                 
                 if (src) {
-                    const seriesId = contentId; // Usar el contentId de la función de configuración
+                    const seriesId = contentId;
                     const li = playLink.closest('.episode-item');
                     const seasonNumber = li?.dataset.season;
                     const episodeNumber = li?.dataset.episode;
                     
-                    // Lógica para marcar como visto antes de navegar
                     if (seriesId && seasonNumber && episodeNumber) {
                         markEpisodeAsWatched(seriesId, seasonNumber, episodeNumber);
                     }
                     
-                    // CAMBIO: Navegación directa
                     window.location.href = src;
                 }
             }
