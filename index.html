@@ -78,6 +78,13 @@
         .channel-card { aspect-ratio: 1 / 1; cursor: pointer; }
         .movie-poster:hover, .channel-card:hover { transform: scale(1.05); }
         .movie-poster img, .channel-card img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; transition: opacity 0.4s ease; }
+        
+        /* 🚨 MODIFICACIÓN SOLICITADA: Para que la imagen del canal se muestre completa sin estirar el contenedor */
+        .channel-card img {
+            object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortar */
+        }
+        /* ----------------------------------------------------------------------------------------------------- */
+
         .movie-poster img.loaded, .channel-card img.loaded { opacity: 1; }
         .poster-loader { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; z-index: 2; }
         
@@ -487,19 +494,8 @@
                 });
                 // -----------------------------------------------------------
                 
-                // 3. Cargar Canales
-                const channelsSnapshot = await dbFirestore.collection('canales').get();
-                allData.canales = channelsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-                // 4. Cargar Notificaciones
-                const notificationsSnapshot = await dbFirestore.collection('notificaciones').get();
-                allData.notificaciones = notificationsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-
                 // ✅ MODIFICACIÓN CRÍTICA: Ordenar por el campo 'created_at' (más reciente primero)
                 allData.contenidos.sort((a, b) => {
-                    // Usamos el campo numérico 'created_at' (timestamp en milisegundos) que fue añadido desde el panel de administración.
-                    // Esto garantiza que el contenido más nuevo aparezca en primer plano.
                     const dateA = a.created_at || 0;
                     const dateB = b.created_at || 0;
                     
@@ -507,10 +503,28 @@
                         return dateB - dateA; // Ordenar de forma descendente (más reciente primero)
                     }
                     
-                    // Fallback: Si no tiene campo de fecha (contenido viejo), ordenamos por ID
                     return (b.id || '').localeCompare(a.id || ''); 
                 });
 
+                
+                // 3. Cargar Canales
+                const channelsSnapshot = await dbFirestore.collection('canales').get();
+                allData.canales = channelsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+                // 🚨 MODIFICACIÓN: Ordenar Canales alfabéticamente (A-Z) por el campo 'name'
+                allData.canales.sort((a, b) => {
+                    const nameA = (a.name || '').toUpperCase();
+                    const nameB = (b.name || '').toUpperCase();
+                    if (nameA < nameB) return -1;
+                    if (nameA > nameB) return 1;
+                    return 0; // nombres iguales
+                });
+                // -----------------------------------------------------------
+
+
+                // 4. Cargar Notificaciones
+                const notificationsSnapshot = await dbFirestore.collection('notificaciones').get();
+                allData.notificaciones = notificationsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
                 renderNotifications(allData.notificaciones);
                 showAllContent();
