@@ -65,106 +65,39 @@
             margin-bottom: 16px; 
         }
         
-        .movie-poster, .channel-card { 
+        .movie-poster { 
             position: relative; 
             overflow: hidden; 
             border-radius: 5px; 
             transition: transform 0.3s ease; 
             display: block; 
             background-color: #222; 
+            box-sizing: border-box; 
+            aspect-ratio: 2 / 3; 
         }
-
-        .movie-poster { aspect-ratio: 2 / 3; }
-        .channel-card { aspect-ratio: 1 / 1; cursor: pointer; }
-        .movie-poster:hover, .channel-card:hover { transform: scale(1.05); }
-        .movie-poster img, .channel-card img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; transition: opacity 0.4s ease; }
         
-        /* 🚨 MODIFICACIÓN SOLICITADA: Para que la imagen del canal se muestre completa sin estirar el contenedor */
-        .channel-card img {
-            object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortar */
-        }
-        /* ----------------------------------------------------------------------------------------------------- */
+        .movie-poster:hover { transform: scale(1.05); }
+        .movie-poster img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; transition: opacity 0.4s ease; }
+        
+        /* El CSS de .channel-card y .channel-card img se mueve a canales.html */
 
-        .movie-poster img.loaded, .channel-card img.loaded { opacity: 1; }
+        .movie-poster img.loaded { opacity: 1; }
         .poster-loader { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; z-index: 2; }
         
-        /* ---------------------------------------------------------------------------------- */
         /* --- CSS AÑADIDO/MODIFICADO PARA EL RATING (IZQUIERDA) Y AÑO (DERECHA) y TAG (ABAJO) --- */
-        
-        /* Estilo para la Puntuación (esquina superior izquierda) - REDUCIDO */
         .poster-rating {
-            position: absolute; 
-            top: 6px; /* Ajuste ligero */
-            left: 6px; /* Ajuste ligero */
-            background-color: rgba(0, 0, 0, 0.7); 
-            color: #FFD700; 
-            padding: 3px 5px; /* Reducción de padding */
-            border-radius: 4px; 
-            font-size: 0.7rem; /* ⬅️ REDUCIDO */
-            font-weight: 700; 
-            z-index: 3; 
-            display: flex; 
-            align-items: center;
-            gap: 2px; /* Reducción de gap */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            position: absolute; top: 6px; left: 6px; background-color: rgba(0, 0, 0, 0.7); color: #FFD700; padding: 3px 5px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; z-index: 3; display: flex; align-items: center; gap: 2px; box-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
-
-        .poster-rating .material-icons {
-            font-size: 12px; /* ⬅️ REDUCIDO */
-            color: #FFD700;
-        }
-
-        /* 🆕 Estilo para el Año (esquina superior derecha) - REDUCIDO */
+        .poster-rating .material-icons { font-size: 12px; color: #FFD700; }
         .poster-year {
-            position: absolute; 
-            top: 6px; /* Ajuste ligero */
-            right: 6px; /* Ajuste ligero */
-            background-color: rgba(0, 0, 0, 0.7); 
-            color: white; 
-            padding: 3px 5px; /* Reducción de padding */
-            border-radius: 4px; 
-            font-size: 0.7rem; /* ⬅️ REDUCIDO */
-            font-weight: 700; 
-            z-index: 3; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            position: absolute; top: 6px; right: 6px; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 3px 5px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; z-index: 3; box-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
-
-        /* 🔄 Estilo para la etiqueta de promoción (Tag) */
         .poster-tag { 
-            position: absolute; 
-            bottom: 40px; 
-            left: 8px; 
-            right: auto; 
-            background-color: var(--main-red); 
-            color: white; 
-            padding: 4px 8px; 
-            border-radius: 4px; 
-            font-size: 0.7rem; 
-            font-weight: 700; 
-            text-transform: uppercase; 
-            z-index: 3; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.4); 
+            position: absolute; bottom: 40px; left: 8px; right: auto; background-color: var(--main-red); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; z-index: 3; box-shadow: 0 2px 4px rgba(0,0,0,0.4); 
         }
-
-        /* 🆕 Estilo para el Título (superpuesto en la parte inferior) */
         .poster-title-overlay {
-            position: absolute; 
-            bottom: 0; 
-            left: 0; 
-            right: 0; 
-            background-color: rgba(0, 0, 0, 0.7); 
-            color: white; 
-            padding: 8px 6px; 
-            font-size: 0.75rem; 
-            font-weight: 600; 
-            text-align: center;
-            z-index: 3; 
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            border-radius: 0 0 5px 5px;
+            position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 8px 6px; font-size: 0.75rem; font-weight: 600; text-align: center; z-index: 3; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; border-radius: 0 0 5px 5px;
         }
-        /* ---------------------------------------------------------------------------------- */
 
         .fullscreen-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--background-color); z-index: 1003; transform: translateX(100%); transition: transform 0.3s ease-in-out; display: flex; flex-direction: column; }
         .fullscreen-overlay.active { transform: translateX(0); }
@@ -191,7 +124,6 @@
         .notification-message { color: #ccc; font-size: 0.95rem; line-height: 1.5; margin-bottom: 16px; }
         .notification-time { font-size: 0.8rem; color: #888; text-align: right; }
         #no-notifications { text-align: center; color: #888; padding: 40px 20px; }
-        #channels-grid { overflow-y: auto; flex-grow: 1; padding: 8px; }
         #toast-container { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 2000; }
         .toast { background-color: #323232; color: #fff; padding: 12px 20px; border-radius: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); opacity: 0; transform: translateY(20px); transition: opacity 0.3s ease, transform 0.3s ease; font-size: 0.9rem; }
         .toast.show { opacity: 1; transform: translateY(0); }
@@ -235,16 +167,6 @@
         <div id="notifications-list-container"></div>
     </div>
     
-    <div id="channels-overlay" class="fullscreen-overlay">
-        <div class="overlay-header">
-            <button class="menu-btn" id="channels-close-btn"><i class="material-icons">arrow_back</i></button>
-            <h2 style="flex-grow: 1; margin-left: 8px;">Canales</h2>
-            <a href="https://cinefl1xt3r.netlify.app/agenda.html" target="_blank" class="menu-btn" style="color: var(--main-red); font-weight: 700;">
-                <i class="material-icons">calendar_today</i>
-            </a>
-            </div>
-        <div id="channels-grid" class="movie-grid"></div>
-    </div>
     <div class="side-menu">
         <div class="side-menu-header">
             <div class="user-avatar">
@@ -258,7 +180,7 @@
                 <a href="#" id="notifications-btn" class="side-menu-item"><i class="material-icons">notifications</i><span class="notification-badge"></span><span>Notificaciones</span></a>
                 <a href="#" id="filter-movies" class="side-menu-item"><i class="material-icons">movie</i><span>Películas</span></a>
                 <a href="#" id="filter-series" class="side-menu-item"><i class="material-icons">tv</i><span>Series</span></a>
-                <a href="#" id="filter-channels" class="side-menu-item"><i class="material-icons">live_tv</i><span>Canales</span></a>
+                <a href="canales.html" id="filter-channels" class="side-menu-item"><i class="material-icons">live_tv</i><span>Canales</span></a>
                 <a href="#" id="filter-favorites" class="side-menu-item"><i class="material-icons">favorite</i><span>Mis Favoritos</span></a>
             </div>
             <hr style="border: none; height: 1px; background-color: var(--menu-divider); margin: 0 20px;">
@@ -299,12 +221,10 @@
     document.addEventListener('DOMContentLoaded', () => {
         
         // --- 1. CONFIGURACIÓN E INICIALIZACIÓN DE FIREBASE ---
-        // *** ⚠️ IMPORTANTE: REEMPLAZA ESTOS VALORES CON TU PROPIA CONFIGURACIÓN DE FIREBASE ***
         const firebaseConfig = {
             apiKey: "AIzaSyAvX9ZWG402NpI1UFyBxL_HxeMHSLF8fBI",
             authDomain: "hidraflix-ba716.firebaseapp.com",
             projectId: "hidraflix-ba716", 
-            // ... otros campos si son necesarios
         };
 
         let dbFirestore;
@@ -323,25 +243,21 @@
         const categoryNav = document.getElementById("category-nav");
         const searchOverlay = document.getElementById('search-overlay');
         const notificationsOverlay = document.getElementById('notifications-overlay');
-        const channelsOverlay = document.getElementById('channels-overlay');
         const requestPanel = document.getElementById('request-panel');
         const menuBtns = document.querySelectorAll(".menu-btn");
         const searchBtn = document.querySelector('.search-btn');
         const searchCloseBtn = document.getElementById('search-close-btn');
         const notificationsBtn = document.getElementById('notifications-btn');
         const notificationsCloseBtn = document.getElementById('notifications-close-btn');
-        const channelsCloseBtn = document.getElementById('channels-close-btn');
         const requestContentBtn = document.getElementById('request-content-btn');
         const searchInput = document.getElementById('search-input');
         const searchTabs = document.querySelector('.search-tabs');
         const searchResultsGrid = document.getElementById('search-results-grid');
         const notificationsListContainer = document.getElementById('notifications-list-container');
         const notificationBadge = document.querySelector('.notification-badge');
-        const channelsGrid = document.getElementById('channels-grid');
         const menuItems = document.querySelectorAll(".side-menu-item");
         
-        // Inicialización de datos vacía. Se llena en fetchAllData.
-        let allData = { contenidos: [], canales: [], notificaciones: [] }; 
+        let allData = { contenidos: [], notificaciones: [] }; // Se eliminó 'canales' de aquí
         let currentViewContent = [];
 
         const loaderHTML = `
@@ -411,12 +327,10 @@
 
         function renderNotifications(notifications = []) {
             if (notifications.length === 0) { notificationsListContainer.innerHTML = `<p id="no-notifications">No hay notificaciones nuevas.</p>`; return; }
-            // Nota: Se asume que los documentos de notificación tienen un campo 'timestamp' (número o Timestamp de Firebase) para ordenar.
             notifications.sort((a, b) => (b.timestamp?.seconds || b.timestamp || 0) - (a.timestamp?.seconds || b.timestamp || 0));
             notificationsListContainer.innerHTML = notifications.map(n => {
-                // Manejo de timestamp si viene de Firebase (objeto con seconds y nanoseconds) o como número
                 const dateMs = (n.timestamp?.seconds || n.timestamp) * 1000;
-                const date = dateMs ? new Date(dateMs) : new Date(); // Usa fecha actual si falla
+                const date = dateMs ? new Date(dateMs) : new Date(); 
                 const timeString = date.toLocaleString('es-ES', { day: 'numeric', month: 'short', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true });
 
                 return `<div class="notification-item" data-id="${n.id}"><div class="notification-title">${n.title}</div><p class="notification-message">${n.message}</p><div class="notification-time">${timeString}</div></div>`;
@@ -425,31 +339,17 @@
             const lastReadId = localStorage.getItem('lastReadNotificationId') || '0';
             if (notifications.length > 0 && notifications[0].id !== lastReadId) { notificationBadge.style.display = 'block'; }
         }
-
-        function renderChannelsPage(channels = []) {
-            channelsGrid.innerHTML = "";
-            if (channels.length === 0) { channelsGrid.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; padding: 20px;">No hay canales disponibles.</p>`; return; }
-            channels.forEach(channel => {
-                const card = document.createElement('div');
-                card.className = 'channel-card js-channel-link';
-                card.dataset.streamUrl = channel.url || '';
-                card.innerHTML = `${loaderHTML}<img data-src="${channel.logo}" alt="${channel.name} logo" loading="lazy">`;
-                channelsGrid.appendChild(card);
-                lazyLoadObserver.observe(card);
-            });
-        }
         
         notificationsBtn.addEventListener('click', (e) => { e.preventDefault(); closeAllOverlays(); notificationsOverlay.classList.add('active'); notificationBadge.style.display = 'none'; if (allData.notificaciones.length > 0) { localStorage.setItem('lastReadNotificationId', allData.notificaciones[0].id); } });
         
         menuBtns.forEach(btn => { if (!btn.closest('.overlay-header')) { btn.addEventListener("click", () => { sideMenu.classList.toggle("active"); overlay.classList.toggle("active"); }); } });
         
-        function closeAllOverlays() { sideMenu.classList.remove("active"); searchOverlay.classList.remove("active"); notificationsOverlay.classList.remove("active"); channelsOverlay.classList.remove("active"); requestPanel.classList.remove("active"); overlay.classList.remove("active"); }
+        function closeAllOverlays() { sideMenu.classList.remove("active"); searchOverlay.classList.remove("active"); notificationsOverlay.classList.remove("active"); requestPanel.classList.remove("active"); overlay.classList.remove("active"); }
         
         overlay.addEventListener("click", closeAllOverlays);
         searchBtn.addEventListener("click", () => { closeAllOverlays(); searchOverlay.classList.add("active"); searchInput.focus(); });
         searchCloseBtn.addEventListener("click", () => searchOverlay.classList.remove("active"));
         notificationsCloseBtn.addEventListener('click', () => notificationsOverlay.classList.remove('active'));
-        channelsCloseBtn.addEventListener('click', () => channelsOverlay.classList.remove('active'));
         
         // --- 2. FUNCIÓN DE CARGA DE DATOS DESDE FIRESTORE ---
         async function fetchAllData() {
@@ -472,57 +372,26 @@
                 
                 // 2. Cargar Contenidos (Películas y Series)
                 const contentSnapshot = await dbFirestore.collection('contenidos').get();
-                const loadedContenidos = contentSnapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data()
-                }));
+                const loadedContenidos = contentSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
                 
-                // --- FIX: FILTRADO DE CONTENIDO DUPLICADO EN EL FRONTEND ---
                 const uniqueTitles = new Set();
                 allData.contenidos = loadedContenidos.filter(item => {
-                    // Usamos el título del contenido como la clave de unicidad, ignorando mayúsculas/minúsculas.
                     const titleKey = item.title ? item.title.toLowerCase().trim() : '';
-                    
-                    // Si la clave ya fue vista, es un duplicado -> lo descartamos (return false).
-                    if (titleKey && uniqueTitles.has(titleKey)) {
-                        return false;
-                    }
-                    
-                    // Si es nuevo, lo registramos y lo conservamos (return true).
+                    if (titleKey && uniqueTitles.has(titleKey)) { return false; }
                     uniqueTitles.add(titleKey);
                     return true;
                 });
-                // -----------------------------------------------------------
                 
-                // ✅ MODIFICACIÓN CRÍTICA: Ordenar por el campo 'created_at' (más reciente primero)
                 allData.contenidos.sort((a, b) => {
                     const dateA = a.created_at || 0;
                     const dateB = b.created_at || 0;
-                    
-                    if (dateA !== dateB) {
-                        return dateB - dateA; // Ordenar de forma descendente (más reciente primero)
-                    }
-                    
+                    if (dateA !== dateB) { return dateB - dateA; }
                     return (b.id || '').localeCompare(a.id || ''); 
                 });
 
+                // ❌ Se eliminó la carga de canales de aquí
                 
-                // 3. Cargar Canales
-                const channelsSnapshot = await dbFirestore.collection('canales').get();
-                allData.canales = channelsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-                // 🚨 MODIFICACIÓN: Ordenar Canales alfabéticamente (A-Z) por el campo 'name'
-                allData.canales.sort((a, b) => {
-                    const nameA = (a.name || '').toUpperCase();
-                    const nameB = (b.name || '').toUpperCase();
-                    if (nameA < nameB) return -1;
-                    if (nameA > nameB) return 1;
-                    return 0; // nombres iguales
-                });
-                // -----------------------------------------------------------
-
-
-                // 4. Cargar Notificaciones
+                // 3. Cargar Notificaciones
                 const notificationsSnapshot = await dbFirestore.collection('notificaciones').get();
                 allData.notificaciones = notificationsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
@@ -562,16 +431,9 @@
                 posterLink.href = item.type === 'series' ? `series.html?id=${item.id}` : `entrada.html?id=${item.id}`;
                 posterLink.className = "movie-poster";
                 
-                // --- PUNTUACIÓN (ESQUINA SUPERIOR IZQUIERDA) ---
                 const ratingHTML = item.rating ? `<div class="poster-rating"><i class="material-icons">star</i> ${item.rating}</div>` : '';
-                
-                // --- AÑO (ESQUINA SUPERIOR DERECHA) ---
                 const yearHTML = item.year ? `<div class="poster-year">${item.year}</div>` : '';
-
-                // --- TAG (ESQUINA INFERIOR IZQUIERDA - MOVIDO ARRIBA) ---
                 const tagHTML = item.tag ? `<div class="poster-tag">${item.tag}</div>` : '';
-
-                // --- TÍTULO (EN LA PARTE INFERIOR) ---
                 const titleOverlayHTML = item.title ? `<div class="poster-title-overlay">${item.title}</div>` : '';
 
                 posterLink.innerHTML = `${ratingHTML}${yearHTML}${tagHTML}${titleOverlayHTML}${loaderHTML}<img data-src="${item.poster}" alt="${item.title}" loading="lazy">`;
@@ -651,16 +513,10 @@
         document.getElementById("filter-movies").addEventListener("click", e => { e.preventDefault(); showMoviesOnly(); closeAllOverlays(); });
         document.getElementById("filter-series").addEventListener("click", e => { e.preventDefault(); showSeriesOnly(); closeAllOverlays(); });
         document.getElementById("filter-favorites").addEventListener("click", e => { e.preventDefault(); showFavorites(); closeAllOverlays(); });
-        document.getElementById("filter-channels").addEventListener("click", e => { e.preventDefault(); closeAllOverlays(); setActiveMenuItem(e.currentTarget); renderChannelsPage(allData.canales); channelsOverlay.classList.add('active'); });
+        
+        // ❌ Se eliminó el listener de #filter-channels ya que ahora es un link directo
+        
         requestContentBtn.addEventListener('click', (e) => { e.preventDefault(); closeAllOverlays(); requestPanel.classList.add('active'); overlay.classList.add('active'); });
-
-        channelsGrid.addEventListener('click', (e) => {
-            const channelLink = e.target.closest('.js-channel-link');
-            if (channelLink && channelLink.dataset.streamUrl) {
-                e.preventDefault();
-                startPlayback(channelLink.dataset.streamUrl);
-            }
-        });
         
         document.getElementById('request-form').addEventListener('submit', async (e) => {
             e.preventDefault();

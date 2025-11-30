@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canales - CineFlixter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            /* ESTE VALOR SERÁ DINÁMICAMENTE ACTUALIZADO POR FIREBASE SETTINGS */
+            --main-red: #E50914; 
+            --background-color: #000000; 
+            --header-background: #080808;
+            --surface-color: #1f1f1f;
+            --text-color: #ffffff;
+            --border-color: #444;
+            --menu-bg: #101010;
+        }
+        body, html {
+            margin: 0; padding: 0; font-family: 'Manrope', sans-serif;
+            background-color: var(--background-color); color: var(--text-color);
+            height: 100%;
+        }
+        * { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+        a { text-decoration: none; color: inherit; }
+        
+        .fullscreen-page { 
+            position: fixed; 
+            top: 0; left: 0; width: 100%; height: 100%; 
+            background-color: var(--background-color); 
+            z-index: 1003; 
+            display: flex; 
+            flex-direction: column; 
+        }
+
+        .overlay-header { 
+            display: flex; align-items: center; gap: 8px; 
+            padding: 8px; background-color: var(--header-background); 
+            flex-shrink: 0; 
+        }
+        .overlay-header h2 { font-size: 1.25rem; font-weight: 600; margin-left: 8px; flex-grow: 1; }
+        
+        .menu-btn { background: none; border: none; color: white; cursor: pointer; padding: 8px; }
+        .material-icons { font-size: 24px; }
+
+        /* Estilos de la Cuadrícula */
+        .movie-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); 
+            gap: 8px; /* Espacio entre los canales */
+            padding: 8px; 
+            overflow-y: auto; 
+            flex-grow: 1; 
+        }
+
+        /* Estilos de la Tarjeta del Canal (incluyendo la corrección) */
+        .channel-card { 
+            position: relative; 
+            overflow: hidden; 
+            border-radius: 5px; 
+            transition: transform 0.3s ease; 
+            display: block; 
+            background-color: #222; 
+            aspect-ratio: 1 / 1; 
+            cursor: pointer; 
+            box-sizing: border-box; /* CLAVE para el espaciado */
+        }
+        .channel-card:hover { transform: scale(1.05); }
+
+        .channel-card img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: contain; /* Ajusta la imagen sin estirar el contenedor */
+            display: block; 
+            opacity: 0; 
+            transition: opacity 0.4s ease; 
+            padding: 5%; /* CLAVE: Añade margen interno para evitar que se pegue */
+        }
+        .channel-card img.loaded { opacity: 1; }
+
+        /* Estilos del Loader */
+        .poster-loader { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; z-index: 2; }
+        .spinner { height: 48px; width: 48px; animation: rotate 2s linear infinite; transform-origin: center center; }
+        .spinner-path { stroke-dasharray: 1, 200; stroke-dashoffset: 0; stroke: var(--main-red); stroke-linecap: round; animation: dash 1.5s ease-in-out infinite; }
+        @keyframes rotate { 100% { transform: rotate(360deg); } }
+        @keyframes dash { 0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; } 50% { stroke-dasharray: 89, 200; stroke-dashoffset: -35px; } 100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; } }
+        
+        /* Estilos del Modal de Reproducción */
+        body.player-active { overflow: hidden; }
+        #playback-modal { position: fixed; top: 50%; left: 50%; width: 90px; height: 90px; transform: translate(-50%, -50%) scale(0.95); background-color: #2c2c2e; border-radius: 12px; z-index: 1005; box-shadow: 0 12px 17px 2px rgba(0,0,0,0.14), 0 5px 22px 4px rgba(0,0,0,0.12), 0 7px 8px -4px rgba(0,0,0,0.2); opacity: 0; visibility: hidden; transition: transform 0.3s ease, opacity 0.3s ease; display: flex; justify-content: center; align-items: center; }
+        #playback-modal.is-active { transform: translate(-50%, -50%) scale(1); opacity: 1; visibility: visible; }
+        
+    </style>
+</head>
+<body>
+    <div id="channels-page" class="fullscreen-page">
+        <div class="overlay-header">
+            <button class="menu-btn" onclick="history.back()"><i class="material-icons">arrow_back</i></button>
+            <h2 style="flex-grow: 1;">Canales</h2>
+            <a href="https://cinefl1xt3r.netlify.app/agenda.html" target="_blank" class="menu-btn" style="color: var(--main-red); font-weight: 700;">
+                <i class="material-icons">calendar_today</i>
+            </a>
+        </div>
+        <div id="channels-grid" class="movie-grid">
+            </div>
+    </div>
+    
+    <div id="playback-modal">
+        <svg class="spinner" viewBox="25 25 50 50">
+            <circle class="spinner-path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
+        </svg>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        // --- CONFIGURACIÓN E INICIALIZACIÓN DE FIREBASE (Repetida para este archivo) ---
+        const firebaseConfig = {
+            apiKey: "AIzaSyAvX9ZWG402NpI1UFyBxL_HxeMHSLF8fBI",
+            authDomain: "hidraflix-ba716.firebaseapp.com",
+            projectId: "hidraflix-ba716", 
+        };
+
+        let dbFirestore;
+        try {
+            firebase.initializeApp(firebaseConfig);
+            dbFirestore = firebase.firestore();
+            console.log("Firebase y Firestore inicializados correctamente.");
+        } catch (error) {
+            console.error("Error al inicializar Firebase:", error);
+            document.getElementById('channels-grid').innerHTML = '<p style="grid-column: 1 / -1; text-align: center; padding: 20px;">Error: Firebase no está disponible.</p>';
+        }
+        // --------------------------------------------------------------------
+
+        const channelsGrid = document.getElementById('channels-grid');
+        const playbackModal = document.getElementById('playback-modal');
+        let playbackTimeout;
+        let currentIframe = null;
+        let allChannels = []; // Almacenar los canales para el manejo de la cuadrícula
+        const loaderHTML = `
+            <div class="poster-loader">
+                <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="spinner-path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"/>
+                </svg>
+            </div>`;
+
+        // --- FUNCIONES DE REPRODUCCIÓN (Copiadas de index.html) ---
+        function showPlaybackModal() {
+            playbackModal.classList.add('is-active');
+            document.body.classList.add('player-active');
+            if(history.state?.playbackModal !== true) {
+                history.pushState({ playbackModal: true }, '');
+            }
+        }
+
+        function hidePlaybackModal() {
+            playbackModal.classList.remove('is-active');
+            document.body.classList.remove('player-active');
+            if (playbackTimeout) clearTimeout(playbackTimeout);
+            if (currentIframe) {
+                currentIframe.src = 'about:blank';
+                currentIframe.remove();
+                currentIframe = null;
+            }
+        }
+
+        function startPlayback(videoUrl) {
+            if (!videoUrl) { console.error("URL de video no válida."); return; }
+            showPlaybackModal();
+            currentIframe = document.createElement('iframe');
+            currentIframe.src = videoUrl;
+            currentIframe.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:99999;display:none;";
+            currentIframe.setAttribute('allow', 'autoplay; fullscreen');
+            currentIframe.setAttribute('allowfullscreen', '');
+            document.body.appendChild(currentIframe);
+            
+            playbackTimeout = setTimeout(() => {
+                hidePlaybackModal();
+                if(currentIframe) currentIframe.style.display = 'block';
+            }, 5000);
+        }
+
+        window.addEventListener('popstate', (event) => {
+            if (playbackModal.classList.contains('is-active') || currentIframe) {
+                 hidePlaybackModal();
+            }
+        });
+        // ------------------------------------------------------------------
+
+        // --- LAZY LOADING OBSERVER (Copiado de index.html) ---
+        const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const itemContainer = entry.target;
+                    const img = itemContainer.querySelector('img');
+                    if (img && img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.onload = () => {
+                            img.classList.add('loaded');
+                            const loader = itemContainer.querySelector('.poster-loader');
+                            if (loader) loader.remove();
+                        };
+                    }
+                    observer.unobserve(itemContainer);
+                }
+            });
+        }, { rootMargin: "0px 0px 200px 0px" });
+        // ------------------------------------------------------------------
+
+        // --- FUNCIÓN DE RENDERIZADO DE CANALES ---
+        function renderChannels(channels = []) {
+            channelsGrid.innerHTML = "";
+            if (channels.length === 0) { 
+                channelsGrid.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; padding: 20px;">No hay canales disponibles.</p>`; 
+                return; 
+            }
+            channels.forEach(channel => {
+                const card = document.createElement('div');
+                card.className = 'channel-card js-channel-link';
+                card.dataset.streamUrl = channel.url || '';
+                // Se eliminó la imagen de fondo para evitar un error de CSS si no existe el logo
+                card.innerHTML = `${loaderHTML}<img data-src="${channel.logo}" alt="${channel.name} logo" loading="lazy">`;
+                channelsGrid.appendChild(card);
+                lazyLoadObserver.observe(card);
+            });
+        }
+        // ------------------------------------------------------------------
+        
+        // --- FUNCIÓN DE CARGA PRINCIPAL DE CANALES ---
+        async function fetchChannels() {
+            if (!dbFirestore) return;
+
+            // Mostrar placeholders de carga
+            channelsGrid.innerHTML = Array.from({length: 12}, () => `<div class="channel-card">${loaderHTML}</div>`).join('');
+
+            try {
+                // 1. Cargar Ajustes (para el color)
+                const settingsDoc = await dbFirestore.collection('settings').doc('app-settings').get();
+                if (settingsDoc.exists) {
+                    const settings = settingsDoc.data();
+                    if (settings.main_color) {
+                        document.documentElement.style.setProperty('--main-red', settings.main_color);
+                    }
+                }
+                
+                // 2. Cargar Canales
+                const channelsSnapshot = await dbFirestore.collection('canales').get();
+                allChannels = channelsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+                // Ordenar Canales alfabéticamente (A-Z) por el campo 'name'
+                allChannels.sort((a, b) => {
+                    const nameA = (a.name || '').toUpperCase();
+                    const nameB = (b.name || '').toUpperCase();
+                    if (nameA < nameB) return -1;
+                    if (nameA > nameB) return 1;
+                    return 0;
+                });
+                
+                renderChannels(allChannels);
+
+            } catch (error) {
+                console.error("Error al cargar canales de Firebase:", error);
+                channelsGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; padding: 20px;">Error al cargar canales. Revisa tu consola.</p>';
+            }
+        }
+
+        // --- EVENT LISTENER para iniciar la reproducción ---
+        channelsGrid.addEventListener('click', (e) => {
+            const channelLink = e.target.closest('.js-channel-link');
+            if (channelLink && channelLink.dataset.streamUrl) {
+                e.preventDefault();
+                startPlayback(channelLink.dataset.streamUrl);
+            }
+        });
+
+        // Cargar los canales al iniciar
+        fetchChannels();
+    });
+    </script>
+</body>
+</html>
