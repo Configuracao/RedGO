@@ -46,17 +46,18 @@
         .menu-btn { background: none; border: none; color: white; cursor: pointer; padding: 8px; }
         .material-icons { font-size: 24px; }
 
-        /* Estilos de la Cuadrícula */
+        /* Estilos de la Cuadrícula - LÍNEA CORREGIDA */
         .movie-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); 
+            /* CORRECCIÓN: Usamos auto-fit y un minmax más flexible (e.g., 70px) para evitar la superposición */
+            grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); 
             gap: 8px; /* Espacio entre los canales */
             padding: 8px; 
             overflow-y: auto; 
             flex-grow: 1; 
         }
 
-        /* Estilos de la Tarjeta del Canal (incluyendo la corrección) */
+        /* Estilos de la Tarjeta del Canal */
         .channel-card { 
             position: relative; 
             overflow: hidden; 
@@ -66,18 +67,18 @@
             background-color: #222; 
             aspect-ratio: 1 / 1; 
             cursor: pointer; 
-            box-sizing: border-box; /* CLAVE para el espaciado */
+            box-sizing: border-box; 
         }
         .channel-card:hover { transform: scale(1.05); }
 
         .channel-card img { 
             width: 100%; 
             height: 100%; 
-            object-fit: contain; /* Ajusta la imagen sin estirar el contenedor */
+            object-fit: contain; 
             display: block; 
             opacity: 0; 
             transition: opacity 0.4s ease; 
-            padding: 5%; /* CLAVE: Añade margen interno para evitar que se pegue */
+            padding: 5%; 
         }
         .channel-card img.loaded { opacity: 1; }
 
