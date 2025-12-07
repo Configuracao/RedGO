@@ -264,7 +264,7 @@
     
     let groupedOptions = {};
     let currentAction = 'play';
-    const ALLOWED_DOMAINS = ['dumbalag.com', 'vidhide.me']; 
+    // Se ha eliminado: const ALLOWED_DOMAINS = ['dumbalag.com', 'vidhide.me']; 
 
     function closeAllModals() {
         document.querySelectorAll('.bottom-sheet, .dialog-modal').forEach(m => m.classList.remove('active'));
@@ -454,22 +454,18 @@
             document.getElementById('movie-synopsis').textContent = item.synopsis || 'Sin sinopsis disponible.';
             setupSynopsisToggle(); // Llamada para habilitar el 'Ver más'
             
-            // LÓGICA DE FILTRADO Y AGRUPACIÓN DE ENLACES
-            const filteredOptions = (item.options || []).filter(option => {
-                if (option.src) {
-                    return ALLOWED_DOMAINS.some(domain => option.src.includes(domain));
-                }
-                return false; 
-            });
+            // LÓGICA DE AGRUPACIÓN DE ENLACES (ANTES AQUÍ ESTABA EL FILTRO)
+            // Ya no hay filtrado por dominio, se usa cualquier opción que tenga URL (src).
+            const allOptions = (item.options || []).filter(option => option.src); 
 
-            groupedOptions = filteredOptions.reduce((acc, option) => {
+            groupedOptions = allOptions.reduce((acc, option) => {
                 const lang = option.audio || 'Indefinido';
                 if (!acc[lang]) acc[lang] = [];
                 acc[lang].push(option);
                 return acc;
             }, {});
             
-            if (filteredOptions.length === 0) {
+            if (allOptions.length === 0) {
                  fabPlay.style.display = 'none';
             } else {
                  fabPlay.style.display = 'flex'; 
