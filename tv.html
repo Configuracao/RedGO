@@ -301,19 +301,31 @@
 
         // --- FUNCIÓN AGENDA DEPORTIVA CON AUTO-LIMPIEZA ---
         async function importarAgendaDeportiva() {
-    const urlAgenda = "https://corsproxy.io/?url=" + encodeURIComponent("https://streamx10.cloud/json/agenda345.json?nocache=1772058088855");
+    const btn = document.getElementById('btnAgenda');
+    const originalText = btn.innerText;
+    
+    // Feedback visual de que está trabajando
+    btn.innerText = "Sincronizando...";
+    btn.disabled = true;
+    btn.classList.add('opacity-50', 'cursor-not-allowed');
+
+    const urlAgenda = "https://corsproxy.io/?url=" + encodeURIComponent("https://streamx10.cloud/json/agenda345.json?nocache=" + Date.now());
     const CATEGORIA_AGENDA = "AGENDA DEPORTIVA";
     
     try {
         const response = await fetch(urlAgenda);
         const eventos = await response.json();
 
-        if (!eventos || !Array.isArray(eventos)) return;
+        if (!eventos || !Array.isArray(eventos)) {
+            alert("No se recibieron eventos válidos.");
+            return;
+        }
 
         const ahora = new Date();
         const snapshot = await db.ref('canales').once('value');
         const updates = {};
         
+        // Limpiar agenda anterior
         snapshot.forEach(child => {
             if (child.val().group === CATEGORIA_AGENDA) {
                 updates[child.key] = null;
@@ -323,25 +335,17 @@
 
         let cargados = 0;
         for (let ev of eventos) {
-            // 1. Extraer horas y minutos manualmente del string "HH:mm"
             let [horas, minutos] = ev.time.split(':').map(Number);
-
-            // 2. Aplicar el ajuste de -1 hora
             horas = horas - 1;
-
-            // 3. Corregir si la hora resulta negativa (ej: de 00:00 a 23:00)
             if (horas < 0) horas = 23;
-
-            // 4. Formatear de nuevo a string asegurando los dos dígitos (ej: "07:05")
             const horaAjustada = `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}`;
 
-            // 5. Lógica de expiración (usando la fecha completa para el cálculo)
+            // Lógica de expiración (4 horas después)
             const fechaEvento = new Date(`${ev.date}T${ev.time}:00`);
             const limiteExpiracion = new Date(fechaEvento.getTime() + (4 * 60 * 60 * 1000));
 
             if (limiteExpiracion > ahora) {
                 const nuevoEvento = {
-                    // AQUÍ USAMOS LA HORA AJUSTADA
                     name: `[${horaAjustada}] ${ev.title}`, 
                     group: CATEGORIA_AGENDA,
                     url: ev.link,
@@ -356,17 +360,19 @@
         }
 
         const horaSync = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        document.getElementById('lastUpdate').innerText = `Sync: ${horaSync} (Hora -1h OK)`;
+        document.getElementById('lastUpdate').innerText = `Sync Manual: ${horaSync}`;
+        alert(`Sincronización exitosa. Se cargaron ${cargados} eventos.`);
         
     } catch (error) {
-        console.error("Error en el ajuste manual:", error);
+        console.error("Error en la sincronización:", error);
+        alert("Error al conectar con la agenda.");
+    } finally {
+        // Restaurar botón
+        btn.innerText = originalText;
+        btn.disabled = false;
+        btn.classList.remove('opacity-50', 'cursor-not-allowed');
     }
 }
-
-        // Configurar ejecución cada 5 minutos
-        setInterval(importarAgendaDeportiva, 300000);
-        // Ejecutar al cargar la página
-        window.onload = importarAgendaDeportiva;
 
         function borrarCanal(id) { if(confirm("¿Eliminar?")) db.ref('canales/' + id).remove(); }
         function updateFileName() {}
