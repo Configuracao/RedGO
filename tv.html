@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel IPTV Pro | TV y Contenido</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0f172a; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .custom-scroll::-webkit-scrollbar { width: 5px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+    </style>
+</head>
+<body class="text-slate-200 min-h-screen">
+
+    <nav class="sticky top-0 z-50 glass px-6 py-4 mb-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg shadow-red-500/20 font-bold text-white">TV</div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white leading-none">TV y Contenido</h1>
+                    <span class="text-[10px] text-red-500 font-bold uppercase tracking-[0.2em]">Cloud Control</span>
+                </div>
+            </div>
+            <div class="flex flex-col items-end gap-1">
+                <div id="status" class="flex items-center gap-2 text-xs font-mono bg-slate-900/50 px-4 py-2 rounded-full border border-slate-700">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    Auto-Sync Activo
+                </div>
+                <span id="lastUpdate" class="text-[9px] text-slate-500 font-mono">Iniciando agenda...</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12">
+        
+        <div class="lg:col-span-4 space-y-6">
+            <section class="glass p-6 rounded-3xl">
+                <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <span id="formTitleIcon">➕</span> <span id="formTitle">Gestión de Canal</span>
+                </h2>
+                <div class="space-y-3">
+                    <input type="hidden" id="editId">
+                    <input type="text" id="name" placeholder="Nombre del Canal" class="w-full p-3 rounded-xl bg-slate-900/50 border border-slate-700 focus:border-red-500 outline-none transition text-sm">
+                    <input type="text" id="group" placeholder="Categoría (Ej: Deportes)" class="w-full p-3 rounded-xl bg-slate-900/50 border border-slate-700 focus:border-red-500 outline-none transition text-sm">
+                    <input type="text" id="url" placeholder="URL (.m3u8 / .mpd)" class="w-full p-3 rounded-xl bg-slate-900/50 border border-slate-700 focus:border-red-500 outline-none transition text-sm">
+                    <input type="text" id="image" placeholder="URL Logo" class="w-full p-3 rounded-xl bg-slate-900/50 border border-slate-700 focus:border-red-500 outline-none transition text-sm">
+                    <input type="text" id="license" placeholder="License Key (Kodi/ClearKey)" class="w-full p-3 rounded-xl bg-slate-900/50 border border-slate-700 focus:border-red-500 outline-none transition text-sm font-mono text-slate-400">
+                    <input type="text" id="user_agent" placeholder="User-Agent (Opcional)" class="w-full p-3 rounded-xl bg-slate-900/50 border border-slate-700 focus:border-red-500 outline-none transition text-sm font-mono text-slate-400">
+                    <input type="text" id="referrer" placeholder="Referrer (Opcional)" class="w-full p-3 rounded-xl bg-slate-900/50 border border-slate-700 focus:border-red-500 outline-none transition text-sm font-mono text-slate-400">
+                    
+                    <div class="flex gap-2 pt-2">
+                        <button onclick="guardarCanal()" id="btnGuardar" class="flex-1 bg-red-600 hover:bg-red-500 text-white py-3 rounded-xl font-bold shadow-lg shadow-red-600/20 transition-all active:scale-95">
+                            Guardar Canal
+                        </button>
+                        <button onclick="cancelarEdicion()" id="btnCancelar" class="hidden bg-slate-700 hover:bg-slate-600 text-white px-4 rounded-xl transition-all">
+                            ✖
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glass p-6 rounded-3xl border-blue-500/20">
+                <h2 class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-4">📄 Carga Turbo .M3U</h2>
+                <div class="space-y-4">
+                    <label class="flex flex-col items-center justify-center w-full h-24 border-2 border-slate-700 border-dashed rounded-2xl cursor-pointer bg-slate-900/30 hover:bg-slate-900/50 transition">
+                        <div class="flex flex-col items-center justify-center pt-2">
+                            <p class="text-xs text-slate-400 font-bold">Seleccionar archivo</p>
+                        </div>
+                        <input id="fileInput" type="file" class="hidden" accept=".m3u,.txt" onchange="updateFileName()" />
+                    </label>
+                    <div id="progressContainer" class="hidden space-y-2">
+                        <div class="flex justify-between text-[10px] font-bold">
+                            <span class="text-blue-400">Procesando...</span>
+                            <span id="progressPercent" class="text-white">0%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-1.5">
+                            <div id="progressBar" class="bg-blue-500 h-1.5 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <button onclick="procesarArchivoM3UTurbo()" id="btnSubir" class="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-bold text-xs uppercase tracking-widest transition-all">
+                        Cargar Canales
+                    </button>
+                </div>
+            </section>
+
+            <section class="glass p-6 rounded-3xl border-emerald-500/20">
+                <h2 class="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-4">📅 Agenda Deportiva</h2>
+                <button onclick="importarAgendaDeportiva()" id="btnAgenda" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-3 rounded-xl font-bold text-xs uppercase tracking-widest transition-all shadow-lg shadow-emerald-900/20">
+                    Sincronizar Ahora
+                </button>
+            </section>
+        </div>
+
+        <div class="lg:col-span-8">
+            <div class="glass rounded-3xl overflow-hidden flex flex-col h-[calc(100vh-160px)] shadow-2xl">
+                <div class="p-6 border-b border-white/5 flex flex-wrap gap-4 justify-between items-center bg-white/5">
+                    <h3 class="font-bold text-white">Base de Datos <span id="contador" class="ml-2 bg-red-500 text-white text-[10px] font-bold px-3 py-1 rounded-full">0</span></h3>
+                    <div class="flex flex-wrap gap-2">
+                        <input type="text" id="searchBar" onkeyup="filtrarTabla()" placeholder="Escribe categoría aquí..." class="bg-slate-900/50 border border-slate-700 rounded-lg px-3 py-1 text-xs outline-none focus:border-red-500 w-48">
+                        <button onclick="renombrarCategoria()" class="bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/50 px-3 py-1 rounded-lg text-[10px] font-bold transition-all uppercase">
+                            Renombrar
+                        </button>
+                        <button onclick="borrarPorCategoria()" class="bg-red-600/20 hover:bg-red-600 text-red-500 hover:text-white border border-red-500/50 px-3 py-1 rounded-lg text-[10px] font-bold transition-all uppercase">
+                            Borrar
+                        </button>
+                    </div>
+                </div>
+                <div class="overflow-y-auto custom-scroll flex-1">
+                    <table class="w-full text-left" id="mainTable">
+                        <thead class="text-[10px] uppercase text-slate-500 bg-slate-900/80 sticky top-0 z-10">
+                            <tr>
+                                <th class="p-4 w-16">Logo</th>
+                                <th class="p-4">Canal / URL</th>
+                                <th class="p-4">Grupo</th>
+                                <th class="p-4 text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaCanales" class="divide-y divide-white/5"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyA77FayU1gnBW_1rpFkxRQEcWiwvGi9cIo",
+            authDomain: "tv-y-contenido.firebaseapp.com",
+            databaseURL: "https://tv-y-contenido-default-rtdb.firebaseio.com",
+            projectId: "tv-y-contenido",
+            storageBucket: "tv-y-contenido.firebasestorage.app",
+            messagingSenderId: "652125896828",
+            appId: "1:652125896828:web:1510b5a0c7ef79534ac9f9"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+
+        // BUSCADOR OPTIMIZADO
+        let searchTimeout = null;
+        function filtrarTabla() {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                const f = document.getElementById('searchBar').value.toUpperCase();
+                const rows = document.getElementById('tablaCanales').getElementsByTagName('tr');
+                for (let i = 0; i < rows.length; i++) {
+                    const text = rows[i].textContent || rows[i].innerText;
+                    rows[i].style.display = text.toUpperCase().includes(f) ? "" : "none";
+                }
+            }, 300);
+        }
+
+        function guardarCanal() {
+            const id = document.getElementById('editId').value;
+            const data = {
+                name: document.getElementById('name').value,
+                group: document.getElementById('group').value || "M3U",
+                url: document.getElementById('url').value,
+                image: document.getElementById('image').value,
+                license_key: document.getElementById('license').value || "",
+                user_agent: document.getElementById('user_agent').value || "",
+                referrer: document.getElementById('referrer').value || ""
+            };
+            if(!data.name || !data.url) return alert("Nombre y URL son obligatorios");
+            if(id) {
+                db.ref('canales/' + id).update(data).then(() => { alert("Canal actualizado"); cancelarEdicion(); });
+            } else {
+                db.ref('canales').push(data).then(() => limpiarForm());
+            }
+        }
+
+        function editarCanal(id, n, g, u, i, l, ua, ref) {
+            document.getElementById('editId').value = id;
+            document.getElementById('name').value = decodeURIComponent(n);
+            document.getElementById('group').value = decodeURIComponent(g);
+            document.getElementById('url').value = decodeURIComponent(u);
+            document.getElementById('image').value = decodeURIComponent(i);
+            document.getElementById('license').value = (l === 'undefined' || !l) ? "" : decodeURIComponent(l);
+            document.getElementById('user_agent').value = (ua === 'undefined' || !ua) ? "" : decodeURIComponent(ua);
+            document.getElementById('referrer').value = (ref === 'undefined' || !ref) ? "" : decodeURIComponent(ref);
+            document.getElementById('formTitle').innerText = "Editando Canal";
+            document.getElementById('btnGuardar').innerText = "Actualizar Canal";
+            document.getElementById('btnCancelar').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function cancelarEdicion() {
+            document.getElementById('editId').value = "";
+            document.getElementById('formTitle').innerText = "Gestión de Canal";
+            document.getElementById('btnGuardar').innerText = "Guardar Canal";
+            document.getElementById('btnCancelar').classList.add('hidden');
+            limpiarForm();
+        }
+
+        function limpiarForm() {
+            ['name','group','url','image','license','user_agent','referrer'].forEach(id => document.getElementById(id).value = "");
+        }
+
+        db.ref('canales').on('value', snap => {
+            const tbody = document.getElementById('tablaCanales');
+            document.getElementById('contador').innerText = snap.numChildren();
+            let html = "";
+            snap.forEach(child => {
+                const c = child.val();
+                const k = child.key;
+                const n = encodeURIComponent(c.name || ""), g = encodeURIComponent(c.group || ""), u = encodeURIComponent(c.url || ""), 
+                      img = encodeURIComponent(c.image || ""), lic = encodeURIComponent(c.license_key || ""), 
+                      ua = encodeURIComponent(c.user_agent || ""), ref = encodeURIComponent(c.referrer || "");
+                html += `
+                    <tr class="hover:bg-white/5 transition">
+                        <td class="p-4"><img src="${c.image}" onerror="this.src='https://via.placeholder.com/40'" class="w-10 h-10 rounded-lg bg-black object-contain"></td>
+                        <td class="p-4">
+                            <div class="text-xs font-bold text-white">${c.name}</div>
+                            <div class="text-[9px] text-slate-500 truncate max-w-xs font-mono">${c.url}</div>
+                        </td>
+                        <td class="p-4"><span class="text-[9px] bg-slate-800 px-2 py-1 rounded text-slate-400 font-bold">${c.group}</span></td>
+                        <td class="p-4 text-center">
+                            <div class="flex justify-center gap-2">
+                                <button onclick="editarCanal('${k}', '${n}', '${g}', '${u}', '${img}', '${lic}', '${ua}', '${ref}')" class="p-2 hover:bg-blue-500/20 rounded-lg text-blue-400">✏️</button>
+                                <button onclick="borrarCanal('${k}')" class="p-2 hover:bg-red-500/20 rounded-lg text-red-500">🗑️</button>
+                            </div>
+                        </td>
+                    </tr>`;
+            });
+            tbody.innerHTML = html;
+        });
+
+        // FUNCIONES DE CATEGORÍA
+        function renombrarCategoria() {
+            const actual = document.getElementById('searchBar').value.trim();
+            if (!actual) return alert("Escribe el nombre actual de la categoría en el buscador.");
+            const nuevo = prompt(`Cambiar todos los canales de "${actual}" a la nueva categoría:`);
+            if (nuevo) {
+                db.ref('canales').once('value', snap => {
+                    let cont = 0;
+                    snap.forEach(child => {
+                        if (child.val().group === actual) {
+                            db.ref('canales/' + child.key).update({ group: nuevo });
+                            cont++;
+                        }
+                    });
+                    alert(`Se actualizaron ${cont} canales a la categoría "${nuevo}"`);
+                });
+            }
+        }
+
+        function borrarPorCategoria() {
+            const categoria = document.getElementById('searchBar').value.trim();
+            if (!categoria) return alert("Escribe el nombre de la categoría en el buscador.");
+            if (confirm(`¿Eliminar todos los canales de la categoría "${categoria}"?`)) {
+                db.ref('canales').once('value', snap => {
+                    snap.forEach(child => {
+                        if (child.val().group === categoria) db.ref('canales/' + child.key).remove();
+                    });
+                });
+            }
+        }
+
+        async function procesarArchivoM3UTurbo() {
+            const file = document.getElementById('fileInput').files[0];
+            if (!file) return alert("Selecciona archivo");
+            document.getElementById('progressContainer').classList.remove('hidden');
+            const reader = new FileReader();
+            reader.onload = async function(e) {
+                const lines = e.target.result.split('\n');
+                const canales = [];
+                let temp = null;
+                for (let line of lines) {
+                    line = line.trim();
+                    if (line.startsWith("#EXTINF")) {
+                        temp = {
+                            name: line.substring(line.lastIndexOf(",") + 1).trim(),
+                            image: (line.match(/tvg-logo="([^"]+)"/) || [])[1] || "",
+                            group: (line.match(/group-title="([^"]+)"/) || [])[1] || "M3U",
+                            license_key: "", user_agent: "", referrer: ""
+                        };
+                    } else if (line.includes("license_key=")) {
+                        if(temp) temp.license_key = line.split('=')[1].trim();
+                    } else if (line.includes("user-agent=")) {
+                        if(temp) temp.user_agent = line.split('=')[1].trim();
+                    } else if (line.includes("referrer=")) {
+                        if(temp) temp.referrer = line.split('=')[1].trim();
+                    } else if (line.startsWith("http")) {
+                        if (temp) { temp.url = line; canales.push(temp); temp = null; }
+                    }
+                }
+                for (let i = 0; i < canales.length; i++) {
+                    await db.ref('canales').push(canales[i]);
+                    let p = Math.round(((i+1)/canales.length)*100);
+                    document.getElementById('progressBar').style.width = p+"%";
+                    document.getElementById('progressPercent').innerText = p+"%";
+                }
+                alert("Carga completa"); location.reload();
+            };
+            reader.readAsText(file);
+        }
+
+        // --- FUNCIÓN AGENDA DEPORTIVA CON AUTO-LIMPIEZA ---
+        async function importarAgendaDeportiva() {
+    const urlAgenda = "https://corsproxy.io/?url=" + encodeURIComponent("https://streamx10.cloud/json/agenda345.json?nocache=1772058088855");
+    const CATEGORIA_AGENDA = "AGENDA DEPORTIVA";
+    
+    try {
+        const response = await fetch(urlAgenda);
+        const eventos = await response.json();
+
+        if (!eventos || !Array.isArray(eventos)) return;
+
+        const ahora = new Date();
+        const snapshot = await db.ref('canales').once('value');
+        const updates = {};
+        
+        snapshot.forEach(child => {
+            if (child.val().group === CATEGORIA_AGENDA) {
+                updates[child.key] = null;
+            }
+        });
+        await db.ref('canales').update(updates);
+
+        let cargados = 0;
+        for (let ev of eventos) {
+            // 1. Extraer horas y minutos manualmente del string "HH:mm"
+            let [horas, minutos] = ev.time.split(':').map(Number);
+
+            // 2. Aplicar el ajuste de -1 hora
+            horas = horas - 1;
+
+            // 3. Corregir si la hora resulta negativa (ej: de 00:00 a 23:00)
+            if (horas < 0) horas = 23;
+
+            // 4. Formatear de nuevo a string asegurando los dos dígitos (ej: "07:05")
+            const horaAjustada = `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}`;
+
+            // 5. Lógica de expiración (usando la fecha completa para el cálculo)
+            const fechaEvento = new Date(`${ev.date}T${ev.time}:00`);
+            const limiteExpiracion = new Date(fechaEvento.getTime() + (4 * 60 * 60 * 1000));
+
+            if (limiteExpiracion > ahora) {
+                const nuevoEvento = {
+                    // AQUÍ USAMOS LA HORA AJUSTADA
+                    name: `[${horaAjustada}] ${ev.title}`, 
+                    group: CATEGORIA_AGENDA,
+                    url: ev.link,
+                    image: "https://cdn-icons-png.flaticon.com/512/857/857418.png",
+                    license_key: "",
+                    user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                    referrer: "https://la14hd.com/"
+                };
+                await db.ref('canales').push(nuevoEvento);
+                cargados++;
+            }
+        }
+
+        const horaSync = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('lastUpdate').innerText = `Sync: ${horaSync} (Hora -1h OK)`;
+        
+    } catch (error) {
+        console.error("Error en el ajuste manual:", error);
+    }
+}
+
+        // Configurar ejecución cada 5 minutos
+        setInterval(importarAgendaDeportiva, 300000);
+        // Ejecutar al cargar la página
+        window.onload = importarAgendaDeportiva;
+
+        function borrarCanal(id) { if(confirm("¿Eliminar?")) db.ref('canales/' + id).remove(); }
+        function updateFileName() {}
+    </script>
+</body>
+</html>
