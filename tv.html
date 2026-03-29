@@ -187,20 +187,27 @@
     }
 }
 
-        function editarCanal(id, n, g, u, i, l, ua, ref) {
-            document.getElementById('editId').value = id;
-            document.getElementById('name').value = decodeURIComponent(n);
-            document.getElementById('group').value = decodeURIComponent(g);
-            document.getElementById('url').value = decodeURIComponent(u);
-            document.getElementById('image').value = decodeURIComponent(i);
-            document.getElementById('license').value = (l === 'undefined' || !l) ? "" : decodeURIComponent(l);
-            document.getElementById('user_agent').value = (ua === 'undefined' || !ua) ? "" : decodeURIComponent(ua);
-            document.getElementById('referrer').value = (ref === 'undefined' || !ref) ? "" : decodeURIComponent(ref);
-            document.getElementById('formTitle').innerText = "Editando Canal";
-            document.getElementById('btnGuardar').innerText = "Actualizar Canal";
-            document.getElementById('btnCancelar').classList.remove('hidden');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        // Agrega 'ds' (drm_scheme) y 'du' (drm_uri) al final de los parámetros
+function editarCanal(id, n, g, u, i, l, ua, ref, ds, du) {
+    document.getElementById('editId').value = id;
+    document.getElementById('name').value = decodeURIComponent(n);
+    document.getElementById('group').value = decodeURIComponent(g);
+    document.getElementById('url').value = decodeURIComponent(u);
+    document.getElementById('image').value = decodeURIComponent(i);
+    document.getElementById('license').value = (l === 'undefined' || !l) ? "" : decodeURIComponent(l);
+    document.getElementById('user_agent').value = (ua === 'undefined' || !ua) ? "" : decodeURIComponent(ua);
+    document.getElementById('referrer').value = (ref === 'undefined' || !ref) ? "" : decodeURIComponent(ref);
+    
+    // --- NUEVAS LÍNEAS PARA DRM ---
+    document.getElementById('drm_scheme').value = (ds === 'undefined' || !ds) ? "" : decodeURIComponent(ds);
+    document.getElementById('drm_license_uri').value = (du === 'undefined' || !du) ? "" : decodeURIComponent(du);
+    // ------------------------------
+
+    document.getElementById('formTitle').innerText = "Editando Canal";
+    document.getElementById('btnGuardar').innerText = "Actualizar Canal";
+    document.getElementById('btnCancelar').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
         function cancelarEdicion() {
             document.getElementById('editId').value = "";
