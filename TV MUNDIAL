@@ -104,28 +104,28 @@ http://45.4.169.50:8000/play/a07c
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.izzigo.tv/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=a7d11d37a1f7611ee88d4db880171f32:68f96d618b0b956b008c445896a25a79
-https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/ubehitlwzo/out/v1/8e09c381a51f4366a19e979418112e8f/cenc.mpd
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/ubehitlwzo/out/v1/8e09c381a51f4366a19e979418112e8f/cenc.mpd
 
 #EXTINF:-1 tvg-id="DSPORTS.(ARG).dtvsp" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5a/DSports.png" group-title="DEPORTES", DSPORTS ARG
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.izzigo.tv/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=4f4c3a9912ea752e88f4497864a1bc8b:278128004fe8c6ffb2cd2a0c154a241a
-https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/x0srg3jjpz/out/v1/f779c49314394d61886d63f58d9d52e4/cenc.mpd
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/x0srg3jjpz/out/v1/f779c49314394d61886d63f58d9d52e4/cenc.mpd
 
 #EXTINF:-1 tvg-id="DSPORTS.2.(DTS2).co" tvg-logo="https://d18o29lhcg4kda.cloudfront.net/fit-in/1440x1080/Y2gwMTAwMDAwMDAwMTI4X2xpbmVhcl9jaGFubmVsX3NzbGE_11002_LOGO_1440x1080.png" group-title="DEPORTES", DSPORTS 2 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.izzigo.tv/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=03f12d6a3dbfd3a6fa7dd7f6417e0c11:ea07b87acdf2e45be824cde4a1cf3504
-http://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/dash/enc/rgilyeubta/out/v1/09a67027b18f4fd78aaa3794a2aacfe8/cenc.mpd
+http://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/dash/enc/rgilyeubta/out/v1/09a67027b18f4fd78aaa3794a2aacfe8/cenc.mpd
 
 #EXTINF:-1 tvg-id="DSPORTS.+(DTS+).co" tvg-logo="https://d18o29lhcg4kda.cloudfront.net/fit-in/1440x1080/Y2gwMTAwMDAwMDAwMTM5X2xpbmVhcl9jaGFubmVsX3NzbGE_11002_LOGO_1440x1080.png" group-title="DEPORTES", DSports +
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.izzigo.tv/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f
-http://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
+http://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
 
 #EXTINF:-1 group-title="DEPORTES" tvg-id="Canal.Fox.Sports.(México).mx", tvg-logo="https://i.imgur.com/TJsHUSM.png", Fox Sports mx
 #EXTVLCOPT:network-caching=1000
@@ -499,9 +499,9 @@ https://live1-ott.izzigo.tv/7/out/u/dash/VIX-MUNDIAL-93-HD-H265/default.mpd
 #KODIPROP:inputstream.adaptive.license_key=6c89e84c52eae0428b7d2c8e887a48ec:758a1484f920a0f1aa73e95d5f2be225
 https://live1-ott.izzigo.tv/12/out/u/dash/SKY-LIVE-EVENT-5-HD/default.mpd
 
-#EXTINF:-1 tvg-id="Canal.TNT.Series.sv" group-title="EVENTOS",FRANCIA
+#EXTINF:-1 tvg-id="Canal.TNT.Series.sv" group-title="EVENTOS",México Vs Corea Del Sur
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://drm.mp.lura.live/fp?eqp=AHLEjT_zgY1y-lKbKf9P_G4MfAwKS216_BHVCgam2dwXkECtckJqCeK7nlhc1Ons7hNnOfI0UJvQ4FW38hKg_h14YaUKosppSbgTkARexgAILFT4bEJSEHs45YYlzMg8GGjEKdGvZ7nH7opiBAic_m6pRQUtgeVyVLv5odr2IOUQerCRtW1A3k7ZIcpyarz1b8XCZ8RmlpWH7djDQipxeunp3i_evmy9O6l6t0jeNyI11XyQm321PI17bM_-e4TMJnUVk_2ofBDOql6F2eXIPiWzrMgATAUNYnj9ur07Ks6FqKL8uXyI1NSwAl4q4Zxm&anvauth=tb=0~te=1780895687~sgn=4d326ae898510a64de83881bb0e9f868b57a52604e68681c5af1cb9da693b4a2&t=1780884887
+#KODIPROP:inputstream.adaptive.license_key=https://drm.mp.lura.live/fp?eqp=K6nKR6TOL3ehPfOvhvIzi-Kqh0dbsN5tIm2_RzpEhKNIySdF3m6y7-pSVEa2AEVdqcM3G4Fy5I3gDnJLcxLfDZ9bd_q64tXE8vY95VnUAJmHzmhIVzonvNSvdAD1z6UdEnqYebCGDfPjZgi0S_x198T7FK2t1WxJyI-7NhnzdKEDyFb_MFXKDVhCu4qv5sB_oLe2709iy-0DuJzggYeBfK9x22wsu3JQ8qoHZL8idzj2wMi3dRZZx1f_PoVl-GW1KQtucNtaO53vhUzG8oLhdnO5MoJt_-PidZh1cLOhlDDLWgZvnHUdB6bZQqM3TxhU&anvauth=tb=0~te=1781840659~sgn=fae990003e907c21073839e5688ce7f0ad023aef141932a283b3771c66a7b5cb&t=1781829859
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0
-https://dcs4-live.mp.lura.live/server/play/APXEX2TzBgrvU2RA/manifest.mpd?encp=zuvPJYoOOdEMDNF2j2mvmg:jUD7ZQW8q2Qa3mYsuVje6FJYpifgt7ZRQPz4E7q5tyUgVoafhXWUIJAPQEElKuVodbHW2hoVKg07fXXCPQx_VrimAp8fGize25PEMhzbCArXm99V2Z4K2olHZx0BIgGaOf_4d2e6rlKO6ffpZ0Eneu1yoo3BLibAiWgaLsQc2w1qus29XE9y2b7aagrh8_F6qsBCXr6cJVdxwN0KKWkiSUd6F3oN1Ly4rPQNO1z11EguYEjz-M9SYM_vO76Q2laEU_-YEzeovvEzjImKl8pI6O3oZb8RyZqwV4-YpdOozyrnQ74xJkgeQFmXYljCsmvLHtxmzbc6gv90nIxn2Qa8_XF71nmQgr99jLPCkZ_D3lEdbErRLaCKsOVVjKMu7Zi4pdVFSEX0Sy99bfxhvxcZ_cYxsbMy8_4PcAq-3fWYCBO9D_8yQoAGj0DIfa55jq_UF9DiKIeQaY_YCAgBua9_IHdfVqIQJslHC-oDhrrm77GzjndqEAXOeAx-O1dHZJadKhKzy1r5Oum7mwrbxMLWPvCFFiewmXXi1RSdTP9wiQNQ_ZGiBcactrG2EWBkRss_UOW2QSE0blyIxRo2AxjP2OGD5s4cWasD2j4kDASCUhY99IVYYMUvyFSOMN9wo5bWaSSYxBCTP3uXh6j4-LO87dnqlQd6_XGXQHJmy-_hmmzhaSbyufAuseHeNywHQ6I7caVRbRA0BQOh-YF9Qz3v_sV812UM4E5elcJDPoFHDSuEIKyZawTuZVGvKfnj8GSjviT1_y8JttpDm70R6UYQmDhoekvkA62rJaPXiOawkAcQmuIXQmeGODCS3YORw82duppBntf4mrVllGHvTOSw4VNhnjHLAIQNBGZwcJqHFdf2Xhc0OEF7YdpMDMxgxO4use20DtNDcaAYUImS9XCrcUNRDnR6FuVliz2AMjU6DkENWZJPhrRUavtvfGJ_GYG_wonCoW9H2-8Cw6j6LnctJzCGyjMnSGKS0_nY3wNevDyAQxoBSSxZ-03DSJ0Xx5TU&anvauth=tb=0~te=1780885787~sgn=a2c64621c5485d09a1d1aeaf7c556ed713b3adfc2f1745f57980fa099c968f20&t=1780884887&dfp_pal_nonce=[LURA_PAL_NONCE]
+https://dcs4-live.mp.lura.live/server/play/7nEeEwswV9WQIzBj/manifest.mpd?encp=zuvPJYoOOdEMDNF2j2mvmg:jUD7ZQW8q2Qa3mYsuVje6FJYpifgt7ZRQPz4E7q5tyUgVoafhXWUIJAPQEElKuVodbHW2hoVKg07fXXCPQx_VrimAp8fGize25PEMhzbCArXm99V2Z4K2olHZx0BIgGaOf_4d2e6rlKO6ffpZ0Enek8qsP0DiwphwbpFBZssxHWHY-OiCVeud4BjCGI2PRAYzzTFpnR6X9qG-yiyKyK0W2W0XcWSoQqQMyoXXZhEiAe2LYxpU45ayCjZ25PaXYioCfiBrgBd2nEY8fLG2ctR6HPK0wPJI38wSxR_YZB9hUPrsaWq5npE3px4kSHMBvQC_HFBz-Ca6_a3Zlcx9yqyi4Wzu8EP3kLr4cPgIIwcny_OXnWGsfhLe0SXu-KXc7Kl-hlkQ4iCIIWlSQ3R_FcFBX5-fsHQNhrxWOAIxdBmY4nS1lYR_iVJHO0oQbb4ZRhGX19ZOe0AQHMMMWOEs2cA3WFMwIPl17L69O0FPBlOZIK6IB6REX1DVwmUxuVjBvYYVMlCksddFA8qiwWCtvaW4WYlHQxU9lRyO7Ut8nL3Ei5LRHTHFwks7EiA24XEzwTidAEjy5cl9mYxP0qcfLVIVyhsidq_ztyGy_2yP97LF2TKzJ7oBTwXH5euT-q_dl6Lup_b93b1uI-jDHwJGZAmWbd0bXo7Y6nQ9ygxs8hF8fl301fWwDAMcD5B2MrTN53d_uZUrJQBwIe-2nq2xpfxoE_KtXAlvrhkLqnJvZJDnLI7NCCJMjfOv3RGNxGepKjw1_yNPfBjP4dc5U2uSE1Up1JOHwMQQoIDnAQj_HV2tVYwMFCM_Pa_IoqMwNtbkJF91w9rfHaVLHJyLHLqDeVghlylb354m_q-ny4NoRDPEyRZMZBrZhxreI4d9l3rfPJgJpWBM0E9P94VIom5xsivQX6wUbO5koWwDPVKXa-2Lw-IlsMCHWd0AQi2VnHDuGThJisivwj5a5lp3kAK0hrK8vBMlq9GDo5ZIydMMyp6ztGsAPMF9mtASP4n-fDncW8s&anvauth=tb=0~te=1781830759~sgn=c4f512c387449dec501bb1c9ae15d2d72b89715305ea847adbe4c8d4087c46b3&t=1781829859&dfp_pal_nonce=[LURA_PAL_NONCE]
