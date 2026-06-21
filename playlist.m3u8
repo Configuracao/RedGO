@@ -123,6 +123,8 @@ http://167.250.223.26:9998/play/a01y/index.m3u8
 http://167.250.223.26:9998/play/a02w/index.m3u8
 #EXTINF:-1 group-title="-",Concert Channel
 http://167.250.223.26:9998/play/a03z/index.m3u8
+#EXTINF:-1 group-title="-",DSPORTS
+https://000963.videx.lol/ultra/dsports/index.m3u8
 #EXTINF:-1 group-title="-",DHE
 http://167.250.223.26:9998/play/a00f/index.m3u8
 #EXTINF:-1 group-title="-",DHE HD
