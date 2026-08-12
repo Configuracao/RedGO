@@ -65,7 +65,7 @@ https://tvfuego.cdn.rcs.net.ar/HGxWMSZtXcn2A3b9zrDfUL/asmvm6rkjqeyv00000263v47ey
 http://45.181.122.46:8090/play/a01m
 
 #EXTINF:-1 tvg-id="Canal.ESPN.(Colombia).sv" tvg-logo="https://tbcdn.talentbrew.com/company/391/v3_0/img/espn/espn-logo-white.png" group-title="DEPORTES", ESPN HD CO
-http://181.78.4.250:8097/play/a0aa/index.m3u8
+http://209.61.12.132:9000/play/a06z/index.m3u8
 
 #EXTINF:-1 tvg-id="Canal.ESPN.(Norte).sv" tvg-logo="https://tbcdn.talentbrew.com/company/391/v3_0/img/espn/espn-logo-white.png" group-title="DEPORTES", ESPN HD OPC 2
 http://181.224.200.5:2277/play/aa07/index.m3u8
@@ -167,9 +167,10 @@ https://latamvosliveclarovideo.akamaized.net/Content/DASH_DASH_FK/Live/Channel(F
 #KODIPROP:inputstream.adaptive.license_key=9f327d24c66fbd84e15ab5c9ead7c7a4:83837185529c0c4048f81386c2d36426
 https://a12aivottepl-a.akamaihd.net/gru-nitro/live/dash/enc/fdx74zqzhu/out/v1/7d7a8c6981a842b98a683e9fbfe51d17/cenc.mpd
 
-#EXTINF:-1 tvg-id="Canal.Fox.Deportes.sv" group-title="DEPORTES", FOX DEPORTES
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#EXTINF:-1 tvg-id="Fox.co" tvg-logo="https://i.ibb.co/qkfX5Wc/FOX-Deportes.png" group-title="DEPORTES", FOX DEPORTES
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=d1a163914db8ffad2c3e94f979896a0d:9728800a3959aafdd5b0bcfbf3768811
 https://a12aivottepl-a.akamaihd.net/gru-nitro/live/dash/enc/vkpoljjpkj/out/v1/502bcf68b3514cd28a220e6f0a43816f/cenc.mpd
 
@@ -458,62 +459,62 @@ http://astra.fibernetisp.com.co/play/a0pa/index.m3u8
 #EXTINF:-1 tvg-id="Canal.Discovery.World.Latinoamérica.sv" group-title="CULTURA",Discovery World
 http://186.33.25.234:8125/play/a06e/index.m3u8
 
-#EXTINF:-1 tvg-id="MUNDIAL90" group-title="MUNDIAL" tvg-logo="",VIX 90
+#EXTINF:-1 tvg-id="DEPORTES90" group-title="DEPORTES" tvg-logo="",VIX 90
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=75074a0cbd83f5b72fb3e5c1495252a9:a4a0df04b2d28f2160cead2ecdeb7203
-https://vod-sev-orbit2-s2.izzigo.tv/out/u/startover/dash/VIX-MUNDIAL-90-HD/default.mpd
+https://vod-sev-orbit2-s2.izzigo.tv/out/u/startover/dash/VIX-DEPORTES-90-HD/default.mpd
 
-#EXTINF:-1 tvg-id="MUNDIAL90" group-title="MUNDIAL" tvg-logo="",VIX 91
+#EXTINF:-1 tvg-id="DEPORTES90" group-title="DEPORTES" tvg-logo="",VIX 91
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=11f486ca7df20d63ff3aaecf4d87d132:9271506950313bab2ced7522891aa022
-https://vod-sev-orbit2-s2.izzigo.tv/out/u/startover/dash/VIX-MUNDIAL-91-HD/default.mpd
+https://vod-sev-orbit2-s2.izzigo.tv/out/u/startover/dash/VIX-DEPORTES-91-HD/default.mpd
 
-#EXTINF:-1 tvg-id="MUNDIAL90" group-title="MUNDIAL" tvg-logo="",VIX 92
+#EXTINF:-1 tvg-id="DEPORTES90" group-title="DEPORTES" tvg-logo="",VIX 92
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=784d6b54efe3a13dc1fbcda17e5804db:b4f4814e01943f910b62e6bfd0c23728
-https://vod-sev-orbit2-s2.izzigo.tv/out/u/startover/dash/VIX-MUNDIAL-92-HD/default.mpd
+https://vod-sev-orbit2-s2.izzigo.tv/out/u/startover/dash/VIX-DEPORTES-92-HD/default.mpd
 
-#EXTINF:-1 tvg-id="MUNDIAL90" group-title="MUNDIAL" tvg-logo="",TELEMUNDO ARIZONA
+#EXTINF:-1 tvg-id="DEPORTES90" group-title="DEPORTES" tvg-logo="",TELEMUNDO ARIZONA
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1efe4add8fdf327c5f8d2a1c195e5c71:4f50e6f011e60ca01ee561f27187e78f
 http://cun-live1-ott.izzigo.tv/out/u/dash/NOG1/TELEMUNDO-ARIZONA-USA-TCS-HD/default.mpd
 
-#EXTINF:-1 tvg-id="MUNDIAL90" group-title="MUNDIAL" tvg-logo="",VIX 95
+#EXTINF:-1 tvg-id="DEPORTES90" group-title="DEPORTES" tvg-logo="",VIX 95
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=bfbf27d8a79f7734f720c3af6a63f5fe:d5fcf98fcee1bbdd44104f188d088335
-https://live1-ott.izzigo.tv/8/out/u/dash/VIX-MUNDIAL-95-HD-H265/default.mpd
+https://live1-ott.izzigo.tv/8/out/u/dash/VIX-DEPORTES-95-HD-H265/default.mpd
 
-#EXTINF:-1 tvg-id="MUNDIAL90" group-title="MUNDIAL" tvg-logo="",VIX 94
+#EXTINF:-1 tvg-id="DEPORTES90" group-title="DEPORTES" tvg-logo="",VIX 94
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=78535ece7acc58ad362346c7c2fa4cf5:9042221339d28d54428a3e7d0c34bd65
-https://live1-ott.izzigo.tv/8/out/u/dash/VIX-MUNDIAL-94-HD-H265/default.mpd
+https://live1-ott.izzigo.tv/8/out/u/dash/VIX-DEPORTES-94-HD-H265/default.mpd
 
-#EXTINF:-1 tvg-id="MUNDIAL90" group-title="MUNDIAL" tvg-logo="",VIX 93
+#EXTINF:-1 tvg-id="DEPORTES90" group-title="DEPORTES" tvg-logo="",VIX 93
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=696435bb1f9b9387866e4d01ab969779:af4bbc01b4e6c0a14279e11451a3e474
-https://live1-ott.izzigo.tv/7/out/u/dash/VIX-MUNDIAL-93-HD-H265/default.mpd
+https://live1-ott.izzigo.tv/7/out/u/dash/VIX-DEPORTES-93-HD-H265/default.mpd
 
-#EXTINF:-1 tvg-id="MUNDIAL90" group-title="MUNDIAL" tvg-logo="",EVENTO
+#EXTINF:-1 tvg-id="DEPORTES90" group-title="DEPORTES" tvg-logo="",EVENTO
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6c89e84c52eae0428b7d2c8e887a48ec:758a1484f920a0f1aa73e95d5f2be225
 https://live1-ott.izzigo.tv/12/out/u/dash/SKY-LIVE-EVENT-5-HD/default.mpd
 
-#EXTINF:-1 tvg-id="Fox.co tvg-logo="https://foxone.asset.viewlift.com/images/2026/02/19/FASTCHANNEL-FOX-1771516241667.png?impolicy=resize&w=1920&h=1080" group-title="MUNDIAL", FOX 4K
+#EXTINF:-1 tvg-id="Fox.co tvg-logo="https://foxone.asset.viewlift.com/images/2026/02/19/FASTCHANNEL-FOX-1771516241667.png?impolicy=resize&w=1920&h=1080" group-title="DEPORTES", FOX 4K
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.primevideo.com/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1f68713028d439ec03be07f56c1d6213:20093db6455160fffed4c394def3193d
 https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/enc/lsilniwjf7/out/v1/fc40f22f10374517a2784e1d97cb23f4/cenc.mpd
 
-#EXTINF:-1 tvg-id="Fox.co tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/cc/Telefe_%28nuevo_logo%29.png" group-title="MUNDIAL", TELEFE
+#EXTINF:-1 tvg-id="Fox.co tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/cc/Telefe_%28nuevo_logo%29.png" group-title="DEPORTES", TELEFE
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.primevideo.com/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
