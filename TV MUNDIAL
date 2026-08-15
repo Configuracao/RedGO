@@ -403,11 +403,11 @@ https://aca-live4-ott.izzigo.tv/11/out/u/dash/TOONCAST-SD/default.mpd
 
 
 #EXTINF:-1 tvg-id="Canal.Sky.Sports.16.sv" group-title="DEPORTES", SKY SPORTS LA LIGA
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.izzigo.tv/
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=cb80e1e7d7598eaf98b1dbbe6dc14ee9:103ae55c7948ca1d159d6743619d26c4
-https://aca-live4-ott.izzigo.tv/12/out/u/dash/SKY-SPORTS-16-HD/default.mpd
+https://live1-ott.izzigo.tv/12/out/u/dash/SKY-SPORTS-16-HD/default.mpd
 
 #EXTINF:-1 tvg-id="ESPN.MX.mx" tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/fysmne1660760631.png" group-title="DEPORTES", ESPN MX
 #KODIPROP:inputstreamaddon=inputstream.adaptive
