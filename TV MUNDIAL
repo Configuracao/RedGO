@@ -62,7 +62,7 @@ http://176.65.146.237:8401/play/a09u/index.m3u8
 https://tvfuego.cdn.rcs.net.ar/HGxWMSZtXcn2A3b9zrDfUL/asmvm6rkjqeyv00000263v47eydhvgcf/output.mpd
 
 #EXTINF:-1 tvg-id="Canal.ESPN.(Sur).sv" tvg-logo="https://tbcdn.talentbrew.com/company/391/v3_0/img/espn/espn-logo-white.png" group-title="DEPORTES", ESPN HD BO
-http://45.181.122.46:8090/play/a01m
+http://207.248.3.81:8081/play/a0t2
 
 #EXTINF:-1 tvg-id="Canal.ESPN.(Colombia).sv" tvg-logo="https://tbcdn.talentbrew.com/company/391/v3_0/img/espn/espn-logo-white.png" group-title="DEPORTES", ESPN HD CO
 http://209.61.12.132:9000/play/a06z/index.m3u8
