@@ -70,6 +70,28 @@ http://209.61.12.132:9000/play/a06z/index.m3u8
 #EXTINF:-1 tvg-id="Canal.ESPN.(Norte).sv" tvg-logo="https://tbcdn.talentbrew.com/company/391/v3_0/img/espn/espn-logo-white.png" group-title="DEPORTES", ESPN HD OPC 2
 http://181.224.200.5:2277/play/aa07/index.m3u8
 
+#EXTINF:-1 tvg-id="Canal.ESPN.(Sur).sv" tvg-logo="https://tbcdn.talentbrew.com/company/391/v3_0/img/espn/espn-logo-white.png" group-title="DEPORTES", ESPN SUR
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"s-TnSuIICxN-aLvQ74p-BQ","kid":"ywBPsQC9kvI3k1YokeMjaw"}],"type":"temporary"}
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#EXTVLCOPT:network-caching=1000 
+#EXTVLCOPT:http-user-agent="FireFox" 
+#EXTVLCOPT--http-reconnect=true 
+https://vcdn.mn10.entel.bo/Content/DASH/Live/Channel(8757cb0a-3584-40cd-901e-8937c7deba83)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.2.(Sur).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/84/CH_LOGO/800/542/0/0/32397574073429.png" group-title="DEPORTES", ESPN 2 SUR
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"bRVWjh2rWecgKuEucVBRhQ","kid":"qB7kppT-zWqopoLlAksxPA"}],"type":"temporary"}
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#EXTVLCOPT:network-caching=1000 
+#EXTVLCOPT:http-user-agent="FireFox" 
+#EXTVLCOPT--http-reconnect=true 
+https://vcdn.mn10.entel.bo:443/Content/DASH/Live/Channel(62567d5c-295c-4ffd-ac7e-c9749e874884)/manifest.mpd
+
 #EXTINF:-1 tvg-id="Canal.ESPN.2.(Norte).sv" tvg-logo="https://static.wikia.nocookie.net/espn/images/7/79/ESPN2-Logo-D795.png/revision/latest/scale-to-width-down/300?cb=20130819193813" group-title="DEPORTES", ESPN 2 HD
 http://190.7.19.197:232/play/a03m/index.m3u8
 
@@ -79,6 +101,17 @@ http://190.7.19.197:232/play/a03m/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=a81ee4a694fecd6aa8a682e5024b313c:6d15568e1dab59e7202ae12e71505185
 https://vcdn.mn10.entel.bo:443/Content/DASH/Live/Channel(62567d5c-295c-4ffd-ac7e-c9749e874884)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.3.(Sur).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/85/CH_LOGO/800/542/0/0/85904894074972.png" group-title="DEPORTES", ESPN 3 SUR
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"3hsM4Z-oBKHEc-uO8tXPbQ","kid":"imDXiJ_xJu4YlTNekiVPjg"}],"type":"temporary"}
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#EXTVLCOPT:network-caching=1000 
+#EXTVLCOPT:http-user-agent="FireFox" 
+#EXTVLCOPT--http-reconnect=true 
+https://vcdn.mn10.entel.bo:443/Content/DASH/Live/Channel(a38d1401-ee01-4802-812a-7cb460c9832c)/manifest.mpd
 
 #EXTINF:-1 tvg-id="Canal.ESPN.3.(Sur).sv" group-title="DEPORTES", ESPN 3
 http://181.224.200.5:2277/play/a02g/index.m3u8
