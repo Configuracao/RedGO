@@ -1,0 +1,8 @@
+#EXTM3U url-tvg="https://xtream-masters.com/epg/SV1.xml.gz"
+
+#EXTINF:-1 tvg-id="Canal.HBO.Family.Latinoamérica.sv" tvg-logo="https://github.com/masterentertainment/listas/blob/main/logos/HBOF.png?raw=true" group-title="CINE & SERIES", HBO FAMILY
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=230a6cfa5e7fd4665b15b6ddccb96459:939c3f61b9fb213518e49c24eceeab85
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-FAMILY-HD-H265/default.mpd
