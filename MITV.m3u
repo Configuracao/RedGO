@@ -56,6 +56,31 @@ https://live1-ott.izzigo.tv/8/out/u/dash/HBO-SIGNATURE-HD-H265/default.mpd
 #KODIPROP:inputstream.adaptive.license_key=abf304290bec7c982e706b1fae592aea:73e1d01cc86bb88c184fbca31292977f
 https://live1-ott.izzigo.tv/8/out/u/dash/HBO-XTREME-HD-H265/default.mpd
 
+#EXTINF:-1 tvg-id="Canal.AMC.US.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/53/CH_LOGO/320/320/0/0/29332619071250.png" group-title="CINE & SERIES", AMC US HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3290efe4c5cf67165e846a0742c22cd9:ddb94463c46af6037432fc026339c09d
+https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/clients/dash/enc/gyczo3tdxu/out/v1/4e9f7dd1b08a404581818c3923af9a93/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.AMC+.(Latinoamérica).sv" tvg-logo="https://m.media-amazon.com/images/S/pv-target-images/145fb397b95a82a730cb3887f421145121cb473b7a0845cf8b108551b381126e._SL800_FMpng_.png" group-title="CINE & SERIES", AMC+ HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=59a51164c2c915352f04066a06f6e807:eba5cc362d1d63c0fe6460febca0fd11
+https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/clients/dash/enc/0f5clvxn6o/out/v1/d5a953bb19734fa3baa1776266887fcb/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.AMC.EN.ESPAÑOL.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/zffV9FW/amc-espanol.png" group-title="CINE & SERIES", AMC EN ESPAÑOL HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://amc-amcespanol-1-us.lg.wurl.tv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.Cinecanal.(México).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/46/CH_LOGO/800/542/0/0/53485573073445.png" group-title="CINE & SERIES", Cinecanal HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=5e87d24ed7b54576895548ffa65eab1d:1e5d7c9e67248af38e48ec56d2241507
+https://live1-ott.izzigo.tv/14/out/u/dash/CINECANAL-HD/default.mpd
+
 #EXTINF:-1 tvg-id="Canal.Cinemax.(México).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/47/CH_LOGO/800/542/0/0/60951863073142.png" group-title="CINE & SERIES", Cinemax HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://www.izzigo.tv/
@@ -112,11 +137,6 @@ https://live1-ott.izzigo.tv/12/out/u/dash/COMEDY-CENTRAL-HD/default.mpd
 #KODIPROP:inputstream.adaptive.license_key=2c73635de48c1033f60965175563af02:ac71c079e88f068aad80e947bac1b494
 https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/jainwiiq5g/out/v1/1094f5319566443cb6a9000810384a1a/cenc.mpd
 
-#EXTINF:-1 tvg-id="Canal.Adult.Swim.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/118/CH_LOGO/320/320/0/0/32013737078382.png" group-title="CINE & SERIES", Adult Swim HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-https://1234-tbx.vrioott.com/adultswim/manifest.mpd
-
 #EXTINF:-1 tvg-id="Canal.AXN.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/55/CH_LOGO/800/542/0/0/77211152071862.png" group-title="CINE & SERIES", AXN HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://www.izzigo.tv/
@@ -130,11 +150,6 @@ https://live1-ott.izzigo.tv/13/out/u/dash/AXN-HD/default.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=8ce1ec3e2402a170cbe13b79ce9bb30f:82fdcfde32cc02673547e58b50e2b5ae
 https://live1-ott.izzigo.tv/13/out/u/dash/FX-HD/default.mpd
-
-#EXTINF:-1 tvg-id="Canal.Star.Channel.Argentina.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/42/CH_LOGO/320/320/0/0/6901418607879.png" group-title="CINE & SERIES", Star Channel Argentina HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-https://1196-tbx.vrioott.com/starchannelarg/manifest.mpd
 
 #EXTINF:-1 tvg-id="Canal.Sony.(México).sv" tvg-logo="https://i.postimg.cc/vTK3N70T/sony-channel.png" group-title="CINE & SERIES", Sony Channel HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
@@ -170,3 +185,1267 @@ https://live1-ott.izzigo.tv/6/out/u/dash/TNT-HD-H265/default.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=8c7c3c7a05812a5245d64c0eced08a41:e56c4dedfa6c51f617cc7c9d2d61f7a8
 https://live1-ott.izzigo.tv/11/out/u/dash/TNT-SERIES-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.CLARO.SPORTS.EN.VIVO.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/6chwhjB2/claro-sports.png" group-title="DEPORTES", CLARO SPORTS EN VIVO HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4b2e5f5d42771121d0dc5f6c9f74ac30:60460fa43257c537ba19a7f735d8177c
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/4eia4ypjxr/out/v1/2c628105d22c47dcb532e26968706a83/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.beIN.SPORTS.XTRA.Ñ.(Latinoamérica).sv" tvg-logo="https://images.fubo.tv/channel-config-ui/station-logos/on-white/bein-sports-xtra-en-espanol-main-copy.png" group-title="DEPORTES", beIN SPORTS XTRA Ñ HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://dbrb49pjoymg4.cloudfront.net/10001/99991785/hls/playlist.m3u8?ads.xumo_channelId=99991785
+
+#EXTINF:-1 tvg-id="Canal.Dsports.Argentina.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/hvzLcknV/dsports.png" group-title="DEPORTES", Dsports Argentina HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4f4c3a9912ea752e88f4497864a1bc8b:278128004fe8c6ffb2cd2a0c154a241a
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/x0srg3jjpz/out/v1/f779c49314394d61886d63f58d9d52e4/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.DSPorts.Chile.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/hvzLcknV/dsports.png" group-title="DEPORTES", DSPorts Chile HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.paramountplus.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=62f9e095e872d430b931b6ad35be2168:415eb477052aa42d010768d57cc9535a
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/cardt9ai8g/out/v1/a85c58beee18435e82a57a0fb9d2f681/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.Dsports.Colombia.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/hvzLcknV/dsports.png" group-title="DEPORTES", Dsports Colombia HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f8b207c10f3f76aeba32a360ec52b9e4:afad49d20eb39670e93e371c1d669921
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/3gg2jnixjn/out/v1/e1840e01f3f14563b66bbb944d5cc54c/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.DSports.Uruguay.Básico.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/1RW8b69D/worldtv2.png" group-title="DEPORTES", DSports Uruguay Básico HD
+#EXTVLCOPT:http-user-agent=dgo/4.48.0 (Android; Android 7.1.2; Asus; ASUS_Z01QD) ExoPlayer/2.19.1
+#EXTVLCOPT:http-referrer=android_mobile.directvgo.com
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d07dd2d8456e3b59acf9ae00379b8bfa:5d75d58fac3ba91e20a024b268ac964f
+https://099ed2f3014c41e78f3c7bc29b21bc11.mediatailor.us-east-1.amazonaws.com/v1/dash/dffceb859a31f14d0ed059ef6b4e2e4d850e60b1/live_1062/1062_DIRECTV_SPORTS_URU_DASH/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.DSports.Uruguay.Plus.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/bw68w0BN/worldtv2.png" group-title="DEPORTES", DSports Uruguay Plus HD
+#EXTVLCOPT:http-user-agent=dgo/4.48.0 (Android; Android 7.1.2; Asus; ASUS_Z01QD) ExoPlayer/2.19.1
+#EXTVLCOPT:http-referrer=android_mobile.directvgo.com
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=270132d9ff3f3065941539866728edd4:5d75d58fac3ba91e20a024b268ac964f
+https://099ed2f3014c41e78f3c7bc29b21bc11.mediatailor.us-east-1.amazonaws.com/v1/dash/dffceb859a31f14d0ed059ef6b4e2e4d850e60b1/live_1314/1314_DIRECTV_SPORTS_URU_PLUS_DASH/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.DSports.2.Argentina.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/hGDVfzgm/dsports-2.png" group-title="DEPORTES", DSports 2 Argentina HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0db71325e4256f5f16b348b3b1b7832a:c664b811a97edc555da47c1d22482542
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/nzl2d4ffbw/out/v1/d094dc6ba8354f3e88b7efa32f80cc33/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.DSports.2.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/hGDVfzgm/dsports-2.png" group-title="DEPORTES", DSports 2 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=03f12d6a3dbfd3a6fa7dd7f6417e0c11:ea07b87acdf2e45be824cde4a1cf3504
+http://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/dash/enc/rgilyeubta/out/v1/09a67027b18f4fd78aaa3794a2aacfe8/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.DSports+.Argentina.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/gcnKcwqB/dsports.png" group-title="DEPORTES", DSports+ Argentina HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=da81f7165f73c884fc1dcf0bf3bd4bb5:3f8d519997196db76631dd4b427f53f6
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/hoo4ddqavw/out/v1/dadfb43b8a714e4f9288026b5c3351a0/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.DSports+.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/gcnKcwqB/dsports.png" group-title="DEPORTES", DSports+ HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f
+http://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.Sports.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/93/CH_LOGO/320/320/0/0/1455190607979.png" group-title="DEPORTES", FOX Sports HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ce5f0570b7f89e2efe19c7bf3c77dae7:d17fdbc7f72e68adf298b71d935864ba
+https://dish.akamaized.net/Content/DASH/Live/channel(foxsports_arg)/variant.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.Sports.2.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/94/CH_LOGO/320/320/0/0/61150555072785.png" group-title="DEPORTES", FOX Sports 2 HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=922eaebf57397ebf2656cbf71ae4775f:3014cf17de69d8f916a83cbf6b4aec94
+https://dish.akamaized.net/Content/DASH/Live/channel(foxsports2_arg)/variant.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.Sports.3.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/95/CH_LOGO/320/320/0/0/42712843072366.png" group-title="DEPORTES", FOX Sports 3 HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ee0ff8714c8f96a448eae5c9b796c889:d7c1e6b0d11ba5051096bb34779c6efb
+https://dish.akamaized.net/Content/DASH/Live/channel(foxsports3_arg)/variant.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.ARGENTINA.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/21/CH_LOGO/320/320/0/0/25899985073189.png" group-title="DEPORTES", ESPN ARGENTINA HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=8113ca483fed6872a8db8c1e32b48cb2:895fe3b51a531a69afcef8eb1417aed5
+https://dish.akamaized.net/Content/DASH/Live/channel(espn_arg)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.2.ARGENTINA.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/84/CH_LOGO/320/320/0/0/32397574073429.png" group-title="DEPORTES", ESPN 2 ARGENTINA HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=fd71a595f5b61225be82193536bd891b:279d9fb593bf5b8a4b4350171f6139fa
+https://dish.akamaized.net/Content/DASH/Live/channel(espn2_arg)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.3.ARGENTINA.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/85/CH_LOGO/320/320/0/0/85904894074972.png" group-title="DEPORTES", ESPN 3 ARGENTINA HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=56cffe75198fa81600c625883f10ede1:87e203fb99dded387fd481126e7c5178
+https://dish.akamaized.net/Content/DASH/Live/channel(espn3_arg)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.4.ARGENTINA.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/pJK6xQ0/espn-4B.png" group-title="DEPORTES", ESPN 4 ARGENTINA HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=50d56945c41f3c8fc0154c414aa2f842:572883af19d1589aec3d40af47dfd179
+https://dish.akamaized.net/Content/DASH/Live/channel(espn4_arg)/variant.mpd
+
+#EXTINF:-1 tvg-id="Canal.TYC.SPORTS..(Latinoamérica).sv" tvg-logo="https://i.ibb.co/gGbp2pF/tyc-2026.png" group-title="DEPORTES", TYC SPORTS  HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=197ca823ac5f4e48573f9f87113c7d7a:c30eefbf2e79a97b0340e0877f4cdbf5
+https://dish.akamaized.net/Content/DASH/Live/channel(tycsports_arg)/variant.mpd
+
+#EXTINF:-1 tvg-id="Canal.TYC.SPORTS.INTERNACIONAL.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/gGbp2pF/tyc-2026.png" group-title="DEPORTES", TYC SPORTS INTERNACIONAL HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=abb4405bf296d53b612b9124b6ff9b57:7dff5070b84e6890b35a88a86ce44f40
+https://dish.akamaized.net/Content/DASH/Live/channel(tycsports)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.TVP.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/120/CH_LOGO/320/320/0/0/26428256071569.png" group-title="DEPORTES", TVP HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0259a1760a8b123dedc1b9f008463e61:86c61c4dd0abd13f5c115cbf2176673e
+https://dish.akamaized.net/Content/DASH/Live/channel(tvpublica_arg)/variant.mpd
+
+#EXTINF:-1 tvg-id="Canal.TELEFE.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/115/CH_LOGO/320/320/0/0/57769025072354.png" group-title="DEPORTES", TELEFE HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=675cb5adcd788bdee4af50518b041626:b28bf4d4eec81cb96e6ca9a0c022dcd5
+https://dish.akamaized.net/Content/DASH/Live/channel(telefe_arg)/variant.mpd
+
+#EXTINF:-1 tvg-id="Canal.DeporTV.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/48/CH_LOGO/800/542/0/0/13868550072195.png" group-title="DEPORTES", DeporTV HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=67bdf2a11676afea85dc4a0a1ad32505:4cac215849ae213aa2893644506ed559
+https://dish.akamaized.net/Content/DASH/Live/channel(deportv_arg)/variant.mpd
+
+#EXTINF:-1 tvg-id="Canal.TNT.Sports.Premium.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2181/CH_LOGO/320/320/0/0/27256579073984.png" group-title="DEPORTES", TNT Sports Premium HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f7d41f94c41a5943cd836a52a59b7ebc:de0cb81e4146240f61281db5bf0d0ade
+https://dish.akamaized.net/Content/DASH/Live/channel(tntsports_arg)/variant.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.Premium.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/120/CH_LOGO/320/320/0/0/50191211073985.png" group-title="DEPORTES", ESPN Premium HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=c29b4e05389dc0493aa29d0debbe5a76:bbccac68c01477eed726fb1c11d54560
+https://dish.akamaized.net/Content/DASH/Live/channel(espnpr_arg)/variant.mpd
+
+#EXTINF:-1 tvg-id="Canal.EVENTOS.PY.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/3WZtzG3/eventos-py.png" group-title="DEPORTES", EVENTOS PY HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://d3kzwqwnq1f7tq.cloudfront.net/out/v1/25ca218d53194065bedf6d998ace462e/index.mpd?*
+
+#EXTINF:-1 tvg-id="Canal.EVENTOS+.PY.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/3WZtzG3/eventos-py.png" group-title="DEPORTES", EVENTOS+ PY HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://d2jluxxgx550su.cloudfront.net/out/v1/62de20495af84f908fa8963f50c44d46/index.mpd?*
+
+#EXTINF:-1 tvg-id="Canal.ESPN.Sur.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/21/CH_LOGO/400/400/0/0/25899985073189.png" group-title="DEPORTES", ESPN Sur HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=cb004fb100bd92f23793562891e3236b:b3e4e74ae2080b137e68bbd0ef8a7e05
+https://vcdn.mn10.entel.bo/Content/DASH/Live/Channel(8757cb0a-3584-40cd-901e-8937c7deba83)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.2.Sur.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/84/CH_LOGO/800/542/0/0/32397574073429.png" group-title="DEPORTES", ESPN 2 Sur HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a81ee4a694fecd6aa8a682e5024b313c:6d15568e1dab59e7202ae12e71505185
+https://vcdn.mn10.entel.bo:443/Content/DASH/Live/Channel(62567d5c-295c-4ffd-ac7e-c9749e874884)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.3.Sur.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/85/CH_LOGO/800/542/0/0/85904894074972.png" group-title="DEPORTES", ESPN 3 Sur HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=8a60d7889ff126ee1895335e92254f8e:de1b0ce19fa804a1c473eb8ef2d5cf6d
+https://vcdn.mn10.entel.bo:443/Content/DASH/Live/Channel(a38d1401-ee01-4802-812a-7cb460c9832c)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.4.Sur.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/83/CH_LOGO/800/542/0/0/16514023071132.png" group-title="DEPORTES", ESPN 4 Sur HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=54a2c11085c315ed6ff85c340a86095d:5f0d10cf4a5c7e22e286b7e8cb4e79f4
+https://vcdn.mn10.entel.bo:443/Content/DASH/Live/Channel(9500bf02-0001-4199-a150-58dc5d692cca)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.5..(Latinoamérica).sv" tvg-logo="https://i.ibb.co/6bvjxGP/espn-5B.png" group-title="DEPORTES", ESPN 5  HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4e126297fc7af35c736bdffe98eecaaa:fdb0091cf67d9c596dbfb07cf6f4c8f5
+https://vcdn.mn10.entel.bo:443/Content/DASH/Live/Channel(80c74968-a2ef-4005-8661-045fe97408a8)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.6..(Latinoamérica).sv" tvg-logo="https://i.ibb.co/CsyhPz4/espn-6B.png" group-title="DEPORTES", ESPN 6  HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f5836382452cdca1e1c8bf8b9a713534:7d261930c3309ed2b06d2abb34a64410
+https://vcdn.mn10.entel.bo:443/Content/DASH/Live/Channel(b30aa51e-97fa-4354-bb38-871fb360e984)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.7..(Latinoamérica).sv" tvg-logo="https://i.ibb.co/LSQFzkw/espn-7B.png" group-title="DEPORTES", ESPN 7  HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=98ea1e32227adcd3618baac2bbf36814:72a03a09d33e412f14a9bfa4ef24b542
+https://vcdn.mn10.entel.bo:443/Content/DASH/Live/Channel(5ab5db84-2235-4c10-9066-be9bc2ee087a)/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.MÉXICO.(Latinoamérica).sv" tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/fysmne1660760631.png" group-title="DEPORTES", ESPN MÉXICO HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=52358519f886446d82834a803b36f796:58b6ac8e07d354b178255e03b9d0f819
+http://147.78.1.28/xview/espn_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.2.MÉXICO.(Latinoamérica).sv" tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/f6gq9s1660760610.png" group-title="DEPORTES", ESPN 2 MÉXICO HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=52358519f886446d82834a803b36f796:58b6ac8e07d354b178255e03b9d0f819
+http://147.78.1.28/xview/espn_2_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.3.MÉXICO.(Latinoamérica).sv" tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/xtqms51749408993.png" group-title="DEPORTES", ESPN 3 MÉXICO HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0c39778fe8fb4f9f8574016b3d4ae2ed:232b1f450f2e37f47fdd5b678a8a546d
+http://147.78.1.28/xview/espn_3_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.4.MÉXICO.(Latinoamérica).sv" tvg-logo="https://wvusports.com/images/2024/8/12/ESPN_PLUS_FC_NEG_8_.png" group-title="DEPORTES", ESPN 4 MÉXICO HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0c39778fe8fb4f9f8574016b3d4ae2ed:232b1f450f2e37f47fdd5b678a8a546d
+http://147.78.1.28/xview/espn_plus_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.NBC.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/ZdhGKSh/nbc.png" group-title="DEPORTES", NBC HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=00452acd36f22483b22308f047994854:9778aa304c3c838580c7c45da34bc45b
+https://fsly.stream.peacocktv.com/Content/CMAF_OL2-CTR-4s-v2/Live/channel(khnl)/master.mpd
+
+#EXTINF:-1 tvg-id="Canal.TELEMUNDO.ARIZONA.(Latinoamérica).sv" tvg-logo="https://ver.zapitv.com/images/ch/213/LOGO/m/0" group-title="DEPORTES", TELEMUNDO ARIZONA HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1efe4add8fdf327c5f8d2a1c195e5c71:4f50e6f011e60ca01ee561f27187e78f
+https://live1-ott.izzigo.tv/out/u/dash/NOG1/TELEMUNDOARIZONAUSATCSHD/TELEMUNDOARIZONAUSATCSHD.mpd
+
+#EXTINF:-1 tvg-id="Canal.TELEMUNDO.(Latinoamérica).sv" tvg-logo="https://ver.zapitv.com/images/ch/213/LOGO/m/0" group-title="DEPORTES", TELEMUNDO HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ce7ab3022e753307997f58afe001bac4:72d631a66e635c60829a0fe7705516c1
+https://cdn.stmify.com/peacock/stream/TELEMUNDO/master.mpd
+
+#EXTINF:-1 tvg-id="Canal.UNIVERSO.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/2SYRLkw/nbc-universo.png" group-title="DEPORTES", UNIVERSO HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=069f3495380f3d25a8c03477067f7d1b:7d9dbf8134535e1665e914fb7134ce47
+https://cdn.stmify.com/peacock/stream/UNIVERSO_WEST/master.mpd
+
+#EXTINF:-1 tvg-id="Canal.TSN.1.(Latinoamérica).sv" tvg-logo="https://www.sportsmediawatch.com/wp-content/uploads/2013/05/tsn.png" group-title="DEPORTES", TSN 1 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=14eeabf30c14b7fbf3008c03099ce011:17d2ac8dbc5429bd70af3433aa12158d
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/w0rehjjrwe/out/v1/69a2a7041395406b970598f61680e7cf/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.TSN.2.(Latinoamérica).sv" tvg-logo="https://www.sportsmediawatch.com/wp-content/uploads/2013/05/tsn.png" group-title="DEPORTES", TSN 2 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=85b277daf5aae05833fe43a68f587968:d52d7e9bc0bcd98787efd547ac91eca0
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/cjglydxghe/out/v1/8977baf175da4b94873194613dd3fe55/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.TSN.3.(Latinoamérica).sv" tvg-logo="https://www.sportsmediawatch.com/wp-content/uploads/2013/05/tsn.png" group-title="DEPORTES", TSN 3 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d3250252765347a0c2603c6cb4869f8c:0c19319460da7e9ed816db46ce839b37
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/lsibpqruq1/out/v1/748887d614a84913ba8bcdf3c82823e6/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.TSN.4.(Latinoamérica).sv" tvg-logo="https://www.sportsmediawatch.com/wp-content/uploads/2013/05/tsn.png" group-title="DEPORTES", TSN 4 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11111111111111118111000000000000:619353d8d5eb758c69fc3c2249205a1c
+https://lott3-web-opus.cdn.avp.telus.net/232006004133/vxfmt=dp/manifest.mpd?device_profile=dashvmx
+
+#EXTINF:-1 tvg-id="Canal.TSN.5.(Latinoamérica).sv" tvg-logo="https://www.sportsmediawatch.com/wp-content/uploads/2013/05/tsn.png" group-title="DEPORTES", TSN 5 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=385ceb9714b75e0cef61254f80b31002:18dce92a2891fee68d21ede5173230f8
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/cscevwljkq/out/v1/972185041b244140860b7d56398e9aaf/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.TNT.SPORTS.1.UK.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/M2XfypX/tnt1.png" group-title="DEPORTES", TNT SPORTS 1 UK HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.TNT.SPORTS.2.UK.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/gFpYs4N/tnt2.png" group-title="DEPORTES", TNT SPORTS 2 UK HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f3df7843080ae743bf865dc5fdf64c68:567c863bc12eb74788ea74888c042e1b
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/puehlftk5j/out/v1/f7f0da1ee112481ca0024e6d4dd97f4a/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.TNT.SPORTS.3.UK.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/R6d05KZ/tnt3.png" group-title="DEPORTES", TNT SPORTS 3 UK HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=cc91508324ce9dcaf425a43d58f1d9d4:643e5474d9edd87c7d9091c8c97994ca
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/dev1hjwzh9/out/v1/a5f0ee7ad7b24906b14f43bebbbe4678/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.TNT.SPORTS.4.UK.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/52R1cbw/tnt4.png" group-title="DEPORTES", TNT SPORTS 4 UK HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=fa34fa8c90336dd528c7a23871cad1fe:552a78d1aeb74f1650d68255c5749408
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/tdijwiga2k/out/v1/f5fde318678f4f7583bf27b7231bde1f/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.US.(Latinoamérica).sv" tvg-logo="https://brandlogos.net/wp-content/uploads/2015/01/fox_corporation-logo_brandlogos.net_dy4bz.png" group-title="DEPORTES", FOX US HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0cc2f872759c96de70237e6fa6de03d0:a879b1d38ed002d4018bce96f9219b8d
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/zpfs5hlgya/out/v1/84b1d591a23640178a8e8aa43c6e59a7/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.US.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/KpDHpB08/61-O-9l-Maqh-L.png" group-title="DEPORTES", FOX US HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f6564ec2aee819046328a0e153be574d:ff46a8a1031eb27ef22576a077c98ab7
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/ajfoeddkbz/out/v1/b78800b9b2304879b15843f455836829/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.4K.(Latinoamérica).sv" tvg-logo="https://images.fubo.tv/channel-config-ui/station-logos/on-white/foxsports_logo_full-color_4k-copy.png" group-title="DEPORTES", FOX 4K HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1f68713028d439ec03be07f56c1d6213:20093db6455160fffed4c394def3193d
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/lsilniwjf7/out/v1/fc40f22f10374517a2784e1d97cb23f4/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FS1.(Latinoamérica).sv" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL0vsi2FLu2yFwyw1aJX0V1Kcvh7zLNEM9nQ&s" group-title="DEPORTES", FS1 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d7d78ea2021a29541136bd5dc8352fe7:6425ac4c0cdf906fe0cce5cf40dc8933
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/cizlveblk4/out/v1/e5c36c41621e4384b80427d87199433a/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.Sports.en.español.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/v8tSQ1fQ/fox-sports-en-espanol.png" group-title="DEPORTES", FOX Sports en español HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://live-manifest.production-public.tubi.io/live/d906efca-1302-4e29-b0d9-9a1d7a305d69/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal..FOX.EN.TUBI..(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/76qvY6yb/fox-en-tubi.png" group-title="DEPORTES",  FOX EN TUBI  HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://live-manifest.production-public.tubi.io/live/7d0f4aa6-93cf-4480-b8f5-2c13370acb70/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.FOX.EN.TUBI.MX..(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/76qvY6yb/fox-en-tubi.png" group-title="DEPORTES", FOX EN TUBI MX  HD
+#EXTVLCOPT:http-user-agent=ExoPlayer/10.2.3000 (Linux;Android 16) AndroidXMedia3/1.4.1
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://live-manifest.production-public.tubi.io/live/97cf2465-5219-4897-965d-43ecf9690102/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.FOX.EN.TUBI.XTRA.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/CLB20DfR/fox-en-tubi-xtra.png" group-title="DEPORTES", FOX EN TUBI XTRA HD
+#EXTVLCOPT:http-user-agent=ExoPlayer/10.2.3000 (Linux;Android 16) AndroidXMedia3/1.4.1
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://aegis-akamai.tubi.video/c5dacf9a-08c0-4d28-9e76-a26dbc575267/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.FOX.EN.TUBI.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/76qvY6yb/fox-en-tubi.png" group-title="DEPORTES", FOX EN TUBI HD
+#EXTVLCOPT:http-user-agent=ExoPlayer/10.2.3000 (Linux;Android 16) AndroidXMedia3/1.4.1
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://amg00733-tubi-amg00733c2-tubi-us-8155.playouts.now.amagi.tv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.FOX.(Latinoamérica).sv" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCUo4Idr7rD6IFueJARbXWdd5f7EzttEJ9bQ&s" group-title="DEPORTES", FOX HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=8ec2e6248abe2e10e16e439c9b85ffd8:f121b015c2a5197828355fb6a874c297
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/worucjnctz/out/v1/20ac5ecdc9b848dc92e7f1188bdf6ff6/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.TV.PAGA.(Latinoamérica).sv" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCUo4Idr7rD6IFueJARbXWdd5f7EzttEJ9bQ&s" group-title="DEPORTES", FOX TV PAGA HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0c39778fe8fb4f9f8574016b3d4ae2ed:232b1f450f2e37f47fdd5b678a8a546d
+http://147.78.1.28/xview/fox_tvpay_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX+.(Latinoamérica).sv" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsg5Mhyv1ic0vowNu8DKcxwKvF0HrFRD2iqQ&s" group-title="DEPORTES", FOX+ HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=51710c9c227a4637991466ece1b3550e:831bfae1e16f4cc2cda5d620e6d1e96a
+http://147.78.1.28/xview/fox_mas_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/8kR5Hy4g/fox-mx.png" group-title="DEPORTES", FOX HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b8541cb32f0e09630565707ed329d700:8ec5a5a282fffa597e46a5a066985842
+https://live1-ott.izzigo.tv/13/out/u/dash/FOX-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.ONE.PLUS.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/J4sjd5Bs/fox-one-plus.png" group-title="DEPORTES", FOX ONE PLUS HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=fa2333198b068c64561263fb7264d74c:a9b9fce5b9cc409d925250484f7dde90
+https://live1-ott.izzigo.tv/14/out/u/dash/FOX-ONE-PLUS-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.DEPORTES.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/qkfX5Wc/FOX-Deportes.png" group-title="DEPORTES", FOX DEPORTES HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d1a163914db8ffad2c3e94f979896a0d:9728800a3959aafdd5b0bcfbf3768811
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/vkpoljjpkj/out/v1/502bcf68b3514cd28a220e6f0a43816f/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.TELEMUNDO.DEPORTES.AHORA.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/g2G9ysJV/telemundo-deportes-ahora-now.png" group-title="DEPORTES", TELEMUNDO DEPORTES AHORA HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=300b58dfdaf35e8537ce25c39e99aec7:6fc107a6f62f39da27b36ff079d7f937
+https://fsly.stream.peacocktv.com/Content/CMAF_OL2-CTR-4s-v2/Live/channel(telemundodeportes)/master.mpd
+
+#EXTINF:-1 tvg-id="Canal.TNT.(Latinoamérica).sv" tvg-logo="https://www.izzigo.tv/images/ch/152/LOGO/m/0" group-title="DEPORTES", TNT HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=52358519f886446d82834a803b36f796:58b6ac8e07d354b178255e03b9d0f819
+http://147.78.1.28/xview/tnt_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.SPACE.(Latinoamérica).sv" tvg-logo="https://www.izzigo.tv/images/ch/61/LOGO/m/0" group-title="DEPORTES", SPACE HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=454da47f9b5046f1b385f84d953f7388:408a097bb5aaa894c025157a02f94e96
+http://147.78.1.28/xview/space_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.CANAL.5.VIX.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/V310Z0q/canal5.png" group-title="DEPORTES", CANAL 5 VIX HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d695093ea3e66d75a4d213a3e2cbf360:01be3f645e89a067d2786c295f68dde4
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/ntkdl68eob/out/v1/bd5dfb7676994383881bc6e71877d29d/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.NU9VE.VIX.(Latinoamérica).sv" tvg-logo="https://www.izzigo.tv/images/ch/20/LOGO/m/0" group-title="DEPORTES", NU9VE VIX HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=79737d20a3eaa862f8cb77c61cb3b58c:41df11a0be44fd7272538728cec38bc6
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/skz7pgjdyp/out/v1/8e7377f4d3154738b7f48baa996b35a5/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.LAS.ESTRELLAS.VIX.(Latinoamérica).sv" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/b/b2/LOGO_LAS_ESTRELLAS_2017.svg/revision/latest/scale-to-width-down/250?cb=20170108213622" group-title="DEPORTES", LAS ESTRELLAS VIX HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=9850bd2ac5d9089ce920ca127e67aa57:8561d5b02983577886cf1f40aed3a8fe
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/ep2x5rkrf5/out/v1/4e18b1b6cb5a48e19b5062e782008c4e/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.AZTECA.7..(Latinoamérica).sv" tvg-logo="https://i.ibb.co/8D59DTdP/Azteca72024.png" group-title="DEPORTES", AZTECA 7  HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=109e7fcb4970436a9e4628090c208451:0ab1bc308c773d627f5a511f0fffc0e4
+http://147.78.1.28/xview/azteca_7_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.TUDN.VIX.(Latinoamérica).sv" tvg-logo="https://www.izzigo.tv/images/ch/134/LOGO/m/0" group-title="DEPORTES", TUDN  VIX HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=763ce1ebcaf23502c8cf357c6ef423e1:0c5e6c0820a1ea28753721db00272411
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/26hxutyti4/out/v1/c7064d5b251a4564b53e0854426b9c8f/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.IMAGEN.TV.(Latinoamérica).sv" tvg-logo="https://images.pluto.tv/channels/64e35aff6b1fdb0008ea8441/colorLogoPNG.png?auto=&trim=auto&ixlib=react-9.1.5&h=50&dpr=2&q=50" group-title="DEPORTES", IMAGEN TV HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=109e7fcb4970436a9e4628090c208451:0ab1bc308c773d627f5a511f0fffc0e4
+http://147.78.1.28/xview/imagen_tv_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.Canal.5.Sky+.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/V310Z0q/canal5.png" group-title="DEPORTES", Canal 5 Sky+ HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2764ddb50fbcdfa640e19874116dd529:ab1e5cc276f81696e41131392290585d
+https://live1-ott.izzigo.tv/7/out/u/dash/CANAL-5-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.NU9VE.Nacional.Sky+.(Latinoamérica).sv" tvg-logo="https://www.izzigo.tv/images/ch/20/LOGO/m/0" group-title="DEPORTES", NU9VE Nacional Sky+ HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a6b62517ca4bb59d9ef0b888616a765a:f18c080bac9d074e4a5b641d5767065f
+https://live1-ott.izzigo.tv/out/u/dash/CDMX1/NUEVE-RDF-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.Las.Estrellas.Sky+.(Latinoamérica).sv" tvg-logo="https://www.izzigo.tv/images/ch/351/LOGO/m/0" group-title="DEPORTES", Las Estrellas Sky+ HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b1c3688c4a105217c61d77672ec44b97:a7bbb9361ad0b4d6b1f3e0a665da21c9
+https://live1-ott.izzigo.tv/out/u/dash/NOG1/LAS-ESTRELLAS-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.Azteca.7.Sky+.(Latinoamérica).sv" tvg-logo="https://www.izzigo.tv/images/ch/18/LOGO/m/0" group-title="DEPORTES", Azteca 7 Sky+ HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2cde091f1e4675c82d65498bd6ba0e65:29f2aeb97a908466177c56fc28fe083f
+https://live1-ott.izzigo.tv/out/u/dash/NOG1/AZTECA-7-HD/dash/AZTECA-7-HD.mpd
+
+#EXTINF:-1 tvg-id="Canal.TUDN.Sky+.(Latinoamérica).sv" tvg-logo="https://www.izzigo.tv/images/ch/134/LOGO/m/0" group-title="DEPORTES", TUDN Sky+ HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=010efb17241d2f50c80d3ca5218770f4:ecfec27a0a1ad4004488263c33b51e9f
+https://dai.google.com/linear/dash/event/E7BYfKfBR7WihqU5eGBxQQ/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.ZONA.TUDN.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/WDt6Sc6/zona-tudn.png" group-title="DEPORTES", ZONA TUDN HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=cb308ff4c4ec835baa2956212507de52:aa45e839f15058df50342ace8d040a48
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/mitr07scim/out/v1/4fb1073240a549479fd2f343e6cad4ba/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.GOL.CARACOL.(Latinoamérica).sv" tvg-logo="https://platform-static.cdn.mdstrm.com/player/logo/s-live-69690cfcce0dc031830e7c1a.png" group-title="DEPORTES", GOL CARACOL HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1c6bfd8d1cdd4df69ea5fc4dd2f025bb:b6fd90027dac7a94a9461f8b2638cbb4
+https://dmbgaz4xf6jyh.cloudfront.net/live-stream-dai/69690cfcce0dc031830e7c1a/c1464dd58d504cd2a3095a1e13adc28c/d97743de3620a865848fff7a9de14dda1bf2409d/session/55534978-da3f-4250-b992-203211b9b068/manifest.mpd?player=698d025b1e7558eea117b4dd&access_token=y7jtZ7w6fwZw4Yy3tvpYbm6iyoa5nS6yBeH8jHAhRJF1V1eZgaIbZk8sHNSPJbmJNcmK3sP4Uyl&uid=8sd3WIQO8unRQwNa1Y1kA72UuPHcAlui&sid=QvundnY4fcIp37ABZUDO9f7omeMimo1N&pid=GrTyoaChQH26EsX8QfF7PSskk2qmbfYU&ref=ditu.caracoltv.com&ext_pb=0&es=dmbgaz4xf6jyh.cloudfront.net&proto=https&pz=us&xr=us-east-2&manifestfilter=video_height:480-1080
+
+#EXTINF:-1 tvg-id="Canal.FOX.SPORTS.PREMIUM.MX.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/DZKbJyzw/fsp.png" group-title="DEPORTES", FOX SPORTS PREMIUM MX HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=9f327d24c66fbd84e15ab5c9ead7c7a4:83837185529c0c4048f81386c2d36426
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/fdx74zqzhu/out/v1/7d7a8c6981a842b98a683e9fbfe51d17/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.SPORTS.MX.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/dQ6T3FcG/fs-mx.png" group-title="DEPORTES", FOX SPORTS MX HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2fbdaa3bea0d0323ae011b318d1db716:8726ef7eaf5b9dce15fb6aa9f80bd53f
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.SPORTS.2.MX.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/GmW4Vhvw/fs2-mx.png" group-title="DEPORTES", FOX SPORTS 2 MX HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=8836fb04d62dc64c9f8a39ef8640d5eb:d4f05ce56c5231b7cdf53455bea58621
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/tepjqej1ys/out/v1/c9c9159baee749a19612b1598495859a/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FOX.SPORTS.3.MX.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/L585LqF2/fs3-mx.png" group-title="DEPORTES", FOX SPORTS 3 MX HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11c8c1c2ef0385cf1e64d44bb9c3a395:5769730ffbdc4b2fd8945929d9ace063
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/wybgz0orr8/out/v1/2f6d1612abd44f5883917f8a585b955f/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.LL.TV.EA.Sports.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/HDqc38p/LaLigaTV.png" group-title="DEPORTES", LL TV EA Sports HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=620e51b82596475517a27aa425c52280:2b9ba811e9c5aeafc8ae1b71cdca4d6a
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/k0duzgfejg/out/v1/70a50b1bda944628b8e7e66ab4069419/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.SKY.sports.16.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/G2YVKzdm/sky-sport-16.png" group-title="DEPORTES", SKY sports 16 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=cb80e1e7d7598eaf98b1dbbe6dc14ee9:103ae55c7948ca1d159d6743619d26c4
+https://live1-ott.izzigo.tv/12/out/u/dash/SKY-SPORTS-16-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.SKY.sports.24.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/zXq6wnM1/sky-sport-24.png" group-title="DEPORTES", SKY sports 24 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d8d5823d92a9ef9306a4cc4bd634b4b4:df9fbdaa0ef9e905b75f4692f213af19
+https://live1-ott.izzigo.tv/15/out/u/dash/SKY-SPORTS-24-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.SKY.sports.21.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/W1yjByM9/sky-sport-21.png" group-title="DEPORTES", SKY sports 21 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=99909032389c6ee41c3d2f3ec829f804:41fbc575c8ef1cdac1dca990c9a0df9d
+https://live1-ott.izzigo.tv/13/out/u/dash/SKY-SPORTS-21-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.SKY.sports.1.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/yYv7PxWH/sky-sport.png" group-title="DEPORTES", SKY sports 1 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=335511dfdf0d03bc06f1fdead5870b5a:1a022fb33ad3de4d4579b04966551488
+https://live1-ott.izzigo.tv/13/out/u/dash/SKY-SPORTS-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.Sky.Sports.F1.(Latinoamérica).sv" tvg-logo="https://www.izzigo.tv/images/ch/143/LOGO/m/0" group-title="DEPORTES", Sky Sports F1 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4817bd58cac334213f024d5d9676bd22:30a2f0d4408d38aa5968f08a784c37ad
+https://live-atv-cdn.izzigo.tv/12/out/u/dash/F1-HD/F1-HD.mpd
+
+#EXTINF:-1 tvg-id="Canal.SKY.sports.80.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/Nf7YBs3z/sky-sport-event-1.png" group-title="DEPORTES", SKY sports 80 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=34aad5d065a5dc7b2f32e85d59f750fd:efb2b1fd2e3f99dbe0a0f27f0e089467
+https://live1-ott.izzigo.tv/11/out/u/dash/SKY-LIVE-EVENT-1-HD/SKY-LIVE-EVENT-1-HD.mpd
+
+#EXTINF:-1 tvg-id="Canal.SKY.sports.81.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/6QTNrd8J/sky-sport-event-2.png" group-title="DEPORTES", SKY sports 81 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1d220987b13a594b144d1bbb6bedd568:b1778e4c2200a3a885957500b13f5335
+https://live1-ott.izzigo.tv/8/out/u/dash/SKY-LIVE-EVENT-2-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.SKY.sports.83.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/sJFN5k78/sky-sport-event-4.webp" group-title="DEPORTES", SKY sports 83 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a931b2e953695ffb0cfd38573e97ba33:4ddd99cc4fb168d7f0e20be8a3287100
+https://live1-ott.izzigo.tv/11/out/u/dash/SKY-LIVE-EVENT-4-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.SKY.sports.84.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/6352xxv/sky-sport-event-5.webp" group-title="DEPORTES", SKY sports 84 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=6c89e84c52eae0428b7d2c8e887a48ec:758a1484f920a0f1aa73e95d5f2be225
+https://live1-ott.izzigo.tv/12/out/u/dash/SKY-LIVE-EVENT-5-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.FIFA+.EN.ESPAÑOL.(Latinoamérica).sv" tvg-logo="https://m.media-amazon.com/images/I/2185OD67t-L.png" group-title="DEPORTES", FIFA+ EN ESPAÑOL HD
+#EXTVLCOPT:http-user-agent=NitroX/1.24.1-1 (Xiaomi 2510DRK44C; Android 16; mobile; release)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://2b77fda3.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/VmlkYWEtZXNfRklGQVBsdXNTcGFuaXNoX0hMUw/playlist.m3u8?ads.wurl_channel=1780&ads.wurl_name=FIFAPlusSpanish&ads.coppa=0&ads.ifa=&ads.dnt=&ads.us_privacy=&ads.gdpr=&ads.gdpr_consent=&ads.app_name=&ads.app_bundle=&ads.app_store_url=&ads.ifa_type=&ads.custom=&ads.device_make=&ads.device_model=&ads.vidaa_ads_param=1190406319&ads.vauth=&ads.device_type=&ads.brand_name=&ads.device_osv=&ads.device_language=&ads.vidaa_ads_contentType=600007&ads.vidaa_ads_contentId=6915
+
+#EXTINF:-1 tvg-id="Canal.FIFA+.(Latinoamérica).sv" tvg-logo="https://m.media-amazon.com/images/I/2185OD67t-L.png" group-title="DEPORTES", FIFA+ HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=26977ba93795552a60559679ab740b38:e75175191d0ed494da3dec258bbfd74f
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/filihyb6x1/out/v1/e2b737b02ca046729b34f0594a611494/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.Premier.Sports.1.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/m2ChRY5V/Premier-Sports-1-II.png" group-title="DEPORTES", Premier Sports 1 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1444f4235529f183f0a5a486befe9cdb:e5e3fec67a1bb3472a2089c8a0a2557f
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/m6sqanvm2m/out/v1/f6beb46c6e9a4132ad739f3ca27df6aa/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.Premier.Sports.2.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/6QjpzY8J/premier-sports-2.png" group-title="DEPORTES", Premier Sports 2 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.STARZPLAY.CRICKET.1.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/3Rc6mTwd/starzplay-cricbuzz1.png" group-title="DEPORTES", STARZPLAY CRICKET 1 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36  WebAppManager
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b660aa26290d401fd3596d41079619ff:f60928c13011b9e6b2f651232e1e7f9e
+http://criclive1.starzplayarabia.com/out/v1/sp_tv_enc/criclife1/criclife1_dash_enc/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.STARZPLAY.CRICKET.2.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/t43LfwBz/starzplay-cricbuzz2.png" group-title="DEPORTES", STARZPLAY CRICKET 2 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36  WebAppManager
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4e8b5ddac5332a4e66c002b4c0f22322:d06de29b0eacb81ac6e3f325849047e8
+http://neacdnpop3-edge01.aws.playco.com/live/eds/Criclife_3/DASH/Criclife_3.mpd
+
+#EXTINF:-1 tvg-id="Canal.WILLOW.TV.(Latinoamérica).sv" tvg-logo="https://gn-images-stb-opus.cdn.avp.telus.net/assets/s110532_ld_h15_ab.png?w=500&h=375" group-title="DEPORTES", WILLOW TV HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11111111111111118111000000000000:44e0ad57944a0779be4542cc244133aa
+https://lott3-stb-opus.cdn.avp.telus.net/232006003031/vxfmt=dp/manifest.mpd?device_profile=dashvmx
+
+#EXTINF:-1 tvg-id="Canal.WILLOW.SPORTS.(Latinoamérica).sv" tvg-logo="https://images.fubo.tv/channel-config-ui/station-logos/on-dark/willow_sports_stacked_logo_full_white.png?ch=width&auto=format%2Ccompress" group-title="DEPORTES", WILLOW SPORTS HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FANCODE.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/c4tjNV5B/fancode.png" group-title="DEPORTES", FANCODE HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1994b1df7dfd2e8a8d7b9bf3fb900285:22a1444b3da18e139191665b3d652835
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/avqlywnuzx/out/v1/aefca6420f944a9482e117f315de535f/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FANCODE.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/c4tjNV5B/fancode.png" group-title="DEPORTES", FANCODE HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FS1.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/qM94jmQL/fs1.png" group-title="DEPORTES", FS1 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=5466ebd70704bdeb657f0abf3c5ca4ef:bdd79b72d8e48ed483aa623cc38a8a16
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/tmpzbbdj9y/out/v1/962736723a534ba294e7592fef49827b/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FS2.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/66f3DKxT/fs2.png" group-title="DEPORTES", FS2 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=09453ce820d65fbc675de3185f9e454c:98cff9600995fa381c76fdacf3c7edae
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/awxnrqkbo5/out/v1/716529a4091947b0877e6cb80dbd6ccb/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.NBC.SPORTS.BAY.AREA..(Latinoamérica).sv" tvg-logo="https://img.nbc.com/files/2024-08/nbcsports-bay-area-logo-color-382x300.png" group-title="DEPORTES", NBC SPORTS BAY AREA  HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=20b593e9bee43324a8b1d830eaa82d78:a87dba51bd2dd7f7879730ac2bd4005b
+https://cdn.stmify.com/peacock/stream/NBC_SPORTS_BAY_AREA/master.mpd
+
+#EXTINF:-1 tvg-id="Canal.NBC.SPORTS.BOSTON..(Latinoamérica).sv" tvg-logo="https://img.nbc.com/files/2024-08/nbcsports-boston-logo-color-375x300.png" group-title="DEPORTES", NBC SPORTS BOSTON  HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0f73521c174532e59711ccb4462ac770:f06c7f95319c0386b4fc5fa3d58ab504
+https://cdn.stmify.com/peacock/stream/NBC_SPORTS_BOSTON/master.mpd
+
+#EXTINF:-1 tvg-id="Canal.NBC.SPORTS.PHILADELPHIA..(Latinoamérica).sv" tvg-logo="https://img.nbc.com/files/2024-08/nbcsports-philadelphia-logo-color-378x300.png" group-title="DEPORTES", NBC SPORTS PHILADELPHIA  HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=e07a6dfad8333a388f2a931a743621b9:638ff7ec62eeee611927f1d6d5baa146
+https://cdn.stmify.com/peacock/stream/NBC_SPORTS_PHILADELPHIA/master.mpd
+
+#EXTINF:-1 tvg-id="Canal.NBC.SPORTS.PEACOCK.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/sXLGTmh7/nbc-sports-now.png" group-title="DEPORTES", NBC SPORTS PEACOCK HD
+#EXTVLCOPT:http-user-agent=Roku/DVP-12.0 (12.0.0.4186-55)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=00459011b26524a673b0ced54cef0a8b:b31ded0e8a4cad5a36b6be06dae76f28
+https://fsly.stream.peacocktv.com/Content/CMAF_OL2-CTR-4s-v2/Live/channel(nbcsportspeacock)/master.mpd
+
+#EXTINF:-1 tvg-id="Canal.TEAM.USA.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/QdMngYLm/TEAM-USA.png" group-title="DEPORTES", TEAM USA HD
+#EXTVLCOPT:http-user-agent=Roku/DVP-12.0 (12.0.0.4186-55)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=00459011b26524a673b0ced54cef0a8b:b31ded0e8a4cad5a36b6be06dae76f28
+https://amg01416-amg01416c4-xumo-us-4165.playouts.now.amagi.tv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.GOLF.CHANNEL.US..(Latinoamérica).sv" tvg-logo="https://gn-images-stb-opus.cdn.avp.telus.net/assets/s65385_ld_h15_ab.png?w=400" group-title="DEPORTES", GOLF CHANNEL US  HD
+#EXTVLCOPT:http-user-agent=Roku/DVP-12.0 (12.0.0.4186-55)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4c46e6bfebd1336d9e8003c576de0dfb:8b70c7f6ee9d3f9d8a76870af90123e9
+http://23.237.104.106:8080/USA_GOLF/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.GOLF.CHANNEL.CA.(Latinoamérica).sv" tvg-logo="https://gn-images-stb-opus.cdn.avp.telus.net/assets/s65385_ld_h15_ab.png?w=400" group-title="DEPORTES", GOLF CHANNEL CA HD
+#EXTVLCOPT:http-user-agent=Roku/DVP-12.0 (12.0.0.4186-55)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11111111111111118111000000000000:3f9a6a4b15d8e0eba9f6733ce7c066e5
+https://lott-web-opus.cdn.avp.telus.net/232006003169/vxfmt=dp/manifest.mpd?device_profile=dashvmx
+
+#EXTINF:-1 tvg-id="Canal.GOLF.CHANNEL.LATIN.AMERICA.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/224/CH_LOGO/160/160/0/0/6885621707734.png" group-title="DEPORTES", GOLF CHANNEL LATIN AMERICA HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=bd45f6a37a3887044bac88a63e55b70e:2dff34fba01dd53d0a37dc913bb9ba51
+https://paz-live4-ott.izzigo.tv/11/out/u/dash/GOLF-CHANNEL-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.NFL.NETWORK.(Latinoamérica).sv" tvg-logo="https://www.izzigo.tv/images/ch/142/LOGO/m/0" group-title="DEPORTES", NFL NETWORK HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b26a662a10074eb0756404c8e90e765a:76e376bd25f92bed939435d982f92d3f
+https://ac-009.live.p7s1video.net/e0e064c8/t_004/ran-nflnetwork-de-hd/cenc-default.mpd
+
+#EXTINF:-1 tvg-id="Canal.NFL.CHANNEL.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/prp6YxDk/nfl-channel.png" group-title="DEPORTES", NFL CHANNEL HD
+#EXTVLCOPT:http-user-agent=Roku/DVP-12.0 (12.0.0.4186-55)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=002007110c69a23803173b50eab05f23:590d6e8f4ca81319f9bb29104f571990
+https://c300.play.lura.app/play/v1/live/ZHx8AbT0xVvm1el0epd7vw/master.m3u8?ts=1668459044045&app=Mp8DA1vKVAoO4yHJ0QFZ3w&exp=2299179044&auth=8HJTwR6prnzFjGE2Ki_8pfvwxMRvWtSwRm3R54TN3_w&PlatformChild=%5BPLATFORM_CHILD%5D&usprivacy=1YNN&coppa=0&autoplay=auto&videomute=0&encoder=DC1-XUMO&fwDid=276481e8-ea7f-4a39-af32-1b3aaee95687&tmsid=121705&palnonce=&rdid=276481e8-ea7f-4a39-af32-1b3aaee95687&islat=0&atts=&attmas=&idfv=&screenw=1920&screenh=1080&title=%5Bcontent_title%5D
+
+#EXTINF:-1 tvg-id="Canal.NBA.TV.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/82QvHTH/ar-nba-tv.png" group-title="DEPORTES", NBA TV HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+http://23.237.104.106:8080/USA_NBA/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.NBA.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/sxS6cbXP/nba.png" group-title="DEPORTES", NBA HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=84077d18bcf234a42de3745be106a87f:aee3069c062ec8ee6bfdd32985f287ef
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/2jbycgm3g3/out/v1/066dd9325648468c9ecdc8b272370931/cenc.mpd?amznDtid=AOAGZA014O5RE&encoding=segmentBase
+
+#EXTINF:-1 tvg-id="Canal.NBA.Channel.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/MpF93htY/nba-channel.png" group-title="DEPORTES", NBA Channel HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://amg00556-nbafastchannel-xumo.amagi.tv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.AYM.SPORTS.(Latinoamérica).sv" tvg-logo="https://images-ott.izzigo.tv/images/repository/885/20081885-LOGO-m.png" group-title="DEPORTES", AYM SPORTS HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://aym-as.otteravision.com/aym/as/as.m3u8
+
+#EXTINF:-1 tvg-id="Canal.Béisbol.Latino.TV.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/sxvRGbKM/beisbol-latino.png" group-title="DEPORTES", Béisbol Latino TV HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=5dbf14888bd99a7b01a3c9b0386c29ed:1ee5f6042b292cfb366e5b2ec27ecf22
+https://live1-ott.izzigo.tv/14/out/u/dash/BEISBOL-LATINO-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.Hi.Sports.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/nhxDp91D/hi-sports.png" group-title="DEPORTES", Hi Sports HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f2966ad533e52a19c3ded1c7b9e40370:2e0bb20e3edb3ce7fc0d616b3ff28748
+https://live1-ott.izzigo.tv/12/out/u/dash/HI-SPORTS-SD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.ITV.Deportes.AYM.SPORTS.3.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/Pr8hcbyv/itv-deportes.png" group-title="DEPORTES", ITV Deportes AYM SPORTS 3 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4d05c520c40e5e40ddbbda041d1e2811:f7e248dc1d326f172c621895c90338a0
+https://jmp2.uk/plu-63f7e3f9dff38e00082a57af.m3u8
+
+#EXTINF:-1 tvg-id="Canal.CombaTV.AYM.SPORTS.5.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/QdQDNXRt/comba-tv.png" group-title="DEPORTES", CombaTV AYM SPORTS 5 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d82fc67b0ad0eac6a3f5cadc6e515796:c9bb81474744fd82c379427312895636
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=4609
+
+#EXTINF:-1 tvg-id="Canal.Combate.Global.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/L4CSKz5S/combate-global.png" group-title="DEPORTES", Combate Global HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://d7xd1azn9o8z7.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ojgeak92rsjd6/server/distrib/9ZyB2flX4brcEQ21Z/zuvPJYoOOdEMDNF2j2mvmg.u11pIHHxg4zn_J5_7NMwCvbxoAihWCJsSeWRKxhEKeoFgynWSWKVB3Jj4tTtIZWWQ272IxV1AVA7236Re_eo71eLBAnnv995vJFbZyuYPqzfE2ZlogsREQAyD12lJ_hIe5q8XoCVuB_N9PsQoRC8ZnvXlinL9_n36omWaAp4VD80AO1xTq9WXHFFvT0__3yBgz86cJg3ih5hjJHM2wsDWw/manifest.m3u8
+
+#EXTINF:-1 tvg-id="Canal.AYM.SPORTS.6.(Latinoamérica).sv" tvg-logo="https://images-ott.izzigo.tv/images/repository/890/20081890-LOGO-m.png" group-title="DEPORTES", AYM SPORTS 6 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=631a52dca90f831983db77ddb86aec94:3ef6b0202e6251c072da34644a22f2ed
+https://live1-ott.izzigo.tv/12/out/u/dash/AYM-SPORTS-6-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.AYM.SPORTS.5.(Latinoamérica).sv" tvg-logo="https://images-ott.izzigo.tv/images/repository/887/20081887-LOGO-m.png" group-title="DEPORTES", AYM SPORTS 5 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a9e233ab2b79206ab831b008736f96b4:77ef8ba23c6fd23c1b568d6afc8fe7f3
+https://live1-ott.izzigo.tv/15/out/u/dash/AYM-SPORTS-5-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.AYM.SPORTS.4.(Latinoamérica).sv" tvg-logo="https://images-ott.izzigo.tv/images/repository/886/20081886-LOGO-m.png" group-title="DEPORTES", AYM SPORTS 4 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=461471403f806418a36742f8179ca701:5096081eab55c6bb8dbcb9b4d514b866
+https://live1-ott.izzigo.tv/11/out/u/dash/AYM-SPORTS-4-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.AYM.SPORTS.3.(Latinoamérica).sv" tvg-logo="https://images-ott.izzigo.tv/images/repository/888/20081888-LOGO-m.png" group-title="DEPORTES", AYM SPORTS 3 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=6a3dfcc8a17f703b0ba77840adcd40a6:f03d7f595513c365172eec0ce608836f
+https://live1-ott.izzigo.tv/11/out/u/dash/AYM-SPORTS-3-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.AYM.SPORTS.2.(Latinoamérica).sv" tvg-logo="https://images-ott.izzigo.tv/images/repository/889/20081889-LOGO-m.png" group-title="DEPORTES", AYM SPORTS 2 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=5f4100d140b59b7b5a21810984b34cf6:dff3f31ae78f6728c1d733d1967177df
+https://live1-ott.izzigo.tv/14/out/u/dash/AYM-SPORTS-2-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.AYM.SPORTS.(Latinoamérica).sv" tvg-logo="https://images-ott.izzigo.tv/images/repository/885/20081885-LOGO-m.png" group-title="DEPORTES", AYM SPORTS HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2fbb472e6bf667907bba5972570ba939:035534fb535e0e30b27d2b46924f84a0
+https://live1-ott.izzigo.tv/14/out/u/dash/AYM-SPORTS-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.AZTECA.DEPORTES.NETWORK.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/pLzvPJ3/aztecadeportes.png" group-title="DEPORTES", AZTECA DEPORTES NETWORK HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0c39778fe8fb4f9f8574016b3d4ae2ed:232b1f450f2e37f47fdd5b678a8a546d
+http://147.78.1.28/xview/azteca_deportes_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.AZTECA.DEPORTES.NETWORK.2.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/pLzvPJ3/aztecadeportes.png" group-title="DEPORTES", AZTECA DEPORTES NETWORK 2 HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://jmp2.uk/plu-65cf60d166eec80008724e6f.m3u8
+
+#EXTINF:-1 tvg-id="Canal.AZTECA.DEPORTES.NETWORK.3.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/pLzvPJ3/aztecadeportes.png" group-title="DEPORTES", AZTECA DEPORTES NETWORK 3 HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://apollo.production-public.tubi.io/live/azteca-deportes-network-ootAAI.m3u8
+
+#EXTINF:-1 tvg-id="Canal.Adrenalina.Sports.Network.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/3x24hrK1/adrenalina-sports.webp" group-title="DEPORTES", Adrenalina Sports Network HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=6de0a66b528401c0378c559712f74643:f9a240cea75f585add8405375ad1d787
+https://live1-ott.izzigo.tv/11/out/u/dash/ADRENALINA-HD/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.Lucha.Plus.(Latinoamérica).sv" tvg-logo="https://canvas-lb.tubitv.com/opts/9Z1QnAP6tQoUFA==/730f7dae-9bb8-4c17-8144-d47df922b9b9/CHgQeDoFMS4xLjlAAQ==" group-title="DEPORTES", Lucha Plus HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://live-manifest.production-public.tubi.io/live/6436b853-530a-42e3-bd7f-20776e7e2e0b/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.TVC.DEPORTES.(Latinoamérica).sv" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/7c/TVC_Deportes.png/revision/latest?cb=20151111050623" group-title="DEPORTES", TVC DEPORTES HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=52358519f886446d82834a803b36f796:58b6ac8e07d354b178255e03b9d0f819
+http://147.78.1.28/xview/tvc_deportes_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.TVC.DEPORTES.2.(Latinoamérica).sv" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/7b/TVC_Deportes_2_%282015-%29.png/revision/latest?cb=20151111050730" group-title="DEPORTES", TVC DEPORTES 2 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=109e7fcb4970436a9e4628090c208451:0ab1bc308c773d627f5a511f0fffc0e4
+http://147.78.1.28/xview/tvc_deportes_2_hd.mpd
+
+#EXTINF:-1 tvg-id="Canal.T2.LIVE.TENNIS.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/m8rwcJy/T2-live-tennis.png" group-title="DEPORTES", T2 LIVE TENNIS HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=59f50679c9e60963bd0cb6640992aaaa:8685817c4d31f322e08940feeae2855a
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/bfigtl960n/out/v1/5ba5484550e84681bff2e8ca994266c1/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.Tennis.Channel.MX.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/K8p0yqv8/tenis-mx.webp" group-title="DEPORTES", Tennis Channel MX HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=aa402a0dd205802a933df2e40c1d77f2:9c6ab81548720ef33ea73a4b6c8274b5
+https://live1-ott.izzigo.tv/11/out/u/dash/TENNIS-CHANNEL-HD/TENNIS-CHANNEL-HD.mpd
+
+#EXTINF:-1 tvg-id="Canal.Tennis.Channel..(Latinoamérica).sv" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/ESBD2600001ME_20230809T053838SQUARE.png_20230809053839.png" group-title="DEPORTES", Tennis Channel  HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://amg01444-tennischannelth-tennischde-samsungat-p3jwq.amagi.tv/playlist/amg01444-tennischannelth-tennischde-samsungat/playlist.m3u8?ads.did=%7BPSID%7D&ads.dnt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.tc_string=%7BTC_STRING%7D&ads.coppa=0
+
+#EXTINF:-1 tvg-id="Canal.Tennis.Channel.US.(Latinoamérica).sv" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/ESBD2600001ME_20230809T053838SQUARE.png_20230809053839.png" group-title="DEPORTES", Tennis Channel US HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+http://23.237.104.106:8080/USA_TENNIS/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.MLB.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/RZmZWtYp/MLB.png" group-title="DEPORTES", MLB HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ee5d12187eeb1425a158c206d5871c4a:534f8173db1aa31b05c98f92c0290b3d
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/dn9i986kds/out/v1/791537303c344634994de4d4407f44b6/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.NHL.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/L6GrDqQP/nhl.png" group-title="DEPORTES", NHL HD
+#EXTVLCOPT:http-user-agent=Roku/DVP-12.0 (12.0.0.4186-55)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://live-manifest.production-public.tubi.io/live/2cfb4368-6c7e-4075-bc1f-69f7141a8012/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.MSG.NETWORKS.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/ZqCQtvgn/msg.png" group-title="DEPORTES", MSG NETWORKS HD
+#EXTVLCOPT:http-user-agent=Roku/DVP-12.0 (12.0.0.4186-55)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+http://23.237.104.106:8080/USA_MSG/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.SportsNet.360.(Latinoamérica).sv" tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/SportsNet_360.png" group-title="DEPORTES", SportsNet 360 HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11111111111111118111000000000000:40132c27eeb82760de46b73636a1411d
+https://lott-web-opus.cdn.avp.telus.net/232006004242/vxfmt=dp/manifest.mpd?device_profile=dashvmx
+
+#EXTINF:-1 tvg-id="Canal.SportsNet.Ontario.(Latinoamérica).sv" tvg-logo="https://r2.thesportsdb.com/images/media/channel/logo/SportsNet_Ontario.png" group-title="DEPORTES", SportsNet Ontario HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a022db2cb103fb56712cd38dee06b3f3:8f4cb500d2e1604ae190c91effadb5c1
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/poqx3mcyvb/out/v1/8e4df29dfd1b4f9b926cd6b13548cba6/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.ESPN.US.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/TPKcqwGz/espn.png" group-title="DEPORTES", ESPN US HD
+#EXTVLCOPT:http-user-agent=Roku/DVP-12.0 (12.0.0.4186-55)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+http://snowbank.houseinventer.com/6500/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.ESPN.2.US.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/4NXb2ws3/espn-2.png" group-title="DEPORTES", ESPN 2 US HD
+#EXTVLCOPT:http-user-agent=Roku/DVP-12.0 (12.0.0.4186-55)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+http://snowbank.houseinventer.com/6501/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.ACC.NETWORK.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/fLh0D9jm/acc-network-us.png" group-title="DEPORTES", ACC NETWORK HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+http://23.237.104.106:8080/USA_ACCN/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.TNT.US.(Latinoamérica).sv" tvg-logo="https://www.izzigo.tv/images/ch/152/LOGO/m/0" group-title="DEPORTES", TNT US HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+http://stream.cammonitorplus.net/9849763/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.TRUTV.(Latinoamérica).sv" tvg-logo="https://www.izzigo.tv/images/ch/87/LOGO/m/0" group-title="DEPORTES", TRUTV HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+http://23.237.104.106:8080/USA_TRUTV/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.YES.NETWORK.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/0yZYtb9f/yes-network-us.png" group-title="DEPORTES", YES NETWORK HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.CBS.NEW.YORK.(Latinoamérica).sv" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10098_dark_360w_270h.png" group-title="DEPORTES", CBS NEW YORK HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=421b7a258a557c073110d2bd0aa335ba:4d7481264fdffb9b7cc05bf490e62ad2
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/8kmy1rjdu3/out/v1/53c15187903449e6971e0817d79d7cca/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.CBS.CHICAGO.(Latinoamérica).sv" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10098_dark_360w_270h.png" group-title="DEPORTES", CBS CHICAGO HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=780cb0938d1399fa631bd6c0b868e560:f8529525ed53f542de966ad548c59f9c
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/p04avr57rr/out/v1/25ec3c73680045ce86858d701763a70c/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.Golazo!.Network.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/nr9Snx3B/Golazo.png" group-title="DEPORTES", Golazo! Network HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/rbem8rorcw/out/v1/5318821e2c3c44c2a439681b9aa86e9b/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.DAZN.TV..(Latinoamérica).sv" tvg-logo="https://images.pluto.tv/channels/647f07e74cfc2c0008a2e557/thumbnail.jpg?auto=&ixlib=react-9.1.5&w=224&h=124&dpr=2&q=50" group-title="DEPORTES", DAZN TV  HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://jmp2.uk/plu-647f07e74cfc2c0008a2e557.m3u8
+
+#EXTINF:-1 tvg-id="Canal.SPOTV.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/pT3R00Pw/spotv.png" group-title="DEPORTES", SPOTV HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3197f7f5086c4315af2b7a94bc9201cb:17462a74739ae0d9855705ffc2c0e1b5
+https://global-cdn1.visionplus.id/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.SPOTV2.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/gjcqTK4K/spotv2.png" group-title="DEPORTES", SPOTV2 HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1539f043249e413d91906036f305831e:671e24fd8d234c7f38d85055815f902a
+https://global-cdn2.visionplus.id/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.beIN.SPORTS.US.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/Tw1nb6qt/bein-sports.png" group-title="DEPORTES", beIN SPORTS US HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+http://23.237.104.106:8080/USA_BEIN/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.beIN.SPORTS.XTRA.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/13rnHrb6/beis-sports-xtra.png" group-title="DEPORTES", beIN SPORTS XTRA HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.beIN.SPORTS.1.AU.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/PxVwNGgX/be-IN-SPORTS1-ENGLISH-Digital-Mono.png" group-title="DEPORTES", beIN SPORTS 1 AU HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.143 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=335dad778109954503dcbb21dc92015f:24bfd75d436cbf73168a2a2dccd40281
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/ghwcl6hv68/out/v1/83536910d8034e9b9895a20fbe1c1687/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.beIN.SPORTS.2.AU.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/5NYwY0NW/be-IN-SPORTS2-ENGLISH-Digital-Mono.png" group-title="DEPORTES", beIN SPORTS 2 AU HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.143 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.beIN.SPORTS.3.AU.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/9fjtjh2F/be-IN-SPORTS3-ENGLISH-Digital-Mono.png" group-title="DEPORTES", beIN SPORTS 3 AU HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.143 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.beIN.SPORTS.1.ID.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/PxVwNGgX/be-IN-SPORTS1-ENGLISH-Digital-Mono.png" group-title="DEPORTES", beIN SPORTS 1 ID HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.143 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
+https://global-cdn3.visionplus.id/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.beIN.SPORTS.2.ID.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/5NYwY0NW/be-IN-SPORTS2-ENGLISH-Digital-Mono.png" group-title="DEPORTES", beIN SPORTS 2 ID HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.143 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
+https://global-cdn4.visionplus.id/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.beIN.SPORTS.3.ID.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/9fjtjh2F/be-IN-SPORTS3-ENGLISH-Digital-Mono.png" group-title="DEPORTES", beIN SPORTS 3 ID HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.143 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b
+https://global-cdn1.visionplus.id/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.beIN.SPORTS.4.ID.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/9fjtjh2F/be-IN-SPORTS3-ENGLISH-Digital-Mono.png" group-title="DEPORTES", beIN SPORTS 4 ID HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.143 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=aef1823177ad40199de440504d992ad5:b95c919408eec7663214a9a67af831ba
+https://global-cdn2.visionplus.id/out/v1/2e55bc8199044c27b1dbb827af65a04f/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.beIN.SPORTS.5.ID.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/9fjtjh2F/be-IN-SPORTS3-ENGLISH-Digital-Mono.png" group-title="DEPORTES", beIN SPORTS 5 ID HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.143 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=c48c8e48dba24420b5dcef9f5b847b12:daad0aeb165b9a26b706f2a261b8fafe
+https://global-cdn1.visionplus.id/out/v1/fe4d00f07e2f43b789102b84b4d243a9/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.SOCCER.CHANNEL.(Latinoamérica).sv" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/6/6a/SoccerChannel2020.png/revision/latest?cb=20220810085741" group-title="DEPORTES", SOCCER CHANNEL HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.143 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4035323a7fe64767ab8f3345ed9b93be:67377b8d429603f8bf30c161bda269e5
+https://global-cdn3.visionplus.id/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.SPORTSTARS.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/9fjtjh2F/be-IN-SPORTS3-ENGLISH-Digital-Mono.png" group-title="DEPORTES", SPORTSTARS HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.143 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
+https://global-cdn2.visionplus.id/out/v1/89a6e4261cd7470f83e5869e90440cff/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.SPORTSTARS.2.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/9fjtjh2F/be-IN-SPORTS3-ENGLISH-Digital-Mono.png" group-title="DEPORTES", SPORTSTARS 2 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.143 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=911e72adf36946afbdbb4f80782a8394:08aec548a851ba64b7172ae7f05cb91c
+https://global-cdn1.visionplus.id/out/v1/d2c68a3dfb644808b416bd90dcc92d5f/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.SPORTSTARS.4.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/9fjtjh2F/be-IN-SPORTS3-ENGLISH-Digital-Mono.png" group-title="DEPORTES", SPORTSTARS 4 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.7258.143 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95
+https://global-cdn3.visionplus.id/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.BIG.NETWORK.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/PxX0gLD5/big-ten-network-us.png" group-title="DEPORTES", BIG NETWORK HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36  WebAppManager
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+http://23.237.104.106:8080/USA_BTN/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.RACER.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/PJdHXtRS/racer.png" group-title="DEPORTES", RACER HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36  WebAppManager
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+http://23.237.104.106:8080/USA_MAV_TV/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.RACER.SELECT.(Latinoamérica).sv" tvg-logo="https://image.xumo.com/v1/channels/channel/99951269/600x500.webp?type=color_onBlack" group-title="DEPORTES", RACER SELECT HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://dbrb49pjoymg4.cloudfront.net/10001/99951269/hls/playlist.m3u8?ads.xumo_channelId=99951269
+
+#EXTINF:-1 tvg-id="Canal.Red.Bull.TV.en.Español.(Latinoamérica).sv" tvg-logo="https://media.tvup.cloud/canales/color_lg_5c4352438c3e78047f57c408.png" group-title="DEPORTES", Red Bull TV en Español HD
+#EXTVLCOPT:http-user-agent=NitroX/1.24.1-1 (Xiaomi 2510DRK44C; Android 16; mobile; release)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://8b35224b42fd4ae797ea4d8b205f8368.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-957-WORBLATAMESFAST-VIDAA/957/vidaa/hls/master/playlist.m3u8?ads.ifa=IFA&ads.ifa_type=IFA_TYPE&ads.device_type=DEVICE_TYPE&ads.brand_name=BRAND_NAME&ads.device_country=DEVICE_COUNTRY&ads.device_osv=DEVICE_OSV&ads.device_language=DEVICE_LANGUAGE&ads.dnt=DNT&ads.gdpr=GDPR&ads.gdpr_consent=GDPR_CONSENT&ads.us_privacy=US_PRIVACY&ads.coppa=COPPA&ad.vpi=VPI&ads.app_bundle=APP_BUNDLE&ads.app_name=APP_NAME&ads.app_store_url=APP_STORE_URL&ads.vidaa_ads_param=1199898630
+
+#EXTINF:-1 tvg-id="Canal.Red.Bull.TV.(Latinoamérica).sv" tvg-logo="https://media.tvup.cloud/canales/color_lg_5c4352438c3e78047f57c408.png" group-title="DEPORTES", Red Bull TV HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
+
+#EXTINF:-1 tvg-id="Canal.RALLY.TV.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/Mp0VCRjd/rally-tv.png" group-title="DEPORTES", RALLY TV HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://dms.redbull.tv/v5/destination/rallytv/07f960dc-fd36-466c-971f-64a597518b83/personal_computer/http/us/es_US/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.GTTV.(Latinoamérica).sv" tvg-logo="https://www.gttv.sk/assets/images/GTTV_1.png" group-title="DEPORTES", GTTV HD
+#EXTVLCOPT:http-user-agent=AntikTVExoPlayer/1.1.47 (Linux;Android 15) ExoPlayerLib/2.14.2
+#EXTVLCOPT:http-referrer=https://webtv.sk/
+#KODIPROP:inputstream.adaptive.license_type=widevine
+http://stream.ostv.sk/GTTV/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal.UFC.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/Wbywxnvc/ufc.webp" group-title="DEPORTES", UFC HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a49085f8da5e65af1efff0edac830b1f:4659bc58a85c062e3fe0c039a446fe47
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/8mxwjnh2te/out/v1/356704796c0c4bed81f67cd3518d0c8a/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.ONE.FC.(Latinoamérica).sv" tvg-logo="https://play-lh.googleusercontent.com/PQaYfi_HubgbGxcW2cYurj7Jxl5ksJ6Jr_r-vNt9ZarSXS7KIFvrYfvI55QUHs-7jE-6" group-title="DEPORTES", ONE FC HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=308006101c8fd0262c0f529319b9c127:37683aadc75b1450efa82d62c647984d
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/kkfdbi2d1c/out/v1/a5b9b32dafd5499688240287ef8c9b90/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.PFL.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/d0SmGj8j/pfl.png" group-title="DEPORTES", PFL HD
+#EXTVLCOPT:http-user-agent=Roku/DVP-12.0 (12.0.0.4186-55)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://wurlpfl.global.transmit.live/hls/6893aa5362c3255cddeee0c9/v1/pfl_pflmma_1/tcltvplus_us/latest/main/hls/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.SWERVE.COMBAT.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/2gDHQxW/swerve-combat.png" group-title="DEPORTES", SWERVE COMBAT HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://dbrb49pjoymg4.cloudfront.net/10001/99951305/hls/playlist.m3u8?ads.xumo_channelId=99951305
+
+#EXTINF:-1 tvg-id="Canal.COMBATE.GLOBAL.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/L4CSKz5S/combate-global.png" group-title="DEPORTES", COMBATE GLOBAL HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://d1u6wgaa8xb3mk.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-9fazlfu4at6aj/server/distrib/QDLoJT9yeWXS4WJP6/zuvPJYoOOdEMDNF2j2mvmg.u11pIHHxg4zn_J5_7NMwCvbxoAihWCJsSeWRKxhEKeoFgynWSWKVB3Jj4tTtIZWWcoaFPXDCjGvkNCD5r3qc8iuea_TCCOedUj2PegrO6kozyyjPsrlkz2DJ_dCfvxqdTxvlzkjhMHtTFaBoYlyZQf7MVggFEv4XSUNSJIBMujHhn5guG50Cdd9mIqIzFjbAxl4RiWCqeweKVNSQFxI-PA/manifest.m3u8
+
+#EXTINF:-1 tvg-id="Canal.FIGHT.SPORTS.(Latinoamérica).sv" tvg-logo="https://tva.onscreenasia.com/wp-content/uploads/2018/08/TVA-29-August-6.png" group-title="DEPORTES", FIGHT SPORTS HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=aa00f320f06247dcaf8e3cea1fb07f44:6169dd042bb5e59d709272b614011bbb
+https://global-cdn2.visionplus.id/out/v1/73b7057c72da4615888a11b02a6cbb3c/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.FIGHTBOX.(Latinoamérica).sv" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/d/d9/FightBox_HD_white_2.svg/revision/latest/scale-to-width-down/811?cb=20260508174403" group-title="DEPORTES", FIGHTBOX HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36  WebAppManager
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b4ebbf11f2604527b77c9482dc35ea0a:40b7e96cdaed43d76d7cdbdfc4011dd9
+http://neacdnpop3-edge01.aws.playco.com/live/eds/FightBox/DASH/FightBox.mpd
+
+#EXTINF:-1 tvg-id="Canal.FIGHT.SPORTS.(Latinoamérica).sv" tvg-logo="https://tva.onscreenasia.com/wp-content/uploads/2018/08/TVA-29-August-6.png" group-title="DEPORTES", FIGHT SPORTS HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2f4c7790660c4a0ea82f38ca1998da13:e0a97198d9f2dfcb0a0483cd4b04414b
+https://cdnbal1.indihometv.com/atm/DASH/fightsport/manifest.mpd
+
+#EXTINF:-1 tvg-id="Canal.FUBO.SPORTS.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/Kcv1mhYZ/fubo-sports23-m-1.png" group-title="DEPORTES", FUBO SPORTS HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://wurlfubo.global.transmit.live/hls/67eb094ee3ed1615e41629ae/v1/fubotv_fubo_sports_network_1/vizio_us/latest/main/hls/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal.FUBO.SPORTS.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/Kcv1mhYZ/fubo-sports23-m-1.png" group-title="DEPORTES", FUBO SPORTS HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=dc69b6159a0f9f0a4e03b3ff91cbacd5:d0dcbcd7723bc40df0bf34c9c092d51f
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/3b7qwiqzk3/out/v1/9f14895badca43e6a716db021dcd0c31/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.FUBO.SPORTS.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/Kcv1mhYZ/fubo-sports23-m-1.png" group-title="DEPORTES", FUBO SPORTS HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3dcfbec0e7146928baa55210bf2cb62f:bc85f74f815d9be5ae1dd6defaa05135
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/uiffe4jhf0/out/v1/3534efafca8c4815adbb4d2e9a1fe003/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.SPORTDIGITAL.FUSSBALL.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/fT1dwWC5/sportdigital.png" group-title="DEPORTES", SPORTDIGITAL FUSSBALL HD
+#EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
+#EXTVLCOPT:http-referrer=https://www.primevideo.com/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
+https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.SPORTDIGITAL.SCOOORE.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/pfHxtNN/scooore.png" group-title="DEPORTES", SPORTDIGITAL SCOOORE HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://d30q89nbu2cn1m.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-dqa8cbhgtjvjl/ScoooreDE.m3u8?ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D&ads.ssai_vendor=SSSLIVE&ads.service_id=ATBD26000124P
+
+#EXTINF:-1 tvg-id="Canal.SPORTDIGITAL.FREE.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/XX6rKD0/sdf.png" group-title="DEPORTES", SPORTDIGITAL FREE HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://d46c0ebf9ef94053848fdd7b1f2f6b90.mediatailor.eu-central-1.amazonaws.com/v1/master/81bfcafb76f9c947b24574657a9ce7fe14ad75c0/live-prod/1ee22da8-818e-11eb-908d-533d39655269/0/master.m3u8?uid=%7BPSID%7D&optout=%7BTARGETOPT%7D&country=AT&vendor=samsung&ads:app_domain=%7BAPP_DOMAIN%7D&ads:app_name=%7BAPP_NAME%7D&coppa=1&ads:tcf=%7BTC_STRING%7D
+
+#EXTINF:-1 tvg-id="Canal.RAI.SPORT.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/3x8wQd0S/rai-sport.png" group-title="DEPORTES", RAI SPORT HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://viamotionhsi.netplus.ch/live/eds/raisport1/browser-dash/raisport1.mpd
+
+#EXTINF:-1 tvg-id="Canal.LA.CHAINE.L'ÉQUIPE.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/CKH8m6VZ/la-chaine-lequipe.png" group-title="DEPORTES", LA CHAINE L'ÉQUIPE HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+https://dq37unyetkpcz.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-m04j89j7k5gtp/LEquipe_FR.m3u8
+
+#EXTINF:-1 tvg-id="Canal.EUROSPORT.1.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/43qK7w7x/EUROSPORT1.png" group-title="DEPORTES", EUROSPORT 1 HD
+#EXTVLCOPT:http-user-agent=AntikTVExoPlayer/1.1.47 (Linux;Android 15) ExoPlayerLib/2.14.2
+#EXTVLCOPT:http-referrer=https://webtv.sk/
+#KODIPROP:inputstream.adaptive.license_type=widevine
+https://dash2.antik.sk/stream/nvidia_eurosport1/playlist_cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.EUROSPORT.2.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/q7PRMRSt/EUROSPORT2.png" group-title="DEPORTES", EUROSPORT 2 HD
+#EXTVLCOPT:http-user-agent=AntikTVExoPlayer/1.1.47 (Linux;Android 15) ExoPlayerLib/2.14.2
+#EXTVLCOPT:http-referrer=https://webtv.sk/
+#KODIPROP:inputstream.adaptive.license_type=widevine
+https://dash2.antik.sk/stream/nvidia_eurosport2/playlist_cenc.mpd
+
+#EXTINF:-1 tvg-id="Canal.KSA.SPORT.1.(Latinoamérica).sv" tvg-logo="https://aloula.faulio.com/storage/mediagallery/36/f0/fullhd_7b5a1c62d4c0785dff72d85e41ade22b9478258b.png" group-title="DEPORTES", KSA SPORT 1 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36  WebAppManager
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a0723ff5bf2bbbb31dc727e4346b1cc7:29951a0a48586258ab168f26b3f58daa
+http://neacdnpop3-edge01.aws.playco.com/live/eds/KSA_Sports1_HD/DASH/KSA_Sports1_HD.mpd
+
+#EXTINF:-1 tvg-id="Canal.KSA.SPORT.2.(Latinoamérica).sv" tvg-logo="https://aloula.faulio.com/storage/mediagallery/57/09/fullhd_470ef56d4e496e82df1d74aca7edeef597b2e541.png" group-title="DEPORTES", KSA SPORT 2 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36  WebAppManager
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f7142ef5a9d7b8ef1044232e74605e91:f36d37064c1109c107ffab95c0f7532d
+http://neacdnpop3-edge01.aws.playco.com/live/eds/KSA_Sports2_HD/DASH/KSA_Sports2_HD.mpd
+
+#EXTINF:-1 tvg-id="Canal.KSA.SPORT.3.(Latinoamérica).sv" tvg-logo="https://aloula.faulio.com/storage/mediagallery/2d/ee/fullhd_f1d461237592b4d46c44a6f300df1d97051f7c55.png" group-title="DEPORTES", KSA SPORT 3 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36  WebAppManager
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=637dc9620732d390ab2df32e070256f0:0e47bb47e90258b5f392f8ecb54a8b22
+http://neacdnpop3-edge01.aws.playco.com/live/eds/KSA_Sports3_HD/DASH/KSA_Sports3_HD.mpd
+
+#EXTINF:-1 tvg-id="Canal.ABU.DHABI.SPORTS.1.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/HBfTDzp/no-img.png" group-title="DEPORTES", ABU DHABI SPORTS 1 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36  WebAppManager
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1bec6ac7cd9a02dd75da2278ba3183ef:029edcf6b6c737595445a1a3a390edb3
+http://neacdnpop3-edge01.aws.playco.com/live/eds/Abu_Dhabi_Sports_1_HD/DASH/Abu_Dhabi_Sports_1_HD.mpd
+
+#EXTINF:-1 tvg-id="Canal.ABU.DHABI.SPORTS.2.(Latinoamérica).sv" tvg-logo="https://i.ibb.co/HBfTDzp/no-img.png" group-title="DEPORTES", ABU DHABI SPORTS 2 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36  WebAppManager
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=528afb1be8ef0e74a8fe703e37e493de:1f58c055fe8028ca00226301d6161729
+http://neacdnpop3-edge01.aws.playco.com/live/eds/Abu_Dhabi_Sports_2_HD/DASH/Abu_Dhabi_Sports_2_HD.mpd
+
+#EXTINF:-1 tvg-id="Canal.MBC.Shahid.|.Sports.1.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/tTRh0wvz/shahid-sports.png" group-title="DEPORTES", MBC Shahid | Sports 1 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6998.166 Safari/537.36
+#EXTVLCOPT:http-referrer=https://localhost
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ab081a704aad41829b1123b09b6ecafd:dd51609092fff15e68b91debf5d591f9
+https://shahid-sports-1-enc.edgenextcdn.net/out/v1/0169cfa282614ebe97ef0201da87bb04/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.MBC.Shahid.|.Sports.2.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/tTRh0wvz/shahid-sports.png" group-title="DEPORTES", MBC Shahid | Sports 2 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6998.166 Safari/537.36
+#EXTVLCOPT:http-referrer=https://localhost
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=50a7f3afc00a40b38face4db639d0e4c:ad7000691326064706281a700b7d6714
+https://shahid-sports-2-enc.edgenextcdn.net/out/v1/589aa6b16ce942388695b5b214f4ae93/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.MBC.Shahid.|.Sports.3.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/tTRh0wvz/shahid-sports.png" group-title="DEPORTES", MBC Shahid | Sports 3 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6998.166 Safari/537.36
+#EXTVLCOPT:http-referrer=https://localhost
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2b6f6b340aa8467785e4e82f9320fb5a:8889701d704078c4d910ed1409413d9b
+https://shahid-sports-3-enc.edgenextcdn.net/out/v1/2658c96bbfa54f339e357fe36361587e/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.MBC.Shahid.|.Sports.4.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/tTRh0wvz/shahid-sports.png" group-title="DEPORTES", MBC Shahid | Sports 4 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6998.166 Safari/537.36
+#EXTVLCOPT:http-referrer=https://localhost
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=6477160076644679af1028534f03f67e:1267f99705113a62c7782c4d5281a7eb
+https://shahid-sports-4-enc.edgenextcdn.net/out/v1/f813ab47644d4c41a99285513f6c7409/index.mpd
+
+#EXTINF:-1 tvg-id="Canal.MBC.Shahid.|.Sports.5.(Latinoamérica).sv" tvg-logo="https://i.postimg.cc/tTRh0wvz/shahid-sports.png" group-title="DEPORTES", MBC Shahid | Sports 5 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6998.166 Safari/537.36
+#EXTVLCOPT:http-referrer=https://localhost
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=e2df3c205b674360bc6f364ba1090e70:93da2c77bc812bc05a6e20ad8d35ea78
+https://shahid-sports-5-enc.edgenextcdn.net/out/v1/ae00715d1c2c4432852b44a254c04a3d/index.mpd
