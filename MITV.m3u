@@ -1,0 +1,57 @@
+#EXTM3U url-tvg="https://xtream-masters.com/epg/SV1.xml.gz"
+
+#EXTINF:-1 tvg-id="Canal.HBO.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/100/CH_LOGO/800/542/0/0/228799490721.png" group-title="CINE & SERIES", HBO HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=026db28a966b1d022cbeaa8816e5525b:ed3f885f288102d9de178bdef3b7e451
+https://live1-ott.izzigo.tv/7/out/u/dash/HBO-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.HBO.2.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/101/CH_LOGO/800/542/0/0/36093751072127.png" group-title="CINE & SERIES", HBO 2 HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=8cee93949588075725a6b3528a415ae1:ab2bf64ff3a054e56527bce95c909f82
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO2-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.HBO.Family.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/102/CH_LOGO/800/542/0/0/7354519807335.png" group-title="CINE & SERIES", HBO Family HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=230a6cfa5e7fd4665b15b6ddccb96459:939c3f61b9fb213518e49c24eceeab85
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-FAMILY-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.HBO.Mundi.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/107/CH_LOGO/800/542/0/0/61157416071448.png" group-title="CINE & SERIES", HBO Mundi HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=96b2370bdcc9acb6caa0cfd5aa35dcf4:b732a02918aa32e739e43952db768cc6
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-MUNDI-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.HBO.Plus.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/124/CH_LOGO/800/542/0/0/10237380072165.png" group-title="CINE & SERIES", HBO Plus HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=bcf21b0b685df69510b2709f18befd17:19f88216f52de21149cda28c301f5d96
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-PLUS-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.HBO.Pop.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/109/CH_LOGO/800/542/0/0/68908128073927.png" group-title="CINE & SERIES", HBO Pop HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=04ab4cefd27bf2635261fa714af883d6:5a1282ee809826b9b2a5636970730da6
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-POP-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.HBO.Signature.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/49/CH_LOGO/800/542/0/0/3657655307500.png" group-title="CINE & SERIES", HBO Signature HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=cbda1cb384558d8ec6fd3cc3841bad87:0eba590cffc565ed48ee61970c8bf2dc
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-SIGNATURE-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-id="Canal.HBO.Xtreme.(Latinoamérica).sv" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/108/CH_LOGO/800/542/0/0/6041444607334.png" group-title="CINE & SERIES", HBO Xtreme HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=abf304290bec7c982e706b1fae592aea:73e1d01cc86bb88c184fbca31292977f
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-XTREME-HD-H265/default.mpd
