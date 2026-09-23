@@ -124,7 +124,7 @@ http://181.224.200.5:2277/play/a02h/index.m3u8
 #EXTINF:-1 tvg-id="ESPN.7.HD.co" group-title="DEPORTES", ESPN 7
 http://181.224.200.5:2277/play/a02l/index.m3u8
 #EXTINF:-1 tvg-id="Canal.Movistar.LaLiga.sv" group-title="DEPORTES", MOVISTAR LA LIGA
-http://amir11.bounceme.net:8080//live/BYexLqvLKc/fHHgNqFuLi/846.ts
+http://mundo2.pro/live/Glenda/Mariuxi2308/406871.m3u
 
 #EXTINF:-1 tvg-id="Canal.ESPN.Deportes.sv" group-title="DEPORTES", ESPN DEPORTES HD
 http://84.17.50.102/espndeportes/tracks-v1a1/mono.ts.m3u8
