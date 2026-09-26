@@ -1,0 +1,59 @@
+[
+  {
+    "tipo": "pelicula",
+    "id": 550,
+    "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    "tipo": "pelicula",
+    "id": 569094,
+    "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+  },
+  {
+    "tipo": "serie",
+    "id": 1399,
+    "temporadas": [
+      {
+        "numero_temporada": 1,
+        "capitulos": [
+          {
+            "numero_capitulo": 1,
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          {
+            "numero_capitulo": 2,
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+          }
+        ]
+      },
+      {
+        "numero_temporada": 2,
+        "capitulos": [
+          {
+            "numero_capitulo": 1,
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tipo": "serie",
+    "id": 66732,
+    "temporadas": [
+      {
+        "numero_temporada": 1,
+        "capitulos": [
+          {
+            "numero_capitulo": 1,
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoydates.mp4"
+          },
+          {
+            "numero_capitulo": 2,
+            "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+          }
+        ]
+      }
+    ]
+  }
+]
