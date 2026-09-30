@@ -1,5 +1,69 @@
 #EXTM3U
 
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/100/CH_LOGO/800/542/0/0/228799490721.png" group-title="Cine & Series",HBO
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#EXTVLCOPT:http-origin=https://www.izzigo.tv
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=026db28a966b1d022cbeaa8816e5525b&key=ed3f885f288102d9de178bdef3b7e451
+https://live1-ott.izzigo.tv/7/out/u/dash/HBO-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/101/CH_LOGO/800/542/0/0/36093751072127.png" group-title="Cine & Series",HBO 2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#EXTVLCOPT:http-origin=https://www.izzigo.tv
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=8cee93949588075725a6b3528a415ae1&key=ab2bf64ff3a054e56527bce95c909f82
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO2-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/102/CH_LOGO/800/542/0/0/7354519807335.png" group-title="Cine & Series",HBO Family
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#EXTVLCOPT:http-origin=https://www.izzigo.tv
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=230a6cfa5e7fd4665b15b6ddccb96459&key=939c3f61b9fb213518e49c24eceeab85
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-FAMILY-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/107/CH_LOGO/800/542/0/0/61157416071448.png" group-title="Cine & Series",HBO Mundi
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#EXTVLCOPT:http-origin=https://www.izzigo.tv
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=96b2370bdcc9acb6caa0cfd5aa35dcf4&key=b732a02918aa32e739e43952db768cc6
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-MUNDI-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/124/CH_LOGO/800/542/0/0/10237380072165.png" group-title="Cine & Series",HBO Plus
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#EXTVLCOPT:http-origin=https://www.izzigo.tv
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=bcf21b0b685df69510b2709f18befd17&key=19f88216f52de21149cda28c301f5d96
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-PLUS-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/109/CH_LOGO/800/542/0/0/68908128073927.png" group-title="Cine & Series",HBO Pop
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#EXTVLCOPT:http-origin=https://www.izzigo.tv
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=04ab4cefd27bf2635261fa714af883d6&key=5a1282ee809826b9b2a5636970730da6
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-POP-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/49/CH_LOGO/800/542/0/0/3657655307500.png" group-title="Cine & Series",HBO Signature
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#EXTVLCOPT:http-origin=https://www.izzigo.tv
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=cbda1cb384558d8ec6fd3cc3841bad87&key=0eba590cffc565ed48ee61970c8bf2dc
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-SIGNATURE-HD-H265/default.mpd
+
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/108/CH_LOGO/800/542/0/0/6041444607334.png" group-title="Cine & Series",HBO Xtreme
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#EXTVLCOPT:http-origin=https://www.izzigo.tv
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=abf304290bec7c982e706b1fae592aea&key=73e1d01cc86bb88c184fbca31292977f
+https://live1-ott.izzigo.tv/8/out/u/dash/HBO-XTREME-HD-H265/default.mpd
+
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/hvzLcknV/dsports.png" group-title="Deportes",DIRECTV SPORTS ARG
 #EXTVLCOPT:http-user-agent=dgo/4.48.0 (Android; Android 7.1.2; Asus; ASUS_Z01QD) ExoPlayer/2.19.1
 #EXTVLCOPT:http-origin=android_mobile.directvgo.com
