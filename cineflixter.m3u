@@ -1,0 +1,8 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/hvzLcknV/dsports.png",DIRECTV SPORTS ARG
+#EXTVLCOPT:http-user-agent=dgo/4.48.0 (Android; Android 7.1.2; Asus; ASUS_Z01QD) ExoPlayer/2.19.1
+#EXTVLCOPT:http-origin=android_mobile.directvgo.com
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=dc4844c309c47baf996f267cda324d61&keyid=13129171e9303da3a31dd7b583f7f41c
+https://1cf44b5bdec84b56bd4ec71e0cbf33de.mediatailor.us-east-1.amazonaws.com/v1/dash/dffceb859a31f14d0ed059ef6b4e2e4d850e60b1/live_1057/1057_DIRECTV_SPORTS_ARG_DASH/manifest.mpd
