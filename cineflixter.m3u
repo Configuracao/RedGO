@@ -2122,5 +2122,5 @@ https://cdn.sensa.com.ar/output/SMT3/CHTVH/playlist.m3u8
 #EXTHTTP:{"User-Agent":"Mozilla/5.0","Referer":"https://portal.app.flow.com.ar/","Origin":"https://portal.app.flow.com.ar"}
 https://edge-live22-sl.cvattv.com.ar/{TOKEN_ACTUALIZADO}/live/c7eds/AnimalPlanet/SA_Live_dash_enc/AnimalPlanet.mpd
 
-#EXTINF:-1 tvg-id="Canal.ESPN.(Sur).sv" tvg-logo="https://tbcdn.talentbrew.com/company/391/v3_0/img/espn/espn-logo-white.png" group-title="DEPORTES", ESPN HD BO
-http://207.248.3.81:8081/play/a0t2
+#EXTINF:-1 tvg-id="Canal.ESPN.(Norte).sv" tvg-logo="https://tbcdn.talentbrew.com/company/391/v3_0/img/espn/espn-logo-white.png" group-title="DEPORTES", ESPN HD OPC 2
+http://181.224.200.5:2277/play/aa07/index.m3u8
