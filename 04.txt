@@ -1745,11 +1745,11 @@ https://edge-live05-mun.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.e
 https://cdn.sensa.com.ar/output/SMT1/BLBH/playlist.m3u8
 
 
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=552c6be6b9f5bd19e76bbdfd53d2f175:78555120f3c692883dce7c89e1bebe62
 #KODIPROP:inputstream.adaptive.stream_headers=referer=https://portal.app.flow.com.ar
 #KODIPROP:inputstream.adaptive.stream_headers=origin=https://portal.app.flow.com.ar
 #EXTINF:-1 ch-number="11" tvg-id="Flow Music" tvg-logo="https://raw.githubusercontent.com/masterentertainment/listas/refs/heads/main/logos/FLMUS.png" group-title="Música",Flow Music 
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=552c6be6b9f5bd19e76bbdfd53d2f175:78555120f3c692883dce7c89e1bebe62
 https://edge-live05-mun.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzkwOTkyMjc2Iiwic2lwIjoiMTgxLjE2Ni4xNzguMTUwIiwicGF0aCI6Ii9saXZlL2M3ZWRzL1R5Q1Nwb3J0L1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiJmNjk4MjIxMmIyNzhlMmVjIiwic2Vzc2lvbl9pZCI6ImNiYjQ4YjUxNTQ2MWY5OTliZjUzMWVjM2Q5ZTI1ODBhLTE3OTA4MTk0NzYtNDAzIiwiY2xpZW50X2lkIjoiZmxvdzo5OTk5MDAwMDA4MDQxMjMtLWZsb3c6OTk5OTAwMDAwODA0MTIzOlAiLCJkZXZpY2VfaWQiOiJjYmI0OGI1MTU0NjFmOTk5YmY1MzFlYzNkOWUyNTgwYSIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjExNSIsImF1ZCI6IjM2NCIsInNvdXJjZXMiOlsxMDUsODUsMjEwLDg2LDg4XX0=.0b1KVZAqeXnNn_E23hdf5rFalFiCNZsR38TdjEDbHlxl0URe_2PfWScjzErtiKeqCfRfmxg771tGyVKmRpszdg==/live/c7eds/Flow_Music_XP/SA_Live_dash_enc/Flow_Music_XP.mpd
 
 
