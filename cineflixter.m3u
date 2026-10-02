@@ -250,21 +250,21 @@ https://live1-ott.izzigo.tv/12/out/u/dash/GOLDEN-PREMIER-HD/default.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=717324c2c4e6694baddacfd5fbd3a20f&key=aacbecfb7f1da441a420a582400102da
 https://live1-ott.izzigo.tv/13/out/u/dash/GOLDEN-PREMIER-2HR-HD/default.mpd
 
-#EXTINF:-1 group-title="Deportes",DSPORTS
+#EXTINF:-1 group-title="Deportes",DSports ARG
 #EXTVLCOPT:http-user-agent=dgo/4.48.0 (Android; Android 7.1.2; Asus; ASUS_Z01QD) ExoPlayer/2.19.1
 #EXTVLCOPT:http-origin=android_mobile.directvgo.com
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=dc4844c309c47baf996f267cda324d61&keyid=13129171e9303da3a31dd7b583f7f41c
 https://1cf44b5bdec84b56bd4ec71e0cbf33de.mediatailor.us-east-1.amazonaws.com/v1/dash/dffceb859a31f14d0ed059ef6b4e2e4d850e60b1/live_1057/1057_DIRECTV_SPORTS_ARG_DASH/manifest.mpd
 
-#EXTINF:-1 group-title="Deportes",DSPORTS 2
+#EXTINF:-1 group-title="Deportes",DSports 2
 #EXTVLCOPT:http-user-agent=dgo/4.48.0 (Android; Android 7.1.2; Asus; ASUS_Z01QD) ExoPlayer/2.19.1
 #EXTVLCOPT:http-origin=android_mobile.directvgo.com
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=4cc211af8468e321973787bb61f55db4&keyid=054e17b9b99e3e0aa1e022d238635d35
 https://46925e69ccf445e09667cb17c8bb4f2c.mediatailor.us-east-1.amazonaws.com/v1/dash/dffceb859a31f14d0ed059ef6b4e2e4d850e60b1/live_1065/1065_DIRECTV_SPORTS_OCC_2_DASH/manifest.mpd
 
-#EXTINF:-1 group-title="Deportes",DSPORTS opc 2
+#EXTINF:-1 group-title="Deportes",DSports opc 2
 #EXTVLCOPT:http-user-agent=dgo/4.48.0 (Android; Android 7.1.2; Asus; ASUS_Z01QD) ExoPlayer/2.19.1
 #EXTVLCOPT:http-origin=android_mobile.directvgo.com
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
@@ -286,7 +286,7 @@ https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/x0srg3jjpz/
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=415eb477052aa42d010768d57cc9535a&keyid=62f9e095e872d430b931b6ad35be2168
 https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/cardt9ai8g/out/v1/a85c58beee18435e82a57a0fb9d2f681/cenc.mpd
 
-#EXTINF:-1 group-title="Deportes",DSPORTS COL
+#EXTINF:-1 group-title="Deportes",DSports COL
 #EXTVLCOPT:http-user-agent=AivAndroidPlayer/1.0 (AndroidDevice)
 #EXTVLCOPT:http-referrer=https://www.primevideo.com/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
