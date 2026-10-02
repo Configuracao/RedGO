@@ -407,1710 +407,1710 @@ https://live1-ott.izzigo.tv/11/out/u/dash/SKY-LIVE-EVENT-4-HD/default.mpd
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=6c89e84c52eae0428b7d2c8e887a48ec&key=758a1484f920a0f1aa73e95d5f2be225
 https://live1-ott.izzigo.tv/12/out/u/dash/SKY-LIVE-EVENT-5-HD/default.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4481/CH_LOGO/40/40/0/0/93938736073686.png?WORLDTV6" group-title="SENSA ARG",RTS Televisión Santafesina
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4481/CH_LOGO/40/40/0/0/93938736073686.png?WORLDTV6" group-title="ARGENTINA",RTS Televisión Santafesina
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT6/RTSh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/961/CH_LOGO/40/40/0/0/7886775407228.png?WORLDTV6" group-title="SENSA ARG",Telefe Santa Fe
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/961/CH_LOGO/40/40/0/0/7886775407228.png?WORLDTV6" group-title="ARGENTINA",Telefe Santa Fe
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR4/TSFH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4182/CH_LOGO/40/40/0/0/3734962507360.png?WORLDTV6" group-title="SENSA ARG",Canal 10 Televisión rionegrina
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4182/CH_LOGO/40/40/0/0/3734962507360.png?WORLDTV6" group-title="ARGENTINA",Canal 10 Televisión rionegrina
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT2/C10RNH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/981/CH_LOGO/40/40/0/0/98840360071467.png?WORLDTV6" group-title="SENSA ARG",Doce TV Misiones
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/981/CH_LOGO/40/40/0/0/98840360071467.png?WORLDTV6" group-title="ARGENTINA",Doce TV Misiones
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT5/c12pos/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4301/CH_LOGO/40/40/0/0/69783906072395.png?WORLDTV6" group-title="SENSA ARG",Canal 12 Trenque Lauquen
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4301/CH_LOGO/40/40/0/0/69783906072395.png?WORLDTV6" group-title="ARGENTINA",Canal 12 Trenque Lauquen
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT6/C12TLH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1301/CH_LOGO/40/40/0/0/1420770707895.png?WORLDTV6" group-title="SENSA ARG",El Tres TV Rosario
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1301/CH_LOGO/40/40/0/0/1420770707895.png?WORLDTV6" group-title="ARGENTINA",El Tres TV Rosario
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR2/C3RH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/bNMX9Sfm/https://geo.edge.pontiscloud.com:9002/images/2746/CH_LOGO/40/40/0/0/891711440772.png?WORLDTV6" group-title="SENSA ARG",El Seis TV Bariloche
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/bNMX9Sfm/https://geo.edge.pontiscloud.com:9002/images/2746/CH_LOGO/40/40/0/0/891711440772.png?WORLDTV6" group-title="ARGENTINA",El Seis TV Bariloche
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT4/BC6H/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3241/CH_LOGO/40/40/0/0/7668166207102.png?WORLDTV6" group-title="SENSA ARG",El Nueve TV Bahía Blanca
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3241/CH_LOGO/40/40/0/0/7668166207102.png?WORLDTV6" group-title="ARGENTINA",El Nueve TV Bahía Blanca
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT3/C9BBH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5821/CH_LOGO/40/40/0/0/1920528907833.png?WORLDTV6" group-title="SENSA ARG",El Siete TV Mendoza
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5821/CH_LOGO/40/40/0/0/1920528907833.png?WORLDTV6" group-title="ARGENTINA",El Siete TV Mendoza
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 http://cdn.sensa.com.ar/output/SMT3/C7Mh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5461/CH_LOGO/40/40/0/0/334362060769.png?WORLDTV6" group-title="SENSA ARG",El Nueve Mendoza
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5461/CH_LOGO/40/40/0/0/334362060769.png?WORLDTV6" group-title="ARGENTINA",El Nueve Mendoza
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 http://cdn.sensa.com.ar/output/SMT3/TLVh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2922/CH_LOGO/40/40/0/0/98322363078367.png?WORLDTV6" group-title="SENSA ARG",Radio Joven
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2922/CH_LOGO/40/40/0/0/98322363078367.png?WORLDTV6" group-title="ARGENTINA",Radio Joven
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT4/RJH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2862/CH_LOGO/40/40/0/0/51527617078366.png?WORLDTV6" group-title="SENSA ARG",Radio 1
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2862/CH_LOGO/40/40/0/0/51527617078366.png?WORLDTV6" group-title="ARGENTINA",Radio 1
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 http://cdn.sensa.com.ar/output/SMT4/R1H/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/6301/CH_LOGO/40/40/0/0/297485900710160.png?WORLDTV6" group-title="SENSA ARG",Radio Río FM
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/6301/CH_LOGO/40/40/0/0/297485900710160.png?WORLDTV6" group-title="ARGENTINA",Radio Río FM
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 http://cdn.sensa.com.ar/output/SMT4/RRH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2924/CH_LOGO/40/40/0/0/62474047078368.png?WORLDTV6" group-title="SENSA ARG",Radio Viñas
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2924/CH_LOGO/40/40/0/0/62474047078368.png?WORLDTV6" group-title="ARGENTINA",Radio Viñas
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 http://cdn.sensa.com.ar/output/SMT4/RVH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2926/CH_LOGO/40/40/0/0/49040088078369.png?WORLDTV6" group-title="SENSA ARG",Radio Estilo
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2926/CH_LOGO/40/40/0/0/49040088078369.png?WORLDTV6" group-title="ARGENTINA",Radio Estilo
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT4/RSH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/6061/CH_LOGO/40/40/0/0/762916110710127.png?WORLDTV6" group-title="SENSA ARG",FM 95.5 República
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/6061/CH_LOGO/40/40/0/0/762916110710127.png?WORLDTV6" group-title="ARGENTINA",FM 95.5 República
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ACE/FMREPH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2901/CH_LOGO/40/40/0/0/88179546078381.png?WORLDTV6" group-title="SENSA ARG",Canal 907
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2901/CH_LOGO/40/40/0/0/88179546078381.png?WORLDTV6" group-title="ARGENTINA",Canal 907
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/COR/comunicarcaroyaH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3841/CH_LOGO/40/40/0/0/71241680072511.png?WORLDTV6" group-title="SENSA ARG",Cadena 3
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3841/CH_LOGO/40/40/0/0/71241680072511.png?WORLDTV6" group-title="ARGENTINA",Cadena 3
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ET-01/Cadena3/master.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3981/CH_LOGO/40/40/0/0/71941975079039.png?WORLDTV6" group-title="SENSA ARG",Cosquín Rock
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3981/CH_LOGO/40/40/0/0/71941975079039.png?WORLDTV6" group-title="ARGENTINA",Cosquín Rock
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ET-01/cosquinrock/master.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3982/CH_LOGO/40/40/0/0/67035155079040.png?WORLDTV6" group-title="SENSA ARG",La Popu
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3982/CH_LOGO/40/40/0/0/67035155079040.png?WORLDTV6" group-title="ARGENTINA",La Popu
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ET-01/popular/master.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4384/CH_LOGO/40/40/0/0/18277879079297.png?WORLDTV6" group-title="SENSA ARG",Futuröck
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4384/CH_LOGO/40/40/0/0/18277879079297.png?WORLDTV6" group-title="ARGENTINA",Futuröck
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT6/FTRh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4221/CH_LOGO/40/40/0/0/61169382079260.png?WORLDTV6" group-title="SENSA ARG",Crea TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4221/CH_LOGO/40/40/0/0/61169382079260.png?WORLDTV6" group-title="ARGENTINA",Crea TV
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT7/VtxH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/901/CH_LOGO/40/40/0/0/12050400077728.png?WORLDTV6" group-title="SENSA ARG",Billboard
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/901/CH_LOGO/40/40/0/0/12050400077728.png?WORLDTV6" group-title="ARGENTINA",Billboard
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT1/BLBH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4423/CH_LOGO/40/40/0/0/68027460079379.png?WORLDTV6" group-title="SENSA ARG",Eventos Deportivos
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4423/CH_LOGO/40/40/0/0/68027460079379.png?WORLDTV6" group-title="ARGENTINA",Eventos Deportivos
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/NDS/evendeportivosH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4941/CH_LOGO/40/40/0/0/19827444079517.png?WORLDTV6" group-title="SENSA ARG",UniRío TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4941/CH_LOGO/40/40/0/0/19827444079517.png?WORLDTV6" group-title="ARGENTINA",UniRío TV
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT6/UniRioTVh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4741/CH_LOGO/40/40/0/0/72500335072130.png?WORLDTV6" group-title="SENSA ARG",BVC Bahía Blanca
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4741/CH_LOGO/40/40/0/0/72500335072130.png?WORLDTV6" group-title="ARGENTINA",BVC Bahía Blanca
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT7/BVCh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/741/CH_LOGO/40/40/0/0/3855649207974.png?WORLDTV6" group-title="SENSA ARG",Canal 3 La Pampa
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/741/CH_LOGO/40/40/0/0/3855649207974.png?WORLDTV6" group-title="ARGENTINA",Canal 3 La Pampa
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR3/Canal3h/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1621/CH_LOGO/40/40/0/0/145164420755.png?WORLDTV6" group-title="SENSA ARG",Canal 10 Mar del Plata
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1621/CH_LOGO/40/40/0/0/145164420755.png?WORLDTV6" group-title="ARGENTINA",Canal 10 Mar del Plata
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT6/C10MPH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2081/CH_LOGO/40/40/0/0/732184400753.png?WORLDTV6" group-title="SENSA ARG",Canal 8 Mar del Plata
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2081/CH_LOGO/40/40/0/0/732184400753.png?WORLDTV6" group-title="ARGENTINA",Canal 8 Mar del Plata
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT2/C8MPH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1081/CH_LOGO/40/40/0/0/86810730078.png?WORLDTV6" group-title="SENSA ARG",Telefe Rosario
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1081/CH_LOGO/40/40/0/0/86810730078.png?WORLDTV6" group-title="ARGENTINA",Telefe Rosario
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=e693edee3bb6b3eab4e24a9293d1204d&keyid=6ad6f6cfee9c415dff0674701bf71683
 https://cdn.sensa.com.ar/live/sta01/TlfRos/live_dash_cld/TlfRos.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/588/CH_LOGO/40/40/0/0/887528030752.png?WORLDTV6" group-title="SENSA ARG",Telefe Córdoba
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/588/CH_LOGO/40/40/0/0/887528030752.png?WORLDTV6" group-title="ARGENTINA",Telefe Córdoba
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=40eb9a4d4c2d374123cdaa14325f9589&key=432059bce61664caffc06223a1c081e2
 https://cdn.sensa.com.ar/bpk-tv/Canal8cba/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/782/CH_LOGO/40/40/0/0/93452015074309.png?WORLDTV6" group-title="SENSA ARG",Telediario Televisión
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/782/CH_LOGO/40/40/0/0/93452015074309.png?WORLDTV6" group-title="ARGENTINA",Telediario Televisión
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=ff1e6f58369fa0457670eb452cb49f8a&key=4a5b005a7dbd38fe00c50d27fa23ab0a
 https://cdn.sensa.com.ar/bpk-tv/TelediarioTelevision/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/589/CH_LOGO/40/40/0/0/51636269072.png?WORLDTV6" group-title="SENSA ARG",El Doce Córdoba
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/589/CH_LOGO/40/40/0/0/51636269072.png?WORLDTV6" group-title="ARGENTINA",El Doce Córdoba
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=4c816a8c004ab857e53d7897c7c1db1b&key=a57bb2fbf55f52d9d827a04bbb531588
 https://cdn.sensa.com.ar/bpk-tv/Canal12cba/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/590/CH_LOGO/40/40/0/0/7476260107885.png?WORLDTV6" group-title="SENSA ARG",Canal 10 Córdoba
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/590/CH_LOGO/40/40/0/0/7476260107885.png?WORLDTV6" group-title="ARGENTINA",Canal 10 Córdoba
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=faf29a5a543c9d82ef34ec2479140003&key=2452197f9d4eb63a3081d986ca413375
 https://cdn.sensa.com.ar/bpk-tv/Canal10cba/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/120/CH_LOGO/40/40/0/0/26428256071569.png?WORLDTV6" group-title="SENSA ARG",TVP
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/120/CH_LOGO/40/40/0/0/26428256071569.png?WORLDTV6" group-title="ARGENTINA",TVP
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=6b17538810f1dd4485f174dcc204872c&key=3d5b973772433ce07c8999aa659ea48c
 https://cdn.sensa.com.ar/live/eds/TVPublica/live_dash_cld/TVPublica.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/54/CH_LOGO/40/40/0/0/47462716073248.png?WORLDTV6" group-title="SENSA ARG",América
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/54/CH_LOGO/40/40/0/0/47462716073248.png?WORLDTV6" group-title="ARGENTINA",América
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=b5651806b42f087c58332b052de727c5&key=11901b35cc3e5aa73619f64d02c38a0f
 https://cdn.sensa.com.ar/live/eds/America/live_dash_cld/America.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/57/CH_LOGO/40/40/0/0/42552730073067.png?WORLDTV6" group-title="SENSA ARG",El Trece Satelital
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/57/CH_LOGO/40/40/0/0/42552730073067.png?WORLDTV6" group-title="ARGENTINA",El Trece Satelital
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=e7b05c7a737b7f0a5d571b91deaa2697&key=4079ac205b544b1c294ee1568906ff58
 https://cdn.sensa.com.ar/live/eds/Canal13/live_dash_cld/Canal13.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/58/CH_LOGO/40/40/0/0/47205269072808.png?WORLDTV6" group-title="SENSA ARG",El Nueve
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/58/CH_LOGO/40/40/0/0/47205269072808.png?WORLDTV6" group-title="ARGENTINA",El Nueve
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=7c1f50e3f51216bdd1efcc99d3a27217&key=3441c930277d824402aafee446ba8f90
 https://cdn.sensa.com.ar/live/eds/Canal9/live_dash_cld/Canal9.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/115/CH_LOGO/40/40/0/0/57769025072354.png?WORLDTV6" group-title="SENSA ARG",Telefe Nacional
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/115/CH_LOGO/40/40/0/0/57769025072354.png?WORLDTV6" group-title="ARGENTINA",Telefe Nacional
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=9bb54fccffaddd38916e85c08de98cc9&key=d06f509c418eb6f1b2fc2b766445328b
 https://cdn.sensa.com.ar/live/eds/Telefe/live_dash_cld/Telefe.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/116/CH_LOGO/40/40/0/0/859370090736.png?WORLDTV6" group-title="SENSA ARG",TN
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/116/CH_LOGO/40/40/0/0/859370090736.png?WORLDTV6" group-title="ARGENTINA",TN
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=4b4ebe3c68c4c95c7639096e76c233d0&key=0c48cd5e3298b762a099acdc05a5182a
 https://cdn.sensa.com.ar/live/eds/TN/live_dash_cld/TN.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/362/CH_LOGO/40/40/0/0/439650900762.png?WORLDTV6" group-title="SENSA ARG",CNN en Español
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/362/CH_LOGO/40/40/0/0/439650900762.png?WORLDTV6" group-title="ARGENTINA",CNN en Español
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=718f07e2beccf40cc207365ea8a70ef6&key=672d59d617c4a697025be0fb8d382cc0
 https://cdn.sensa.com.ar/live/eds/CnnEspanol/live_dash_cld/CnnEspanol.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/487/CH_LOGO/40/40/0/0/120048070713.png?WORLDTV6" group-title="SENSA ARG",CNN
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/487/CH_LOGO/40/40/0/0/120048070713.png?WORLDTV6" group-title="ARGENTINA",CNN
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=16c07e6ffdddf95b34e666f9fb745eb4&key=adbd7d96395740ad5a389cba976e31d8
 https://cdn.sensa.com.ar/live/eds/CnnINT/live_dash_cld/CnnINT.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/56/CH_LOGO/40/40/0/0/8952752307709.png?WORLDTV6" group-title="SENSA ARG",C5N
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/56/CH_LOGO/40/40/0/0/8952752307709.png?WORLDTV6" group-title="ARGENTINA",C5N
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=bd1767fe3554f1285222b5610105c0e9&key=839d5b1eec7eb70d68c1e1531fc0d6d4
 https://cdn.sensa.com.ar/live/eds/C5N/live_dash_cld/C5N.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/51/CH_LOGO/40/40/0/0/2944696007343.png?WORLDTV6" group-title="SENSA ARG",A24
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/51/CH_LOGO/40/40/0/0/2944696007343.png?WORLDTV6" group-title="ARGENTINA",A24
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/A24/live_dash_cld/A24.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/361/CH_LOGO/40/40/0/0/34056872073.png?WORLDTV6" group-title="SENSA ARG",Canal 26
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/361/CH_LOGO/40/40/0/0/34056872073.png?WORLDTV6" group-title="ARGENTINA",Canal 26
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/Canal26/live_dash_cld/Canal26.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4126/CH_LOGO/40/40/0/0/49015720078226.png?WORLDTV6" group-title="SENSA ARG",El Destape
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4126/CH_LOGO/40/40/0/0/49015720078226.png?WORLDTV6" group-title="ARGENTINA",El Destape
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=af0566c50e733c311bdfa6736a95ce50&key=e4dfd12993097b3c35ad47562d61b4ce
 https://cdn.sensa.com.ar/bpk-tv/ElDestape/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/62/CH_LOGO/40/40/0/0/90907313073986.png?WORLDTV6" group-title="SENSA ARG",Crónica TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/62/CH_LOGO/40/40/0/0/90907313073986.png?WORLDTV6" group-title="ARGENTINA",Crónica TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=194f0682180e147f7928078dcc78a019&key=ddfc08545e74a6bd8870f1189cd1bec0
 https://cdn.sensa.com.ar/live/eds/Cronica/live_dash_cld/Cronica.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5184/CH_LOGO/40/40/0/0/63174717076158.png?WORLDTV6" group-title="SENSA ARG",ARGENTINA 12
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5184/CH_LOGO/40/40/0/0/63174717076158.png?WORLDTV6" group-title="ARGENTINA",ARGENTINA 12
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=34f254be5f3d6a8ab44c28b4cb2e5a4a&keyid=61635507689b4c74568928cc0f5d82d9
 https://cdn.sensa.com.ar/bpk-tv/Argentina12/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2881/CH_LOGO/40/40/0/0/92683155075202.png?WORLDTV6" group-title="SENSA ARG",Multivisión Federal
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2881/CH_LOGO/40/40/0/0/92683155075202.png?WORLDTV6" group-title="ARGENTINA",Multivisión Federal
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=8f9261beee045d06c325c380b9275e15&key=89976f64ccde3509e15e38c9196a529f
 https://cdn.sensa.com.ar/bpk-tv/Multivision/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1161/CH_LOGO/40/40/0/0/62114771072283.png?WORLDTV6" group-title="SENSA ARG",T5 Satelital
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1161/CH_LOGO/40/40/0/0/62114771072283.png?WORLDTV6" group-title="ARGENTINA",T5 Satelital
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=0c7cb1ff69ab931bc2348f2e00381544&key=e89139fc667b4e306f1accb3db40a584
 https://cdn.sensa.com.ar/bpk-tv/T5Satelital/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5261/CH_LOGO/40/40/0/0/85674967079945.png?WORLDTV6" group-title="SENSA ARG",Comunidad Fan
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5261/CH_LOGO/40/40/0/0/85674967079945.png?WORLDTV6" group-title="ARGENTINA",Comunidad Fan
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/ComunidadFan/live_dash_cld/ComunidadFan.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/123/CH_LOGO/40/40/0/0/30595173074646.png?WORLDTV6" group-title="SENSA ARG",Net TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/123/CH_LOGO/40/40/0/0/30595173074646.png?WORLDTV6" group-title="ARGENTINA",Net TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=c3db691c7e4520b7b2dc822ab905545a&key=ee2a1ebe6fcc2ef3b01943cdd9256cc6
 https://cdn.sensa.com.ar/live/eds/NETTV/live_dash_cld/NETTV.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2562/CH_LOGO/40/40/0/0/47904040078196.png?WORLDTV6" group-title="SENSA ARG",+Perfil
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2562/CH_LOGO/40/40/0/0/47904040078196.png?WORLDTV6" group-title="ARGENTINA",+Perfil
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=1894229072ccac2d0f6a101d618d039d&key=9a7ea848df202bf22ac51bda4482a4c2
 https://cdn.sensa.com.ar/bpk-tv/Perfil/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2561/CH_LOGO/40/40/0/0/937932020710246.png?WORLDTV6" group-title="SENSA ARG",Alpha TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2561/CH_LOGO/40/40/0/0/937932020710246.png?WORLDTV6" group-title="ARGENTINA",Alpha TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=1d7d1609477d0b0d51a5b7d1539e65eb&key=90b61b3fa577eab7b53ef6f1caeb82bf
 https://cdn.sensa.com.ar/bpk-tv/RockPop/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/105/CH_LOGO/40/40/0/0/85249704073644.png?WORLDTV6" group-title="SENSA ARG",LN+
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/105/CH_LOGO/40/40/0/0/85249704073644.png?WORLDTV6" group-title="ARGENTINA",LN+
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=a002010b506854599dffbb8b9048ec7c&key=160eedf85229da919a7c5eec4fbef809
 https://cdn.sensa.com.ar/live/eds/LaNacionMas/live_dash_cld/LaNacionMas.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/6181/CH_LOGO/40/40/0/0/29112835077673.png?WORLDTV6" group-title="SENSA ARG",DNews
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/6181/CH_LOGO/40/40/0/0/29112835077673.png?WORLDTV6" group-title="ARGENTINA",DNews
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=172bb2b8fa089d9d7f6d6a1b956682c9&keyid=b5ba5c05d3eb98bb2d26ff885ac3cacc
 https://cdn.sensa.com.ar/live/sta01/Dnews/live_dash_cld/Dnews.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/367/CH_LOGO/40/40/0/0/917545880726.png?WORLDTV6" group-title="SENSA ARG",Ciudad Magazine
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/367/CH_LOGO/40/40/0/0/917545880726.png?WORLDTV6" group-title="ARGENTINA",Ciudad Magazine
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=014771c4a91db80e96f038ec0acfc304&key=e37fa696265923a6082de157662aab73
 https://cdn.sensa.com.ar/live/eds/CiudadMagazine/live_dash_cld/CiudadMagazine.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/122/CH_LOGO/40/40/0/0/1011215007477.png?WORLDTV6" group-title="SENSA ARG",Encuentro
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/122/CH_LOGO/40/40/0/0/1011215007477.png?WORLDTV6" group-title="ARGENTINA",Encuentro
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=9e6bc6cd9b600238f89d75ffb02cb852&key=f102949aa16d1a741d0fa30dc60f9cbd
 https://cdn.sensa.com.ar/live/eds/Encuentro/live_dash_cld/Encuentro.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/368/CH_LOGO/40/40/0/0/446218910784.png?WORLDTV6" group-title="SENSA ARG",América Sports
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/368/CH_LOGO/40/40/0/0/446218910784.png?WORLDTV6" group-title="ARGENTINA",América Sports
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=f9a70c294ea75346b991a61c55ff1d8f&key=7012eb6cd752998ee5cfbe68517491f5
 https://cdn.sensa.com.ar/live/eds/AmericaSports/live_dash_cld/AmericaSports.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/48/CH_LOGO/40/40/0/0/13868550072195.png?WORLDTV6" group-title="SENSA ARG",DeporTV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/48/CH_LOGO/40/40/0/0/13868550072195.png?WORLDTV6" group-title="ARGENTINA",DeporTV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=1904c4d846a99e940903174bdbab74f0&key=08a4ca972cd037a1fe042515c310bfe1
 https://cdn.sensa.com.ar/live/eds/Deportv/live_dash_cld/Deportv.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/224/CH_LOGO/40/40/0/0/6885621707734.png?WORLDTV6" group-title="SENSA ARG",Golf Channel
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/224/CH_LOGO/40/40/0/0/6885621707734.png?WORLDTV6" group-title="ARGENTINA",Golf Channel
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=be71d8107de961319fc6a47d9f1c79ad&key=02071a1c9846318c60480d4086be8e9b
 https://cdn.sensa.com.ar/live/eds/GolfTV/live_dash_cld/GolfTV.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1981/CH_LOGO/40/40/0/0/42832369072861.png?WORLDTV6" group-title="SENSA ARG",TyC Sports
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1981/CH_LOGO/40/40/0/0/42832369072861.png?WORLDTV6" group-title="ARGENTINA",TyC Sports
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=b480459bb4255ddfd94078ac877df803&key=3de0121491eb7abfda29e71fecc1154c
 https://cdn.sensa.com.ar/bpk-tv/TYCSports/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/121/CH_LOGO/40/40/0/0/42832369072861.png?WORLDTV6" group-title="SENSA ARG",TyC Sports
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/121/CH_LOGO/40/40/0/0/42832369072861.png?WORLDTV6" group-title="ARGENTINA",TyC Sports
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=53d0cf6c1d49c16f5180f86e1870b00f&key=7eb6743b5f44b52ba27c88229c8c7ae2
 https://cdn.sensa.com.ar/live/eds/TYCSports/live_dash_cld/TYCSports.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5741/CH_LOGO/40/40/0/0/15689981078691.png?WORLDTV6" group-title="SENSA ARG",DSports
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5741/CH_LOGO/40/40/0/0/15689981078691.png?WORLDTV6" group-title="ARGENTINA",DSports
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/DSports/live_dash_cld/DSports.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5742/CH_LOGO/40/40/0/0/61559752076998.png?WORLDTV6" group-title="SENSA ARG",DSports 2
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5742/CH_LOGO/40/40/0/0/61559752076998.png?WORLDTV6" group-title="ARGENTINA",DSports 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/DSports2/live_dash_cld/DSports2.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/21/CH_LOGO/40/40/0/0/25899985073189.png?WORLDTV6" group-title="SENSA ARG",ESPN Bolivia
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/21/CH_LOGO/40/40/0/0/25899985073189.png?WORLDTV6" group-title="ARGENTINA",ESPN Bolivia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.axsbolivia.com/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=e1ef5c825da48fbeeaa30e8f60ce44bd&key=982d1273c4a1cf6ddb8b2306a025d2f7
 https://cdn.sensa.com.ar/live/eds/ESPN-Bolivia/live_dash_cld/ESPN-Bolivia.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/84/CH_LOGO/40/40/0/0/32397574073429.png?WORLDTV6" group-title="SENSA ARG",ESPN 2 Bolivia
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/84/CH_LOGO/40/40/0/0/32397574073429.png?WORLDTV6" group-title="ARGENTINA",ESPN 2 Bolivia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.axsbolivia.com/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=27a8d785579f23dde39ac1937cf7bd53&keyid=bbf6811ca9cccba8e73817b3c1e03433
 https://cdn.sensa.com.ar/live/eds/ESPN2Bolivia/live_dash_cld/ESPN2Bolivia.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/21/CH_LOGO/40/40/0/0/25899985073189.png?WORLDTV6" group-title="SENSA ARG",ESPN
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/21/CH_LOGO/40/40/0/0/25899985073189.png?WORLDTV6" group-title="ARGENTINA",ESPN
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=6d243ebd7a57bea4b4b052ae13f4c051&key=5c1925879de873d43b7c25925902539b
 https://cdn.sensa.com.ar/live/eds/ESPN/live_dash_cld/ESPN.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/84/CH_LOGO/40/40/0/0/32397574073429.png?WORLDTV6" group-title="SENSA ARG",ESPN 2
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/84/CH_LOGO/40/40/0/0/32397574073429.png?WORLDTV6" group-title="ARGENTINA",ESPN 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/ESPN2/live_dash_cld/ESPN2.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/85/CH_LOGO/40/40/0/0/85904894074972.png?WORLDTV6" group-title="SENSA ARG",ESPN 3
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/85/CH_LOGO/40/40/0/0/85904894074972.png?WORLDTV6" group-title="ARGENTINA",ESPN 3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/ESPN3/live_dash_cld/ESPN3.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/83/CH_LOGO/40/40/0/0/16514023071132.png?WORLDTV6" group-title="SENSA ARG",ESPN 4
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/83/CH_LOGO/40/40/0/0/16514023071132.png?WORLDTV6" group-title="ARGENTINA",ESPN 4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=034653d3413f23e87249d1fb7e68359a&key=a0d6b849f17c430e9cc02d07739a4e4a
 https://cdn.sensa.com.ar/live/eds/ESPN4/live_dash_cld/ESPN4.mpd
 
-#EXTINF:-1 tvg-logo="https://static.flow.com.ar/images/-/-/0/0/5522598607348.png?WORLDTV6" group-title="SENSA ARG",ESPN 5 Bolivia
+#EXTINF:-1 tvg-logo="https://static.flow.com.ar/images/-/-/0/0/5522598607348.png?WORLDTV6" group-title="ARGENTINA",ESPN 5 Bolivia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.axsbolivia.com/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=3363a5880018821bdd854ddcdf879780&keyid=afadc56db7e9690efdaded5bba0e6d5d
 https://cdn.sensa.com.ar/live/eds/ESPN5Bolivia/live_dash_cld/ESPN5Bolivia.mpd
 
-#EXTINF:-1 tvg-logo="https://static.flow.com.ar/images/-/-/0/0/15905984073899.png?WORLDTV6" group-title="SENSA ARG",ESPN 6 Bolivia
+#EXTINF:-1 tvg-logo="https://static.flow.com.ar/images/-/-/0/0/15905984073899.png?WORLDTV6" group-title="ARGENTINA",ESPN 6 Bolivia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.axsbolivia.com/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=0ce509689c0a6a9be57d366ce4129650&keyid=263b433faed40d221c8de4b77113efce
 https://cdn.sensa.com.ar/bpk-tv/ESPN6Bolivia/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://static.flow.com.ar/images/-/-/0/0/12041360073463.png?WORLDTV6" group-title="SENSA ARG",ESPN 7 Bolivia
+#EXTINF:-1 tvg-logo="https://static.flow.com.ar/images/-/-/0/0/12041360073463.png?WORLDTV6" group-title="ARGENTINA",ESPN 7 Bolivia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.axsbolivia.com/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=55ff1f66dd94290476672e0c1143c1a2&keyid=055b26873d74bc9a7f10bd10900f461c
 https://cdn.sensa.com.ar/live/eds/ESPN7Bolivia/live_dash_cld/ESPN7Bolivia.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/93/CH_LOGO/40/40/0/0/1455190607979.png?WORLDTV6" group-title="SENSA ARG",FOX Sports
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/93/CH_LOGO/40/40/0/0/1455190607979.png?WORLDTV6" group-title="ARGENTINA",FOX Sports
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=1a61b644fdc68568b5be3e2629041564&key=a1672cdfb5de64707151128f811da667
 https://cdn.sensa.com.ar/live/eds/FoxSports1/live_dash_cld/FoxSports1.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/94/CH_LOGO/40/40/0/0/61150555072785.png?WORLDTV6" group-title="SENSA ARG",FOX Sports 2
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/94/CH_LOGO/40/40/0/0/61150555072785.png?WORLDTV6" group-title="ARGENTINA",FOX Sports 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/FoxSports2/live_dash_cld/FoxSports2.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/95/CH_LOGO/40/40/0/0/42712843072366.png?WORLDTV6" group-title="SENSA ARG",FOX Sports 3
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/95/CH_LOGO/40/40/0/0/42712843072366.png?WORLDTV6" group-title="ARGENTINA",FOX Sports 3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/FoxSports3/live_dash_cld/FoxSports3.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/119/CH_LOGO/40/40/0/0/27256579073984.png?WORLDTV6" group-title="SENSA ARG",TNT Sports Premium
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/119/CH_LOGO/40/40/0/0/27256579073984.png?WORLDTV6" group-title="ARGENTINA",TNT Sports Premium
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=c26371079e89206d63e1454893e881b6&key=adac3c3b3774e411d6e49724f7ea0ee3
 https://cdn.sensa.com.ar/live/eds/TNTSports/live_dash_cld/TNTSports.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2181/CH_LOGO/40/40/0/0/27256579073984.png?WORLDTV6" group-title="SENSA ARG",TNT Sports Premium
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2181/CH_LOGO/40/40/0/0/27256579073984.png?WORLDTV6" group-title="ARGENTINA",TNT Sports Premium
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=08fe89bb41ac5f4825bbaa358b3458c7&key=c1ea85d94fb80f64d53747529e488a75
 https://cdn.sensa.com.ar/bpk-tv/TNTSports/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/120/CH_LOGO/40/40/0/0/50191211073985.png?WORLDTV6" group-title="SENSA ARG",ESPN Premium
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/120/CH_LOGO/40/40/0/0/50191211073985.png?WORLDTV6" group-title="ARGENTINA",ESPN Premium
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=f8943d114e25151c8ae4f612351d5a5f&key=7f34c9a70c836020cbc3273c427ff277
 https://cdn.sensa.com.ar/live/eds/ESPNPremium/live_dash_cld/ESPNPremium.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2182/CH_LOGO/40/40/0/0/50191211073985.png?WORLDTV6" group-title="SENSA ARG",ESPN Premium
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2182/CH_LOGO/40/40/0/0/50191211073985.png?WORLDTV6" group-title="ARGENTINA",ESPN Premium
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=f8943d114e25151c8ae4f612351d5a5f&key=7f34c9a70c836020cbc3273c427ff277
 https://cdn.sensa.com.ar/bpk-tv/ESPNPremium/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1481/CH_LOGO/40/40/0/0/8910877007358.png?WORLDTV6" group-title="SENSA ARG",Garage TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1481/CH_LOGO/40/40/0/0/8910877007358.png?WORLDTV6" group-title="ARGENTINA",Garage TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=ad1be5752980085910010adb9d72532d&key=8acfaacb600b382bfe18962964355ce6
 https://cdn.sensa.com.ar/live/eds/ElGarage/live_dash_cld/ElGarage.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/262/CH_LOGO/40/40/0/0/2118831607492.png?WORLDTV6" group-title="SENSA ARG",Discovery Turbo
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/262/CH_LOGO/40/40/0/0/2118831607492.png?WORLDTV6" group-title="ARGENTINA",Discovery Turbo
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=6902d50ec036d30146b12b927f4363d4&key=d40dc5eb6e0f8fbd58ab7dd6b91143b5
 https://cdn.sensa.com.ar/live/eds/DiscoveryTurbo/live_dash_cld/DiscoveryTurbo.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1811/CH_LOGO/40/40/0/0/14574346073582.png?WORLDTV6" group-title="SENSA ARG",PX Sports
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1811/CH_LOGO/40/40/0/0/14574346073582.png?WORLDTV6" group-title="ARGENTINA",PX Sports
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=e070a7426b8cb1cab5f63996b7bd7669&key=1c140e0715b26c7232942ab87d232964
 https://cdn.sensa.com.ar/live/sta01/PXSports/live_dash_cld/PXSports.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3441/CH_LOGO/40/40/0/0/91940693078962.png?WORLDTV6" group-title="SENSA ARG",Claro Sports
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3441/CH_LOGO/40/40/0/0/91940693078962.png?WORLDTV6" group-title="ARGENTINA",Claro Sports
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=04983282c2fa819a08fa03a13fe4fdbe&key=4780a24340ea957c4a27b257e2b6ec4c
 https://cdn.sensa.com.ar/live/eds/ClaroSports/live_dash_cld/ClaroSports.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3441/CH_LOGO/40/40/0/0/91940693078962.png?WORLDTV6" group-title="SENSA ARG",Claro Sports
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3441/CH_LOGO/40/40/0/0/91940693078962.png?WORLDTV6" group-title="ARGENTINA",Claro Sports
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=04983282c2fa819a08fa03a13fe4fdbe&key=4780a24340ea957c4a27b257e2b6ec4c
 https://cdn.sensa.com.ar/bpk-tv/claroSports/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4620/CH_LOGO/40/40/0/0/84503092079391.png?WORLDTV6" group-title="SENSA ARG",Sensa Deportes
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4620/CH_LOGO/40/40/0/0/84503092079391.png?WORLDTV6" group-title="ARGENTINA",Sensa Deportes
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=be43a68903a920561dc14daf19229d97&keyid=bad94ad091751a8adf0369f80ca83d17
 https://cdn.sensa.com.ar/bpk-tv/SensaDeportes/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/vod/vod/400/400/0/0/49923.png?WORLDTV6" group-title="SENSA ARG",Sensa Eventos
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/vod/vod/400/400/0/0/49923.png?WORLDTV6" group-title="ARGENTINA",Sensa Eventos
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR3/sensaeventosH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/111/CH_LOGO/40/40/0/0/46888977071492.png?WORLDTV6" group-title="SENSA ARG",Paka Paka
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/111/CH_LOGO/40/40/0/0/46888977071492.png?WORLDTV6" group-title="ARGENTINA",Paka Paka
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=b767babf86cd94bb854084213c0ff47c&key=04847c6299cd7b48ebda927e957c167c
 https://cdn.sensa.com.ar/live/eds/PakaPaka/live_dash_cld/PakaPaka.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3983/CH_LOGO/40/40/0/0/96726193078010.png?WORLDTV6" group-title="SENSA ARG",Plim Plim
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3983/CH_LOGO/40/40/0/0/96726193078010.png?WORLDTV6" group-title="ARGENTINA",Plim Plim
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=a47bfb9e246f3b8405c1225fae73da9e&key=a4865fb8742b4541f64ac37370e902a6
 https://cdn.sensa.com.ar/bpk-tv/PlimPlim/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1815/CH_LOGO/40/40/0/0/2335855007695.png?WORLDTV6" group-title="SENSA ARG",Baby TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1815/CH_LOGO/40/40/0/0/2335855007695.png?WORLDTV6" group-title="ARGENTINA",Baby TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=5cf6da7262ddb74c2f370ded6056f46c&key=78109125565ab1747f511f7e77e3bbaf
 https://cdn.sensa.com.ar/live/sta01/BabyTV/live_dash_cld/BabyTV.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/863/CH_LOGO/40/40/0/0/61362740071226.png?WORLDTV6" group-title="SENSA ARG",Nick Jr.
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/863/CH_LOGO/40/40/0/0/61362740071226.png?WORLDTV6" group-title="ARGENTINA",Nick Jr.
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=040efb4ac8008085d09c17db602b24fa&key=1940b88114de13d460cb196326e638a7
 https://cdn.sensa.com.ar/live/eds/NickJrCo/live_dash_cld/NickJrCo.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1812/CH_LOGO/40/40/0/0/10249036073271.png?WORLDTV6" group-title="SENSA ARG",ZooMoo
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1812/CH_LOGO/40/40/0/0/10249036073271.png?WORLDTV6" group-title="ARGENTINA",ZooMoo
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/sta01/ZooMoo/live_dash_cld/ZooMoo.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/67/CH_LOGO/40/40/0/0/43430600073531.png?WORLDTV6" group-title="SENSA ARG",Discovery Kids
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/67/CH_LOGO/40/40/0/0/43430600073531.png?WORLDTV6" group-title="ARGENTINA",Discovery Kids
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=4d8b3220ac30e5c8148d4bcc225efa5a&key=eb6918dfe117fc405396a9c3986a0450
 https://cdn.sensa.com.ar/live/eds/DiscoveryKids/live_dash_cld/DiscoveryKids.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/70/CH_LOGO/40/40/0/0/4140286707756.png?WORLDTV6" group-title="SENSA ARG",Disney Jr.
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/70/CH_LOGO/40/40/0/0/4140286707756.png?WORLDTV6" group-title="ARGENTINA",Disney Jr.
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=18654944953b25a8b6392722a83db653&key=40bf6a9f05bbf0e06715ed5707f0edd2
 https://cdn.sensa.com.ar/live/eds/DisneyJR/live_dash_cld/DisneyJR.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/50/CH_LOGO/40/40/0/0/54018734074367.png?WORLDTV6" group-title="SENSA ARG",Disney Channel
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/50/CH_LOGO/40/40/0/0/54018734074367.png?WORLDTV6" group-title="ARGENTINA",Disney Channel
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=70d91b14935a3599f02e5dab71ef21dc&key=803e9152e9daf717b772399a97802076
 https://cdn.sensa.com.ar/live/eds/DisneyCh/live_dash_cld/DisneyCh.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/60/CH_LOGO/40/40/0/0/18422580072845.png?WORLDTV6" group-title="SENSA ARG",Cartoon Network
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/60/CH_LOGO/40/40/0/0/18422580072845.png?WORLDTV6" group-title="ARGENTINA",Cartoon Network
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/CartoonNetwork/live_dash_cld/CartoonNetwork.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/320/CH_LOGO/40/40/0/0/702391890760.png?WORLDTV6" group-title="SENSA ARG",Nickelodeon
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/320/CH_LOGO/40/40/0/0/702391890760.png?WORLDTV6" group-title="ARGENTINA",Nickelodeon
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/Nickelodeon/live_dash_cld/Nickelodeon.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/481/CH_LOGO/40/40/0/0/1490409807453.png?WORLDTV6" group-title="SENSA ARG",Cartoonito
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/481/CH_LOGO/40/40/0/0/1490409807453.png?WORLDTV6" group-title="ARGENTINA",Cartoonito
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=cf15d5a0f9329f815779d4a7dd760fbc&key=cd00a8a3f6a167954d4f678fab2323da
 https://cdn.sensa.com.ar/live/eds/Boomerang/live_dash_cld/Boomerang.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/501/CH_LOGO/40/40/0/0/5456596307880.png?WORLDTV6" group-title="SENSA ARG",Tooncast
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/501/CH_LOGO/40/40/0/0/5456596307880.png?WORLDTV6" group-title="ARGENTINA",Tooncast
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=fd904e04bd403cfa97b7482f3fefbea1&key=600f05511e9e743d8de056380e24310f
 https://cdn.sensa.com.ar/live/eds/Tooncast/live_dash_cld/Tooncast.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1804/CH_LOGO/40/40/0/0/25045866075258.png?WORLDTV6" group-title="SENSA ARG",Canal Infantil
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1804/CH_LOGO/40/40/0/0/25045866075258.png?WORLDTV6" group-title="ARGENTINA",Canal Infantil
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=39673983f4ba22f0f80c0934ce0424c8&key=cd9f3498cb63cc72d1317b14a67ab93c
 https://cdn.sensa.com.ar/live/sta01/CanalInfantil/live_dash_cld/CanalInfantil.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1818/CH_LOGO/40/40/0/0/62988800077133.png?WORLDTV6" group-title="SENSA ARG",DreamWorks
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1818/CH_LOGO/40/40/0/0/62988800077133.png?WORLDTV6" group-title="ARGENTINA",DreamWorks
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=2f70f543b9effe70bff3f97542ff6ff5&key=6a7e17712027287a68adda6e1df4716a
 https://cdn.sensa.com.ar/live/sta01/Dreamworks/live_dash_cld/Dreamworks.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1285/CH_LOGO/40/40/0/0/62685863076950.png?WORLDTV6" group-title="SENSA ARG",Universal Premiere
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1285/CH_LOGO/40/40/0/0/62685863076950.png?WORLDTV6" group-title="ARGENTINA",Universal Premiere
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=4ca479ba8963f132c701eefaa0fb2b5a&key=bed235194da5e18108c12ef81b324a80
 https://cdn.sensa.com.ar/live/eds/UniPre/live_dash_cld/UniPre.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1284/CH_LOGO/40/40/0/0/34307524076949.png?WORLDTV6" group-title="SENSA ARG",Universal Crime
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1284/CH_LOGO/40/40/0/0/34307524076949.png?WORLDTV6" group-title="ARGENTINA",Universal Crime
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=7ad1cfe8edbc35b5bab1a66a5ce298b3&key=25794ae1df1e9908d43a102481e7d311
 https://cdn.sensa.com.ar/live/eds/UniCri/live_dash_cld/UniCri.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1283/CH_LOGO/40/40/0/0/94843453076948.png?WORLDTV6" group-title="SENSA ARG",Universal Comedy
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1283/CH_LOGO/40/40/0/0/94843453076948.png?WORLDTV6" group-title="ARGENTINA",Universal Comedy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=94cdab8673fe231a8de57259eac5522b&key=1125d154649770cc122770531b8f8b30
 https://cdn.sensa.com.ar/live/eds/UniCom/live_dash_cld/UniCom.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1282/CH_LOGO/40/40/0/0/21817888076947.png?WORLDTV6" group-title="SENSA ARG",Universal Cinema
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1282/CH_LOGO/40/40/0/0/21817888076947.png?WORLDTV6" group-title="ARGENTINA",Universal Cinema
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=6a65e77fb5f2838b2f97c778cc571ac2&key=bc1f28b1ec619ed7da22fc9a80d3a35d
 https://cdn.sensa.com.ar/live/eds/UniCin/live_dash_cld/UniCin.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1281/CH_LOGO/40/40/0/0/16370616076951.png?WORLDTV6" group-title="SENSA ARG",Universal Reality
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1281/CH_LOGO/40/40/0/0/16370616076951.png?WORLDTV6" group-title="ARGENTINA",Universal Reality
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=dfbcbe656b34884d8f8dcc57d2dc51f8&key=d3e2c03003b443ccedd30d6442fbdd40
 https://cdn.sensa.com.ar/live/eds/UniRea/live_dash_cld/UniRea.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/100/CH_LOGO/40/40/0/0/228799490721.png?WORLDTV6" group-title="SENSA ARG",HBO
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/100/CH_LOGO/40/40/0/0/228799490721.png?WORLDTV6" group-title="ARGENTINA",HBO
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=dead023f7a81634339ae639990c1517a&key=ba970222b4466c61d0deccc67ab34452
 https://cdn.sensa.com.ar/live/eds/HBO/live_dash_cld/HBO.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/101/CH_LOGO/40/40/0/0/36093751072127.png?WORLDTV6" group-title="SENSA ARG",HBO 2
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/101/CH_LOGO/40/40/0/0/36093751072127.png?WORLDTV6" group-title="ARGENTINA",HBO 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=f962b76c3693dafee011746344b5e823&key=1ac863f1633dfc2d3db069f3dd9a8145
 https://cdn.sensa.com.ar/live/eds/HBO2/live_dash_cld/HBO2.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/124/CH_LOGO/40/40/0/0/10237380072165.png?WORLDTV6" group-title="SENSA ARG",HBO Plus
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/124/CH_LOGO/40/40/0/0/10237380072165.png?WORLDTV6" group-title="ARGENTINA",HBO Plus
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=c6f386db42c083a82b8969064eb9907d&key=dc492969ce6b9cb3909a5d59a33f88da
 https://cdn.sensa.com.ar/live/eds/HBOPlus/live_dash_cld/HBOPlus.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/102/CH_LOGO/40/40/0/0/7354519807335.png?WORLDTV6" group-title="SENSA ARG",HBO Family
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/102/CH_LOGO/40/40/0/0/7354519807335.png?WORLDTV6" group-title="ARGENTINA",HBO Family
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=c6f386db42c083a82b8969064eb9907d&key=dc492969ce6b9cb3909a5d59a33f88da
 https://cdn.sensa.com.ar/live/eds/HBOFamily/live_dash_cld/HBOFamily.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/49/CH_LOGO/40/40/0/0/3657655307500.png?WORLDTV6" group-title="SENSA ARG",HBO Signature
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/49/CH_LOGO/40/40/0/0/3657655307500.png?WORLDTV6" group-title="ARGENTINA",HBO Signature
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=bf48ba89e03b41e52882a7e155facd9c&key=50103d8a819d4faed4e44dc6cd908066
 https://cdn.sensa.com.ar/live/eds/HBOSignature/live_dash_cld/HBOSignature.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/107/CH_LOGO/40/40/0/0/61157416071448.png?WORLDTV6" group-title="SENSA ARG",HBO MUNDI HD
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/107/CH_LOGO/40/40/0/0/61157416071448.png?WORLDTV6" group-title="ARGENTINA",HBO MUNDI HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=bea5da44f49a7e30d21a6e0a2fddc225&key=0185b209bf50e2a1b1cfd416db5177de
 https://cdn.sensa.com.ar/live/eds/HBOMundi/live_dash_cld/HBOMundi.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/109/CH_LOGO/40/40/0/0/68908128073927.png?WORLDTV6" group-title="SENSA ARG",HBO Pop
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/109/CH_LOGO/40/40/0/0/68908128073927.png?WORLDTV6" group-title="ARGENTINA",HBO Pop
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=d5cf1ad9c7bc0a20051535aff63a5c04&key=019ea0de590a01385f50ae3fe090d19e
 https://cdn.sensa.com.ar/live/eds/HBOPop/live_dash_cld/HBOPop.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/108/CH_LOGO/40/40/0/0/6041444607334.png?WORLDTV6" group-title="SENSA ARG",HBO Xtreme
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/108/CH_LOGO/40/40/0/0/6041444607334.png?WORLDTV6" group-title="ARGENTINA",HBO Xtreme
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=33d4823ed2cae55c19fa0a7c20fa4235&key=a64c4d55edb20046802e76332c8aa75e
 https://cdn.sensa.com.ar/live/eds/HBOXtreme/live_dash_cld/HBOXtreme.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/61/CH_LOGO/40/40/0/0/98997452071605.png?WORLDTV6" group-title="SENSA ARG",Cine.AR
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/61/CH_LOGO/40/40/0/0/98997452071605.png?WORLDTV6" group-title="ARGENTINA",Cine.AR
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=2b1d643b42908bda2927137cf3747e1a&key=9ccd9052a9a28c05096996e82c080eb3
 https://cdn.sensa.com.ar/live/eds/CineAR/live_dash_cld/CineAR.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/365/CH_LOGO/40/40/0/0/371516250745.png?WORLDTV6" group-title="SENSA ARG",Volver
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/365/CH_LOGO/40/40/0/0/371516250745.png?WORLDTV6" group-title="ARGENTINA",Volver
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=7a7ecf0c34695dd4e253574b0b85441e&key=e6518e0b5dfa5e0dc268a5b16106811b
 https://cdn.sensa.com.ar/live/eds/Volver/live_dash_cld/Volver.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/47/CH_LOGO/40/40/0/0/60951863073142.png?WORLDTV6" group-title="SENSA ARG",Cinemax
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/47/CH_LOGO/40/40/0/0/60951863073142.png?WORLDTV6" group-title="ARGENTINA",Cinemax
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=3b3d89f0e099f750bab4f8c2ebc4c7ec&key=114313f734e7a8e84b0ca6d16bd652cb
 https://cdn.sensa.com.ar/live/eds/Cinemax/live_dash_cld/Cinemax.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/264/CH_LOGO/40/40/0/0/8622092407184.png?WORLDTV6" group-title="SENSA ARG",Europa Europa
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/264/CH_LOGO/40/40/0/0/8622092407184.png?WORLDTV6" group-title="ARGENTINA",Europa Europa
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=01c6295e3fc98352427941dc1015605a&key=bac9c97340df0b813a9f08c54880feb4
 https://cdn.sensa.com.ar/live/eds/EuropaEuropa/live_dash_cld/EuropaEuropa.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/45/CH_LOGO/40/40/0/0/98227784074535.png?WORLDTV6" group-title="SENSA ARG",Space
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/45/CH_LOGO/40/40/0/0/98227784074535.png?WORLDTV6" group-title="ARGENTINA",Space
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=fd7516e74eafbf6f9664a9465149f179&key=6aa2935d17fd4e1e8963ecbef4edb82b
 https://cdn.sensa.com.ar/live/eds/Space/live_dash_cld/Space.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/286/CH_LOGO/40/40/0/0/801518560763.png?WORLDTV6" group-title="SENSA ARG",Film & Arts
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/286/CH_LOGO/40/40/0/0/801518560763.png?WORLDTV6" group-title="ARGENTINA",Film & Arts
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=8fe3226b05e86b7107d2c05e402d14ee&key=2caa3a78f028164cf395c6ed40b9d39a
 https://cdn.sensa.com.ar/live/eds/FilmArts/live_dash_cld/FilmArts.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/46/CH_LOGO/40/40/0/0/53485573073445.png?WORLDTV6" group-title="SENSA ARG",Cinecanal
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/46/CH_LOGO/40/40/0/0/53485573073445.png?WORLDTV6" group-title="ARGENTINA",Cinecanal
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=acea34a4dadf7896a0280b08496d49d5&key=6eb61a3bf3411c64f89b594e57d487c6
 https://cdn.sensa.com.ar/live/eds/Cinecanal/live_dash_cld/Cinecanal.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/281/CH_LOGO/40/40/0/0/7149423107401.png?WORLDTV6" group-title="SENSA ARG",Golden
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/281/CH_LOGO/40/40/0/0/7149423107401.png?WORLDTV6" group-title="ARGENTINA",Golden
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=6ecbd132de727224c161abd8065b0dfb&key=75faf1eca3cef7208e19de379d0a529d
 https://cdn.sensa.com.ar/live/eds/Golden/live_dash_cld/Golden.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/315/CH_LOGO/40/40/0/0/86179590071069.png?WORLDTV6" group-title="SENSA ARG",Golden Edge
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/315/CH_LOGO/40/40/0/0/86179590071069.png?WORLDTV6" group-title="ARGENTINA",Golden Edge
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=202c8579c94df506c1a1c54ef49a0c60&key=871f84901f3580cfa7273293482a66c5
 https://cdn.sensa.com.ar/live/eds/GoldenEdge/live_dash_cld/GoldenEdge.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5183/CH_LOGO/40/40/0/0/14749740072376.png?WORLDTV6" group-title="SENSA ARG",Golden Premier
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5183/CH_LOGO/40/40/0/0/14749740072376.png?WORLDTV6" group-title="ARGENTINA",Golden Premier
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=663d5e9f8e3b2d485f78980cbc1d44cb&keyid=c3f2dfe6bf97ff3613d651154003ba30
 https://cdn.sensa.com.ar/live/eds/GoldenPremiere/live_dash_cld/GoldenPremiere.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/44/CH_LOGO/40/40/0/0/40933922074230.png?WORLDTV6" group-title="SENSA ARG",TNT
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/44/CH_LOGO/40/40/0/0/40933922074230.png?WORLDTV6" group-title="ARGENTINA",TNT
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/TNT/live_dash_cld/TNT.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/118/CH_LOGO/40/40/0/0/32013737078382.png?WORLDTV6" group-title="SENSA ARG",Adult Swim
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/118/CH_LOGO/40/40/0/0/32013737078382.png?WORLDTV6" group-title="ARGENTINA",Adult Swim
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=476ae5b67b7ad297ac643386d2daa229&key=0ef75009de12efe833dafa97aa30272c
 https://cdn.sensa.com.ar/live/eds/AdultSwim/live_dash_cld/AdultSwim.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/97/CH_LOGO/40/40/0/0/35224800072040.png?WORLDTV6" group-title="SENSA ARG",FX
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/97/CH_LOGO/40/40/0/0/35224800072040.png?WORLDTV6" group-title="ARGENTINA",FX
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=bbb8c81822a1628f4986c6379ca5406a&key=b661265baada5324eb826224a4f358bd
 https://cdn.sensa.com.ar/live/eds/FX/live_dash_cld/FX.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1807/CH_LOGO/40/40/0/0/30781400075257.png?WORLDTV6" group-title="SENSA ARG",Cine Premium
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1807/CH_LOGO/40/40/0/0/30781400075257.png?WORLDTV6" group-title="ARGENTINA",Cine Premium
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=812f89cb0024d3699e832d72e4f0ebb6&key=851d7496cd1a7e03125b2b6d3b41c922
 https://cdn.sensa.com.ar/live/sta01/CinePremium/live_dash_cld/CinePremium.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1806/CH_LOGO/40/40/0/0/47205068074564.png?WORLDTV6" group-title="SENSA ARG",Cine Hispano
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1806/CH_LOGO/40/40/0/0/47205068074564.png?WORLDTV6" group-title="ARGENTINA",Cine Hispano
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=c3cb7320815d01cb41fdb0e9d5bd2915&key=7c89266b0cc60fa3419474fc96c18927
 https://cdn.sensa.com.ar/live/sta01/CineHispano/live_dash_cld/CineHispano.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1805/CH_LOGO/40/40/0/0/38183247075481.png?WORLDTV6" group-title="SENSA ARG",Cine Familiar
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1805/CH_LOGO/40/40/0/0/38183247075481.png?WORLDTV6" group-title="ARGENTINA",Cine Familiar
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=7686e3ee3e606e6694e6e39fcbc9a8b7&key=cd0fa59bb71a398843499febb859c341
 https://cdn.sensa.com.ar/live/sta01/CineFamiliar/live_dash_cld/CineFamiliar.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1816/CH_LOGO/40/40/0/0/38444071074991.png?WORLDTV6" group-title="SENSA ARG",Mórbido TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1816/CH_LOGO/40/40/0/0/38444071074991.png?WORLDTV6" group-title="ARGENTINA",Mórbido TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=6a48e923df0b1783bfa0e82a3c51fc20&key=122676906256fb0154d841936909c57b
 https://cdn.sensa.com.ar/bpk-tv/Morbido/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/862/CH_LOGO/40/40/0/0/33860159072069.png?WORLDTV6" group-title="SENSA ARG",Comedy Central
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/862/CH_LOGO/40/40/0/0/33860159072069.png?WORLDTV6" group-title="ARGENTINA",Comedy Central
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=eed9a193b3c6167b823030d788d771a4&key=d21daeba7e513d9f3ba714deeddd0630
 https://cdn.sensa.com.ar/live/eds/ComCentral/live_dash_cld/ComCentral.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/42/CH_LOGO/40/40/0/0/6901418607879.png?WORLDTV6" group-title="SENSA ARG",Star Channel
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/42/CH_LOGO/40/40/0/0/6901418607879.png?WORLDTV6" group-title="ARGENTINA",Star Channel
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=78396693b172158176c33c28f2e7c0b8&key=1e251112819a34ed691bc3881c64ea4d
 https://cdn.sensa.com.ar/live/eds/StarChannel/live_dash_cld/StarChannel.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/22/CH_LOGO/40/40/0/0/85009266073787.png?WORLDTV6" group-title="SENSA ARG",Warner TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/22/CH_LOGO/40/40/0/0/85009266073787.png?WORLDTV6" group-title="ARGENTINA",Warner TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://mrpw.pt.verspective.net/?deviceId=MWRkNGU4YTgtNTg1OC0zODgyLWE4ZTItMTRmZThjMDM1ZjZm
 https://cdn.sensa.com.ar/live/eds/Warner/live_dash_cld/Warner.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/113/CH_LOGO/40/40/0/0/86995730071579.png?WORLDTV6" group-title="SENSA ARG",Sony Channel
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/113/CH_LOGO/40/40/0/0/86995730071579.png?WORLDTV6" group-title="ARGENTINA",Sony Channel
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=258b455eee76d6406f87dd02ddc735d9&key=dd8aad74c79fe839cc142d0ff6694473
 https://cdn.sensa.com.ar/live/eds/Sony/live_dash_cld/Sony.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1817/CH_LOGO/40/40/0/0/34455100076336.png?WORLDTV6" group-title="SENSA ARG",Sony Movies
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1817/CH_LOGO/40/40/0/0/34455100076336.png?WORLDTV6" group-title="ARGENTINA",Sony Movies
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=075fade91099c9f43ed30ec8d0b71399&keyid=b80550353a7ba2c637b952345e6f79f6
 https://cdn.sensa.com.ar/bpk-tv/Sonymovies/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/55/CH_LOGO/40/40/0/0/77211152071862.png?WORLDTV6" group-title="SENSA ARG",AXN
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/55/CH_LOGO/40/40/0/0/77211152071862.png?WORLDTV6" group-title="ARGENTINA",AXN
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=828c473cb192caaba8e1d9fc63da4d75&key=cb600861e9822efeea5d2dbd0c157c45
 https://cdn.sensa.com.ar/live/eds/AXN/live_dash_cld/AXN.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/488/CH_LOGO/40/40/0/0/81694330078327.png?WORLDTV6" group-title="SENSA ARG",USA Network
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/488/CH_LOGO/40/40/0/0/81694330078327.png?WORLDTV6" group-title="ARGENTINA",USA Network
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=3a1e766119c3fb03b095c8e7f0e63139&key=03932364e1ff6ab68cdc2c1969aee6a5
 https://cdn.sensa.com.ar/live/eds/USANetwork/live_dash_cld/USANetwork.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/117/CH_LOGO/40/40/0/0/18783550073421.png?WORLDTV6" group-title="SENSA ARG",TNT Series
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/117/CH_LOGO/40/40/0/0/18783550073421.png?WORLDTV6" group-title="ARGENTINA",TNT Series
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=2d15f2d2f8f81fbacd82391f5889aa3a&key=97c7a5029500a81d37f2b70d6276fc9a
 https://cdn.sensa.com.ar/live/eds/TNTSeries/live_dash_cld/TNTSeries.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5001/CH_LOGO/40/40/0/0/1215155407108.png?WORLDTV6" group-title="SENSA ARG",AMC Series
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5001/CH_LOGO/40/40/0/0/1215155407108.png?WORLDTV6" group-title="ARGENTINA",AMC Series
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=420a8a8f74e8a2b850cae8422216a653&key=03adc142038343f8558fd09fa28163cb
 https://cdn.sensa.com.ar/live/eds/AMCSeries/live_dash_cld/AMCSeries.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/53/CH_LOGO/40/40/0/0/29332619071250.png?WORLDTV6" group-title="SENSA ARG",AMC
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/53/CH_LOGO/40/40/0/0/29332619071250.png?WORLDTV6" group-title="ARGENTINA",AMC
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=68fc78cb6fe580c35d269da87a471eb0&key=2bd623220a247d95d6900cea612769df
 https://cdn.sensa.com.ar/live/eds/AMC/live_dash_cld/AMC.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/41/CH_LOGO/40/40/0/0/9929073907327.png?WORLDTV6" group-title="SENSA ARG",Universal TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/41/CH_LOGO/40/40/0/0/9929073907327.png?WORLDTV6" group-title="ARGENTINA",Universal TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=7c6cc36b9c3f44f37b713ad40483e085&key=ceaecf70b99780967d97b9eaf6e2ad5f
 https://cdn.sensa.com.ar/live/eds/Universal/live_dash_cld/Universal.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/267/CH_LOGO/40/40/0/0/223329100777.png?WORLDTV6" group-title="SENSA ARG",Studio Universal
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/267/CH_LOGO/40/40/0/0/223329100777.png?WORLDTV6" group-title="ARGENTINA",Studio Universal
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=3a07b220f8f142a0ef8662ffa0adee4f&key=e88846d040cd157b28ffda1d44a5cf89
 https://cdn.sensa.com.ar/live/eds/StudioUniversal/live_dash_cld/StudioUniversal.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/63/CH_LOGO/40/40/0/0/76775190072352.png?WORLDTV6" group-title="SENSA ARG",DHE
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/63/CH_LOGO/40/40/0/0/76775190072352.png?WORLDTV6" group-title="ARGENTINA",DHE
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=5453180074c0a8ecfe2a21e0cd5f2c1b&key=1150fd93492ba8609fb94d0a3087b3a5
 https://cdn.sensa.com.ar/live/eds/DHE/live_dash_cld/DHE.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/285/CH_LOGO/40/40/0/0/1820288007328.png?WORLDTV6" group-title="SENSA ARG",TCM
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/285/CH_LOGO/40/40/0/0/1820288007328.png?WORLDTV6" group-title="ARGENTINA",TCM
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=18cfe27adad2e444dc0f50a3238a1740&key=a0e25f18be94d6eb1c9733111135c047
 https://cdn.sensa.com.ar/live/eds/TCM/live_dash_cld/TCM.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2563/CH_LOGO/40/40/0/0/1274320207337.png?WORLDTV6" group-title="SENSA ARG",Eurochannel
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2563/CH_LOGO/40/40/0/0/1274320207337.png?WORLDTV6" group-title="ARGENTINA",Eurochannel
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=bf1324eab263b72f5d8373a9678e6774&key=1375cd3390772b03b5136dce1641ba84
 https://cdn.sensa.com.ar/bpk-tv/Eurochannel/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/316/CH_LOGO/40/40/0/0/2880757007137.png?WORLDTV6" group-title="SENSA ARG",De Película
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/316/CH_LOGO/40/40/0/0/2880757007137.png?WORLDTV6" group-title="ARGENTINA",De Película
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=639e9249b63b731e7621953d27aa5393&key=ce09cb3f4bcad5c1febe10893b6ba491
 https://cdn.sensa.com.ar/live/eds/DePelicula/live_dash_cld/DePelicula.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/82/CH_LOGO/40/40/0/0/15069203073244.png?WORLDTV6" group-title="SENSA ARG",El Gourmet
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/82/CH_LOGO/40/40/0/0/15069203073244.png?WORLDTV6" group-title="ARGENTINA",El Gourmet
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=0853b1d2af7d6ee5f7a8a571637ee6b7&key=f173ff83e8a50d7d0c363cde0c261dc6
 https://cdn.sensa.com.ar/live/eds/ElGourmet/live_dash_cld/ElGourmet.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/86/CH_LOGO/40/40/0/0/90527363073450.png?WORLDTV6" group-title="SENSA ARG",Food Network
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/86/CH_LOGO/40/40/0/0/90527363073450.png?WORLDTV6" group-title="ARGENTINA",Food Network
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=53b35977eefc0237bef0173f9b431a07&key=5402473ba47096edc01bb2334685d860
 https://cdn.sensa.com.ar/live/eds/FoodNetwork/live_dash_cld/FoodNetwork.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/6182/CH_LOGO/40/40/0/0/115031920727.png?WORLDTV6" group-title="SENSA ARG",Metro
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/6182/CH_LOGO/40/40/0/0/115031920727.png?WORLDTV6" group-title="ARGENTINA",Metro
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=44f6be58841f0c96cd347e97d57b0fdb&keyid=08a77a5784c0318845b3292939099ad3
 https://cdn.sensa.com.ar/live/sta01/Metro/live_dash_cld/Metro.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/268/CH_LOGO/40/40/0/0/28796844071531.png?WORLDTV6" group-title="SENSA ARG",Home & Garden TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/268/CH_LOGO/40/40/0/0/28796844071531.png?WORLDTV6" group-title="ARGENTINA",Home & Garden TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=ebc8294c36bb50fd4cc6cd89e34604bd&key=5d550080c8349e878fcd86821b91f74b
 https://cdn.sensa.com.ar/live/eds/HGTV/live_dash_cld/HGTV.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/65/CH_LOGO/40/40/0/0/62957837072218.png?WORLDTV6" group-title="SENSA ARG",Discovery Home And Health
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/65/CH_LOGO/40/40/0/0/62957837072218.png?WORLDTV6" group-title="ARGENTINA",Discovery Home And Health
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=73f141744a7aa50a45f9819f0e5bce8b&key=594eff3d094876954e699d548874c58f
 https://cdn.sensa.com.ar/live/eds/HomeHealth/live_dash_cld/HomeHealth.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/312/CH_LOGO/40/40/0/0/4776068107490.png?WORLDTV6" group-title="SENSA ARG",E! Entertainment
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/312/CH_LOGO/40/40/0/0/4776068107490.png?WORLDTV6" group-title="ARGENTINA",E! Entertainment
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=0839729159fd400250f90532f41b65f3&key=992972a1b89982c359c4b4a5f8034eed
 https://cdn.sensa.com.ar/live/eds/Entertaiment/live_dash_cld/Entertaiment.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/313/CH_LOGO/40/40/0/0/30883628072789.png?WORLDTV6" group-title="SENSA ARG",Lifetime
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/313/CH_LOGO/40/40/0/0/30883628072789.png?WORLDTV6" group-title="ARGENTINA",Lifetime
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=6f85d8282bb6fe2db8f34299d5742f02&key=28d49f409d718ecad8f82f477d3beb77
 https://cdn.sensa.com.ar/live/eds/Lifetime/live_dash_cld/Lifetime.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/52/CH_LOGO/40/40/0/0/95118087071584.png?WORLDTV6" group-title="SENSA ARG",A&E
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/52/CH_LOGO/40/40/0/0/95118087071584.png?WORLDTV6" group-title="ARGENTINA",A&E
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=736bef197ba5c73203add79c8e8d279a&key=7f037dc5835305f22a7206d79d4d5db2
 https://cdn.sensa.com.ar/live/eds/AyE/live_dash_cld/AyE.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/66/CH_LOGO/40/40/0/0/6146615007111.png?WORLDTV6" group-title="SENSA ARG",Investigation Discovery
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/66/CH_LOGO/40/40/0/0/6146615007111.png?WORLDTV6" group-title="ARGENTINA",Investigation Discovery
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=f413ca6b4955bab7d89a3d24bbf8c98b&key=58168613434035ceb98e18815f97436c
 https://cdn.sensa.com.ar/live/eds/ID/live_dash_cld/ID.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/68/CH_LOGO/40/40/0/0/72670030071181.png?WORLDTV6" group-title="SENSA ARG",Discovery Theater
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/68/CH_LOGO/40/40/0/0/72670030071181.png?WORLDTV6" group-title="ARGENTINA",Discovery Theater
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=a753ba6e6b313f129bd6591364680f07&key=f3f8e1a7633b262ca37ae8c35f3cd1e2
 https://cdn.sensa.com.ar/live/eds/DiscoveryTheater/live_dash_cld/DiscoveryTheater.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/261/CH_LOGO/40/40/0/0/9654717907493.png?WORLDTV6" group-title="SENSA ARG",Discovery Science
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/261/CH_LOGO/40/40/0/0/9654717907493.png?WORLDTV6" group-title="ARGENTINA",Discovery Science
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=2fcef63599e86bd9bd69644234020cd6&key=a82db4ee21e762bf6c734e71088511c0
 https://cdn.sensa.com.ar/live/eds/DiscoveryScience/live_dash_cld/DiscoveryScience.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/69/CH_LOGO/40/40/0/0/24981309071389.png?WORLDTV6" group-title="SENSA ARG",Discovery World
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/69/CH_LOGO/40/40/0/0/24981309071389.png?WORLDTV6" group-title="ARGENTINA",Discovery World
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=b94901c6926870683c5baebc63496653&key=f04da24cd7eba6dfdd0d66ea2a2feb24
 https://cdn.sensa.com.ar/live/eds/DiscoveryWorld/live_dash_cld/DiscoveryWorld.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/110/CH_LOGO/40/40/0/0/83674247072710.png?WORLDTV6" group-title="SENSA ARG",National Geographic
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/110/CH_LOGO/40/40/0/0/83674247072710.png?WORLDTV6" group-title="ARGENTINA",National Geographic
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=e44c7a4a62dc2bea573f5b21ea78342b&key=bf1996a534ea01086d0b8e284f0f4e7b
 https://cdn.sensa.com.ar/live/eds/NatGeo/live_dash_cld/NatGeo.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/43/CH_LOGO/40/40/0/0/93120001074605.png?WORLDTV6" group-title="SENSA ARG",Animal Planet
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/43/CH_LOGO/40/40/0/0/93120001074605.png?WORLDTV6" group-title="ARGENTINA",Animal Planet
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=dbea5682978c5593d7f9f32ba3fbd000&key=992754095f050d53163c059ff4e81571
 https://cdn.sensa.com.ar/live/eds/AnimalPlanet/live_dash_cld/AnimalPlanet.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1801/CH_LOGO/40/40/0/0/64384481074718.png?WORLDTV6" group-title="SENSA ARG",Love Nature
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1801/CH_LOGO/40/40/0/0/64384481074718.png?WORLDTV6" group-title="ARGENTINA",Love Nature
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=ea6437084f6c055c7c856f86361e86fa&key=9791c0e6f72b4a5eacf8bddfa5290209
 https://cdn.sensa.com.ar/bpk-tv/LoveNature/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/484/CH_LOGO/40/40/0/0/8882809507771.png?WORLDTV6" group-title="SENSA ARG",Sun Channel
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/484/CH_LOGO/40/40/0/0/8882809507771.png?WORLDTV6" group-title="ARGENTINA",Sun Channel
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=6ae7578729bde9d2f342090141103687&key=fb009bb37dd8fb98e2913f6b762b79e5
 https://cdn.sensa.com.ar/live/eds/SUN/live_dash_cld/SUN.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5182/CH_LOGO/40/40/0/0/322248000758.png?WORLDTV6" group-title="SENSA ARG",Canal (á)
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5182/CH_LOGO/40/40/0/0/322248000758.png?WORLDTV6" group-title="ARGENTINA",Canal (á)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?key=cd3cbf606602e6ec433ecac804898b79&keyid=9efda9142e194613fe8c3cad87f83cc0
 https://cdn.sensa.com.ar/live/eds/CanalA/live_dash_cld/CanalA.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/64/CH_LOGO/40/40/0/0/24951383073066.png?WORLDTV6" group-title="SENSA ARG",Discovery
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/64/CH_LOGO/40/40/0/0/24951383073066.png?WORLDTV6" group-title="ARGENTINA",Discovery
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=74ec986b3388c62f5fa7c551e225d0b8&key=9327821de5eace5508cf573778c8c3c3
 https://cdn.sensa.com.ar/live/eds/DiscoveryChannel/live_dash_cld/DiscoveryChannel.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/363/CH_LOGO/40/40/0/0/46230374071624.png?WORLDTV6" group-title="SENSA ARG",Discovery TLC
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/363/CH_LOGO/40/40/0/0/46230374071624.png?WORLDTV6" group-title="ARGENTINA",Discovery TLC
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=bed07c7fbbc6a3024baa8a44c052dd59&key=a632dead698156b3f2083076aa192b57
 https://cdn.sensa.com.ar/live/eds/DiscoveryTravelAndLiving/live_dash_cld/DiscoveryTravelAndLiving.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/103/CH_LOGO/40/40/0/0/9019422407178.png?WORLDTV6" group-title="SENSA ARG",History
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/103/CH_LOGO/40/40/0/0/9019422407178.png?WORLDTV6" group-title="ARGENTINA",History
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=3729d075c1a22d06bd6978c941ff0d13&key=c106c6d1dd58f4f14b6ebe6c8672fd0b
 https://cdn.sensa.com.ar/live/eds/History/live_dash_cld/History.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/99/CH_LOGO/40/40/0/0/16627153073621.png?WORLDTV6" group-title="SENSA ARG",History 2
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/99/CH_LOGO/40/40/0/0/16627153073621.png?WORLDTV6" group-title="ARGENTINA",History 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=454a4c570f8b662076ce4f1a931d3b06&key=2e7233e228d7d8a203e07e2b08584019
 https://cdn.sensa.com.ar/live/eds/History2/live_dash_cld/History2.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/59/CH_LOGO/40/40/0/0/446602280711.png?WORLDTV6" group-title="SENSA ARG",Canal Rural
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/59/CH_LOGO/40/40/0/0/446602280711.png?WORLDTV6" group-title="ARGENTINA",Canal Rural
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=24ecaed20225a367ad8fde9b6e826cd6&key=14dbfc007a3f5648d2c30075f037a830
 https://cdn.sensa.com.ar/live/eds/CanalRural/live_dash_cld/CanalRural.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/591/CH_LOGO/40/40/0/0/44952019073840.png?WORLDTV6" group-title="SENSA ARG",Chacra TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/591/CH_LOGO/40/40/0/0/44952019073840.png?WORLDTV6" group-title="ARGENTINA",Chacra TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=68e7788389d18bfa49daf812c581a3b0&key=b4ef16f31325e24d16390ea74b088512
 https://cdn.sensa.com.ar/bpk-tv/ChacraTV/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4027/CH_LOGO/40/40/0/0/480102480757.png?WORLDTV6" group-title="SENSA ARG",Argentinísima Satelital
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4027/CH_LOGO/40/40/0/0/480102480757.png?WORLDTV6" group-title="ARGENTINA",Argentinísima Satelital
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=ed25b5db60330e7ea14e3bf007db0797&key=9b378d59f78e04e697ca958b1dd69ca7
 https://cdn.sensa.com.ar/bpk-tv/Argentinisima/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3602/CH_LOGO/40/40/0/0/14066743073439.png?WORLDTV6" group-title="SENSA ARG",Allegro
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3602/CH_LOGO/40/40/0/0/14066743073439.png?WORLDTV6" group-title="ARGENTINA",Allegro
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=53dcb05ef1f0bbd2093b0c2fe8e55a5e&key=d2fb9a4f8244a9af19893be032c43d3f
 https://cdn.sensa.com.ar/bpk-tv/Allegro/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/624/CH_LOGO/40/40/0/0/1882958007779.png?WORLDTV6" group-title="SENSA ARG",Quiero Música
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/624/CH_LOGO/40/40/0/0/1882958007779.png?WORLDTV6" group-title="ARGENTINA",Quiero Música
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=d62845f01d257a91fd73d62751828dc1&key=b600539e698a707de23e57d4cdb99d9a
 https://cdn.sensa.com.ar/live/eds/QuieroMusica/live_dash_cld/QuieroMusica.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/104/CH_LOGO/40/40/0/0/4926258407115.png?WORLDTV6" group-title="SENSA ARG",HTV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/104/CH_LOGO/40/40/0/0/4926258407115.png?WORLDTV6" group-title="ARGENTINA",HTV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=5061291f547143b40b8abedfdff59174&key=fb0a1787499cbc22c2ecaf1b43dd4da7
 https://cdn.sensa.com.ar/live/eds/HTV/live_dash_cld/HTV.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1810/CH_LOGO/40/40/0/0/15712909076760.png?WORLDTV6" group-title="SENSA ARG",Mi Música Romántica
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1810/CH_LOGO/40/40/0/0/15712909076760.png?WORLDTV6" group-title="ARGENTINA",Mi Música Romántica
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=0f1be10d0519e0c453105f01319fe407&key=9976d91bfcdc7dd2148d36af89027762
 https://cdn.sensa.com.ar/live/sta01/MiMusicaRomantica/live_dash_cld/MiMusicaRomantica.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1809/CH_LOGO/40/40/0/0/11385912076761.png?WORLDTV6" group-title="SENSA ARG",Mi Música Reggaetón
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1809/CH_LOGO/40/40/0/0/11385912076761.png?WORLDTV6" group-title="ARGENTINA",Mi Música Reggaetón
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=d288fc2da0339c9cfa178be4a07c4cd2&key=c0e25b5d30b6829b15266e84807a0ca6
 https://cdn.sensa.com.ar/live/sta01/MiMusicaReggaeton/live_dash_cld/MiMusicaReggaeton.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1808/CH_LOGO/40/40/0/0/82379535077403.png?WORLDTV6" group-title="SENSA ARG",Mi Música Hits
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1808/CH_LOGO/40/40/0/0/82379535077403.png?WORLDTV6" group-title="ARGENTINA",Mi Música Hits
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=2246c747e5f4e1dc055050d178618935&key=c6c2a6693bec059ebced788d09d271f3
 https://cdn.sensa.com.ar/live/sta01/MiMusicaHit/live_dash_cld/MiMusicaHit.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1802/CH_LOGO/40/40/0/0/50713419076833.png?WORLDTV6" group-title="SENSA ARG",Mi Música K-Pop
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1802/CH_LOGO/40/40/0/0/50713419076833.png?WORLDTV6" group-title="ARGENTINA",Mi Música K-Pop
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=c6f0b2b0142007b8624de0c2d53962c8&key=46b8fb713fdd09a1c55b85b6f8ad9c9c
 https://cdn.sensa.com.ar/live/sta01/MiMusicaKPOP/live_dash_cld/MiMusicaKPOP.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/319/CH_LOGO/40/40/0/0/4622508807296.png?WORLDTV6" group-title="SENSA ARG",MTV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/319/CH_LOGO/40/40/0/0/4622508807296.png?WORLDTV6" group-title="ARGENTINA",MTV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=ade94a8e7881a2ba8b3ae3185ed5ad5d&key=350ba306783e66182b55b761d6cff6d1
 https://cdn.sensa.com.ar/live/eds/MTV/live_dash_cld/MTV.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/311/CH_LOGO/40/40/0/0/182616500734.png?WORLDTV6" group-title="SENSA ARG",Telehit
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/311/CH_LOGO/40/40/0/0/182616500734.png?WORLDTV6" group-title="ARGENTINA",Telehit
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=930f2b33864637faf2b2dab6c8d0ba92&key=530e6561cc4197e9eab7bf7b6f35a3ed
 https://cdn.sensa.com.ar/live/eds/Telehit/live_dash_cld/Telehit.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4061/CH_LOGO/40/40/0/0/37904303079132.png?WORLDTV6" group-title="SENSA ARG",El Folklórico
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4061/CH_LOGO/40/40/0/0/37904303079132.png?WORLDTV6" group-title="ARGENTINA",El Folklórico
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=6075bd0304bd40812aaa2a113b30be24&key=98c85fae2ce02017573a23fad09a8dfa
 https://cdn.sensa.com.ar/bpk-tv/ElFolklorico/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/114/CH_LOGO/40/40/0/0/88763400078201.png?WORLDTV6" group-title="SENSA ARG",TNT Novelas
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/114/CH_LOGO/40/40/0/0/88763400078201.png?WORLDTV6" group-title="ARGENTINA",TNT Novelas
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=8a026fc3d443454cf1aae486b688ca9a&key=7665c2f6e791d44f047e5ffa927382aa
 https://cdn.sensa.com.ar/live/eds/TNTNovelas/live_dash_cld/TNTNovelas.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2484/CH_LOGO/40/40/0/0/68355397076898.png?WORLDTV6" group-title="SENSA ARG",Novelísima
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2484/CH_LOGO/40/40/0/0/68355397076898.png?WORLDTV6" group-title="ARGENTINA",Novelísima
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=4400f758ddbddc81b7ef9a2b32251625&key=aa2448ebc63a5034b9b8e6e8d15f770d
 https://cdn.sensa.com.ar/bpk-tv/Novelis/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/301/CH_LOGO/40/40/0/0/9347484107170.png?WORLDTV6" group-title="SENSA ARG",TLNovelas
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/301/CH_LOGO/40/40/0/0/9347484107170.png?WORLDTV6" group-title="ARGENTINA",TLNovelas
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=a148b587bb34fe9ba5e752b95d0f3517&key=ffbe529daae86e2b6cfa025a937ff7a4
 https://cdn.sensa.com.ar/live/eds/Tlnovelas/live_dash_cld/Tlnovelas.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1803/CH_LOGO/40/40/0/0/91513859074694.png?WORLDTV6" group-title="SENSA ARG",Kanal D Drama
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1803/CH_LOGO/40/40/0/0/91513859074694.png?WORLDTV6" group-title="ARGENTINA",Kanal D Drama
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=b9cab32316b3d8aae0452755cebdaadd&key=35e61869849168043a44045f2d7ff842
 https://cdn.sensa.com.ar/live/eds/KanalD/live_dash_cld/KanalD.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1761/CH_LOGO/40/40/0/0/2565660807177.png?WORLDTV6" group-title="SENSA ARG",Ve Plus
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1761/CH_LOGO/40/40/0/0/2565660807177.png?WORLDTV6" group-title="ARGENTINA",Ve Plus
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=8236bef638490a63aacdc424df908658&key=6229f752364cd5e71cd31a9ef9757bf1
 https://cdn.sensa.com.ar/bpk-tv/VePlus/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/364/CH_LOGO/40/40/0/0/676402460759.png?WORLDTV6" group-title="SENSA ARG",TVE
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/364/CH_LOGO/40/40/0/0/676402460759.png?WORLDTV6" group-title="ARGENTINA",TVE
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=49c79f1d16db45b4e6671c3a7550e8fc&key=ac26680d5cfdcab87e4139a410b9984b
 https://cdn.sensa.com.ar/live/eds/TVE/live_dash_cld/TVE.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/284/CH_LOGO/40/40/0/0/20014093073070.png?WORLDTV6" group-title="SENSA ARG",Telemundo Internacional
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/284/CH_LOGO/40/40/0/0/20014093073070.png?WORLDTV6" group-title="ARGENTINA",Telemundo Internacional
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=0ae7b0708be4edf3453c1ab9d6976974&key=8b31a9788f6dc12640ba69560fcb4b39
 https://cdn.sensa.com.ar/live/eds/Telemundo/live_dash_cld/Telemundo.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1814/CH_LOGO/40/40/0/0/668028540729.png?WORLDTV6" group-title="SENSA ARG",RAI Italia
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1814/CH_LOGO/40/40/0/0/668028540729.png?WORLDTV6" group-title="ARGENTINA",RAI Italia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=cd225327cc07001ffff55bd9271b1b2f&key=faae6578b5c3fde01b9f41fd39696605
 https://cdn.sensa.com.ar/bpk-tv/RAI/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1813/CH_LOGO/40/40/0/0/85662193074124.png?WORLDTV6" group-title="SENSA ARG",France 24 Español
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1813/CH_LOGO/40/40/0/0/85662193074124.png?WORLDTV6" group-title="ARGENTINA",France 24 Español
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=6f35f2d6a34c58941cc3e066c75c2690&key=872ba8b196786ee9858645e641ac221d
 https://cdn.sensa.com.ar/bpk-tv/France24/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/493/CH_LOGO/40/40/0/0/854020000716.png?WORLDTV6" group-title="SENSA ARG",DW Español
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/493/CH_LOGO/40/40/0/0/854020000716.png?WORLDTV6" group-title="ARGENTINA",DW Español
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=5a24d18dae30689d554afc6fc1348734&key=2f7420bfacfeac635b9e8ed0b5afa554
 https://cdn.sensa.com.ar/live/eds/DWChannel/live_dash_cld/DWChannel.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/263/CH_LOGO/40/40/0/0/17581646072235.png?WORLDTV6" group-title="SENSA ARG",Las Estrellas
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/263/CH_LOGO/40/40/0/0/17581646072235.png?WORLDTV6" group-title="ARGENTINA",Las Estrellas
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=6d17e47a4a6feed691363e2e57c2e322&key=5e4906262b25b3f461eb9c63ea04b500
 https://cdn.sensa.com.ar/live/eds/Estrellas/live_dash_cld/Estrellas.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4001/CH_LOGO/40/40/0/0/62763250072541.png?WORLDTV6" group-title="SENSA ARG",UCL
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4001/CH_LOGO/40/40/0/0/62763250072541.png?WORLDTV6" group-title="ARGENTINA",UCL
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=5746dc57cb1c26d5267d116d3f49d871&key=d1dc3a3a13fc3981c08a0376706b2e61
 https://cdn.sensa.com.ar/bpk-tv/UCL/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2761/CH_LOGO/40/40/0/0/655345470739.png?WORLDTV6" group-title="SENSA ARG",TV Chile
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2761/CH_LOGO/40/40/0/0/655345470739.png?WORLDTV6" group-title="ARGENTINA",TV Chile
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=b108e54efb596e5d6403a1759deea810&key=781e087cf7f814fd187f74daa62d112a
 https://cdn.sensa.com.ar/bpk-tv/TVChile/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/366/CH_LOGO/40/40/0/0/231984100764.png?WORLDTV6" group-title="SENSA ARG",EWTN
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/366/CH_LOGO/40/40/0/0/231984100764.png?WORLDTV6" group-title="ARGENTINA",EWTN
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=20de9c8173c1cf6d9cf22d20325e447e&key=58b855b048f7f5bba4ec5d47fdbe3fc9
 https://cdn.sensa.com.ar/live/eds/EWTN/live_dash_cld/EWTN.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2281/CH_LOGO/40/40/0/0/37747274077987.png?WORLDTV6" group-title="SENSA ARG",Radio María TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2281/CH_LOGO/40/40/0/0/37747274077987.png?WORLDTV6" group-title="ARGENTINA",Radio María TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=7b1e631ba089c345f38a0bc04acf459b&key=1b26ad9df48567b9bdc0216e7711b85e
 https://cdn.sensa.com.ar/bpk-tv/RadioMaria/default/index.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/483/CH_LOGO/40/40/0/0/4012387807349.png?WORLDTV6" group-title="SENSA ARG",Canal Luz
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/483/CH_LOGO/40/40/0/0/4012387807349.png?WORLDTV6" group-title="ARGENTINA",Canal Luz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=43ef5f8823a35d1ac482dc48dca4c273&key=b535315a329dfd850082d0f441b0c463
 https://cdn.sensa.com.ar/live/eds/CanalLuz/live_dash_cld/CanalLuz.mpd
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4901/CH_LOGO/40/40/0/0/74440977071969.png?WORLDTV6" group-title="SENSA ARG",Daystar
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4901/CH_LOGO/40/40/0/0/74440977071969.png?WORLDTV6" group-title="ARGENTINA",Daystar
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT7/DayTVh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1041/CH_LOGO/40/40/0/0/27897906076872.png?WORLDTV6" group-title="SENSA ARG",MARANATHA
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1041/CH_LOGO/40/40/0/0/27897906076872.png?WORLDTV6" group-title="ARGENTINA",MARANATHA
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=43ef5f8823a35d1ac482dc48dca4c273&key=b535315a329dfd850082d0f441b0c463
 https://cdn.sensa.com.ar/output/ARR3/MRTH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1241/CH_LOGO/40/40/0/0/42902231076974.png?WORLDTV6" group-title="SENSA ARG",COONET Brinkmann
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1241/CH_LOGO/40/40/0/0/42902231076974.png?WORLDTV6" group-title="ARGENTINA",COONET Brinkmann
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT4/BRKH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1820/CH_LOGO/40/40/0/0/64370533077571.png?WORLDTV6" group-title="SENSA ARG",COOP PLUS Porteña
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1820/CH_LOGO/40/40/0/0/64370533077571.png?WORLDTV6" group-title="ARGENTINA",COOP PLUS Porteña
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT5/PORH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1819/CH_LOGO/40/40/0/0/70000132077572.png?WORLDTV6" group-title="SENSA ARG",Canal 3 Tacural
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1819/CH_LOGO/40/40/0/0/70000132077572.png?WORLDTV6" group-title="ARGENTINA",Canal 3 Tacural
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR2/TacuralH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3968/CH_LOGO/40/40/0/0/21588335079036.png?WORLDTV6" group-title="SENSA ARG",CoopMorteros Streaming
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3968/CH_LOGO/40/40/0/0/21588335079036.png?WORLDTV6" group-title="ARGENTINA",CoopMorteros Streaming
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ACE/CMSH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/243/CH_LOGO/40/40/0/0/93511500073657.png?WORLDTV6" group-title="SENSA ARG",Canal 50 Morteros
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/243/CH_LOGO/40/40/0/0/93511500073657.png?WORLDTV6" group-title="ARGENTINA",Canal 50 Morteros
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 http://online.coopmorteros.coop/canal50/vivo.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2482/CH_LOGO/40/40/0/0/85617370076521.png?WORLDTV6" group-title="SENSA ARG",TVCO PICO
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2482/CH_LOGO/40/40/0/0/85617370076521.png?WORLDTV6" group-title="ARGENTINA",TVCO PICO
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR/TVCOh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2483/CH_LOGO/40/40/0/0/12926473072353.png?WORLDTV6" group-title="SENSA ARG",CPE Santa Rosa La Pampa
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2483/CH_LOGO/40/40/0/0/12926473072353.png?WORLDTV6" group-title="ARGENTINA",CPE Santa Rosa La Pampa
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR/SRLPh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2501/CH_LOGO/40/40/0/0/56072369073270.png?WORLDTV6" group-title="SENSA ARG",Punta Alta Visión
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2501/CH_LOGO/40/40/0/0/56072369073270.png?WORLDTV6" group-title="ARGENTINA",Punta Alta Visión
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT2/CEPATVH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1061/CH_LOGO/40/40/0/0/79624310076902.png?WORLDTV6" group-title="SENSA ARG",LDM TV La Pampa
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1061/CH_LOGO/40/40/0/0/79624310076902.png?WORLDTV6" group-title="ARGENTINA",LDM TV La Pampa
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR2/Canal19LPH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2503/CH_LOGO/40/40/0/0/18862298077160.png?WORLDTV6" group-title="SENSA ARG",DBosco Televisión
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2503/CH_LOGO/40/40/0/0/18862298077160.png?WORLDTV6" group-title="ARGENTINA",DBosco Televisión
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR2/C7SAAH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1601/CH_LOGO/40/40/0/0/87441261073156.png?WORLDTV6" group-title="SENSA ARG",TelViso TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1601/CH_LOGO/40/40/0/0/87441261073156.png?WORLDTV6" group-title="ARGENTINA",TelViso TV
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT2/TELH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3082/CH_LOGO/40/40/0/0/88754444078504.png?WORLDTV6" group-title="SENSA ARG",CableCoop Charlone
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3082/CH_LOGO/40/40/0/0/88754444078504.png?WORLDTV6" group-title="ARGENTINA",CableCoop Charlone
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT4/CCCH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3422/CH_LOGO/40/40/0/0/60976969078835.png?WORLDTV6" group-title="SENSA ARG",NTV Tortuguitas
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3422/CH_LOGO/40/40/0/0/60976969078835.png?WORLDTV6" group-title="ARGENTINA",NTV Tortuguitas
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT5/NTVH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1022/CH_LOGO/40/40/0/0/31560740072137.png?WORLDTV6" group-title="SENSA ARG",Cable 10 Río Gallegos
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1022/CH_LOGO/40/40/0/0/31560740072137.png?WORLDTV6" group-title="ARGENTINA",Cable 10 Río Gallegos
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR/Rio_GallegosH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2508/CH_LOGO/40/40/0/0/11083432076534.png?WORLDTV6" group-title="SENSA ARG",CLYFER TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2508/CH_LOGO/40/40/0/0/11083432076534.png?WORLDTV6" group-title="ARGENTINA",CLYFER TV
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR/CLYFERH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2509/CH_LOGO/40/40/0/0/88623159076702.png?WORLDTV6" group-title="SENSA ARG",CETV Canal Deheza
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2509/CH_LOGO/40/40/0/0/88623159076702.png?WORLDTV6" group-title="ARGENTINA",CETV Canal Deheza
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR/DehezaH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2511/CH_LOGO/40/40/0/0/46132478077122.png?WORLDTV6" group-title="SENSA ARG",Nexos Multimedio Cooperativo
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2511/CH_LOGO/40/40/0/0/46132478077122.png?WORLDTV6" group-title="ARGENTINA",Nexos Multimedio Cooperativo
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR/Canal5GIGH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2512/CH_LOGO/40/40/0/0/30214768077125.png?WORLDTV6" group-title="SENSA ARG",Río Primero TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2512/CH_LOGO/40/40/0/0/30214768077125.png?WORLDTV6" group-title="ARGENTINA",Río Primero TV
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/STAROSA/RIO1TVH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2515/CH_LOGO/40/40/0/0/77974389077126.png?WORLDTV6" group-title="SENSA ARG",Luque TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2515/CH_LOGO/40/40/0/0/77974389077126.png?WORLDTV6" group-title="ARGENTINA",Luque TV
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/STAROSA/LUQUETVH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2514/CH_LOGO/40/40/0/0/89469456077129.png?WORLDTV6" group-title="SENSA ARG",COVISAR - Sta Rosa
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2514/CH_LOGO/40/40/0/0/89469456077129.png?WORLDTV6" group-title="ARGENTINA",COVISAR - Sta Rosa
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/STAROSA/COVISARH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2516/CH_LOGO/40/40/0/0/15168501077127.png?WORLDTV6" group-title="SENSA ARG",Temple TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2516/CH_LOGO/40/40/0/0/15168501077127.png?WORLDTV6" group-title="ARGENTINA",Temple TV
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/STAROSA/TEMPLETVH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2517/CH_LOGO/40/40/0/0/2990054407460.png?WORLDTV6" group-title="SENSA ARG",TvCoop Posse
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2517/CH_LOGO/40/40/0/0/2990054407460.png?WORLDTV6" group-title="ARGENTINA",TvCoop Posse
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/NDS/tvcoopjpH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2518/CH_LOGO/40/40/0/0/12868197073593.png?WORLDTV6" group-title="SENSA ARG",Canal COOP Colonia Caroya
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2518/CH_LOGO/40/40/0/0/12868197073593.png?WORLDTV6" group-title="ARGENTINA",Canal COOP Colonia Caroya
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/COR/CaroyaCoopH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2521/CH_LOGO/40/40/0/0/38808379077146.png?WORLDTV6" group-title="SENSA ARG",Canal Cooperativo Alicia
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2521/CH_LOGO/40/40/0/0/38808379077146.png?WORLDTV6" group-title="ARGENTINA",Canal Cooperativo Alicia
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/LVR/CCAH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://trutv.com.ar/wp-content/uploads/2023/08/TRU-logo-80px.png?WORLDTV6" group-title="SENSA ARG",Televisora Regional Unimar - Marcos Juárez
+#EXTINF:-1 tvg-logo="https://trutv.com.ar/wp-content/uploads/2023/08/TRU-logo-80px.png?WORLDTV6" group-title="ARGENTINA",Televisora Regional Unimar - Marcos Juárez
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/NDS/TRUh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2522/CH_LOGO/40/40/0/0/97778346077157.png?WORLDTV6" group-title="SENSA ARG",CEOSCA-Camilo Aldao
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2522/CH_LOGO/40/40/0/0/97778346077157.png?WORLDTV6" group-title="ARGENTINA",CEOSCA-Camilo Aldao
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/NDS/CEOSCAH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2523/CH_LOGO/40/40/0/0/45821431071947.png?WORLDTV6" group-title="SENSA ARG",C20 Villa María
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2523/CH_LOGO/40/40/0/0/45821431071947.png?WORLDTV6" group-title="ARGENTINA",C20 Villa María
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT5/C20H/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1681/CH_LOGO/40/40/0/0/27492873077521.png?WORLDTV6" group-title="SENSA ARG",TELECO CANAL 10 TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/1681/CH_LOGO/40/40/0/0/27492873077521.png?WORLDTV6" group-title="ARGENTINA",TELECO CANAL 10 TV
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT4/TelecoUcachaH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3042/CH_LOGO/40/40/0/0/50103492078472.png?WORLDTV6" group-title="SENSA ARG",STV 2 Canal - Las Varillas
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3042/CH_LOGO/40/40/0/0/50103492078472.png?WORLDTV6" group-title="ARGENTINA",STV 2 Canal - Las Varillas
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/LVR/STV2H/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2527/CH_LOGO/40/40/0/0/85090079077630.png?WORLDTV6" group-title="SENSA ARG",RTV Canal 2 Golcable
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2527/CH_LOGO/40/40/0/0/85090079077630.png?WORLDTV6" group-title="ARGENTINA",RTV Canal 2 Golcable
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT5/GolcableH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3342/CH_LOGO/40/40/0/0/41079403078757.png?WORLDTV6" group-title="SENSA ARG",CELTTV Tornquist
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3342/CH_LOGO/40/40/0/0/41079403078757.png?WORLDTV6" group-title="ARGENTINA",CELTTV Tornquist
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT3/CELTTVH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2530/CH_LOGO/40/40/0/0/14910418077700.png?WORLDTV6" group-title="SENSA ARG",Funes Fullvisión
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2530/CH_LOGO/40/40/0/0/14910418077700.png?WORLDTV6" group-title="ARGENTINA",Funes Fullvisión
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT2/FVH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2531/CH_LOGO/40/40/0/0/91408905077946.png?WORLDTV6" group-title="SENSA ARG",Canal 2 Pueblo San José
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2531/CH_LOGO/40/40/0/0/91408905077946.png?WORLDTV6" group-title="ARGENTINA",Canal 2 Pueblo San José
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT2/PSJH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2532/CH_LOGO/40/40/0/0/35408141078125.png?WORLDTV6" group-title="SENSA ARG",Canal 11 María Juana
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2532/CH_LOGO/40/40/0/0/35408141078125.png?WORLDTV6" group-title="ARGENTINA",Canal 11 María Juana
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT5/MariaJuanaH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2533/CH_LOGO/40/40/0/0/70000165078012.png?WORLDTV6" group-title="SENSA ARG",Canal 4 Pingüé
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2533/CH_LOGO/40/40/0/0/70000165078012.png?WORLDTV6" group-title="ARGENTINA",Canal 4 Pingüé
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT3/C4PH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2541/CH_LOGO/40/40/0/0/35003362076629.png?WORLDTV6" group-title="SENSA ARG",Vivencias TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2541/CH_LOGO/40/40/0/0/35003362076629.png?WORLDTV6" group-title="ARGENTINA",Vivencias TV
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/NDS/vivenciasH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2543/CH_LOGO/40/40/0/0/49748039075506.png?WORLDTV6" group-title="SENSA ARG",Unidos Tv
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2543/CH_LOGO/40/40/0/0/49748039075506.png?WORLDTV6" group-title="ARGENTINA",Unidos Tv
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/NDS/unidostvH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4823/CH_LOGO/40/40/0/0/42537967079420.png?WORLDTV6" group-title="SENSA ARG",Canal 99 Miramar
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4823/CH_LOGO/40/40/0/0/42537967079420.png?WORLDTV6" group-title="ARGENTINA",Canal 99 Miramar
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR2/C99MH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3482/CH_LOGO/40/40/0/0/66473712078884.png?WORLDTV6" group-title="SENSA ARG",TV Coop Hernando
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3482/CH_LOGO/40/40/0/0/66473712078884.png?WORLDTV6" group-title="ARGENTINA",TV Coop Hernando
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR2/HERH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3882/CH_LOGO/40/40/0/0/54537430079017.png?WORLDTV6" group-title="SENSA ARG",El Sauce TV Canal Local VGB
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3882/CH_LOGO/40/40/0/0/54537430079017.png?WORLDTV6" group-title="ARGENTINA",El Sauce TV Canal Local VGB
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR3/ElSauceTVH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3222/CH_LOGO/40/40/0/0/59584193078619.png?WORLDTV6" group-title="SENSA ARG",Canal 9 Cemdo TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3222/CH_LOGO/40/40/0/0/59584193078619.png?WORLDTV6" group-title="ARGENTINA",Canal 9 Cemdo TV
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT4/CMDH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2941/CH_LOGO/40/40/0/0/21304890078316.png?WORLDTV6" group-title="SENSA ARG",Canal 3 Arroyito
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2941/CH_LOGO/40/40/0/0/21304890078316.png?WORLDTV6" group-title="ARGENTINA",Canal 3 Arroyito
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR3/C3AH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4841/CH_LOGO/40/40/0/0/52537106079461.png?WORLDTV6" group-title="SENSA ARG",MI CIUDAD
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4841/CH_LOGO/40/40/0/0/52537106079461.png?WORLDTV6" group-title="ARGENTINA",MI CIUDAD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT6/MCVH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4982/CH_LOGO/40/40/0/0/66712163079551.png?WORLDTV6" group-title="SENSA ARG",CANAL 2 COOPERATIVO ELENA
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4982/CH_LOGO/40/40/0/0/66712163079551.png?WORLDTV6" group-title="ARGENTINA",CANAL 2 COOPERATIVO ELENA
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT6/C2CEH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4962/CH_LOGO/40/40/0/0/16703632079520.png?WORLDTV6" group-title="SENSA ARG",CABLE IMAGEN ARMSTRONG
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/4962/CH_LOGO/40/40/0/0/16703632079520.png?WORLDTV6" group-title="ARGENTINA",CABLE IMAGEN ARMSTRONG
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT6/CIAh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2801/CH_LOGO/40/40/0/0/56157196078230.png?WORLDTV6" group-title="SENSA ARG",RioTel Río Tercero
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2801/CH_LOGO/40/40/0/0/56157196078230.png?WORLDTV6" group-title="ARGENTINA",RioTel Río Tercero
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT3/RTH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2535/CH_LOGO/40/40/0/0/95897423078121.png?WORLDTV6" group-title="SENSA ARG",Canal 6 Freyre
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2535/CH_LOGO/40/40/0/0/95897423078121.png?WORLDTV6" group-title="ARGENTINA",Canal 6 Freyre
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR3/FRYH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2536/CH_LOGO/40/40/0/0/98726444077724.png?WORLDTV6" group-title="SENSA ARG",Canal 2 Almafuerte
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2536/CH_LOGO/40/40/0/0/98726444077724.png?WORLDTV6" group-title="ARGENTINA",Canal 2 Almafuerte
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR/ALMH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2538/CH_LOGO/40/40/0/0/35734658076751.png?WORLDTV6" group-title="SENSA ARG",Cegro General Roca
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2538/CH_LOGO/40/40/0/0/35734658076751.png?WORLDTV6" group-title="ARGENTINA",Cegro General Roca
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT3/GRH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3802/CH_LOGO/40/40/0/0/32638035078994.png?WORLDTV6" group-title="SENSA ARG",Villa Huidobro
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3802/CH_LOGO/40/40/0/0/32638035078994.png?WORLDTV6" group-title="ARGENTINA",Villa Huidobro
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT2/VHH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2540/CH_LOGO/40/40/0/0/29838770078011.png?WORLDTV6" group-title="SENSA ARG",Canal 11 Oliva
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2540/CH_LOGO/40/40/0/0/29838770078011.png?WORLDTV6" group-title="ARGENTINA",Canal 11 Oliva
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/NDS/OlivaH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3201/CH_LOGO/40/40/0/0/73160833078309.png?WORLDTV6" group-title="SENSA ARG",VIVE TV Rosario
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/3201/CH_LOGO/40/40/0/0/73160833078309.png?WORLDTV6" group-title="ARGENTINA",VIVE TV Rosario
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT4/VIVEH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2534/CH_LOGO/40/40/0/0/86198033078075.png?WORLDTV6" group-title="SENSA ARG",TvCoop Suardi
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2534/CH_LOGO/40/40/0/0/86198033078075.png?WORLDTV6" group-title="ARGENTINA",TvCoop Suardi
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/ARR3/SADH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2542/CH_LOGO/40/40/0/0/77046385073168.png?WORLDTV6" group-title="SENSA ARG",IVISIÓN Canal Local Galvez
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2542/CH_LOGO/40/40/0/0/77046385073168.png?WORLDTV6" group-title="ARGENTINA",IVISIÓN Canal Local Galvez
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=04983282c2fa819a08fa03a13fe4fdbe&key=4780a24340ea957c4a27b257e2b6ec4c
 https://cdn.sensa.com.ar/output/SMT6/IVSh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5122/CH_LOGO/40/40/0/0/62715393079717.png?WORLDTV6" group-title="SENSA ARG",GchuTV Gualeguaychú
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/5122/CH_LOGO/40/40/0/0/62715393079717.png?WORLDTV6" group-title="ARGENTINA",GchuTV Gualeguaychú
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=04983282c2fa819a08fa03a13fe4fdbe&key=4780a24340ea957c4a27b257e2b6ec4c
 https://cdn.sensa.com.ar/output/SMT7/GchuTVh/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2866/CH_LOGO/40/40/0/0/11228946078364.png?WORLDTV6" group-title="SENSA ARG",Coopetel TV - El Bolsón
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2866/CH_LOGO/40/40/0/0/11228946078364.png?WORLDTV6" group-title="ARGENTINA",Coopetel TV - El Bolsón
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT4/CPTH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2528/CH_LOGO/40/40/0/0/60393547077609.png?WORLDTV6" group-title="SENSA ARG",Marchi TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2528/CH_LOGO/40/40/0/0/60393547077609.png?WORLDTV6" group-title="ARGENTINA",Marchi TV
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 https://cdn.sensa.com.ar/output/SMT2/MARCHITVH/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2539/CH_LOGO/40/40/0/0/39912108073157.png?WORLDTV6" group-title="SENSA ARG",Somos Uno Chaco TV
+#EXTINF:-1 tvg-logo="https://geo.edge.pontiscloud.com:9002/images/2539/CH_LOGO/40/40/0/0/39912108073157.png?WORLDTV6" group-title="ARGENTINA",Somos Uno Chaco TV
 #EXTVLCOPT:http-user-agent=VisualOn OSMP+ Player(Linux;Android)
 #EXTVLCOPT:http-referrer=https://webclient.ctcplus.com.ar/
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
