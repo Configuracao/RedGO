@@ -1,0 +1,8 @@
+#EXTM3U url-tvg="https://xtream-masters.com/epg/MX1.xml.gz,https://xtream-masters.com/epg/SV1.xml.gz,https://xtream-masters.com/epg/CO1.xml.gz,https://xtream-masters.com/epg/AR1.xml.gz,https://xtream-masters.com/epg/DIRECTVSPORTS1.xml.gz"
+
+#EXTINF:-1 tvg-id="Nickelodeon.uy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/argentina/nickelodeon-ar.png" group-title="Infantil", Nickelodeon
+#KODIPROP:inputstream.adaptive.license_key=89a6be32a372255475c03d910be1eae8:4446ac987204570bbebb8ee5a4945903
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.stream_headers=referer=https://portal.app.flow.com.ar
+#KODIPROP:inputstream.adaptive.stream_headers=origin=https://portal.app.flow.com.ar
+https://edge-live22-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzkxMzY2MjEyIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M3ZWRzL0FtZXJpY2EyNC9TQV9MaXZlX2Rhc2hfZW5jXy8iLCJzZXNzaW9uX2Nkbl9pZCI6IjUwZDliOGFmZTkwZWI0NzUiLCJzZXNzaW9uX2lkIjoiIiwiY2xpZW50X2lkIjoiIiwiZGV2aWNlX2lkIjoiIiwibWF4X3Nlc3Npb25zIjowLCJzZXNzaW9uX2R1cmF0aW9uIjowLCJ1cmwiOiJodHRwczovLzIwMS4yMzUuNjYuMTIzIiwiYXVkIjoiMzUyIiwic291cmNlcyI6Wzg1LDE0NCwyMTAsODYsODhdfQ==.yXqn2Qm-YvMtThA-u1scNbEv7Z9MYmXVejf1iictTZGQ88AHr0R7QG0DnVfdd_EplZb1HRjsmV-L0kPUAXedQg==/live/c3eds/Nickelodeon/SA_Live_dash_enc/Nickelodeon.mpd
