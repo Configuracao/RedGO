@@ -2490,10 +2490,10 @@ Deportes
 #EXTINF:-1 tvg-id="1411" group-title="Deportes" tvg-logo="https://i.postimg.cc/T5YBc3cB/ESPN-1-Argentina.png" group-logo="https://i.imgur.com/EU6cNrE.png"
 #EXTINF:-1 tvg-id="1411" tvg-logo="https://i.postimg.cc/T5YBc3cB/ESPN-1-Argentina.png" group-title="eventos", ESPN AR
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key={"b3e4e74ae2080b137e68bbd0ef8a7e05":"cb004fb100bd92f23793562891e3236b"}
+#KODIPROP:inputstream.adaptive.license_key={"4e126297fc7af35c736bdffe98eecaaa":"fdb0091cf67d9c596dbfb07cf6f4c8f5"}
 #KODIPROP:inputstream.adaptive.stream_headers=referer=https://portal.app.flow.com.ar
 #KODIPROP:inputstream.adaptive.stream_headers=origin=https://portal.app.flow.com.ar
-https://barinaslive1.boldmss.com/ESPN/ESPN.isml/ESPN.mpd?
+https://barinaslive1.boldmss.com/ESPN_5/ESPN_5.isml/ESPN_5.mpd?
 
 #EXTINF:-1 tvg-id="1411" group-title="Deportes" tvg-logo="https://i.postimg.cc/T5YBc3cB/ESPN-1-Argentina.png" group-logo="https://i.imgur.com/EU6cNrE.png"
 #EXTINF:-1 tvg-id="1411" tvg-logo="https://i.postimg.cc/T5YBc3cB/ESPN-1-Argentina.png" group-title="Deportes", ESPN AR
