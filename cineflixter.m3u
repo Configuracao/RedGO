@@ -2487,6 +2487,14 @@ https://edge-live22-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.ey
 
 Deportes
 
+#EXTINF:-1 tvg-id="3813" tvg-logo="https://geo.edge.pontiscloud.com:9002/images/100/CH_LOGO/800/542/0/0/228799490721.png" group-title="Cine & Series", HBO
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.izzigo.tv/
+#EXTVLCOPT:http-origin=https://www.izzigo.tv
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://delgadolife.net/mundo/api/results.php?keyid=2a73b4333c29ee9030fa70e78c0213bc&key=03fbceb0258f46ca99fac37110bee4f2
+https://mcbold.mcgolive.com.uy/ESPN_4/ESPN_4_MC.isml/ESPN_4.mpd
+
 #EXTINF:-1 tvg-id="1411" group-title="Deportes" tvg-logo="https://i.postimg.cc/T5YBc3cB/ESPN-1-Argentina.png" group-logo="https://i.imgur.com/EU6cNrE.png"
 #EXTINF:-1 tvg-id="1411" tvg-logo="https://i.postimg.cc/T5YBc3cB/ESPN-1-Argentina.png" group-title="Deportes", ESPN AR
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
